@@ -1,0 +1,2786 @@
+{
+ "award_types": {
+  "player_of_the_season": {
+   "label": "Premier League Player of the Season",
+   "category": "player",
+   "official": "Premier League",
+   "first_season": "1994–95"
+  },
+  "young_player_of_the_season": {
+   "label": "Premier League Young Player of the Season",
+   "category": "player",
+   "official": "Premier League",
+   "first_season": "2019–20"
+  },
+  "golden_boot": {
+   "label": "Premier League Golden Boot (top scorer)",
+   "category": "player",
+   "official": "Premier League",
+   "first_season": "1992–93"
+  },
+  "golden_glove": {
+   "label": "Premier League Golden Glove (most clean sheets)",
+   "category": "player",
+   "official": "Premier League",
+   "first_season": "2004–05"
+  },
+  "top_assists": {
+   "label": "Most assists in the season",
+   "category": "player",
+   "official": "Premier League",
+   "first_season": "1992–93"
+  },
+  "playmaker_of_the_season": {
+   "label": "Premier League Playmaker of the Season",
+   "category": "player",
+   "official": "Premier League",
+   "first_season": "2017–18"
+  },
+  "goal_of_the_season": {
+   "label": "Premier League Goal of the Season",
+   "category": "player",
+   "official": "Premier League",
+   "first_season": "1992–93"
+  },
+  "pfa_players_player": {
+   "label": "PFA Players' Player of the Year",
+   "category": "player",
+   "official": "Professional Footballers' Association",
+   "first_season": "1973–74"
+  },
+  "pfa_young_player": {
+   "label": "PFA Young Player of the Year",
+   "category": "player",
+   "official": "Professional Footballers' Association",
+   "first_season": "1973–74"
+  },
+  "fwa_footballer": {
+   "label": "FWA Footballer of the Year",
+   "category": "player",
+   "official": "Football Writers' Association",
+   "first_season": "1947–48"
+  },
+  "manager_of_the_season": {
+   "label": "Premier League Manager of the Season",
+   "category": "manager",
+   "official": "Premier League",
+   "first_season": "1993–94"
+  },
+  "lma_manager_of_the_year": {
+   "label": "LMA Manager of the Year",
+   "category": "manager",
+   "official": "League Managers Association",
+   "first_season": "1992–93"
+  }
+ },
+ "awards": [
+  {
+   "award": "golden_boot",
+   "season": "1992–93",
+   "winner": "Teddy Sheringham",
+   "club": "Tottenham Hotspur",
+   "nationality": "England",
+   "goals": 22,
+   "games": 41
+  },
+  {
+   "award": "top_assists",
+   "season": "1992–93",
+   "winner": "Eric Cantona",
+   "club": "Leeds United",
+   "nationality": "France",
+   "assists": 16
+  },
+  {
+   "award": "top_assists",
+   "season": "1992–93",
+   "winner": "Eric Cantona",
+   "club": "Manchester United",
+   "nationality": "France",
+   "assists": 16
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1992–93",
+   "winner": "Dalian Atkinson",
+   "club": "Aston Villa",
+   "nationality": "England",
+   "opponent": "Wimbledon",
+   "score": "3–1",
+   "date": "3 October 1992"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1992–93",
+   "winner": "Paul McGrath",
+   "club": "Aston Villa"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1992–93",
+   "winner": "Ryan Giggs",
+   "club": "Manchester United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1992–93",
+   "winner": "Chris Waddle",
+   "club": "Sheffield Wednesday"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1992–93",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "golden_boot",
+   "season": "1993–94",
+   "winner": "Andy Cole",
+   "club": "Newcastle United",
+   "nationality": "England",
+   "goals": 34,
+   "games": 40
+  },
+  {
+   "award": "top_assists",
+   "season": "1993–94",
+   "winner": "Andy Cole",
+   "club": "Newcastle United",
+   "nationality": "England",
+   "assists": 13
+  },
+  {
+   "award": "top_assists",
+   "season": "1993–94",
+   "winner": "Eric Cantona",
+   "club": "Manchester United",
+   "nationality": "France",
+   "assists": 13
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1993–94",
+   "winner": "Rod Wallace",
+   "club": "Leeds United",
+   "nationality": "England",
+   "opponent": "Tottenham Hotspur",
+   "score": "1–0",
+   "date": "17 April 1994"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1993–94",
+   "winner": "Eric Cantona",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1993–94",
+   "winner": "Andy Cole",
+   "club": "Newcastle United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1993–94",
+   "winner": "Alan Shearer",
+   "club": "Blackburn Rovers"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "1993–94",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1993–94",
+   "winner": "Joe Kinnear",
+   "club": "Wimbledon",
+   "nationality": "Republic of Ireland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "1994–95",
+   "winner": "Alan Shearer",
+   "club": "Blackburn Rovers",
+   "nationality": "England",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "1994–95",
+   "winner": "Alan Shearer",
+   "club": "Blackburn Rovers",
+   "nationality": "England",
+   "goals": 34,
+   "games": 42
+  },
+  {
+   "award": "top_assists",
+   "season": "1994–95",
+   "winner": "Matt Le Tissier",
+   "club": "Southampton",
+   "nationality": "England",
+   "assists": 15
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1994–95",
+   "winner": "Matt Le Tissier",
+   "club": "Southampton",
+   "nationality": "England",
+   "opponent": "Blackburn Rovers",
+   "score": "2–3",
+   "date": "10 December 1994"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1994–95",
+   "winner": "Alan Shearer",
+   "club": "Blackburn Rovers"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1994–95",
+   "winner": "Robbie Fowler",
+   "club": "Liverpool"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1994–95",
+   "winner": "Jürgen Klinsmann",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "1994–95",
+   "winner": "Kenny Dalglish",
+   "club": "Blackburn Rovers",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1994–95",
+   "winner": "Frank Clark",
+   "club": "Nottingham Forest",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "1995–96",
+   "winner": "Peter Schmeichel",
+   "club": "Manchester United",
+   "nationality": "Denmark",
+   "position": "Goalkeeper"
+  },
+  {
+   "award": "golden_boot",
+   "season": "1995–96",
+   "winner": "Alan Shearer",
+   "club": "Blackburn Rovers",
+   "nationality": "England",
+   "goals": 31,
+   "games": 35
+  },
+  {
+   "award": "top_assists",
+   "season": "1995–96",
+   "winner": "Steve McManaman",
+   "club": "Liverpool",
+   "nationality": "England",
+   "assists": 15
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1995–96",
+   "winner": "Tony Yeboah",
+   "club": "Leeds United",
+   "nationality": "Ghana",
+   "opponent": "Wimbledon",
+   "score": "3–1",
+   "date": "23 September 1995"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1995–96",
+   "winner": "Les Ferdinand",
+   "club": "Newcastle United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1995–96",
+   "winner": "Robbie Fowler",
+   "club": "Liverpool"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1995–96",
+   "winner": "Eric Cantona",
+   "club": "Manchester United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "1995–96",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1995–96",
+   "winner": "Peter Reid",
+   "club": "Sunderland",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "1996–97",
+   "winner": "Juninho Paulista",
+   "club": "Middlesbrough",
+   "nationality": "Brazil",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "1996–97",
+   "winner": "Alan Shearer",
+   "club": "Newcastle United",
+   "nationality": "England",
+   "goals": 25,
+   "games": 31
+  },
+  {
+   "award": "top_assists",
+   "season": "1996–97",
+   "winner": "Eric Cantona",
+   "club": "Manchester United",
+   "nationality": "France",
+   "assists": 12
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1996–97",
+   "winner": "David Beckham",
+   "club": "Manchester United",
+   "nationality": "England",
+   "opponent": "Wimbledon",
+   "score": "3–0",
+   "date": "17 August 1996"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1996–97",
+   "winner": "Alan Shearer",
+   "club": "Newcastle United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1996–97",
+   "winner": "David Beckham",
+   "club": "Manchester United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1996–97",
+   "winner": "Gianfranco Zola",
+   "club": "Chelsea"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "1996–97",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1996–97",
+   "winner": "Danny Wilson",
+   "club": "Barnsley",
+   "nationality": "Northern Ireland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "1997–98",
+   "winner": "Michael Owen",
+   "club": "Liverpool",
+   "nationality": "England",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "1997–98",
+   "winner": "Chris Sutton",
+   "club": "Blackburn Rovers",
+   "nationality": "England",
+   "goals": 18,
+   "games": 35
+  },
+  {
+   "award": "golden_boot",
+   "season": "1997–98",
+   "winner": "Dion Dublin",
+   "club": "Coventry City",
+   "nationality": "England",
+   "goals": 18,
+   "games": 36
+  },
+  {
+   "award": "golden_boot",
+   "season": "1997–98",
+   "winner": "Michael Owen",
+   "club": "Liverpool",
+   "nationality": "England",
+   "goals": 18,
+   "games": 36
+  },
+  {
+   "award": "top_assists",
+   "season": "1997–98",
+   "winner": "David Beckham",
+   "club": "Manchester United",
+   "nationality": "England",
+   "assists": 13
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1997–98",
+   "winner": "Dennis Bergkamp",
+   "club": "Arsenal",
+   "nationality": "Netherlands",
+   "opponent": "Leicester City",
+   "score": "3–2",
+   "date": "27 August 1997"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1997–98",
+   "winner": "Dennis Bergkamp",
+   "club": "Arsenal"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1997–98",
+   "winner": "Michael Owen",
+   "club": "Liverpool"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1997–98",
+   "winner": "Dennis Bergkamp",
+   "club": "Arsenal"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "1997–98",
+   "winner": "Arsène Wenger",
+   "club": "Arsenal",
+   "nationality": "France"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1997–98",
+   "winner": "Dave Jones",
+   "club": "Southampton",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "1998–99",
+   "winner": "Dwight Yorke",
+   "club": "Manchester United",
+   "nationality": "Trinidad and Tobago",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "1998–99",
+   "winner": "Michael Owen",
+   "club": "Liverpool",
+   "nationality": "England",
+   "goals": 18,
+   "games": 30
+  },
+  {
+   "award": "golden_boot",
+   "season": "1998–99",
+   "winner": "Dwight Yorke",
+   "club": "Manchester United",
+   "nationality": "Trinidad and Tobago",
+   "goals": 18,
+   "games": 33
+  },
+  {
+   "award": "golden_boot",
+   "season": "1998–99",
+   "winner": "Jimmy Floyd Hasselbaink",
+   "club": "Leeds United",
+   "nationality": "Netherlands",
+   "goals": 18,
+   "games": 36
+  },
+  {
+   "award": "top_assists",
+   "season": "1998–99",
+   "winner": "Dennis Bergkamp",
+   "club": "Arsenal",
+   "nationality": "Netherlands",
+   "assists": 13
+  },
+  {
+   "award": "top_assists",
+   "season": "1998–99",
+   "winner": "Jimmy Floyd Hasselbaink",
+   "club": "Leeds United",
+   "nationality": "Netherlands",
+   "assists": 13
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1998–99",
+   "winner": "Muzzy Izzet",
+   "club": "Leicester City",
+   "nationality": "Turkey",
+   "opponent": "Tottenham Hotspur",
+   "score": "2–1",
+   "date": "19 October 1998"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1998–99",
+   "winner": "David Ginola",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1998–99",
+   "winner": "Nicolas Anelka",
+   "club": "Arsenal"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1998–99",
+   "winner": "David Ginola",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "1998–99",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1998–99",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "1999–2000",
+   "winner": "Kevin Phillips",
+   "club": "Sunderland",
+   "nationality": "England",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "1999–2000",
+   "winner": "Kevin Phillips",
+   "club": "Sunderland",
+   "nationality": "England",
+   "goals": 30,
+   "games": 36
+  },
+  {
+   "award": "top_assists",
+   "season": "1999–2000",
+   "winner": "David Beckham",
+   "club": "Manchester United",
+   "nationality": "England",
+   "assists": 15
+  },
+  {
+   "award": "top_assists",
+   "season": "1999–2000",
+   "winner": "Nolberto Solano",
+   "club": "Newcastle United",
+   "nationality": "Peru",
+   "assists": 15
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "1999–2000",
+   "winner": "Paolo Di Canio",
+   "club": "West Ham United",
+   "nationality": "Italy",
+   "opponent": "Wimbledon",
+   "score": "1–0",
+   "date": "26 March 2000"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "1999–2000",
+   "winner": "Roy Keane",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "1999–2000",
+   "winner": "Harry Kewell",
+   "club": "Leeds United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "1999–2000",
+   "winner": "Roy Keane",
+   "club": "Manchester United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "1999–2000",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "1999–2000",
+   "winner": "Alan Curbishley",
+   "club": "Charlton Athletic",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2000–01",
+   "winner": "Patrick Vieira",
+   "club": "Arsenal",
+   "nationality": "France",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2000–01",
+   "winner": "Jimmy Floyd Hasselbaink",
+   "club": "Chelsea",
+   "nationality": "Netherlands",
+   "goals": 23,
+   "games": 35
+  },
+  {
+   "award": "top_assists",
+   "season": "2000–01",
+   "winner": "David Beckham",
+   "club": "Manchester United",
+   "nationality": "England",
+   "assists": 12
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2000–01",
+   "winner": "Shaun Bartlett",
+   "club": "Charlton Athletic",
+   "nationality": "South Africa",
+   "opponent": "Leicester City",
+   "score": "2–0",
+   "date": "1 April 2001"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2000–01",
+   "winner": "Teddy Sheringham",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2000–01",
+   "winner": "Steven Gerrard",
+   "club": "Liverpool"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2000–01",
+   "winner": "Teddy Sheringham",
+   "club": "Manchester United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2000–01",
+   "winner": "George Burley",
+   "club": "Ipswich Town",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2000–01",
+   "winner": "George Burley",
+   "club": "Ipswich Town",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2001–02",
+   "winner": "Freddie Ljungberg",
+   "club": "Arsenal",
+   "nationality": "Sweden",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2001–02",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "goals": 24,
+   "games": 33
+  },
+  {
+   "award": "top_assists",
+   "season": "2001–02",
+   "winner": "Robert Pirès",
+   "club": "Arsenal",
+   "nationality": "France",
+   "assists": 15
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2001–02",
+   "winner": "Dennis Bergkamp",
+   "club": "Arsenal",
+   "nationality": "Netherlands",
+   "opponent": "Newcastle United",
+   "score": "1–0",
+   "date": "2 March 2002"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2001–02",
+   "winner": "Ruud van Nistelrooy",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2001–02",
+   "winner": "Craig Bellamy",
+   "club": "Newcastle United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2001–02",
+   "winner": "Robert Pires",
+   "club": "Arsenal"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2001–02",
+   "winner": "Arsène Wenger",
+   "club": "Arsenal",
+   "nationality": "France"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2001–02",
+   "winner": "Arsène Wenger",
+   "club": "Arsenal",
+   "nationality": "France"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2002–03",
+   "winner": "Ruud van Nistelrooy",
+   "club": "Manchester United",
+   "nationality": "Netherlands",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2002–03",
+   "winner": "Ruud van Nistelrooy",
+   "club": "Manchester United",
+   "nationality": "Netherlands",
+   "goals": 25,
+   "games": 34
+  },
+  {
+   "award": "top_assists",
+   "season": "2002–03",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "assists": 20
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2002–03",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "opponent": "Tottenham Hotspur",
+   "score": "1–0",
+   "date": "16 November 2002"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2002–03",
+   "winner": "Thierry Henry",
+   "club": "Arsenal"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2002–03",
+   "winner": "Jermaine Jenas",
+   "club": "Newcastle United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2002–03",
+   "winner": "Thierry Henry",
+   "club": "Arsenal"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2002–03",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2002–03",
+   "winner": "David Moyes",
+   "club": "Everton",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2003–04",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2003–04",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "goals": 30,
+   "games": 37
+  },
+  {
+   "award": "top_assists",
+   "season": "2003–04",
+   "winner": "Muzzy Izzet",
+   "club": "Leicester City",
+   "nationality": "Turkey",
+   "assists": 14
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2003–04",
+   "winner": "Dietmar Hamann",
+   "club": "Liverpool",
+   "nationality": "Germany",
+   "opponent": "Portsmouth",
+   "score": "1–0",
+   "date": "17 March 2004"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2003–04",
+   "winner": "Thierry Henry",
+   "club": "Arsenal"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2003–04",
+   "winner": "Scott Parker",
+   "club": "Charlton Athletic",
+   "clubs": [
+    "Charlton Athletic",
+    "Chelsea"
+   ]
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2003–04",
+   "winner": "Thierry Henry",
+   "club": "Arsenal"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2003–04",
+   "winner": "Arsène Wenger",
+   "club": "Arsenal",
+   "nationality": "France"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2003–04",
+   "winner": "Arsène Wenger",
+   "club": "Arsenal",
+   "nationality": "France"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2004–05",
+   "winner": "Frank Lampard",
+   "club": "Chelsea",
+   "nationality": "England",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2004–05",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "goals": 25,
+   "games": 32
+  },
+  {
+   "award": "golden_glove",
+   "season": "2004–05",
+   "winner": "Petr Čech",
+   "club": "Chelsea",
+   "nationality": "Czech Republic",
+   "clean_sheets": 24
+  },
+  {
+   "award": "top_assists",
+   "season": "2004–05",
+   "winner": "Frank Lampard",
+   "club": "Chelsea",
+   "nationality": "England",
+   "assists": 18
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2004–05",
+   "winner": "Patrik Berger",
+   "club": "Portsmouth",
+   "nationality": "Czech Republic",
+   "opponent": "Charlton Athletic",
+   "score": "1–1",
+   "date": "21 August 2004"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2004–05",
+   "winner": "John Terry",
+   "club": "Chelsea"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2004–05",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2004–05",
+   "winner": "Frank Lampard",
+   "club": "Chelsea"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2004–05",
+   "winner": "José Mourinho",
+   "club": "Chelsea",
+   "nationality": "Portugal"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2004–05",
+   "winner": "David Moyes",
+   "club": "Everton",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2005–06",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2005–06",
+   "winner": "Thierry Henry",
+   "club": "Arsenal",
+   "nationality": "France",
+   "goals": 27,
+   "games": 32
+  },
+  {
+   "award": "golden_glove",
+   "season": "2005–06",
+   "winner": "Pepe Reina",
+   "club": "Liverpool",
+   "nationality": "Spain",
+   "clean_sheets": 20
+  },
+  {
+   "award": "top_assists",
+   "season": "2005–06",
+   "winner": "Didier Drogba",
+   "club": "Chelsea",
+   "nationality": "Ivory Coast",
+   "assists": 11
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2005–06",
+   "winner": "Matthew Taylor",
+   "club": "Portsmouth",
+   "nationality": "England",
+   "opponent": "Sunderland",
+   "score": "3–1",
+   "date": "29 October 2005"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2005–06",
+   "winner": "Steven Gerrard",
+   "club": "Liverpool"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2005–06",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2005–06",
+   "winner": "Thierry Henry",
+   "club": "Arsenal"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2005–06",
+   "winner": "José Mourinho",
+   "club": "Chelsea",
+   "nationality": "Portugal"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2005–06",
+   "winner": "Steve Coppell",
+   "club": "Reading",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2006–07",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United",
+   "nationality": "Portugal",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2006–07",
+   "winner": "Didier Drogba",
+   "club": "Chelsea",
+   "nationality": "Ivory Coast",
+   "goals": 20,
+   "games": 36
+  },
+  {
+   "award": "golden_glove",
+   "season": "2006–07",
+   "winner": "Pepe Reina",
+   "club": "Liverpool",
+   "nationality": "Spain",
+   "clean_sheets": 19
+  },
+  {
+   "award": "top_assists",
+   "season": "2006–07",
+   "winner": "Cesc Fàbregas",
+   "club": "Arsenal",
+   "nationality": "Spain",
+   "assists": 11
+  },
+  {
+   "award": "top_assists",
+   "season": "2006–07",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United",
+   "nationality": "England",
+   "assists": 11
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2006–07",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United",
+   "nationality": "England",
+   "opponent": "Bolton Wanderers",
+   "score": "2–0",
+   "date": "17 March 2007"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2006–07",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2006–07",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2006–07",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2006–07",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2006–07",
+   "winner": "Steve Coppell",
+   "club": "Reading",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2007–08",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United",
+   "nationality": "Portugal",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2007–08",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United",
+   "nationality": "Portugal",
+   "goals": 31,
+   "games": 34
+  },
+  {
+   "award": "golden_glove",
+   "season": "2007–08",
+   "winner": "Pepe Reina",
+   "club": "Liverpool",
+   "nationality": "Spain",
+   "clean_sheets": 18
+  },
+  {
+   "award": "top_assists",
+   "season": "2007–08",
+   "winner": "Cesc Fàbregas",
+   "club": "Arsenal",
+   "nationality": "Spain",
+   "assists": 17
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2007–08",
+   "winner": "Emmanuel Adebayor",
+   "club": "Arsenal",
+   "nationality": "Togo",
+   "opponent": "Tottenham Hotspur",
+   "score": "3–1",
+   "date": "15 September 2007"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2007–08",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2007–08",
+   "winner": "Cesc Fàbregas",
+   "club": "Arsenal"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2007–08",
+   "winner": "Cristiano Ronaldo",
+   "club": "Manchester United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2007–08",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2007–08",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2008–09",
+   "winner": "Nemanja Vidić",
+   "club": "Manchester United",
+   "nationality": "Serbia",
+   "position": "Defender"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2008–09",
+   "winner": "Nicolas Anelka",
+   "club": "Chelsea",
+   "nationality": "France",
+   "goals": 19,
+   "games": 36
+  },
+  {
+   "award": "golden_glove",
+   "season": "2008–09",
+   "winner": "Edwin van der Sar",
+   "club": "Manchester United",
+   "nationality": "Netherlands",
+   "clean_sheets": 21
+  },
+  {
+   "award": "top_assists",
+   "season": "2008–09",
+   "winner": "Frank Lampard",
+   "club": "Chelsea",
+   "nationality": "England",
+   "assists": 10
+  },
+  {
+   "award": "top_assists",
+   "season": "2008–09",
+   "winner": "Robin van Persie",
+   "club": "Arsenal",
+   "nationality": "Netherlands",
+   "assists": 10
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2008–09",
+   "winner": "Glen Johnson",
+   "club": "Portsmouth",
+   "nationality": "England",
+   "opponent": "Hull City",
+   "score": "2–1",
+   "date": "22 November 2008"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2008–09",
+   "winner": "Ryan Giggs",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2008–09",
+   "winner": "Ashley Young",
+   "club": "Aston Villa"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2008–09",
+   "winner": "Steven Gerrard",
+   "club": "Liverpool"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2008–09",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2008–09",
+   "winner": "David Moyes",
+   "club": "Everton",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2009–10",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United",
+   "nationality": "England",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2009–10",
+   "winner": "Didier Drogba",
+   "club": "Chelsea",
+   "nationality": "Ivory Coast",
+   "goals": 29,
+   "games": 32
+  },
+  {
+   "award": "golden_glove",
+   "season": "2009–10",
+   "winner": "Petr Čech",
+   "club": "Chelsea",
+   "nationality": "Czech Republic",
+   "clean_sheets": 17
+  },
+  {
+   "award": "top_assists",
+   "season": "2009–10",
+   "winner": "Frank Lampard",
+   "club": "Chelsea",
+   "nationality": "England",
+   "assists": 16
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2009–10",
+   "winner": "Maynor Figueroa",
+   "club": "Wigan Athletic",
+   "nationality": "Honduras",
+   "opponent": "Stoke City",
+   "score": "2–1",
+   "date": "12 December 2009"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2009–10",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2009–10",
+   "winner": "James Milner",
+   "club": "Aston Villa"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2009–10",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2009–10",
+   "winner": "Harry Redknapp",
+   "club": "Tottenham Hotspur",
+   "nationality": "England"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2009–10",
+   "winner": "Roy Hodgson",
+   "club": "Fulham",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2010–11",
+   "winner": "Nemanja Vidić",
+   "club": "Manchester United",
+   "nationality": "Serbia",
+   "position": "Defender"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2010–11",
+   "winner": "Carlos Tevez",
+   "club": "Manchester City",
+   "nationality": "Argentina",
+   "goals": 20,
+   "games": 31
+  },
+  {
+   "award": "golden_boot",
+   "season": "2010–11",
+   "winner": "Dimitar Berbatov",
+   "club": "Manchester United",
+   "nationality": "Bulgaria",
+   "goals": 20,
+   "games": 32
+  },
+  {
+   "award": "golden_glove",
+   "season": "2010–11",
+   "winner": "Joe Hart",
+   "club": "Manchester City",
+   "nationality": "England",
+   "clean_sheets": 18
+  },
+  {
+   "award": "top_assists",
+   "season": "2010–11",
+   "winner": "Nani",
+   "club": "Manchester United",
+   "nationality": "Portugal",
+   "assists": 14
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2010–11",
+   "winner": "Wayne Rooney",
+   "club": "Manchester United",
+   "nationality": "England",
+   "opponent": "Manchester City",
+   "score": "2–1",
+   "date": "12 February 2011"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2010–11",
+   "winner": "Gareth Bale",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2010–11",
+   "winner": "Jack Wilshere",
+   "club": "Arsenal"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2010–11",
+   "winner": "Scott Parker",
+   "club": "West Ham United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2010–11",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2010–11",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2011–12",
+   "winner": "Vincent Kompany",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "position": "Defender"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2011–12",
+   "winner": "Robin van Persie",
+   "club": "Arsenal",
+   "nationality": "Netherlands",
+   "goals": 30,
+   "games": 38
+  },
+  {
+   "award": "golden_glove",
+   "season": "2011–12",
+   "winner": "Joe Hart",
+   "club": "Manchester City",
+   "nationality": "England",
+   "clean_sheets": 17
+  },
+  {
+   "award": "top_assists",
+   "season": "2011–12",
+   "winner": "David Silva",
+   "club": "Manchester City",
+   "nationality": "Spain",
+   "assists": 15
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2011–12",
+   "winner": "Papiss Cissé",
+   "club": "Newcastle United",
+   "nationality": "Senegal",
+   "opponent": "Chelsea",
+   "score": "2–0",
+   "date": "2 May 2012"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2011–12",
+   "winner": "Robin van Persie",
+   "club": "Arsenal"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2011–12",
+   "winner": "Kyle Walker",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2011–12",
+   "winner": "Robin van Persie",
+   "club": "Arsenal"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2011–12",
+   "winner": "Alan Pardew",
+   "club": "Newcastle United",
+   "nationality": "England"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2011–12",
+   "winner": "Alan Pardew",
+   "club": "Newcastle United",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2012–13",
+   "winner": "Gareth Bale",
+   "club": "Tottenham Hotspur",
+   "nationality": "Wales",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2012–13",
+   "winner": "Robin van Persie",
+   "club": "Manchester United",
+   "nationality": "Netherlands",
+   "goals": 26,
+   "games": 38
+  },
+  {
+   "award": "golden_glove",
+   "season": "2012–13",
+   "winner": "Joe Hart",
+   "club": "Manchester City",
+   "nationality": "England",
+   "clean_sheets": 18
+  },
+  {
+   "award": "top_assists",
+   "season": "2012–13",
+   "winner": "Juan Mata",
+   "club": "Chelsea",
+   "nationality": "Spain",
+   "assists": 12
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2012–13",
+   "winner": "Robin van Persie",
+   "club": "Manchester United",
+   "nationality": "Netherlands",
+   "opponent": "Aston Villa",
+   "score": "2–0",
+   "date": "22 April 2013"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2012–13",
+   "winner": "Gareth Bale",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2012–13",
+   "winner": "Gareth Bale",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2012–13",
+   "winner": "Gareth Bale",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2012–13",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2012–13",
+   "winner": "Alex Ferguson",
+   "club": "Manchester United",
+   "nationality": "Scotland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2013–14",
+   "winner": "Luis Suárez",
+   "club": "Liverpool",
+   "nationality": "Uruguay",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2013–14",
+   "winner": "Luis Suárez",
+   "club": "Liverpool",
+   "nationality": "Uruguay",
+   "goals": 31,
+   "games": 33
+  },
+  {
+   "award": "golden_glove",
+   "season": "2013–14",
+   "winner": "Petr Čech",
+   "club": "Chelsea",
+   "nationality": "Czech Republic",
+   "clean_sheets": 16
+  },
+  {
+   "award": "golden_glove",
+   "season": "2013–14",
+   "winner": "Wojciech Szczęsny",
+   "club": "Arsenal",
+   "nationality": "Poland",
+   "clean_sheets": 16
+  },
+  {
+   "award": "top_assists",
+   "season": "2013–14",
+   "winner": "Luis Suárez",
+   "club": "Liverpool",
+   "nationality": "Uruguay",
+   "assists": 13
+  },
+  {
+   "award": "top_assists",
+   "season": "2013–14",
+   "winner": "Steven Gerrard",
+   "club": "Liverpool",
+   "nationality": "England",
+   "assists": 13
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2013–14",
+   "winner": "Jack Wilshere",
+   "club": "Arsenal",
+   "nationality": "England",
+   "opponent": "Norwich City",
+   "score": "1–0",
+   "date": "19 October 2013"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2013–14",
+   "winner": "Luis Suárez",
+   "club": "Liverpool"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2013–14",
+   "winner": "Eden Hazard",
+   "club": "Chelsea"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2013–14",
+   "winner": "{Luis Suárez",
+   "club": "Liverpool"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2013–14",
+   "winner": "Tony Pulis",
+   "club": "Crystal Palace",
+   "nationality": "Wales"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2013–14",
+   "winner": "Brendan Rodgers",
+   "club": "Liverpool",
+   "nationality": "Northern Ireland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2014–15",
+   "winner": "Eden Hazard",
+   "club": "Chelsea",
+   "nationality": "Belgium",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2014–15",
+   "winner": "Sergio Agüero",
+   "club": "Manchester City",
+   "nationality": "Argentina",
+   "goals": 26,
+   "games": 33
+  },
+  {
+   "award": "golden_glove",
+   "season": "2014–15",
+   "winner": "Joe Hart",
+   "club": "Manchester City",
+   "nationality": "England",
+   "clean_sheets": 14
+  },
+  {
+   "award": "top_assists",
+   "season": "2014–15",
+   "winner": "Cesc Fàbregas",
+   "club": "Chelsea",
+   "nationality": "Spain",
+   "assists": 19
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2014–15",
+   "winner": "Jack Wilshere",
+   "club": "Arsenal",
+   "nationality": "England",
+   "opponent": "West Bromwich Albion",
+   "score": "3–0",
+   "date": "24 May 2015"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2014–15",
+   "winner": "Eden Hazard",
+   "club": "Chelsea"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2014–15",
+   "winner": "Harry Kane",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2014–15",
+   "winner": "Eden Hazard",
+   "club": "Chelsea"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2014–15",
+   "winner": "José Mourinho",
+   "club": "Chelsea",
+   "nationality": "Portugal"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2014–15",
+   "winner": "Eddie Howe",
+   "club": "AFC Bournemouth",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2015–16",
+   "winner": "Jamie Vardy",
+   "club": "Leicester City",
+   "nationality": "England",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2015–16",
+   "winner": "Harry Kane",
+   "club": "Tottenham Hotspur",
+   "nationality": "England",
+   "goals": 25,
+   "games": 38
+  },
+  {
+   "award": "golden_glove",
+   "season": "2015–16",
+   "winner": "Petr Čech",
+   "club": "Arsenal",
+   "nationality": "Czech Republic",
+   "clean_sheets": 16
+  },
+  {
+   "award": "top_assists",
+   "season": "2015–16",
+   "winner": "Mesut Özil",
+   "club": "Arsenal",
+   "nationality": "Germany",
+   "assists": 19
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2015–16",
+   "winner": "Dele Alli",
+   "club": "Tottenham Hotspur",
+   "nationality": "England",
+   "opponent": "Crystal Palace",
+   "score": "2–1",
+   "date": "23 January 2016"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2015–16",
+   "winner": "Riyad Mahrez",
+   "club": "Leicester City"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2015–16",
+   "winner": "Dele Alli",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2015–16",
+   "winner": "Jamie Vardy",
+   "club": "Leicester City"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2015–16",
+   "winner": "Claudio Ranieri",
+   "club": "Leicester City",
+   "nationality": "Italy"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2015–16",
+   "winner": "Claudio Ranieri",
+   "club": "Leicester City",
+   "nationality": "Italy"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2016–17",
+   "winner": "N'Golo Kanté",
+   "club": "Chelsea",
+   "nationality": "France",
+   "position": "Midfielder"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2016–17",
+   "winner": "Harry Kane",
+   "club": "Tottenham Hotspur",
+   "nationality": "England",
+   "goals": 29,
+   "games": 30
+  },
+  {
+   "award": "golden_glove",
+   "season": "2016–17",
+   "winner": "Thibaut Courtois",
+   "club": "Chelsea",
+   "nationality": "Belgium",
+   "clean_sheets": 16
+  },
+  {
+   "award": "top_assists",
+   "season": "2016–17",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "assists": 18
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2016–17",
+   "winner": "Emre Can",
+   "club": "Liverpool",
+   "nationality": "Germany",
+   "opponent": "Watford",
+   "score": "1–0",
+   "date": "1 May 2017"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2016–17",
+   "winner": "N'Golo Kanté",
+   "club": "Chelsea"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2016–17",
+   "winner": "Dele Alli",
+   "club": "Tottenham Hotspur"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2016–17",
+   "winner": "N'Golo Kanté",
+   "club": "Chelsea"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2016–17",
+   "winner": "Antonio Conte",
+   "club": "Chelsea",
+   "nationality": "Italy"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2016–17",
+   "winner": "Antonio Conte",
+   "club": "Chelsea",
+   "nationality": "Italy"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2017–18",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "position": "Forward"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2017–18",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "goals": 32,
+   "games": 36
+  },
+  {
+   "award": "golden_glove",
+   "season": "2017–18",
+   "winner": "David de Gea",
+   "club": "Manchester United",
+   "nationality": "Spain",
+   "clean_sheets": 18
+  },
+  {
+   "award": "top_assists",
+   "season": "2017–18",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "assists": 16
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2017–18",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "assists": 16
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2017–18",
+   "winner": "Sofiane Boufal",
+   "club": "Southampton",
+   "nationality": "Morocco",
+   "opponent": "West Bromwich Albion",
+   "score": "1–0",
+   "date": "21 October 2017"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2017–18",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2017–18",
+   "winner": "Leroy Sané",
+   "club": "Manchester City"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2017–18",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2017–18",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2017–18",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2018–19",
+   "winner": "Virgil van Dijk",
+   "club": "Liverpool",
+   "nationality": "Netherlands",
+   "position": "Defender"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2018–19",
+   "winner": "Pierre-Emerick Aubameyang",
+   "club": "Arsenal",
+   "nationality": "Gabon",
+   "goals": 22,
+   "games": 36
+  },
+  {
+   "award": "golden_boot",
+   "season": "2018–19",
+   "winner": "Sadio Mané",
+   "club": "Liverpool",
+   "nationality": "Senegal",
+   "goals": 22,
+   "games": 36
+  },
+  {
+   "award": "golden_boot",
+   "season": "2018–19",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "goals": 22,
+   "games": 38
+  },
+  {
+   "award": "golden_glove",
+   "season": "2018–19",
+   "winner": "Alisson",
+   "club": "Liverpool",
+   "nationality": "Brazil",
+   "clean_sheets": 21
+  },
+  {
+   "award": "top_assists",
+   "season": "2018–19",
+   "winner": "Eden Hazard",
+   "club": "Chelsea",
+   "nationality": "Belgium",
+   "assists": 15
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2018–19",
+   "winner": "Eden Hazard",
+   "club": "Chelsea",
+   "nationality": "Belgium",
+   "assists": 15
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2018–19",
+   "winner": "Andros Townsend",
+   "club": "Crystal Palace",
+   "nationality": "England",
+   "opponent": "Manchester City",
+   "score": "2–1",
+   "date": "22 December 2018"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2018–19",
+   "winner": "Virgil van Dijk",
+   "club": "Liverpool"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2018–19",
+   "winner": "Raheem Sterling",
+   "club": "Manchester City"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2018–19",
+   "winner": "Raheem Sterling",
+   "club": "Manchester City"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2018–19",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2018–19",
+   "winner": "Chris Wilder",
+   "club": "Sheffield United",
+   "nationality": "England"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2019–20",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "position": "Midfielder"
+  },
+  {
+   "award": "young_player_of_the_season",
+   "season": "2019–20",
+   "winner": "Trent Alexander-Arnold",
+   "club": "Liverpool",
+   "nationality": "England"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2019–20",
+   "winner": "Jamie Vardy",
+   "club": "Leicester City",
+   "nationality": "England",
+   "goals": 23,
+   "games": 35
+  },
+  {
+   "award": "golden_glove",
+   "season": "2019–20",
+   "winner": "Ederson",
+   "club": "Manchester City",
+   "nationality": "Brazil",
+   "clean_sheets": 16
+  },
+  {
+   "award": "top_assists",
+   "season": "2019–20",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "assists": 20
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2019–20",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "assists": 20
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2019–20",
+   "winner": "Son Heung-min",
+   "club": "Tottenham Hotspur",
+   "nationality": "South Korea",
+   "opponent": "Burnley",
+   "score": "3–0",
+   "date": "7 December 2019"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2019–20",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2019–20",
+   "winner": "Trent Alexander-Arnold",
+   "club": "Liverpool"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2019–20",
+   "winner": "Jordan Henderson",
+   "club": "Liverpool"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2019–20",
+   "winner": "Jürgen Klopp",
+   "club": "Liverpool",
+   "nationality": "Germany"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2019–20",
+   "winner": "Jürgen Klopp",
+   "club": "Liverpool",
+   "nationality": "Germany"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2020–21",
+   "winner": "Rúben Dias",
+   "club": "Manchester City",
+   "nationality": "Portugal",
+   "position": "Defender"
+  },
+  {
+   "award": "young_player_of_the_season",
+   "season": "2020–21",
+   "winner": "Phil Foden",
+   "club": "Manchester City",
+   "nationality": "England"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2020–21",
+   "winner": "Harry Kane",
+   "club": "Tottenham Hotspur",
+   "nationality": "England",
+   "goals": 23,
+   "games": 35
+  },
+  {
+   "award": "golden_glove",
+   "season": "2020–21",
+   "winner": "Ederson",
+   "club": "Manchester City",
+   "nationality": "Brazil",
+   "clean_sheets": 19
+  },
+  {
+   "award": "top_assists",
+   "season": "2020–21",
+   "winner": "Harry Kane",
+   "club": "Tottenham Hotspur",
+   "nationality": "England",
+   "assists": 14
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2020–21",
+   "winner": "Harry Kane",
+   "club": "Tottenham Hotspur",
+   "nationality": "England",
+   "assists": 14
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2020–21",
+   "winner": "Erik Lamela",
+   "club": "Tottenham Hotspur",
+   "nationality": "Argentina",
+   "opponent": "Arsenal",
+   "score": "1–0",
+   "date": "14 March 2021"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2020–21",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2020–21",
+   "winner": "Phil Foden",
+   "club": "Manchester City"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2020–21",
+   "winner": "Rúben Dias",
+   "club": "Manchester City"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2020–21",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2020–21",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2021–22",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "position": "Midfielder"
+  },
+  {
+   "award": "young_player_of_the_season",
+   "season": "2021–22",
+   "winner": "Phil Foden",
+   "club": "Manchester City",
+   "nationality": "England"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2021–22",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "goals": 23,
+   "games": 35
+  },
+  {
+   "award": "golden_boot",
+   "season": "2021–22",
+   "winner": "Son Heung-min",
+   "club": "Tottenham Hotspur",
+   "nationality": "South Korea",
+   "goals": 23,
+   "games": 35
+  },
+  {
+   "award": "golden_glove",
+   "season": "2021–22",
+   "winner": "Alisson",
+   "club": "Liverpool",
+   "nationality": "Brazil",
+   "clean_sheets": 20
+  },
+  {
+   "award": "golden_glove",
+   "season": "2021–22",
+   "winner": "Ederson",
+   "club": "Manchester City",
+   "nationality": "Brazil",
+   "clean_sheets": 20
+  },
+  {
+   "award": "top_assists",
+   "season": "2021–22",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "assists": 13
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2021–22",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "assists": 13
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2021–22",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "opponent": "Manchester City",
+   "score": "2–1",
+   "date": "3 October 2021"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2021–22",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2021–22",
+   "winner": "Phil Foden",
+   "club": "Manchester City"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2021–22",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2021–22",
+   "winner": "Jürgen Klopp",
+   "club": "Liverpool",
+   "nationality": "Germany"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2021–22",
+   "winner": "Jürgen Klopp",
+   "club": "Liverpool",
+   "nationality": "Germany"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2022–23",
+   "winner": "Erling Haaland",
+   "club": "Manchester City",
+   "nationality": "Norway",
+   "position": "Forward"
+  },
+  {
+   "award": "young_player_of_the_season",
+   "season": "2022–23",
+   "winner": "Erling Haaland",
+   "club": "Manchester City",
+   "nationality": "Norway"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2022–23",
+   "winner": "Erling Haaland",
+   "club": "Manchester City",
+   "nationality": "Norway",
+   "goals": 36,
+   "games": 35
+  },
+  {
+   "award": "golden_glove",
+   "season": "2022–23",
+   "winner": "David de Gea",
+   "club": "Manchester United",
+   "nationality": "Spain",
+   "clean_sheets": 17
+  },
+  {
+   "award": "top_assists",
+   "season": "2022–23",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "assists": 16
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2022–23",
+   "winner": "Kevin De Bruyne",
+   "club": "Manchester City",
+   "nationality": "Belgium",
+   "assists": 16
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2022–23",
+   "winner": "Julio Enciso",
+   "club": "Brighton & Hove Albion",
+   "nationality": "Paraguay",
+   "opponent": "Manchester City",
+   "score": "1–1",
+   "date": "24 May 2023"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2022–23",
+   "winner": "Erling Haaland",
+   "club": "Manchester City"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2022–23",
+   "winner": "Bukayo Saka",
+   "club": "Arsenal"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2022–23",
+   "winner": "Erling Haaland",
+   "club": "Manchester City"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2022–23",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2022–23",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2023–24",
+   "winner": "Phil Foden",
+   "club": "Manchester City",
+   "nationality": "England",
+   "position": "Midfielder"
+  },
+  {
+   "award": "young_player_of_the_season",
+   "season": "2023–24",
+   "winner": "Cole Palmer",
+   "club": "Chelsea",
+   "nationality": "England"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2023–24",
+   "winner": "Erling Haaland",
+   "club": "Manchester City",
+   "nationality": "Norway",
+   "goals": 27,
+   "games": 31
+  },
+  {
+   "award": "golden_glove",
+   "season": "2023–24",
+   "winner": "David Raya",
+   "club": "Arsenal",
+   "nationality": "Spain",
+   "clean_sheets": 16
+  },
+  {
+   "award": "top_assists",
+   "season": "2023–24",
+   "winner": "Ollie Watkins",
+   "club": "Aston Villa",
+   "nationality": "England",
+   "assists": 13
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2023–24",
+   "winner": "Ollie Watkins",
+   "club": "Aston Villa",
+   "nationality": "England",
+   "assists": 13
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2023–24",
+   "winner": "Alejandro Garnacho",
+   "club": "Manchester United",
+   "nationality": "Argentina",
+   "opponent": "Everton",
+   "score": "1–0",
+   "date": "26 November 2023"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2023–24",
+   "winner": "Phil Foden",
+   "club": "Manchester City"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2023–24",
+   "winner": "Cole Palmer",
+   "club": "Chelsea"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2023–24",
+   "winner": "Phil Foden",
+   "club": "Manchester City"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2023–24",
+   "winner": "Pep Guardiola",
+   "club": "Manchester City",
+   "nationality": "Spain"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2023–24",
+   "winner": "Kieran McKenna",
+   "club": "Ipswich Town",
+   "nationality": "Northern Ireland"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2024–25",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "position": "Forward"
+  },
+  {
+   "award": "young_player_of_the_season",
+   "season": "2024–25",
+   "winner": "Ryan Gravenberch",
+   "club": "Liverpool",
+   "nationality": "Netherlands"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2024–25",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "goals": 29,
+   "games": 38
+  },
+  {
+   "award": "golden_glove",
+   "season": "2024–25",
+   "winner": "David Raya",
+   "club": "Arsenal",
+   "nationality": "Spain",
+   "clean_sheets": 13
+  },
+  {
+   "award": "golden_glove",
+   "season": "2024–25",
+   "winner": "Matz Sels",
+   "club": "Nottingham Forest",
+   "nationality": "Belgium",
+   "clean_sheets": 13
+  },
+  {
+   "award": "top_assists",
+   "season": "2024–25",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "assists": 18
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2024–25",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool",
+   "nationality": "Egypt",
+   "assists": 18
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2024–25",
+   "winner": "Omar Marmoush",
+   "club": "Manchester City",
+   "nationality": "Egypt",
+   "opponent": "AFC Bournemouth",
+   "score": "1–0",
+   "date": "20 May 2025"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2024–25",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2024–25",
+   "winner": "Morgan Rogers",
+   "club": "Aston Villa"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2024–25",
+   "winner": "Mohamed Salah",
+   "club": "Liverpool"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2024–25",
+   "winner": "Arne Slot",
+   "club": "Liverpool",
+   "nationality": "Netherlands"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2024–25",
+   "winner": "Arne Slot",
+   "club": "Liverpool",
+   "nationality": "Netherlands"
+  },
+  {
+   "award": "player_of_the_season",
+   "season": "2025–26",
+   "winner": "Bruno Fernandes",
+   "club": "Manchester United",
+   "nationality": "Portugal",
+   "position": "Midfielder"
+  },
+  {
+   "award": "young_player_of_the_season",
+   "season": "2025–26",
+   "winner": "Nico O'Reilly",
+   "club": "Manchester City",
+   "nationality": "England"
+  },
+  {
+   "award": "golden_boot",
+   "season": "2025–26",
+   "winner": "Erling Haaland",
+   "club": "Manchester City",
+   "nationality": "Norway",
+   "goals": 27,
+   "games": 35
+  },
+  {
+   "award": "golden_glove",
+   "season": "2025–26",
+   "winner": "David Raya",
+   "club": "Arsenal",
+   "nationality": "Spain",
+   "clean_sheets": 19
+  },
+  {
+   "award": "top_assists",
+   "season": "2025–26",
+   "winner": "Bruno Fernandes",
+   "club": "Manchester United",
+   "nationality": "Portugal",
+   "assists": 21
+  },
+  {
+   "award": "playmaker_of_the_season",
+   "season": "2025–26",
+   "winner": "Bruno Fernandes",
+   "club": "Manchester United",
+   "nationality": "Portugal",
+   "assists": 21
+  },
+  {
+   "award": "goal_of_the_season",
+   "season": "2025–26",
+   "winner": "Harrison Reed",
+   "club": "Fulham",
+   "nationality": "England",
+   "opponent": "Liverpool",
+   "score": "2–2",
+   "date": "4 January 2026"
+  },
+  {
+   "award": "pfa_players_player",
+   "season": "2025–26",
+   "winner": "Bruno Fernandes",
+   "club": "Manchester United"
+  },
+  {
+   "award": "pfa_young_player",
+   "season": "2025–26",
+   "winner": "Nico O'Reilly",
+   "club": "Manchester City"
+  },
+  {
+   "award": "fwa_footballer",
+   "season": "2025–26",
+   "winner": "Bruno Fernandes",
+   "club": "Manchester United"
+  },
+  {
+   "award": "manager_of_the_season",
+   "season": "2025–26",
+   "winner": "Mikel Arteta",
+   "club": "Arsenal",
+   "nationality": "Spain"
+  },
+  {
+   "award": "lma_manager_of_the_year",
+   "season": "2025–26",
+   "winner": "Frank Lampard",
+   "club": "Coventry City",
+   "nationality": "England"
+  }
+ ]
+}
