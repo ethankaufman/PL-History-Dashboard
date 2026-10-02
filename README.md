@@ -16,7 +16,7 @@ It is built from the Premier League's official match records: both line-ups, eve
 
 ## How the numbers are checked
 
-Every data set was collected from at least two independent places and compared. `python3 scripts/audit.py` runs **32 checks, and all 32 pass**; `node tests/check_numbers.js` runs 30 more and `python3 scripts/verify.py` recomputes the headline numbers in plain Python. The report shows the audit live. Highlights:
+Every data set was collected from at least two independent places and compared. `python3 scripts/audit.py` runs **32 checks, and all 32 pass**; `node tests/check_numbers.js` runs 34 more and `python3 scripts/verify.py` recomputes the headline numbers in plain Python. The report shows the audit live. Highlights:
 
 | What | Compared with | Result |
 |---|---|---|
@@ -65,13 +65,47 @@ The Premier League's service is not an official, documented API and could change
 * `player_matches.csv` — the main data set (see above). `appearances_lean.csv` — the same rows with ids, which the dashboard loads (smaller and faster).
 * `player_seasons.csv` — the Premier League's season statistics: one row per player per club per season (18,662 rows). Minutes before 2006–07 are computed from line-ups and substitutions.
 * `matches.csv`, `team_matches.csv` — 13,166 matches (and one row per team per match with the league table after every game); `match_details.csv` (official referee, attendance, ground), `match_events.csv` (79,000 goals and cards with minutes).
-* `final_tables.csv`, `seasons.json`, `awards.json`, `honours.json`, `domestic_honours.json`, `records.json`, `teams.json`, `current_players.json`, `transfers.csv` (signings and departures by season, derived from where players played; no fees), `uk_map.json`, `cities.json` (map city labels), `badges.json` (club name to crest file).
+* `final_tables.csv`, `seasons.json`, `awards.json`, `honours.json`, `domestic_honours.json`, `records.json`, `teams.json`, `current_players.json`, `transfers.csv` (signings and departures by season, derived from where players played; no fees), `uk_map.json`, `cities.json` (map city labels), `badges.json` (club name to crest file), `city_case.json` (the Manchester City asterisk: dates, charges, wording and sources).
 * `audit.json` (the audit results shown in the report), `manifest.json` (row counts), `source_disagreements*.csv`.
 * `curated/` — hand-written club histories and stadium lists. `raw/` — files as downloaded (plus small check outputs).
 
-**Scripts (`scripts/`, Python 3)** — downloads: `fetch_wikipedia.py`, `fetch_matches.py`, `fetch_pl_stats.py`, `fetch_pl_matches.py` (about an hour), `fetch_players.py`, `fetch_coordinates.py`, `fetch_badges.py`, `build_cities.py`. Builders: `build_*.py`, `finish_player_seasons.py`, `reconcile_matches.py`, `reconcile_awards.py`, `make_manifest.py`. Checks: `audit.py`, `verify.py`. `rebuild_all.sh` runs the builders and the checks in the right order.
+**Every script (`scripts/`)**
 
-**Tests**: `tests/check_numbers.js` (30 checks).
+| File | What it does |
+|---|---|
+| `audit.py` | Accuracy audit: cross-check the data sets against each other and against independent sources. |
+| `build_awards_seasons.py` | Turn the raw Wikipedia tables in data/raw into data/awards.json and data/seasons.json (awards and season summaries). |
+| `build_cities.py` | Look up the coordinates of the large and relevant cities that are labelled on the intro map. |
+| `build_domestic_honours.py` | Build data/domestic_honours.json: domestic trophies by season and by club. |
+| `build_honours.py` | Build data/honours.json: for each Premier League season, the other big winners of that year. |
+| `build_map.py` | Extract a simplified outline of the UK and Ireland for the intro map. |
+| `build_matches.py` | Build data/matches.csv and data/team_matches.csv from the downloaded football-data.co.uk and footballcsv results. |
+| `build_official_matches.py` | Turn the official Premier League match records into match and player-match tables, and cross-check them. |
+| `build_player_seasons.py` | Build data/player_seasons.csv: one row per player, per club, per season, 1992-93 to 2025-26. |
+| `build_players.py` | LEGACY (superseded by build_official_matches.py): an earlier player-match table built from the open vaastav archive (2016-17 onward). |
+| `build_profiles_transfers.py` | Build current-player profiles and the signings / departures lists. |
+| `build_records.py` | Build data/records.json: league records and club records. |
+| `build_tables.py` | Read each season's official final league table from the saved Wikipedia pages. |
+| `build_teams.py` | Combine everything we know about each club into one file: data/teams.json. |
+| `extract_club_text.py` | Pull readable text out of each saved club page so it can be reviewed and turned into data. |
+| `fetch_badges.py` | Download every club's crest from premierleague.com and list them in data/badges.json. |
+| `fetch_coordinates.py` | Look up latitude/longitude for each club's current ground using Wikipedia's coordinates API. |
+| `fetch_matches.py` | Download Premier League match results for every season. |
+| `fetch_pl_matches.py` | Download the official record of every Premier League match, 1992-93 to 2025-26, from the Premier League's statistics service. |
+| `fetch_pl_stats.py` | Download player season statistics from the Premier League's own statistics service, for every season 1992/93 to 2025/26. |
+| `fetch_players.py` | Download today's Premier League squad lists (used for the current-player profiles). |
+| `fetch_wikipedia.py` | Download Wikipedia pages (as HTML inside a JSON file) politely. |
+| `finish_player_seasons.py` | Fill the 'minutes' column of player_seasons.csv for every season, and check it against the Premier League's own minutes. |
+| `make_manifest.py` | Write data/manifest.json: row counts of the main data files, counted from the files themselves. |
+| `rebuild_all.sh` | Rebuilds every data file from the raw downloads in the right order, then runs every check. |
+| `reconcile_awards.py` | Settle the 'most assists' award records using the Premier League's own statistics. |
+| `reconcile_matches.py` | Cross-check the two independent match sources and fill the gaps in matches.csv and team_matches.csv. |
+| `verify.py` | Independent check of the website's headline numbers: recomputes them in plain Python and compares them with the JavaScript results. |
+| `wikitables.py` | Tiny helper that pulls tables out of Wikipedia HTML using only Python's standard library. |
+
+**Tests**: `tests/check_numbers.js` (34 checks: recomputes the report's numbers with the site's own calculation code and checks the data).
+
+**Also in the repository**: `.gitignore` (keeps the very large raw match downloads, `data/raw/plmatches/`, out of git), `assets/vendor/` (Chart.js, PapaParse and Three.js, saved locally so the site does not depend on a CDN), `assets/badges/` (51 crest images, one per club), `data/raw/` (every download as received, plus small check outputs; the scripts above read these).
 
 ## How to rebuild
 
@@ -82,6 +116,9 @@ python3 scripts/fetch_matches.py && python3 scripts/fetch_pl_stats.py && python3
 ./scripts/rebuild_all.sh
 python3 -m http.server        # then open http://localhost:8000
 ```
+
+## The Manchester City asterisk
+Manchester City were charged in 2023 with 115 breaches of Premier League rules, and on 29 September 2026 an independent commission found them guilty of 114 (all 80 financial-rules charges and 34 of 35 cooperation charges). The financial charges cover 2009–10 to 2017–18, so every Manchester City result, record, trophy and league position in those seasons carries a **\*** on both pages, linked to a plain-language note (what was found, which seasons, how severe, what the asterisk does and does not mean). It is a flag only: sanctions and an appeal are still to come, and nothing has been removed or changed. The dates, charge counts, wording and sources are in `data/city_case.json` (status as of 2 October 2026), so the flag can be updated in one place. `tests/check_numbers.js` checks that three league titles and eight trophies since 1992 fall in the flagged seasons.
 
 ## Method notes and limits
 * **Matchweek** means a club's nth game, so every club has played the same number of games at each point. Points deductions (Middlesbrough 1996–97, Portsmouth 2009–10, Everton and Nottingham Forest 2023–24) count from the day they took effect.
