@@ -2,8 +2,8 @@
 
 A two-page website about every Premier League season since it began in 1992–93.
 
-* **Report** (`index.html`) — 14 findings, each with a chart, a table of every season's winners, and a closing section on the data. It opens with an interactive spinning football that explodes into a rotating map of the UK once the data has loaded.
-* **Dashboard** (`dashboard.html`) — loads the data in the browser and recalculates everything as you filter: four charts with a measure switch and a breakdown switch, summary numbers, a sortable table, a reset button, and extra tools (matchweek table race, club comparison, season and award explorer, player profiles, signings and departures).
+* **Report** (`index.html`) — 18 findings, each with a chart, a table of every season's winners, and a closing section on the data. It opens with an interactive spinning football (the pink-and-purple 2026–27 Premier League ball, the Puma Stellar Nitro Ultimate, recreated in 3D) that explodes into a rotating map of the UK once the data has loaded. On the map you can hover or click any club, zoom to the cursor, jump to London or Manchester and Liverpool, and open each club's history, trophies, records and every ground.
+* **Dashboard** (`dashboard.html`) — loads the data in the browser and recalculates everything as you filter: four charts with a measure switch and a breakdown switch, summary numbers, a sortable table, a reset button, and extra tools (matchweek table race, club comparison, season and award explorer, records and trophies, player profiles, signings and departures).
 
 Live site: https://ethankaufman.github.io/PL-History-Dashboard/
 
@@ -20,7 +20,7 @@ Supporting tables cover every season back to 1992–93: 13,166 matches, 686 offi
 | Player appearances (2016–17 to 2025–26) and today's player list | The open [vaastav/Fantasy-Premier-League](https://github.com/vaastav/Fantasy-Premier-League) archive of the Premier League's public data, and the Premier League's public API. Only real football facts are kept; fantasy-game columns (points, prices, bonus) are dropped. |
 | Match results, shots, cards, referees, odds (1993–94 on) | [football-data.co.uk](https://www.football-data.co.uk/englandm.php) |
 | 1992–93 match results | [footballcsv/england](https://github.com/footballcsv/england) |
-| Final tables, seasons, awards, European and World Cup winners, Ballon d'Or, club histories, stadiums, club coordinates | Wikipedia via its public API (CC BY-SA 4.0). Club histories were written for this project from the club pages. |
+| Final tables, seasons, awards, European and World Cup winners, Ballon d'Or, FA Cup / League Cup / Community Shield / league champions, all-time player records, club histories, stadiums, club coordinates | Wikipedia via its public API (CC BY-SA 4.0). Club histories were written for this project from the club pages. |
 | Player photos | Linked from premierleague.com; initials are shown if a photo does not load. |
 
 ## Files
@@ -49,17 +49,19 @@ Supporting tables cover every season back to 1992–93: 13,166 matches, 686 offi
 * `teams.json` — the 51 clubs: history, every stadium in order, map coordinates, Premier League record.
 * `current_players.json` — profiles of the 667 players in 2026–27 squads, with career Premier League stats.
 * `transfers.csv` — signings and departures by season, derived from where players played (no fees).
+* `domestic_honours.json` — FA Cup, League Cup and Community Shield winners for every season since 1992–93, and every club's league, cup and shield wins of all time (cross-checked against Wikipedia's totals).
+* `records.json` — official all-time player records (goals, assists, appearances, clean sheets...) plus league and club records computed from the match data (biggest wins, longest runs, best and worst seasons, per-club records).
 * `uk_map.json` — simplified outline of the UK and Ireland for the intro map.
 * `curated/` — the hand-written club histories and stadium lists. `raw/` — files exactly as downloaded.
 
 **Scripts (`scripts/`, Python 3, no installs needed)**
 * `fetch_wikipedia.py`, `fetch_matches.py`, `fetch_players.py`, `fetch_coordinates.py` — download the raw data politely (they wait between requests).
 * `wikitables.py`, `extract_club_text.py` — read tables and text out of the Wikipedia pages.
-* `build_awards_seasons.py`, `build_teams.py`, `build_honours.py`, `build_tables.py`, `build_matches.py`, `build_players.py`, `build_profiles_transfers.py`, `build_map.py` — turn the raw files into the files in `data/`, running checks as they go.
+* `build_awards_seasons.py`, `build_teams.py`, `build_honours.py`, `build_domestic_honours.py`, `build_records.py`, `build_tables.py`, `build_matches.py`, `build_players.py`, `build_profiles_transfers.py`, `build_map.py` — turn the raw files into the files in `data/`, running checks as they go.
 * `verify.py` — recomputes the headline numbers in plain Python and compares them with the website's code.
 
 **Tests (`tests/`)**
-* `check_numbers.js` — run `node tests/check_numbers.js`. 11 checks, for example: the match count is exactly 3 × 462 + 31 × 380; every club-season's results agree with the official final tables; every player row links to a real match with the same score.
+* `check_numbers.js` — run `node tests/check_numbers.js`. 20 checks, for example: the match count is exactly 3 × 462 + 31 × 380; every club-season's results agree with the official final tables; every player row links to a real match with the same score; Shearer's 260 is the official top scorer; Arsenal's 49-match unbeaten run is recomputed independently.
 
 ## How to rebuild
 
@@ -76,4 +78,6 @@ python3 -m http.server                                                    # then
 * Player-level data does not exist in free bulk form before 2016–17; shots, cards, referees and odds start in 2000–01.
 * **Signings and departures** are derived (a player turning out for a different club than before), so loans count as moves and fees are not known. 2026–27 moves compare 2025–26 appearances with today's squad lists.
 * The 2026 Ballon d'Or is not announced until 26 October 2026; 2020 had no award.
+* All-time player records (career goals, assists...) cover every season since 1992–93; the dashboard's Explore tab and report finding 13 cover only 2016–17 onward, because that is when player-level data begins.
+* The ball in the intro is a recreation from published descriptions (white with jagged neon pink and purple graphics), not the official artwork.
 * Student project, not affiliated with the Premier League.

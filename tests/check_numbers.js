@@ -64,6 +64,19 @@ check("every player row's score equals its match score", scoreBad === 0, scoreBa
 let tooMany = 0;
 for (const [k, g] of Object.entries(goalsByTeamMatch)) { const [id, team] = k.split("|"); const m = mById[id]; if (g > (m.home === team ? m.home_goals : m.away_goals)) tooMany++; }
 check("players never score more goals in a match than their team", tooMany === 0, tooMany + " team-matches");
+// trophies and records
+const dom = json("domestic_honours.json"), rec = json("records.json");
+check("every season since 1992 has an FA Cup and League Cup winner", seasons.every((x) => dom.by_season[x.season]?.fa_cup?.winner && dom.by_season[x.season]?.league_cup?.winner));
+check("each club's league titles since 1992 are within its all-time league titles", seasons.every((x) => dom.by_club[x.champion].counts.league >= C.titleCounts(seasons).find((t) => t[0] === x.champion)[1]));
+check("Leicester's trophies match their club page (1 league, 1 FA Cup, 3 League Cups, 2 Community Shields)", JSON.stringify(dom.by_club["Leicester City"].counts) === JSON.stringify({ league: 1, fa_cup: 1, league_cup: 3, community_shield: 2, total: 7 }));
+check("official all-time top scorer is Alan Shearer with 260", rec.official.most_goals[0].Player === "Alan Shearer" && rec.official.most_goals[0].Goals === "260");
+check("our 2016–26 player data never exceeds the official career goals (Salah)", totals[0].goals <= +rec.official.most_goals.find((r) => r.Player === totals[0].name).Goals, `${totals[0].name}: ${totals[0].goals} in our data, ${rec.official.most_goals.find((r) => r.Player === totals[0].name).Goals} all-time`);
+// longest unbeaten run recomputed here, independently of the Python that wrote records.json
+const unbeaten = (team) => { const g = tm.filter((r) => r.team === team).sort((a, b) => (a.date < b.date ? -1 : 1)); let best = 0, cur = 0, prev = null; for (const r of g) { const s0 = C.seasonStart(r.season); if (prev !== null && s0 - prev > 1) cur = 0; prev = s0; cur = r.result !== "L" ? cur + 1 : 0; best = Math.max(best, cur); } return best; };
+check("Arsenal's longest unbeaten run is 49 matches (recomputed here and in records.json)", unbeaten("Arsenal") === 49 && rec.league.longest_unbeaten_runs[0].length === 49, unbeaten("Arsenal"));
+const best = ft.filter((r) => r.played === 38).sort((a, b) => b.points - a.points)[0];
+check("most points in a 38-game season is Manchester City's 100 in 2017–18", best.team === "Manchester City" && best.points === 100 && rec.league.most_points[0].points === 100);
+check("Arsenal's all-time record agrees with the official all-time table (1,304 played, 719 won)", rec.clubs.Arsenal.premier_league.played === 1304 && rec.clubs.Arsenal.premier_league.won === 719);
 check("report headline: highest-scoring season is 2023–24", numbers.highestGoalsPerGameSeason === "2023–24", numbers.highestGoalsPerGameSeason);
 console.log(failures ? `\n${failures} check(s) FAILED` : "\nAll checks passed.");
 process.exit(failures ? 1 : 0);
