@@ -17,6 +17,9 @@ const numbers = {
   highestGoalsPerGameSeason: ss.reduce((a, b) => (b.goalsPerGame > a.goalsPerGame ? b : a)).season,
   manUtdTitles: C.titleCounts(seasons)[0][1], titleWinners: C.titleCounts(seasons).length,
   topScorer: totals[0].name, topScorerGoals: totals[0].goals,
+  allTimeTopScorer: C.playerTotalsSeasons(csv("player_seasons.csv")).sort((a, b) => b.goals - a.goals)[0].name,
+  allTimeGoals: C.playerTotalsSeasons(csv("player_seasons.csv")).sort((a, b) => b.goals - a.goals)[0].goals,
+  playerSeasonRows: csv("player_seasons.csv").length,
   promotedGoneDown: C.promotionOutcomes(seasons).filter((p) => p.relegatedFirstSeason).length, promotions: C.promotionOutcomes(seasons).length,
   groundMoves: C.groundMoves(teams).length, maxTitleMargin: Math.max(...tr.map((r) => r.margin)),
 };
@@ -77,6 +80,27 @@ check("Arsenal's longest unbeaten run is 49 matches (recomputed here and in reco
 const best = ft.filter((r) => r.played === 38).sort((a, b) => b.points - a.points)[0];
 check("most points in a 38-game season is Manchester City's 100 in 2017–18", best.team === "Manchester City" && best.points === 100 && rec.league.most_points[0].points === 100);
 check("Arsenal's all-time record agrees with the official all-time table (1,304 played, 719 won)", rec.clubs.Arsenal.premier_league.played === 1304 && rec.clubs.Arsenal.premier_league.won === 719);
+// season-by-season player table (1992-93 onward)
+const psr = csv("player_seasons.csv");
+check("player_seasons.csv covers all 34 seasons with 14 columns", new Set(psr.map((r) => r.season)).size === 34 && Object.keys(psr[0]).length === 14, `${psr.length} rows`);
+const cs = C.playerTotalsSeasons(psr);
+const sh = cs.find((p) => p.name === "Alan Shearer");
+check("computed career goals: Alan Shearer 260 (the official record)", sh.goals === 260 && cs.sort((a, b) => b.goals - a.goals)[0].name === "Alan Shearer", sh.goals);
+const plain = (n) => ({ "andy cole": "andrew cole" })[n.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()] || n.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();   // ignore accents; Wikipedia says Andy Cole, the Premier League says Andrew Cole
+const officialGoals = rec.official.most_goals.every((r) => cs.some((p) => plain(p.name) === plain(r.Player) && p.goals === +r.Goals));
+check("all ten official top career goal totals are reproduced exactly", officialGoals);
+const giggs = cs.find((p) => p.name === "Ryan Giggs");
+check("Ryan Giggs: 162 assists and 632 appearances, as in the official records", giggs.assists === 162 && giggs.appearances === 632, `${giggs.assists} assists, ${giggs.appearances} apps`);
+// the two player tables must agree wherever they overlap (2016-17 onward)
+const goalsMatch = {}, goalsSeason = {};
+for (const r of pm) { const k = r.player_id + "|" + r.season; goalsMatch[k] = (goalsMatch[k] || 0) + r.goals; }
+for (const r of psr) if (C.seasonStart(r.season) >= 2016) { const k = r.player_id + "|" + r.season; goalsSeason[k] = (goalsSeason[k] || 0) + r.goals; }
+const keys = Object.keys(goalsSeason); const same = keys.filter((k) => (goalsMatch[k] || 0) === goalsSeason[k]).length;
+check("goals per player-season agree between the match-by-match and season tables for 2016–17 onward (at least 98%)", same / keys.length >= 0.98, `${same} of ${keys.length} (${(100 * same / keys.length).toFixed(2)}%)`);
+// signings and sales between Premier League clubs must mirror each other
+const tr2 = csv("transfers.csv");
+const sold = tr2.filter((r) => r.kind === "Sold to another Premier League club").length, bought = tr2.filter((r) => r.kind === "Signing from another Premier League club").length;
+check("every sale to another Premier League club is also a signing by that club", sold === bought, `${sold} and ${bought}`);
 check("report headline: highest-scoring season is 2023–24", numbers.highestGoalsPerGameSeason === "2023–24", numbers.highestGoalsPerGameSeason);
 console.log(failures ? `\n${failures} check(s) FAILED` : "\nAll checks passed.");
 process.exit(failures ? 1 : 0);

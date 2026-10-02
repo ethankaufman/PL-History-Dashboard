@@ -24,6 +24,11 @@ goals = Counter(); name = {}
 for r in pm:
     goals[r["player_id"]] += int(r["goals"]); name[r["player_id"]] = r["player"]
 top_id, top_goals = goals.most_common(1)[0]
+career, cname = Counter(), {}
+psrows = rows("player_seasons.csv")
+for r in psrows:
+    career[r["player_id"]] += int(r["goals"]); cname[r["player_id"]] = r["player"]
+at_id, at_goals = career.most_common(1)[0]
 titles = Counter(s["champion"] for s in seasons)
 promoted = down = 0
 ordered = sorted(seasons, key=lambda s: int(s["season"][:4]))
@@ -35,6 +40,7 @@ expected = {
     "firstHomeWinPct": home_pct("1992–93"), "lastHomeWinPct": home_pct("2025–26"), "highestGoalsPerGameSeason": max(gpg, key=gpg.get),
     "manUtdTitles": titles.most_common(1)[0][1], "titleWinners": len(titles), "topScorer": name[top_id], "topScorerGoals": top_goals,
     "promotedGoneDown": down, "promotions": promoted,
+    "allTimeTopScorer": cname[at_id], "allTimeGoals": at_goals, "playerSeasonRows": len(psrows),
 }
 got = json.loads(subprocess.run(["node", str(ROOT / "tests" / "check_numbers.js"), "--json"], capture_output=True, text=True, check=True).stdout)
 bad = 0
