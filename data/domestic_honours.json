@@ -1,0 +1,1864 @@
+{
+ "by_season": {
+  "1992–93": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Sheffield Wednesday",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Arsenal"
+   },
+   "community_shield": {
+    "year": 1992,
+    "winners": [
+     "Leeds United"
+    ],
+    "shared": false
+   }
+  },
+  "1993–94": {
+   "fa_cup": {
+    "winner": "Manchester United",
+    "runner_up": "Chelsea",
+    "score": "4–0"
+   },
+   "league_cup": {
+    "winner": "Aston Villa"
+   },
+   "community_shield": {
+    "year": 1993,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "1994–95": {
+   "fa_cup": {
+    "winner": "Everton",
+    "runner_up": "Manchester United",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Liverpool"
+   },
+   "community_shield": {
+    "year": 1994,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "1995–96": {
+   "fa_cup": {
+    "winner": "Manchester United",
+    "runner_up": "Liverpool",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Aston Villa"
+   },
+   "community_shield": {
+    "year": 1995,
+    "winners": [
+     "Everton"
+    ],
+    "shared": false
+   }
+  },
+  "1996–97": {
+   "fa_cup": {
+    "winner": "Chelsea",
+    "runner_up": "Middlesbrough",
+    "score": "2–0"
+   },
+   "league_cup": {
+    "winner": "Leicester City"
+   },
+   "community_shield": {
+    "year": 1996,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "1997–98": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Newcastle United",
+    "score": "2–0"
+   },
+   "league_cup": {
+    "winner": "Chelsea"
+   },
+   "community_shield": {
+    "year": 1997,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "1998–99": {
+   "fa_cup": {
+    "winner": "Manchester United",
+    "runner_up": "Newcastle United",
+    "score": "2–0"
+   },
+   "league_cup": {
+    "winner": "Tottenham Hotspur"
+   },
+   "community_shield": {
+    "year": 1998,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "1999–2000": {
+   "fa_cup": {
+    "winner": "Chelsea",
+    "runner_up": "Aston Villa",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Leicester City"
+   },
+   "community_shield": {
+    "year": 1999,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2000–01": {
+   "fa_cup": {
+    "winner": "Liverpool",
+    "runner_up": "Arsenal",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Liverpool"
+   },
+   "community_shield": {
+    "year": 2000,
+    "winners": [
+     "Chelsea"
+    ],
+    "shared": false
+   }
+  },
+  "2001–02": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Chelsea",
+    "score": "2–0"
+   },
+   "league_cup": {
+    "winner": "Blackburn Rovers"
+   },
+   "community_shield": {
+    "year": 2001,
+    "winners": [
+     "Liverpool"
+    ],
+    "shared": false
+   }
+  },
+  "2002–03": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Southampton",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Liverpool"
+   },
+   "community_shield": {
+    "year": 2002,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2003–04": {
+   "fa_cup": {
+    "winner": "Manchester United",
+    "runner_up": "Millwall",
+    "score": "3–0"
+   },
+   "league_cup": {
+    "winner": "Middlesbrough"
+   },
+   "community_shield": {
+    "year": 2003,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "2004–05": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Manchester United",
+    "score": "0–0"
+   },
+   "league_cup": {
+    "winner": "Chelsea"
+   },
+   "community_shield": {
+    "year": 2004,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2005–06": {
+   "fa_cup": {
+    "winner": "Liverpool",
+    "runner_up": "West Ham United",
+    "score": "3–3"
+   },
+   "league_cup": {
+    "winner": "Manchester United"
+   },
+   "community_shield": {
+    "year": 2005,
+    "winners": [
+     "Chelsea"
+    ],
+    "shared": false
+   }
+  },
+  "2006–07": {
+   "fa_cup": {
+    "winner": "Chelsea",
+    "runner_up": "Manchester United",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Chelsea"
+   },
+   "community_shield": {
+    "year": 2006,
+    "winners": [
+     "Liverpool"
+    ],
+    "shared": false
+   }
+  },
+  "2007–08": {
+   "fa_cup": {
+    "winner": "Portsmouth",
+    "runner_up": "Cardiff City",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Tottenham Hotspur"
+   },
+   "community_shield": {
+    "year": 2007,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "2008–09": {
+   "fa_cup": {
+    "winner": "Chelsea",
+    "runner_up": "Everton",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Manchester United"
+   },
+   "community_shield": {
+    "year": 2008,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "2009–10": {
+   "fa_cup": {
+    "winner": "Chelsea",
+    "runner_up": "Portsmouth",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Manchester United"
+   },
+   "community_shield": {
+    "year": 2009,
+    "winners": [
+     "Chelsea"
+    ],
+    "shared": false
+   }
+  },
+  "2010–11": {
+   "fa_cup": {
+    "winner": "Manchester City",
+    "runner_up": "Stoke City",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Birmingham City"
+   },
+   "community_shield": {
+    "year": 2010,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "2011–12": {
+   "fa_cup": {
+    "winner": "Chelsea",
+    "runner_up": "Liverpool",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Liverpool"
+   },
+   "community_shield": {
+    "year": 2011,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "2012–13": {
+   "fa_cup": {
+    "winner": "Wigan Athletic",
+    "runner_up": "Manchester City",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Swansea City"
+   },
+   "community_shield": {
+    "year": 2012,
+    "winners": [
+     "Manchester City"
+    ],
+    "shared": false
+   }
+  },
+  "2013–14": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Hull City",
+    "score": "3–2"
+   },
+   "league_cup": {
+    "winner": "Manchester City"
+   },
+   "community_shield": {
+    "year": 2013,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "2014–15": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Aston Villa",
+    "score": "4–0"
+   },
+   "league_cup": {
+    "winner": "Chelsea"
+   },
+   "community_shield": {
+    "year": 2014,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2015–16": {
+   "fa_cup": {
+    "winner": "Manchester United",
+    "runner_up": "Crystal Palace",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Manchester City"
+   },
+   "community_shield": {
+    "year": 2015,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2016–17": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Chelsea",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Manchester United"
+   },
+   "community_shield": {
+    "year": 2016,
+    "winners": [
+     "Manchester United"
+    ],
+    "shared": false
+   }
+  },
+  "2017–18": {
+   "fa_cup": {
+    "winner": "Chelsea",
+    "runner_up": "Manchester United",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Manchester City"
+   },
+   "community_shield": {
+    "year": 2017,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2018–19": {
+   "fa_cup": {
+    "winner": "Manchester City",
+    "runner_up": "Watford",
+    "score": "6–0"
+   },
+   "league_cup": {
+    "winner": "Manchester City"
+   },
+   "community_shield": {
+    "year": 2018,
+    "winners": [
+     "Manchester City"
+    ],
+    "shared": false
+   }
+  },
+  "2019–20": {
+   "fa_cup": {
+    "winner": "Arsenal",
+    "runner_up": "Chelsea",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Manchester City"
+   },
+   "community_shield": {
+    "year": 2019,
+    "winners": [
+     "Manchester City"
+    ],
+    "shared": false
+   }
+  },
+  "2020–21": {
+   "fa_cup": {
+    "winner": "Leicester City",
+    "runner_up": "Chelsea",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Manchester City"
+   },
+   "community_shield": {
+    "year": 2020,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2021–22": {
+   "fa_cup": {
+    "winner": "Liverpool",
+    "runner_up": "Chelsea",
+    "score": "0–0"
+   },
+   "league_cup": {
+    "winner": "Liverpool"
+   },
+   "community_shield": {
+    "year": 2021,
+    "winners": [
+     "Leicester City"
+    ],
+    "shared": false
+   }
+  },
+  "2022–23": {
+   "fa_cup": {
+    "winner": "Manchester City",
+    "runner_up": "Manchester United",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Manchester United"
+   },
+   "community_shield": {
+    "year": 2022,
+    "winners": [
+     "Liverpool"
+    ],
+    "shared": false
+   }
+  },
+  "2023–24": {
+   "fa_cup": {
+    "winner": "Manchester United",
+    "runner_up": "Manchester City",
+    "score": "2–1"
+   },
+   "league_cup": {
+    "winner": "Liverpool"
+   },
+   "community_shield": {
+    "year": 2023,
+    "winners": [
+     "Arsenal"
+    ],
+    "shared": false
+   }
+  },
+  "2024–25": {
+   "fa_cup": {
+    "winner": "Crystal Palace",
+    "runner_up": "Manchester City",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Newcastle United"
+   },
+   "community_shield": {
+    "year": 2024,
+    "winners": [
+     "Manchester City"
+    ],
+    "shared": false
+   }
+  },
+  "2025–26": {
+   "fa_cup": {
+    "winner": "Manchester City",
+    "runner_up": "Chelsea",
+    "score": "1–0"
+   },
+   "league_cup": {
+    "winner": "Manchester City"
+   },
+   "community_shield": {
+    "year": 2025,
+    "winners": [
+     "Crystal Palace"
+    ],
+    "shared": false
+   }
+  }
+ },
+ "by_club": {
+  "AFC Bournemouth": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 0
+   }
+  },
+  "Arsenal": {
+   "league_titles": [
+    "1930–31",
+    "1932–33",
+    "1933–34",
+    "1934–35",
+    "1937–38",
+    "1947–48",
+    "1952–53",
+    "1970–71",
+    "1988–89",
+    "1990–91",
+    "1997–98",
+    "2001–02",
+    "2003–04",
+    "2025–26"
+   ],
+   "fa_cup": [
+    "1929–30",
+    "1935–36",
+    "1949–50",
+    "1970–71",
+    "1978–79",
+    "1992–93",
+    "1997–98",
+    "2001–02",
+    "2002–03",
+    "2004–05",
+    "2013–14",
+    "2014–15",
+    "2016–17",
+    "2019–20"
+   ],
+   "league_cup": [
+    "1986–87",
+    "1992–93"
+   ],
+   "community_shield": [
+    1930,
+    1931,
+    1933,
+    1934,
+    1938,
+    1948,
+    1953,
+    1991,
+    1998,
+    1999,
+    2002,
+    2004,
+    2014,
+    2015,
+    2017,
+    2020,
+    2023,
+    2026
+   ],
+   "community_shield_shared": [
+    1991
+   ],
+   "counts": {
+    "league": 14,
+    "fa_cup": 14,
+    "league_cup": 2,
+    "community_shield": 18,
+    "total": 48
+   }
+  },
+  "Aston Villa": {
+   "league_titles": [
+    "1893–94",
+    "1895–96",
+    "1896–97",
+    "1898–99",
+    "1899–1900",
+    "1909–10",
+    "1980–81"
+   ],
+   "fa_cup": [
+    "1886–87",
+    "1894–95",
+    "1896–97",
+    "1904–05",
+    "1912–13",
+    "1919–20",
+    "1956–57"
+   ],
+   "league_cup": [
+    "1960–61",
+    "1974–75",
+    "1976–77",
+    "1993–94",
+    "1995–96"
+   ],
+   "community_shield": [
+    1981
+   ],
+   "community_shield_shared": [
+    1981
+   ],
+   "counts": {
+    "league": 7,
+    "fa_cup": 7,
+    "league_cup": 5,
+    "community_shield": 1,
+    "total": 20
+   }
+  },
+  "Barnsley": {
+   "league_titles": [],
+   "fa_cup": [
+    "1911–12"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Birmingham City": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "1962–63",
+    "2010–11"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 2,
+    "community_shield": 0,
+    "total": 2
+   }
+  },
+  "Blackburn Rovers": {
+   "league_titles": [
+    "1911–12",
+    "1913–14",
+    "1994–95"
+   ],
+   "fa_cup": [
+    "1883–84",
+    "1884–85",
+    "1885–86",
+    "1889–90",
+    "1890–91",
+    "1927–28"
+   ],
+   "league_cup": [
+    "2001–02"
+   ],
+   "community_shield": [
+    1912
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 3,
+    "fa_cup": 6,
+    "league_cup": 1,
+    "community_shield": 1,
+    "total": 11
+   }
+  },
+  "Blackpool": {
+   "league_titles": [],
+   "fa_cup": [
+    "1952–53"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Bolton Wanderers": {
+   "league_titles": [],
+   "fa_cup": [
+    "1922–23",
+    "1925–26",
+    "1928–29",
+    "1957–58"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1958
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 4,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 5
+   }
+  },
+  "Bradford City": {
+   "league_titles": [],
+   "fa_cup": [
+    "1910–11"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Brentford": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 0
+   }
+  },
+  "Brighton & Hove Albion": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [
+    1910
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 1
+   }
+  },
+  "Burnley": {
+   "league_titles": [
+    "1920–21",
+    "1959–60"
+   ],
+   "fa_cup": [
+    "1913–14"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1960,
+    1973
+   ],
+   "community_shield_shared": [
+    1960
+   ],
+   "counts": {
+    "league": 2,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 2,
+    "total": 5
+   }
+  },
+  "Cardiff City": {
+   "league_titles": [],
+   "fa_cup": [
+    "1926–27"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1927
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 2
+   }
+  },
+  "Charlton Athletic": {
+   "league_titles": [],
+   "fa_cup": [
+    "1946–47"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Chelsea": {
+   "league_titles": [
+    "1954–55",
+    "2004–05",
+    "2005–06",
+    "2009–10",
+    "2014–15",
+    "2016–17"
+   ],
+   "fa_cup": [
+    "1969–70",
+    "1996–97",
+    "1999–2000",
+    "2006–07",
+    "2008–09",
+    "2009–10",
+    "2011–12",
+    "2017–18"
+   ],
+   "league_cup": [
+    "1964–65",
+    "1997–98",
+    "2004–05",
+    "2006–07",
+    "2014–15"
+   ],
+   "community_shield": [
+    1955,
+    2000,
+    2005,
+    2009
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 6,
+    "fa_cup": 8,
+    "league_cup": 5,
+    "community_shield": 4,
+    "total": 23
+   }
+  },
+  "Coventry City": {
+   "league_titles": [],
+   "fa_cup": [
+    "1986–87"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Crystal Palace": {
+   "league_titles": [],
+   "fa_cup": [
+    "2024–25"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    2025
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 2
+   }
+  },
+  "Derby County": {
+   "league_titles": [
+    "1971–72",
+    "1974–75"
+   ],
+   "fa_cup": [
+    "1945–46"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1975
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 2,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 4
+   }
+  },
+  "Everton": {
+   "league_titles": [
+    "1890–91",
+    "1914–15",
+    "1927–28",
+    "1931–32",
+    "1938–39",
+    "1962–63",
+    "1969–70",
+    "1984–85",
+    "1986–87"
+   ],
+   "fa_cup": [
+    "1905–06",
+    "1932–33",
+    "1965–66",
+    "1983–84",
+    "1994–95"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1928,
+    1932,
+    1963,
+    1970,
+    1984,
+    1985,
+    1986,
+    1987,
+    1995
+   ],
+   "community_shield_shared": [
+    1986
+   ],
+   "counts": {
+    "league": 9,
+    "fa_cup": 5,
+    "league_cup": 0,
+    "community_shield": 9,
+    "total": 23
+   }
+  },
+  "Fulham": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 0
+   }
+  },
+  "Huddersfield Town": {
+   "league_titles": [
+    "1923–24",
+    "1924–25",
+    "1925–26"
+   ],
+   "fa_cup": [
+    "1921–22"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1922
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 3,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 5
+   }
+  },
+  "Hull City": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 0
+   }
+  },
+  "Ipswich Town": {
+   "league_titles": [
+    "1961–62"
+   ],
+   "fa_cup": [
+    "1977–78"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 1,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 2
+   }
+  },
+  "Leeds United": {
+   "league_titles": [
+    "1968–69",
+    "1973–74",
+    "1991–92"
+   ],
+   "fa_cup": [
+    "1971–72"
+   ],
+   "league_cup": [
+    "1967–68"
+   ],
+   "community_shield": [
+    1969,
+    1992
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 3,
+    "fa_cup": 1,
+    "league_cup": 1,
+    "community_shield": 2,
+    "total": 7
+   }
+  },
+  "Leicester City": {
+   "league_titles": [
+    "2015–16"
+   ],
+   "fa_cup": [
+    "2020–21"
+   ],
+   "league_cup": [
+    "1963–64",
+    "1996–97",
+    "1999–2000"
+   ],
+   "community_shield": [
+    1971,
+    2021
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 1,
+    "fa_cup": 1,
+    "league_cup": 3,
+    "community_shield": 2,
+    "total": 7
+   }
+  },
+  "Liverpool": {
+   "league_titles": [
+    "1900–01",
+    "1905–06",
+    "1921–22",
+    "1922–23",
+    "1946–47",
+    "1963–64",
+    "1965–66",
+    "1972–73",
+    "1975–76",
+    "1976–77",
+    "1978–79",
+    "1979–80",
+    "1981–82",
+    "1982–83",
+    "1983–84",
+    "1985–86",
+    "1987–88",
+    "1989–90",
+    "2019–20",
+    "2024–25"
+   ],
+   "fa_cup": [
+    "1964–65",
+    "1973–74",
+    "1985–86",
+    "1988–89",
+    "1991–92",
+    "2000–01",
+    "2005–06",
+    "2021–22"
+   ],
+   "league_cup": [
+    "1980–81",
+    "1981–82",
+    "1982–83",
+    "1983–84",
+    "1994–95",
+    "2000–01",
+    "2002–03",
+    "2011–12",
+    "2021–22",
+    "2023–24"
+   ],
+   "community_shield": [
+    1964,
+    1965,
+    1966,
+    1974,
+    1976,
+    1977,
+    1979,
+    1980,
+    1982,
+    1986,
+    1988,
+    1989,
+    1990,
+    2001,
+    2006,
+    2022
+   ],
+   "community_shield_shared": [
+    1964,
+    1965,
+    1977,
+    1986,
+    1990
+   ],
+   "counts": {
+    "league": 20,
+    "fa_cup": 8,
+    "league_cup": 10,
+    "community_shield": 16,
+    "total": 54
+   }
+  },
+  "Luton Town": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "1987–88"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 1,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Manchester City": {
+   "league_titles": [
+    "1936–37",
+    "1967–68",
+    "2011–12",
+    "2013–14",
+    "2017–18",
+    "2018–19",
+    "2020–21",
+    "2021–22",
+    "2022–23",
+    "2023–24"
+   ],
+   "fa_cup": [
+    "1903–04",
+    "1933–34",
+    "1955–56",
+    "1968–69",
+    "2010–11",
+    "2018–19",
+    "2022–23",
+    "2025–26"
+   ],
+   "league_cup": [
+    "1969–70",
+    "1975–76",
+    "2013–14",
+    "2015–16",
+    "2017–18",
+    "2018–19",
+    "2019–20",
+    "2020–21",
+    "2025–26"
+   ],
+   "community_shield": [
+    1937,
+    1968,
+    1972,
+    2012,
+    2018,
+    2019,
+    2024
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 10,
+    "fa_cup": 8,
+    "league_cup": 9,
+    "community_shield": 7,
+    "total": 34
+   }
+  },
+  "Manchester United": {
+   "league_titles": [
+    "1907–08",
+    "1910–11",
+    "1951–52",
+    "1955–56",
+    "1956–57",
+    "1964–65",
+    "1966–67",
+    "1992–93",
+    "1993–94",
+    "1995–96",
+    "1996–97",
+    "1998–99",
+    "1999–2000",
+    "2000–01",
+    "2002–03",
+    "2006–07",
+    "2007–08",
+    "2008–09",
+    "2010–11",
+    "2012–13"
+   ],
+   "fa_cup": [
+    "1908–09",
+    "1947–48",
+    "1962–63",
+    "1976–77",
+    "1982–83",
+    "1984–85",
+    "1989–90",
+    "1993–94",
+    "1995–96",
+    "1998–99",
+    "2003–04",
+    "2015–16",
+    "2023–24"
+   ],
+   "league_cup": [
+    "1991–92",
+    "2005–06",
+    "2008–09",
+    "2009–10",
+    "2016–17",
+    "2022–23"
+   ],
+   "community_shield": [
+    1908,
+    1911,
+    1952,
+    1956,
+    1957,
+    1965,
+    1967,
+    1977,
+    1983,
+    1990,
+    1993,
+    1994,
+    1996,
+    1997,
+    2003,
+    2007,
+    2008,
+    2010,
+    2011,
+    2013,
+    2016
+   ],
+   "community_shield_shared": [
+    1965,
+    1967,
+    1977,
+    1990
+   ],
+   "counts": {
+    "league": 20,
+    "fa_cup": 13,
+    "league_cup": 6,
+    "community_shield": 21,
+    "total": 60
+   }
+  },
+  "Middlesbrough": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "2003–04"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 1,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Newcastle United": {
+   "league_titles": [
+    "1904–05",
+    "1906–07",
+    "1908–09",
+    "1926–27"
+   ],
+   "fa_cup": [
+    "1909–10",
+    "1923–24",
+    "1931–32",
+    "1950–51",
+    "1951–52",
+    "1954–55"
+   ],
+   "league_cup": [
+    "2024–25"
+   ],
+   "community_shield": [
+    1909
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 4,
+    "fa_cup": 6,
+    "league_cup": 1,
+    "community_shield": 1,
+    "total": 12
+   }
+  },
+  "Norwich City": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "1961–62",
+    "1984–85"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 2,
+    "community_shield": 0,
+    "total": 2
+   }
+  },
+  "Nottingham Forest": {
+   "league_titles": [
+    "1977–78"
+   ],
+   "fa_cup": [
+    "1897–98",
+    "1958–59"
+   ],
+   "league_cup": [
+    "1977–78",
+    "1978–79",
+    "1988–89",
+    "1989–90"
+   ],
+   "community_shield": [
+    1978
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 1,
+    "fa_cup": 2,
+    "league_cup": 4,
+    "community_shield": 1,
+    "total": 8
+   }
+  },
+  "Oldham Athletic": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 0
+   }
+  },
+  "Portsmouth": {
+   "league_titles": [
+    "1948–49",
+    "1949–50"
+   ],
+   "fa_cup": [
+    "1938–39",
+    "2007–08"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1949
+   ],
+   "community_shield_shared": [
+    1949
+   ],
+   "counts": {
+    "league": 2,
+    "fa_cup": 2,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 5
+   }
+  },
+  "Queens Park Rangers": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "1966–67"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 1,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Reading": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 0
+   }
+  },
+  "Sheffield United": {
+   "league_titles": [
+    "1897–98"
+   ],
+   "fa_cup": [
+    "1898–99",
+    "1901–02",
+    "1914–15",
+    "1924–25"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 1,
+    "fa_cup": 4,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 5
+   }
+  },
+  "Sheffield Wednesday": {
+   "league_titles": [
+    "1902–03",
+    "1903–04",
+    "1928–29",
+    "1929–30"
+   ],
+   "fa_cup": [
+    "1895–96",
+    "1906–07",
+    "1934–35"
+   ],
+   "league_cup": [
+    "1990–91"
+   ],
+   "community_shield": [
+    1935
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 4,
+    "fa_cup": 3,
+    "league_cup": 1,
+    "community_shield": 1,
+    "total": 9
+   }
+  },
+  "Southampton": {
+   "league_titles": [],
+   "fa_cup": [
+    "1975–76"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Stoke City": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "1971–72"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 1,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Sunderland": {
+   "league_titles": [
+    "1891–92",
+    "1892–93",
+    "1894–95",
+    "1901–02",
+    "1912–13",
+    "1935–36"
+   ],
+   "fa_cup": [
+    "1936–37",
+    "1972–73"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1936
+   ],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 6,
+    "fa_cup": 2,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 9
+   }
+  },
+  "Swansea City": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "2012–13"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 1,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Swindon Town": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [
+    "1968–69"
+   ],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 1,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Tottenham Hotspur": {
+   "league_titles": [
+    "1950–51",
+    "1960–61"
+   ],
+   "fa_cup": [
+    "1900–01",
+    "1920–21",
+    "1960–61",
+    "1961–62",
+    "1966–67",
+    "1980–81",
+    "1981–82",
+    "1990–91"
+   ],
+   "league_cup": [
+    "1970–71",
+    "1972–73",
+    "1998–99",
+    "2007–08"
+   ],
+   "community_shield": [
+    1921,
+    1951,
+    1961,
+    1962,
+    1967,
+    1981,
+    1991
+   ],
+   "community_shield_shared": [
+    1967,
+    1981,
+    1991
+   ],
+   "counts": {
+    "league": 2,
+    "fa_cup": 8,
+    "league_cup": 4,
+    "community_shield": 7,
+    "total": 21
+   }
+  },
+  "Watford": {
+   "league_titles": [],
+   "fa_cup": [],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 0,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 0
+   }
+  },
+  "West Bromwich Albion": {
+   "league_titles": [
+    "1919–20"
+   ],
+   "fa_cup": [
+    "1887–88",
+    "1891–92",
+    "1930–31",
+    "1953–54",
+    "1967–68"
+   ],
+   "league_cup": [
+    "1965–66"
+   ],
+   "community_shield": [
+    1920,
+    1954
+   ],
+   "community_shield_shared": [
+    1954
+   ],
+   "counts": {
+    "league": 1,
+    "fa_cup": 5,
+    "league_cup": 1,
+    "community_shield": 2,
+    "total": 9
+   }
+  },
+  "West Ham United": {
+   "league_titles": [],
+   "fa_cup": [
+    "1963–64",
+    "1974–75",
+    "1979–80"
+   ],
+   "league_cup": [],
+   "community_shield": [
+    1964
+   ],
+   "community_shield_shared": [
+    1964
+   ],
+   "counts": {
+    "league": 0,
+    "fa_cup": 3,
+    "league_cup": 0,
+    "community_shield": 1,
+    "total": 4
+   }
+  },
+  "Wigan Athletic": {
+   "league_titles": [],
+   "fa_cup": [
+    "2012–13"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Wimbledon": {
+   "league_titles": [],
+   "fa_cup": [
+    "1987–88"
+   ],
+   "league_cup": [],
+   "community_shield": [],
+   "community_shield_shared": [],
+   "counts": {
+    "league": 0,
+    "fa_cup": 1,
+    "league_cup": 0,
+    "community_shield": 0,
+    "total": 1
+   }
+  },
+  "Wolverhampton Wanderers": {
+   "league_titles": [
+    "1953–54",
+    "1957–58",
+    "1958–59"
+   ],
+   "fa_cup": [
+    "1892–93",
+    "1907–08",
+    "1948–49",
+    "1959–60"
+   ],
+   "league_cup": [
+    "1973–74",
+    "1979–80"
+   ],
+   "community_shield": [
+    1949,
+    1954,
+    1959,
+    1960
+   ],
+   "community_shield_shared": [
+    1949,
+    1954,
+    1960
+   ],
+   "counts": {
+    "league": 3,
+    "fa_cup": 4,
+    "league_cup": 2,
+    "community_shield": 4,
+    "total": 13
+   }
+  }
+ }
+}
