@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.pyc
+venv/
+# big third-party downloads that scripts can re-create
+data/raw/vaastav/
