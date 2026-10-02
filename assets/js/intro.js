@@ -3,7 +3,7 @@
  */
 import * as THREE from "../vendor/three.module.min.js";
 
-const REPORT_DATA = ["matches", "teamMatches", "finalTables", "playerMatches", "seasons", "awards", "honours", "teams", "map", "domestic", "records"];
+const REPORT_DATA = ["matches", "teamMatches", "finalTables", "playerMatches", "seasons", "awards", "honours", "teams", "map", "domestic", "records", "playerSeasons"];
 const CODES = { "Arsenal": "ARS", "Aston Villa": "AVL", "AFC Bournemouth": "BOU", "Brentford": "BRE", "Brighton & Hove Albion": "BHA", "Chelsea": "CHE", "Coventry City": "COV", "Crystal Palace": "CRY", "Everton": "EVE", "Fulham": "FUL", "Hull City": "HUL", "Ipswich Town": "IPS", "Leeds United": "LEE", "Liverpool": "LIV", "Manchester City": "MCI", "Manchester United": "MUN", "Newcastle United": "NEW", "Nottingham Forest": "NFO", "Tottenham Hotspur": "TOT", "Sunderland": "SUN" };
 
 const root = document.getElementById("intro");

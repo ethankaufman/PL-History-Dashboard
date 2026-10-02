@@ -7,7 +7,7 @@
   const $ = (id) => document.getElementById(id);
   let d;
   try {
-    d = await PL.load(["playerMatches", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers", "domestic", "records"], (p) => {
+    d = await PL.load(["playerMatches", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers", "domestic", "records", "playerSeasons"], (p) => {
       $("load-bar").style.width = Math.round(p * 100) + "%"; $("load-text").textContent = `Loading the data… ${Math.round(p * 100)}%`;
     });
   } catch (e) { $("load-text").innerHTML = `Couldn't load the data: ${esc(e.message)} <button class="btn small" onclick="location.reload()">Retry</button>`; return; }
@@ -15,7 +15,13 @@
 
   const pm = d.playerMatches;
   for (const r of pm) { r.goals = r.goals || 0; r.assists = r.assists || 0; r.clean_sheet = r.clean_sheet || 0; r.yellow_cards = r.yellow_cards || 0; r.red_cards = r.red_cards || 0; }
-  const seasonList = [...new Set(pm.map((r) => r.season))].sort(C.bySeason);
+  // second data set: season totals for every player, every club, every season since 1992-93
+  const ps = d.playerSeasons;
+  for (const r of ps) { r.n = r.appearances; r.team = r.club; r.clean_sheet = r.clean_sheets; r.minutes = r.minutes || 0; r.nationality = r.nationality || "Unknown"; }
+  const DATASETS = { matches: { rows: pm, label: "Every appearance, 2016–17 to 2025–26" }, seasons: { rows: ps, label: "Season totals, 1992–93 to 2025–26" } };
+  let dataset = "matches";
+  const seasonsOf = (rows) => [...new Set(rows.map((r) => r.season))].sort(C.bySeason);
+  const seasonList = seasonsOf(pm);
   const clubList = [...new Set(pm.map((r) => r.team))].sort();
   const positions = ["Goalkeeper", "Defender", "Midfielder", "Forward"];
   const optionHtml = (items, all) => (all ? `<option value="">${all}</option>` : "") + items.map((x) => `<option value="${esc(x)}">${esc(x)}</option>`).join("");
@@ -34,32 +40,50 @@
   // EXPLORE: filters, summary numbers, four charts with switches, table, reset
   // =====================================================================
   const FILTERS = [
+    { id: "f-data", label: "Data", html: Object.entries(DATASETS).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join(""), def: "matches", wide: true },
     { id: "f-from", label: "From season", html: optionHtml(seasonList), def: seasonList[0] },
     { id: "f-to", label: "To season", html: optionHtml(seasonList), def: seasonList[seasonList.length - 1] },
     { id: "f-club", label: "Club", html: optionHtml(clubList, "All clubs"), def: "" },
-    { id: "f-opp", label: "Opponent", html: optionHtml(clubList, "All opponents"), def: "" },
+    { id: "f-opp", label: "Opponent", html: optionHtml(clubList, "All opponents"), def: "", matchOnly: true },
     { id: "f-pos", label: "Position", html: optionHtml(positions, "All positions"), def: "" },
-    { id: "f-venue", label: "Venue", html: optionHtml(["Home", "Away"], "Home and away"), def: "" },
-    { id: "f-mw1", label: "Matchweek from", html: null, def: 1, type: "number" },
-    { id: "f-mw2", label: "Matchweek to", html: null, def: 38, type: "number" },
+    { id: "f-venue", label: "Venue", html: optionHtml(["Home", "Away"], "Home and away"), def: "", matchOnly: true },
+    { id: "f-mw1", label: "Matchweek from", html: null, def: 1, type: "number", matchOnly: true },
+    { id: "f-mw2", label: "Matchweek to", html: null, def: 38, type: "number", matchOnly: true },
     { id: "f-player", label: "Player name contains", html: null, def: "", type: "search" },
   ];
-  $("filters").innerHTML = FILTERS.map((f) => `<div><label for="${f.id}">${f.label}</label>` +
+  $("filters").innerHTML = FILTERS.map((f) => `<div id="w-${f.id}" ${f.wide ? 'style="grid-column: span 2"' : ""}><label for="${f.id}">${f.label}</label>` +
     (f.html !== null ? `<select id="${f.id}">${f.html}</select>` : `<input id="${f.id}" type="${f.type}" ${f.type === "number" ? 'min="1" max="42"' : 'placeholder="e.g. Salah"'}>`) + `</div>`).join("") +
     `<div><button class="btn primary" id="reset" type="button" style="width:100%">Reset all filters</button></div>`;
-  const resetFilters = () => { FILTERS.forEach((f) => ($(f.id).value = f.def)); redrawExplore(); };
-  FILTERS.forEach((f) => $(f.id).addEventListener(f.type === "search" ? "input" : "change", redrawExplore));
+  const resetFilters = () => { $("f-data").value = "matches"; applyDataset(); FILTERS.forEach((f) => ($(f.id).value = f.def)); redrawExplore(); };
+  FILTERS.forEach((f) => $(f.id).addEventListener(f.type === "search" ? "input" : "change", () => (f.id === "f-data" ? (applyDataset(), redrawExplore()) : redrawExplore())));
   $("reset").addEventListener("click", resetFilters);
   FILTERS.forEach((f) => ($(f.id).value = f.def));
 
+  // switching data set: change the season choices, hide the filters that only make sense match by match, update the breakdowns
+  function applyDataset() {
+    dataset = $("f-data").value;
+    const rows = DATASETS[dataset].rows, seasons = seasonsOf(rows), clubs = [...new Set(rows.map((r) => r.team))].sort();
+    $("f-from").innerHTML = optionHtml(seasons); $("f-to").innerHTML = optionHtml(seasons);
+    $("f-from").value = seasons[0]; $("f-to").value = seasons[seasons.length - 1];
+    $("f-club").innerHTML = optionHtml(clubs, "All clubs");
+    FILTERS.filter((f) => f.matchOnly).forEach((f) => { $("w-" + f.id).hidden = dataset !== "matches"; $(f.id).value = f.def; });
+    const allowed = Object.keys(BREAKDOWNS).filter((k) => dataset === "seasons" ? k !== "opponent" && k !== "venue" && k !== "matchweek" : k !== "nationality");
+    const fill = (id, keep, fallback) => { $(id).innerHTML = allowed.map((k) => `<option value="${k}">${BREAKDOWNS[k].label}</option>`).join(""); $(id).value = allowed.includes(keep) ? keep : fallback; };
+    CHARTS.forEach((c) => fill(c.id + "-b", $(c.id + "-b").value, c.breakdown === "matchweek" ? "season" : c.breakdown));
+    fill("tbl-group", $("tbl-group").value, "player");
+    $("data-note").textContent = dataset === "matches"
+      ? "One row per player per match (minutes, goals, assists, cards and more) for the ten seasons with match-by-match data."
+      : "One row per player per club per season, 1992–93 to 2025–26. Minutes are recorded from about 2006–07; before that, only appearances, goals, assists, clean sheets and cards exist.";
+  }
   function filtered() {
     const from = C.seasonStart($("f-from").value), to = C.seasonStart($("f-to").value);
     const club = $("f-club").value, opp = $("f-opp").value, pos = $("f-pos").value, venue = $("f-venue").value;
     const mw1 = +$("f-mw1").value || 1, mw2 = +$("f-mw2").value || 99, q = $("f-player").value.trim().toLowerCase();
-    return pm.filter((r) => {
+    const match = dataset === "matches";
+    return DATASETS[dataset].rows.filter((r) => {
       const s = C.seasonStart(r.season);
-      return s >= from && s <= to && (!club || r.team === club) && (!opp || r.opponent === opp) && (!pos || r.position === pos) &&
-        (!venue || r.venue === venue) && r.game_no >= mw1 && r.game_no <= mw2 && (!q || r.player.toLowerCase().includes(q));
+      return s >= from && s <= to && (!club || r.team === club) && (!pos || r.position === pos) && (!q || r.player.toLowerCase().includes(q)) &&
+        (!match || ((!opp || r.opponent === opp) && (!venue || r.venue === venue) && r.game_no >= mw1 && r.game_no <= mw2));
     });
   }
 
@@ -67,13 +91,13 @@
   const MEASURES = {
     appearances: { label: "Appearances", val: (g) => g.n },
     players: { label: "Different players", val: (g) => g.ids.size },
-    minutes: { label: "Minutes played", val: (g) => g.minutes },
+    minutes: { label: "Minutes played (where recorded)", val: (g) => g.minutes },
     goals: { label: "Goals", val: (g) => g.goals },
     assists: { label: "Assists", val: (g) => g.assists },
     clean_sheets: { label: "Clean sheets", val: (g) => g.cs },
     yellow: { label: "Yellow cards", val: (g) => g.yellow },
     red: { label: "Red cards", val: (g) => g.red },
-    goals_per_90: { label: `Goals per 90 min (groups with ${MIN_RATE_MINUTES}+ min)`, val: (g) => (g.minutes >= MIN_RATE_MINUTES ? (g.goals * 90) / g.minutes : null), rate: true },
+    goals_per_90: { label: `Goals per 90 min (groups with ${MIN_RATE_MINUTES}+ min recorded)`, val: (g) => (g.minutes >= MIN_RATE_MINUTES ? (g.gm * 90) / g.minutes : null), rate: true },
     goals_per_app: { label: "Goals per appearance", val: (g) => (g.n ? g.goals / g.n : null), rate: true },
   };
   const BREAKDOWNS = {
@@ -81,17 +105,18 @@
     matchweek: { label: "Matchweek", key: (r) => r.game_no, order: "time" },
     club: { label: "Club", key: (r) => r.team },
     opponent: { label: "Opponent", key: (r) => r.opponent },
-    position: { label: "Position", key: (r) => r.position },
+    position: { label: "Position", key: (r) => r.position || "Unknown" },
     venue: { label: "Venue", key: (r) => r.venue },
     player: { label: "Player", key: (r) => r.player_id + "|" + r.player },
+    nationality: { label: "Nationality", key: (r) => r.nationality },
   };
   function group(rows, keyFn) {
     const m = new Map();
     for (const r of rows) {
       const k = keyFn(r);
       let g = m.get(k);
-      if (!g) m.set(k, (g = { n: 0, minutes: 0, goals: 0, assists: 0, cs: 0, yellow: 0, red: 0, ids: new Set() }));
-      g.n++; g.minutes += r.minutes; g.goals += r.goals; g.assists += r.assists; g.cs += r.clean_sheet; g.yellow += r.yellow_cards; g.red += r.red_cards; g.ids.add(r.player_id);
+      if (!g) m.set(k, (g = { n: 0, minutes: 0, gm: 0, goals: 0, assists: 0, cs: 0, yellow: 0, red: 0, ids: new Set() }));
+      g.n += r.n ?? 1; g.minutes += r.minutes; if (r.minutes > 0) g.gm += r.goals; g.goals += r.goals; g.assists += r.assists; g.cs += r.clean_sheet; g.yellow += r.yellow_cards; g.red += r.red_cards; g.ids.add(r.player_id);
     }
     return m;
   }
@@ -99,9 +124,9 @@
 
   // KPIs
   function drawKpis(rows) {
-    const g = [...group(rows, () => 1).values()][0] || { n: 0, minutes: 0, goals: 0, assists: 0, cs: 0, yellow: 0, red: 0, ids: new Set() };
+    const g = [...group(rows, () => 1).values()][0] || { n: 0, minutes: 0, gm: 0, goals: 0, assists: 0, cs: 0, yellow: 0, red: 0, ids: new Set() };
     const tiles = [[int(g.n), "appearances in view"], [int(g.ids.size), "different players"], [int(g.goals), "goals"], [int(g.assists), "assists"],
-      [g.minutes ? dec((g.goals * 90) / g.minutes, 3) : "–", "goals per 90 minutes"], [int(g.yellow + g.red), `cards (${int(g.yellow)} yellow, ${int(g.red)} red)`]];
+      [g.minutes ? dec((g.gm * 90) / g.minutes, 3) : "–", "goals per 90 minutes (where minutes are recorded)"], [int(g.yellow + g.red), `cards (${int(g.yellow)} yellow, ${int(g.red)} red)`]];
     $("kpis").innerHTML = tiles.map(([n, l]) => `<div class="kpi"><div class="n">${n}</div><div class="l">${l}</div></div>`).join("");
   }
 
@@ -147,7 +172,7 @@
   $("tbl-group").addEventListener("change", () => drawTable(currentRows));
   function drawTable(rows) {
     const bKey = $("tbl-group").value, B = BREAKDOWNS[bKey];
-    tblRows = [...group(rows, B.key)].map(([k, g]) => ({ k, label: keyLabel(k, bKey), n: g.n, minutes: g.minutes, goals: g.goals, assists: g.assists, cs: g.cs, yellow: g.yellow, red: g.red, g90: g.minutes ? (g.goals * 90) / g.minutes : null }));
+    tblRows = [...group(rows, B.key)].map(([k, g]) => ({ k, label: keyLabel(k, bKey), n: g.n, minutes: g.minutes, goals: g.goals, assists: g.assists, cs: g.cs, yellow: g.yellow, red: g.red, g90: g.minutes ? (g.gm * 90) / g.minutes : null }));
     const col = tblSort.col;
     tblRows.sort((a, b) => (col === "label" ? String(a.label).localeCompare(String(b.label), undefined, { numeric: true }) * tblSort.dir : ((a[col] ?? -1) - (b[col] ?? -1)) * tblSort.dir));
     const shown = tblRows.slice(0, 250);
@@ -162,6 +187,8 @@
   });
 
   let currentRows = pm;
+  const noteEl = document.createElement("div"); noteEl.id = "data-note"; noteEl.className = "note"; noteEl.style.margin = "-6px 2px 14px"; $("filters").after(noteEl);
+  applyDataset();
   function redrawExplore() { currentRows = filtered(); drawKpis(currentRows); CHARTS.forEach((c) => drawChart(c, currentRows)); drawTable(currentRows); }
   redrawExplore();
 
@@ -347,7 +374,7 @@
       most_free_kicks: ["Most direct free-kick goals (career)", "Goals", ["Rank", "Player", "Goals", "Games", "Ratio", "Playing position"]],
     };
     root.innerHTML = `<h2>League records</h2>
-      <p class="note">All-time Premier League player records, 1992–93 to 2025–26, as listed by Wikipedia. (The Explore tab covers only 2016–17 onward, so its totals are smaller.)</p>
+      <p class="note">All-time Premier League player records, 1992–93 to 2025–26, as listed by Wikipedia. (In the Explore tab, choose the 'Season totals' data to rebuild these from the player table.)</p>
       <div class="row"><div><label for="rb-pick">Record book</label><select id="rb-pick">${Object.entries(BOOKS).map(([k, b]) => `<option value="${k}">${b[0]}</option>`).join("")}</select></div></div>
       <div class="grid2"><div class="card"><canvas id="rb-chart"></canvas></div><div class="card"><div class="tablewrap" style="max-height:380px"><table class="plain" id="rb-tbl"></table></div></div></div>
       <div class="grid2" id="lg-records"></div>
@@ -425,16 +452,16 @@
       list = P.filter((p) => (!club || p.club === club) && (!pos || p.position === pos) && (!q || (p.name + " " + p.known_as).toLowerCase().includes(q)));
       const key = { name: (p) => p.name, goals: (p) => -p.premier_league_career.goals, apps: (p) => -p.premier_league_career.appearances, age: (p) => p.age ?? 99, mins: (p) => -p.this_season.minutes }[sort];
       list.sort((a, b) => (typeof key(a) === "string" ? key(a).localeCompare(key(b)) : key(a) - key(b)));
-      $("p-count").textContent = `${int(list.length)} players in 2026–27 squads. Career figures are Premier League appearances from 2016–17 to 2025–26.`;
-      $("p-grid").innerHTML = list.slice(0, shown).map((p, i) => `<button class="pcard" data-i="${i}"><img src="${esc(p.photo)}" alt="" loading="lazy" onerror="this.outerHTML='<div class=avatar>${esc(initials(p.known_as))}</div>'"><div><b>${esc(p.known_as)}</b><small>${esc(p.club)}</small><small>${esc(p.position)}${p.age ? " · " + p.age : ""}</small><small>${p.premier_league_career.appearances ? int(p.premier_league_career.appearances) + " apps · " + int(p.premier_league_career.goals) + " goals" : "new to our data"}</small></div></button>`).join("");
+      $("p-count").textContent = `${int(list.length)} players in 2026–27 squads. Career figures are Premier League totals from 1992–93 to 2025–26.`;
+      $("p-grid").innerHTML = list.slice(0, shown).map((p, i) => `<button class="pcard" data-i="${i}"><img src="${esc(p.photo)}" alt="" loading="lazy" onerror="this.outerHTML='<div class=avatar>${esc(initials(p.known_as))}</div>'"><div><b>${esc(p.known_as)}</b><small>${esc(p.club)}</small><small>${esc(p.position)}${p.age ? " · " + p.age : ""}</small><small>${p.premier_league_career.appearances ? int(p.premier_league_career.appearances) + " apps · " + int(p.premier_league_career.goals) + " goals" : "new to the Premier League"}</small></div></button>`).join("");
       $("p-more").hidden = shown >= list.length;
       $("p-grid").querySelectorAll(".pcard").forEach((b) => b.addEventListener("click", () => open(list[+b.dataset.i])));
     }
     function open(p) {
       const c = p.premier_league_career, t = p.this_season, dlg = $("dlg");
-      dlg.innerHTML = `<div style="display:flex;gap:16px;align-items:center;margin-bottom:12px"><img src="${esc(p.photo)}" alt="" style="width:84px;height:106px;object-fit:cover;object-position:top;border-radius:12px;background:#2d1650" onerror="this.style.display='none'"><div><h3 style="margin:0">${esc(p.name)}</h3><div class="muted">${esc(p.club)} · ${esc(p.position)}${p.squad_number ? " · #" + p.squad_number : ""}</div><div class="muted">${p.birth_date ? "Born " + p.birth_date + " (age " + p.age + ")" : "Birth date not listed"} · at the club since ${esc(p.joined_club || "?")}</div><div>${esc(p.availability)}${p.news ? " — " + esc(p.news) : ""}</div></div></div>
-        <div class="kpis"><div class="kpi"><div class="n">${int(c.appearances)}</div><div class="l">PL appearances 2016–26</div></div><div class="kpi"><div class="n">${int(c.goals)}</div><div class="l">goals</div></div><div class="kpi"><div class="n">${int(c.assists)}</div><div class="l">assists</div></div><div class="kpi"><div class="n">${int(t.minutes)}</div><div class="l">minutes in 2026–27 so far (${t.goals} goals, ${t.assists} assists)</div></div></div>
-        ${c.seasons.length ? `<div class="tablewrap" style="max-height:260px"><table class="plain"><thead><tr><th>Season</th><th>Club</th><th class="num">Apps</th><th class="num">Min</th><th class="num">Goals</th><th class="num">Assists</th><th class="num">Yellow</th><th class="num">Red</th></tr></thead><tbody>${c.seasons.map((s) => `<tr><td>${s.season}</td><td>${esc(s.club)}</td><td class="num">${s.appearances}</td><td class="num">${int(s.minutes)}</td><td class="num">${s.goals}</td><td class="num">${s.assists}</td><td class="num">${s.yellow_cards}</td><td class="num">${s.red_cards}</td></tr>`).join("")}</tbody></table></div>` : `<p class="muted">No Premier League appearances in our 2016–17 to 2025–26 data.</p>`}
+      dlg.innerHTML = `<div style="display:flex;gap:16px;align-items:center;margin-bottom:12px"><img src="${esc(p.photo)}" alt="" style="width:84px;height:106px;object-fit:cover;object-position:top;border-radius:12px;background:#2d1650" onerror="this.style.display='none'"><div><h3 style="margin:0">${esc(p.name)}</h3><div class="muted">${esc(p.club)} · ${esc(p.position)}${p.squad_number ? " · #" + p.squad_number : ""}${p.nationality ? " · " + esc(p.nationality) : ""}</div><div class="muted">${p.birth_date ? "Born " + p.birth_date + " (age " + p.age + ")" : "Birth date not listed"} · at the club since ${esc(p.joined_club || "?")}</div><div>${esc(p.availability)}${p.news ? " — " + esc(p.news) : ""}</div></div></div>
+        <div class="kpis"><div class="kpi"><div class="n">${int(c.appearances)}</div><div class="l">PL appearances, 1992–2026</div></div><div class="kpi"><div class="n">${int(c.goals)}</div><div class="l">goals</div></div><div class="kpi"><div class="n">${int(c.assists)}</div><div class="l">assists</div></div><div class="kpi"><div class="n">${int(t.minutes)}</div><div class="l">minutes in 2026–27 so far (${t.goals} goals, ${t.assists} assists)</div></div></div>
+        ${c.seasons.length ? `<div class="tablewrap" style="max-height:260px"><table class="plain"><thead><tr><th>Season</th><th>Club</th><th class="num">Apps</th><th class="num">Min</th><th class="num">Goals</th><th class="num">Assists</th><th class="num">Yellow</th><th class="num">Red</th></tr></thead><tbody>${c.seasons.map((s) => `<tr><td>${s.season}</td><td>${esc(s.club)}</td><td class="num">${s.appearances}</td><td class="num">${s.minutes == null ? "–" : int(s.minutes)}</td><td class="num">${s.goals}</td><td class="num">${s.assists}</td><td class="num">${s.yellow_cards}</td><td class="num">${s.red_cards}</td></tr>`).join("")}</tbody></table></div>` : `<p class="muted">No Premier League appearances before 2026–27.</p>`}
         <p style="text-align:right;margin:14px 0 0"><button class="btn" onclick="document.getElementById('dlg').close()">Close</button></p>`;
       dlg.showModal();
     }
@@ -456,23 +483,23 @@
       <div><label for="t-club">Club</label><select id="t-club">${optionHtml(clubsT, "All clubs")}</select></div>
       <div><label for="t-dir">Direction</label><select id="t-dir"><option value="">Signings and departures</option><option>Signing</option><option>Departure</option></select></div>
       <div><label for="t-kind">Type of move</label><select id="t-kind">${optionHtml(kinds, "All types")}</select></div>
-      <div><label for="t-min">Minimum minutes</label><input id="t-min" type="number" min="0" value="0"></div></div>
-      <p class="note">Derived from where players actually played, since no fees are available: a move is a player appearing for a different club than before (or, for 2026–27, comparing 2025–26 appearances with today's squad lists). Loans count as moves. "From outside the Premier League" also covers promoted youth players. Minutes are those in the later season for a signing, or the last season at the club for a departure.</p>
+      <div><label for="t-min">Minimum appearances</label><input id="t-min" type="number" min="0" value="0"></div></div>
+      <p class="note">Derived from where players actually played, since no fees are available: a move is a player appearing for a different club than before, for every season from 1993–94 (or, for 2026–27, comparing 2025–26 appearances with today's squad lists). Loans count as moves. "From outside the Premier League" also covers promoted youth players. Appearances are those in the later season for a signing, or in the last season at the club for a departure. If a player appears for two clubs in one season, the order comes from his clubs in the seasons before and after.</p>
       <div class="kpis" id="t-kpis"></div><div class="grid2"><div class="card"><h3>Signings and departures by club</h3><canvas id="t-chart"></canvas></div>
       <div class="card"><h3>The moves</h3><div class="tablewrap" id="t-wrap"><table class="plain" id="t-tbl"></table></div></div></div>`;
     $("t-season").value = "2025–26";
     let chart;
     function draw() {
       const s = $("t-season").value, club = $("t-club").value, dir = $("t-dir").value, kind = $("t-kind").value, mn = +$("t-min").value || 0;
-      const rows = T.filter((r) => r.season === s && (!club || r.club === club) && (!dir || r.direction === dir) && (!kind || r.kind === kind) && (r.minutes_that_season || 0) >= mn);
+      const rows = T.filter((r) => r.season === s && (!club || r.club === club) && (!dir || r.direction === dir) && (!kind || r.kind === kind) && (r.appearances_that_season || 0) >= mn);
       const sig = rows.filter((r) => r.direction === "Signing").length, dep = rows.filter((r) => r.direction === "Departure").length;
       $("t-kpis").innerHTML = [[int(rows.length), "moves in view"], [int(sig), "signings"], [int(dep), "departures"], [int(rows.filter((r) => /another Premier League club|Mid-season/.test(r.kind) && r.direction === "Signing").length), "between Premier League clubs"]].map(([n, l]) => `<div class="kpi"><div class="n">${n}</div><div class="l">${l}</div></div>`).join("");
       const clubs = C.byKey(rows, (r) => r.club);
       const items = [...clubs].map(([c, rs]) => ({ c, sig: rs.filter((r) => r.direction === "Signing").length, dep: rs.filter((r) => r.direction === "Departure").length })).sort((a, b) => b.sig + b.dep - (a.sig + a.dep)).slice(0, 14);
       if (chart) chart.destroy();
       chart = new Chart($("t-chart"), { type: "bar", data: { labels: items.map((x) => PL.short(x.c)), datasets: [{ label: "Signings", data: items.map((x) => x.sig), backgroundColor: "#00ff85cc" }, { label: "Departures", data: items.map((x) => x.dep), backgroundColor: "#ff2d78cc" }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.1, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { autoSkip: false, font: { size: 10 } } } } } });
-      rows.sort((a, b) => (b.minutes_that_season || 0) - (a.minutes_that_season || 0));
-      $("t-tbl").innerHTML = `<thead><tr><th>Club</th><th>Player</th><th></th><th>From → to</th><th class="num">Min</th></tr></thead><tbody>` + rows.slice(0, 300).map((r) => `<tr><td>${esc(r.club)}</td><td>${esc(r.player)} <span class="muted">${esc(r.position)}</span></td><td><span class="chip ${r.direction === "Signing" ? "up" : "down"}">${r.direction}</span></td><td class="muted">${esc(r.from_club || "outside the PL")} → ${esc(r.to_club || "left the PL")}<br>${esc(r.kind)}</td><td class="num">${int(r.minutes_that_season)}</td></tr>`).join("") + "</tbody>";
+      rows.sort((a, b) => (b.appearances_that_season || 0) - (a.appearances_that_season || 0) || (b.goals_that_season || 0) - (a.goals_that_season || 0));
+      $("t-tbl").innerHTML = `<thead><tr><th>Club</th><th>Player</th><th></th><th>From → to</th><th class="num">Apps</th></tr></thead><tbody>` + rows.slice(0, 300).map((r) => `<tr><td>${esc(r.club)}</td><td>${esc(r.player)} <span class="muted">${esc(r.position)}</span></td><td><span class="chip ${r.direction === "Signing" ? "up" : "down"}">${r.direction}</span></td><td class="muted">${esc(r.from_club || "outside the PL")} → ${esc(r.to_club || "left the PL")}<br>${esc(r.kind)}</td><td class="num">${int(r.appearances_that_season)}</td></tr>`).join("") + "</tbody>";
     }
     ["t-season", "t-club", "t-dir", "t-kind"].forEach((i) => $(i).addEventListener("change", draw));
     $("t-min").addEventListener("input", draw);

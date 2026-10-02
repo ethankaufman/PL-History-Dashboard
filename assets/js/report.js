@@ -3,6 +3,7 @@ function renderReport(d) {
   const { int, dec, pct, esc, clubColor, palette } = PL;
   const C = Calc;
   PL.chartDefaults();
+  document.getElementById("report-root").hidden = false;   // show the page (still under the intro overlay) BEFORE drawing charts, so they measure their real size
 
   const matches = d.matches, seasons = d.seasons, finalTables = d.finalTables, pm = d.playerMatches, teams = d.teams;
   const seasonStats = C.seasonStats(matches);
@@ -17,7 +18,7 @@ function renderReport(d) {
   // ---------- hero ----------
   document.getElementById("summary").innerHTML =
     `This report follows every Premier League season from 1992–93 to 2025–26: ${int(matches.length)} matches, ${int(totalGoals)} goals ` +
-    `and ${int(seasons.length)} champions' stories, plus ${int(pm.length)} player appearances from 2016–17 onward. ` +
+    `and ${int(seasons.length)} champions' stories, plus season-by-season stats for every player since 1992–93 and ${int(pm.length)} match-by-match appearances from 2016–17. ` +
     `The league has become a little less home-friendly (home wins fell from ${pct(firstSeason.homeWinPct)} of matches in ${firstSeason.season} to ${pct(lastSeason.homeWinPct)} in ${lastSeason.season}), ` +
     `goals have crept up to ${dec(lastSeason.goalsPerGame)} a game, and a handful of clubs still win everything: only ${titleCounts.length} clubs have ever won the title, ` +
     `and ${titleCounts[0][0]} alone won ${titleCounts[0][1]}.`;
@@ -133,16 +134,16 @@ function renderReport(d) {
     caption: "Source: matches.csv — odds_home / odds_away for the winning side.",
   });
 
-  // 8 squad rotation
-  const squad = C.squadSizes(pm);
-  const sqHigh = max(squad, (s) => s.avgPlayersUsed), sqLow = min(squad, (s) => s.avgPlayersUsed);
+  // 8 squad rotation (every season, from the season-totals table)
+  const squad = C.squadSizesSeasons(d.playerSeasons);
+  const sqHigh = max(squad, (x) => x.avgPlayersUsed), sqLow = min(squad, (x) => x.avgPlayersUsed);
   add({
-    title: `Clubs used an average of ${dec(sqHigh.avgPlayersUsed, 1)} players in ${sqHigh.season}, up from ${dec(sqLow.avgPlayersUsed, 1)} in ${sqLow.season}`,
-    body: [`Squad rotation has increased. Over ${squad.length} seasons of player data, the average club used between ${dec(sqLow.avgPlayersUsed, 1)} (${sqLow.season}) and ${dec(sqHigh.avgPlayersUsed, 1)} (${sqHigh.season}) different players in the league. ` +
-      `That is about ${dec(sqHigh.avgPlayersUsed - sqLow.avgPlayersUsed, 1)} extra players a season.`,
-      `A player counts for a club in a season if he played at least one minute for that club. The average is over all ${squad[0].clubs} clubs in each season's player table.`],
-    chart: { type: "bar", data: { labels: squad.map((s) => s.season), datasets: [{ label: "Average players used per club", data: squad.map((s) => +s.avgPlayersUsed.toFixed(2)), backgroundColor: "#04f5ffaa" }] }, options: lineOpts({ y: { min: 20, title: { display: true, text: "Players used" } } }) },
-    caption: "Source: player_matches.csv — distinct players with at least one minute, per club per season.",
+    title: `Clubs used an average of ${dec(sqHigh.avgPlayersUsed, 1)} players in ${sqHigh.season}, up from a low of ${dec(sqLow.avgPlayersUsed, 1)} in ${sqLow.season}`,
+    body: [`Squad rotation has increased. Across ${squad.length} seasons of player data, the average club used between ${dec(sqLow.avgPlayersUsed, 1)} (${sqLow.season}) and ${dec(sqHigh.avgPlayersUsed, 1)} (${sqHigh.season}) different players in the league. ` +
+      `In ${squad[0].season} it was ${dec(squad[0].avgPlayersUsed, 1)}; in ${squad[squad.length - 1].season} it was ${dec(squad[squad.length - 1].avgPlayersUsed, 1)}.`,
+      `A player counts for a club in a season if he made at least one appearance for that club (substitute appearances included). The average is over all clubs in the season. Source: player_seasons.csv, the Premier League's season statistics.`],
+    chart: { type: "bar", data: { labels: squad.map((x) => x.season), datasets: [{ label: "Average players used per club", data: squad.map((x) => +x.avgPlayersUsed.toFixed(2)), backgroundColor: "#04f5ffaa" }] }, options: lineOpts({ y: { min: 20, title: { display: true, text: "Players used" } } }) },
+    caption: "Source: player_seasons.csv — distinct players with at least one appearance, per club per season.",
   });
 
   // 9 London share
@@ -206,31 +207,33 @@ function renderReport(d) {
     caption: "Source: awards.json — Premier League Golden Boot winners by season.",
   });
 
-  // 13 top scorers
-  const totals = C.playerTotals(pm).sort((a, b) => b.goals - a.goals).slice(0, 10);
-  const t0 = totals[0];
-  const hl = [...totals].sort((a, b) => b.goals / b.minutes - a.goals / a.minutes)[0];
+  // 13 all-time scorers, computed from the season-totals table and checked against the official list
+  const careers = C.playerTotalsSeasons(d.playerSeasons).sort((a, b) => b.goals - a.goals);
+  const top10 = careers.slice(0, 10), c0 = top10[0], c1 = top10[1];
+  const hundred = careers.filter((p) => p.goals >= 100).length;
+  const rate = C.playerTotals(pm).filter((p) => p.minutes >= 5000).sort((a, b) => b.goals / b.minutes - a.goals / a.minutes)[0];
+  const official = d.records.official.most_goals[0];
   add({
-    title: `Since 2016–17, ${t0.name} has scored the most Premier League goals (${t0.goals}); ${hl.name} scores fastest, a goal every ${int(hl.minutes / hl.goals)} minutes`,
-    body: [`This list only covers the ten seasons with player data, 2016–17 to 2025–26, so it is not the all-time record (that belongs to Alan Shearer, in the next finding). ${totals.slice(0, 3).map((p) => `${p.name} (${p.goals})`).join(", ")} head a list built from ${int(pm.length)} appearances. ` +
-      `${hl.name} has ${hl.goals} goals in ${int(hl.minutes)} minutes, ${dec(90 * hl.goals / hl.minutes, 2)} goals per 90 minutes — the best rate among the top ten.`,
-      `Goals are summed over every match a player appeared in during 2016–17 to 2025–26 (own goals not included). Goals per 90 minutes is goals divided by minutes played, times 90.`],
-    chart: { type: "bar", data: { labels: totals.map((p) => p.name), datasets: [{ label: "Goals 2016–17 to 2025–26", data: totals.map((p) => p.goals), backgroundColor: palette[0] + "cc" }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.4, plugins: { legend: { display: false } } } },
-    caption: "Source: player_matches.csv — goals by player, one row per appearance.",
+    title: `${c0.name}'s ${c0.goals} goals are still the Premier League record, ${c0.goals - c1.goals} clear of ${c1.name}`,
+    body: [`Adding up every player's goals for every club in every season since 1992–93, ${c0.name} scored ${c0.goals} in ${c0.appearances} games (${parseInt(c0.first, 10)} to ${parseInt(c0.last, 10) + 1}). ` +
+      `${c1.name} is second with ${c1.goals} and ${top10[2].name} third with ${top10[2].goals}; ${hundred} players have reached 100. ` +
+      `Where minutes are recorded (2016–17 onward), ${rate.name} scores fastest: a goal every ${int(rate.minutes / rate.goals)} minutes.`,
+      `Goals are summed from player_seasons.csv over every club a player appeared for. The total matches the official all-time list (${official.Player}: ${official.Goals}). Own goals are not credited to players.`],
+    chart: { type: "bar", data: { labels: top10.map((p) => p.name), datasets: [{ label: "Premier League goals, all time", data: top10.map((p) => p.goals), backgroundColor: top10.map((p, i) => (i === 0 ? "#ffc83dcc" : "#00ff85aa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.4, plugins: { legend: { display: false } } } },
+    caption: "Source: player_seasons.csv — goals by player across every club and season, 1992–93 to 2025–26. Gold = record holder.",
   });
 
-  // 13b all-time scorers (official records)
-  const topScorers = d.records.official.most_goals.map((r) => ({ name: r.Player, goals: +r.Goals, games: +r.Games, ratio: +r.Ratio, first: r["First goal"], last: r["Last goal"] }));
-  const hundred = d.records.official["100_goals"];
-  const sh = topScorers[0], k2 = topScorers[1];
-  const salahRow = hundred.find((r) => r.Player === "Mohamed Salah");
+  // 13c nationality
+  const nat = C.nationalityShare(d.playerSeasons);
   add({
-    title: `${sh.name}'s ${sh.goals} goals are still the Premier League record, ${sh.goals - k2.goals} clear of ${k2.name}`,
-    body: [`${sh.name} scored ${sh.goals} goals in ${sh.games} games between ${sh.first} and ${sh.last}. ${k2.name} is second with ${k2.goals}, and ${topScorers[2].name} third with ${topScorers[2].goals}. ` +
-      `${hundred.length} players have reached 100 Premier League goals${salahRow ? `, including ${salahRow.Player} with ${salahRow.Goals}` : ""}. The highest goals-per-game ratio in the top ten belongs to ${[...topScorers].sort((a, b) => b.ratio - a.ratio)[0].name} (${dec([...topScorers].sort((a, b) => b.ratio - a.ratio)[0].ratio, 2)}).`,
-      `These are the official all-time records from Wikipedia's "Premier League records and statistics" page, covering every season since 1992–93. They differ from the previous finding because our player-by-player data only starts in 2016–17.`],
-    chart: { type: "bar", data: { labels: topScorers.map((p) => p.name), datasets: [{ label: "Premier League goals, all time", data: topScorers.map((p) => p.goals), backgroundColor: topScorers.map((p, i) => (i === 0 ? "#ffc83dcc" : "#00ff85aa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.4, plugins: { legend: { display: false } } } },
-    caption: "Source: records.json — official career goals list (Wikipedia). Gold = record holder.",
+    title: `English players made ${pct(nat[0].englandAppsPct, 0)} of Premier League appearances in ${nat[0].season}, but only ${pct(nat[nat.length - 1].englandAppsPct, 0)} in ${nat[nat.length - 1].season}`,
+    body: [`The league has become far more international. In ${nat[0].season} English players made ${pct(nat[0].englandAppsPct, 1)} of all appearances and scored ${pct(nat[0].englandGoalsPct, 1)} of the goals; by ${nat[nat.length - 1].season} those figures were ${pct(nat[nat.length - 1].englandAppsPct, 1)} and ${pct(nat[nat.length - 1].englandGoalsPct, 1)}. ` +
+      `The number of nationalities on the pitch grew from ${nat[0].nationalities} to ${Math.max(...nat.map((x) => x.nationalities))} at its peak.`,
+      `Share of appearances is appearances by players whose national team is England divided by all appearances in the season. Nationality is the player's national team as listed by the Premier League.`],
+    chart: { type: "line", data: { labels: nat.map((x) => x.season), datasets: [
+      { label: "England's share of appearances", data: nat.map((x) => +x.englandAppsPct.toFixed(2)), borderColor: palette[1], tension: .3, pointRadius: 1.5 },
+      { label: "England's share of goals", data: nat.map((x) => +x.englandGoalsPct.toFixed(2)), borderColor: palette[3], tension: .3, pointRadius: 1.5 }] }, options: lineOpts({ legend: true, y: { min: 0, title: { display: true, text: "% of total" } } }) },
+    caption: "Source: player_seasons.csv — nationality, appearances and goals of every player, every season.",
   });
 
   // 14 Champions League winners by country
@@ -296,6 +299,7 @@ function renderReport(d) {
       <div class="chartbox"><canvas id="chart-${i + 1}" role="img" aria-label="${esc(s.title)}"></canvas><div class="cap">${esc(s.caption)}</div></div>
     </section>`).join("");
   sections.forEach((s, i) => charts.push(new Chart(document.getElementById(`chart-${i + 1}`), s.chart)));
+  requestAnimationFrame(() => charts.forEach((c) => c.resize()));
 
   // ---------- season-by-season winners table (extra) ----------
   const champByS = Object.fromEntries(seasons.map((s) => [s.season, s]));
@@ -320,6 +324,7 @@ function renderReport(d) {
     <ul>
       <li><b>The main data set — <code>player_matches.csv</code></b>: one row is one player in one Premier League match he played in (at least one minute), ${int(pm.length)} rows across ${new Set(pm.map((r) => r.season)).size} seasons (2016–17 to 2025–26), ${int(new Set(pm.map((r) => r.player_id)).size)} players and ${new Set(pm.map((r) => r.team)).size} clubs.
         Columns include season, matchweek, date, player, position, team, opponent, home or away, score, minutes, goals, assists, clean sheet, saves, cards and expected goals and assists (from 2022–23). It comes from the public Premier League data saved each gameweek in the open vaastav archive; fantasy-game columns (points, prices, bonus) were dropped.</li>
+      <li><b>Every player, every season — <code>player_seasons.csv</code></b>: ${int(d.playerSeasons.length)} rows, one per player per club per season from 1992–93 to 2025–26 (${int(new Set(d.playerSeasons.map((r) => r.player_id)).size)} players): appearances, goals, assists, clean sheets, cards, nationality and position, and minutes where recorded (from 2006–07). From the Premier League's public statistics service, and checked against the official career records (Shearer's 260 goals, Giggs' 162 assists and so on).</li>
       <li><b>Matches — <code>matches.csv</code> and <code>team_matches.csv</code></b>: ${int(matches.length)} matches, one row per match and ${int(tm.length)} rows with one per team per match, plus the league table after every game. 1993–94 onward from football-data.co.uk; 1992–93 from the footballcsv project. Shots, fouls, cards, referees and odds exist only from 2000–01.</li>
       <li><b>Final tables, seasons, awards, honours, clubs</b>: ${int(finalTables.length)} official table rows, ${seasons.length} seasons (${int(nPromoted)} promotions), ${int(d.awards.awards.length)} award records, European and World Cup winners, and ${teams.length} club histories with ${int(C.sum(teams, (t) => t.stadiums.length))} stadium entries, all from Wikipedia (CC BY-SA 4.0).</li>
       <li><b>Records and trophies</b>: all-time player records (career goals, assists, appearances, clean sheets) are the official lists from Wikipedia, and the winners of the FA Cup, League Cup, Community Shield and league title come from Wikipedia's lists, with each club's totals cross-checked against Wikipedia's totals. Club and league records for the Premier League era (biggest wins, longest runs, best and worst seasons) are computed from the match data here and agree with the official lists.</li>

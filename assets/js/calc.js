@@ -103,6 +103,49 @@
     return [...perSeason].map(([season, sizes]) => ({ season, avgPlayersUsed: avg(sizes), clubs: sizes.length })).sort((a, b) => bySeason(a.season, b.season));
   }
 
+  /** Players used per club per season, from the season-totals table (one row per player per club per season). */
+  function squadSizesSeasons(rows) {
+    const perClubSeason = new Map();
+    for (const r of rows) {
+      if (!(r.appearances > 0)) continue;
+      const k = r.season + "|" + r.club;
+      if (!perClubSeason.has(k)) perClubSeason.set(k, new Set());
+      perClubSeason.get(k).add(r.player_id);
+    }
+    const perSeason = new Map();
+    for (const [k, set] of perClubSeason) {
+      const season = k.split("|")[0];
+      if (!perSeason.has(season)) perSeason.set(season, []);
+      perSeason.get(season).push(set.size);
+    }
+    return [...perSeason].map(([season, sizes]) => ({ season, avgPlayersUsed: avg(sizes), clubs: sizes.length })).sort((a, b) => bySeason(a.season, b.season));
+  }
+
+  /** Career totals by player across the season-totals table (every club, every season since 1992-93). */
+  function playerTotalsSeasons(rows) {
+    const m = new Map();
+    for (const r of rows) {
+      let p = m.get(r.player_id);
+      if (!p) m.set(r.player_id, (p = { id: r.player_id, name: r.player, position: r.position, nationality: r.nationality, appearances: 0, goals: 0, assists: 0, cleanSheets: 0, first: r.season, last: r.season }));
+      p.appearances += r.appearances; p.goals += r.goals; p.assists += r.assists; p.cleanSheets += r.clean_sheets;
+      if (bySeason(r.season, p.first) < 0) p.first = r.season;
+      if (bySeason(r.season, p.last) > 0) p.last = r.season;
+    }
+    return [...m.values()];
+  }
+
+  /** England's share of appearances and goals, and the number of nationalities, in each season. */
+  function nationalityShare(rows) {
+    const out = [];
+    for (const [season, rs] of byKey(rows, (r) => r.season)) {
+      const apps = sum(rs, (r) => r.appearances), goals = sum(rs, (r) => r.goals);
+      const eng = rs.filter((r) => r.nationality === "England");
+      out.push({ season, englandAppsPct: (100 * sum(eng, (r) => r.appearances)) / apps, englandGoalsPct: (100 * sum(eng, (r) => r.goals)) / goals,
+        nationalities: new Set(rs.filter((r) => r.nationality && r.appearances > 0).map((r) => r.nationality)).size });
+    }
+    return out.sort((a, b) => bySeason(a.season, b.season));
+  }
+
   /** Career totals by player across the player-match table. */
   function playerTotals(playerMatches) {
     const m = new Map();
@@ -151,5 +194,5 @@
     return moves.sort((a, b) => a.year - b.year);
   }
 
-  return { has, sum, avg, byKey, seasonStart, bySeason, seasonStats, titleCounts, titleRaces, upsets, squadSizes, playerTotals, clubsPerSeason, promotionOutcomes, groundMoves };
+  return { has, sum, avg, byKey, seasonStart, bySeason, seasonStats, titleCounts, titleRaces, upsets, squadSizes, squadSizesSeasons, playerTotalsSeasons, nationalityShare, playerTotals, clubsPerSeason, promotionOutcomes, groundMoves };
 });
