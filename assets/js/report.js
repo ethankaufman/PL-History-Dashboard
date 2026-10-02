@@ -211,12 +211,26 @@ function renderReport(d) {
   const t0 = totals[0];
   const hl = [...totals].sort((a, b) => b.goals / b.minutes - a.goals / a.minutes)[0];
   add({
-    title: `${t0.name} leads the 2016–17 to 2025–26 scoring charts with ${t0.goals} goals; ${hl.name} scores fastest, a goal every ${int(90 * hl.minutes / (90 * hl.goals))} minutes`,
-    body: [`${totals.slice(0, 3).map((p) => `${p.name} (${p.goals})`).join(", ")} head a list built from ${int(pm.length)} appearances. ` +
+    title: `Since 2016–17, ${t0.name} has scored the most Premier League goals (${t0.goals}); ${hl.name} scores fastest, a goal every ${int(hl.minutes / hl.goals)} minutes`,
+    body: [`This list only covers the ten seasons with player data, 2016–17 to 2025–26, so it is not the all-time record (that belongs to Alan Shearer, in the next finding). ${totals.slice(0, 3).map((p) => `${p.name} (${p.goals})`).join(", ")} head a list built from ${int(pm.length)} appearances. ` +
       `${hl.name} has ${hl.goals} goals in ${int(hl.minutes)} minutes, ${dec(90 * hl.goals / hl.minutes, 2)} goals per 90 minutes — the best rate among the top ten.`,
       `Goals are summed over every match a player appeared in during 2016–17 to 2025–26 (own goals not included). Goals per 90 minutes is goals divided by minutes played, times 90.`],
     chart: { type: "bar", data: { labels: totals.map((p) => p.name), datasets: [{ label: "Goals 2016–17 to 2025–26", data: totals.map((p) => p.goals), backgroundColor: palette[0] + "cc" }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.4, plugins: { legend: { display: false } } } },
     caption: "Source: player_matches.csv — goals by player, one row per appearance.",
+  });
+
+  // 13b all-time scorers (official records)
+  const topScorers = d.records.official.most_goals.map((r) => ({ name: r.Player, goals: +r.Goals, games: +r.Games, ratio: +r.Ratio, first: r["First goal"], last: r["Last goal"] }));
+  const hundred = d.records.official["100_goals"];
+  const sh = topScorers[0], k2 = topScorers[1];
+  const salahRow = hundred.find((r) => r.Player === "Mohamed Salah");
+  add({
+    title: `${sh.name}'s ${sh.goals} goals are still the Premier League record, ${sh.goals - k2.goals} clear of ${k2.name}`,
+    body: [`${sh.name} scored ${sh.goals} goals in ${sh.games} games between ${sh.first} and ${sh.last}. ${k2.name} is second with ${k2.goals}, and ${topScorers[2].name} third with ${topScorers[2].goals}. ` +
+      `${hundred.length} players have reached 100 Premier League goals${salahRow ? `, including ${salahRow.Player} with ${salahRow.Goals}` : ""}. The highest goals-per-game ratio in the top ten belongs to ${[...topScorers].sort((a, b) => b.ratio - a.ratio)[0].name} (${dec([...topScorers].sort((a, b) => b.ratio - a.ratio)[0].ratio, 2)}).`,
+      `These are the official all-time records from Wikipedia's "Premier League records and statistics" page, covering every season since 1992–93. They differ from the previous finding because our player-by-player data only starts in 2016–17.`],
+    chart: { type: "bar", data: { labels: topScorers.map((p) => p.name), datasets: [{ label: "Premier League goals, all time", data: topScorers.map((p) => p.goals), backgroundColor: topScorers.map((p, i) => (i === 0 ? "#ffc83dcc" : "#00ff85aa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.4, plugins: { legend: { display: false } } } },
+    caption: "Source: records.json — official career goals list (Wikipedia). Gold = record holder.",
   });
 
   // 14 Champions League winners by country
@@ -231,6 +245,47 @@ function renderReport(d) {
       `Counted by the country of the winning club in each season's final, from the list of Champions League finals. Season labels follow the Premier League season in which the final was played.`],
     chart: { type: "bar", data: { labels: uclList.map((x) => x[0]), datasets: [{ label: "Champions League wins since 1992–93", data: uclList.map((x) => x[1]), backgroundColor: uclList.map((x) => (x[0] === "England" ? "#ff2d78cc" : "#8f7bb8aa")) }] }, options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: false } }, scales: { y: { ticks: { stepSize: 2 } } } } },
     caption: "Source: honours.json — Champions League finals by season.",
+  });
+
+  // 15 record seasons (computed from final tables)
+  const L = d.records.league, best5 = L.most_points, worst5 = L.fewest_points;
+  add({
+    title: `${best5[0].team} won ${best5[0].points} points in ${best5[0].season}, the most ever; ${worst5[0].team} managed just ${worst5[0].points} in ${worst5[0].season}`,
+    body: [`The best seasons: ${best5.slice(0, 3).map((r) => `${r.team} ${r.season} (${r.points})`).join(", ")}. The worst: ${worst5.slice(0, 3).map((r) => `${r.team} ${r.season} (${r.points})`).join(", ")}. ` +
+      `${best5[0].team}'s record came with ${best5[0].won} wins, ${best5[0].drawn} draws and ${best5[0].lost} defeats; ${worst5[0].team} won ${worst5[0].won} game${worst5[0].won === 1 ? "" : "s"}.`,
+      `Points are the official totals in 38-game seasons (the three 42-game seasons are left out so that totals compare fairly). Both lists were computed from final_tables.csv and agree with the official records list.`],
+    chart: { type: "bar", data: { labels: [...best5, ...worst5].map((r) => `${PL.short(r.team)} ${r.season}`), datasets: [{ label: "Points", data: [...best5, ...worst5].map((r) => r.points), backgroundColor: [...best5.map(() => "#00ff85cc"), ...worst5.map(() => "#ff2d78cc")] }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.2, plugins: { legend: { display: false } } } },
+    caption: "Source: final_tables.csv. Green = five best seasons, pink = five worst.",
+  });
+
+  // 16 unbeaten runs
+  const unb = L.longest_unbeaten_runs;
+  add({
+    title: `${unb[0].team}'s ${unb[0].length}-match unbeaten run is still the longest, ${unb[0].length - unb[1].length} games ahead of ${unb[1].team}`,
+    body: [`${unb[0].team} went ${unb[0].length} matches without defeat between ${unb[0].from} and ${unb[0].to}, across ${unb[0].from_season}, ${unb[0].from_season === unb[0].to_season ? "" : "2003–04 and "}${unb[0].to_season}. ${unb[1].team} were next with ${unb[1].length}. ` +
+      `The longest winning run is ${L.longest_winning_runs[0].length} (${L.longest_winning_runs[0].team}); the longest losing run is ${L.longest_losing_runs[0].length} (${L.longest_losing_runs[0].team}, ${L.longest_losing_runs[0].to_season}). The biggest win ever was ${L.biggest_wins[0].score} (${L.biggest_wins[0].home} v ${L.biggest_wins[0].away}, ${L.biggest_wins[0].date.slice(0, 4)}).`,
+      `A run only continues from one season into the next if the club played in the Premier League in both. Unbeaten means no defeats (draws allowed). Computed from team_matches.csv.`],
+    chart: { type: "bar", data: { labels: unb.map((r) => `${PL.short(r.team)} (${r.from_season === r.to_season ? r.from_season : r.from_season.slice(0, 4) + "–" + r.to_season.slice(2)})`), datasets: [{ label: "Matches unbeaten", data: unb.map((r) => r.length), backgroundColor: unb.map((r) => clubColor(r.team)) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.7, plugins: { legend: { display: false } } } },
+    caption: "Source: team_matches.csv — every club's results in date order.",
+  });
+
+  // 17 domestic trophies since 1992
+  const dom = d.domestic.by_season, tally = {};
+  const bump = (club, k) => { if (!club) return; (tally[club] ||= { league: 0, fa_cup: 0, league_cup: 0, community_shield: 0 })[k]++; };
+  for (const s of seasons) bump(s.champion, "league");
+  for (const [, v] of Object.entries(dom)) { bump(v.fa_cup.winner, "fa_cup"); bump(v.league_cup.winner, "league_cup"); if (v.community_shield) v.community_shield.winners.forEach((w) => bump(w, "community_shield")); }
+  const tot = (t) => t.league + t.fa_cup + t.league_cup + t.community_shield;
+  const ranked = Object.entries(tally).sort((a, b) => tot(b[1]) - tot(a[1]) || a[0].localeCompare(b[0])).slice(0, 10);
+  add({
+    title: `${ranked[0][0]} have won ${tot(ranked[0][1])} domestic trophies since 1992, ${tot(ranked[0][1]) - tot(ranked[1][1])} more than ${ranked[1][0]}`,
+    body: [`Counting the Premier League, FA Cup, League Cup and Community Shield from 1992–93 to 2025–26: ${ranked.slice(0, 4).map(([c, t]) => `${c} ${tot(t)}`).join(", ")}. ` +
+      `${Object.keys(tally).length} different clubs have won at least one of the four trophies in that time.`,
+      `Each season's FA Cup and League Cup winner is the final played in that season; the Community Shield is the match played at the start of the season. All-time club totals, back to the 1800s, are in the dashboard's Records tab.`],
+    chart: { type: "bar", data: { labels: ranked.map((r) => PL.short(r[0])), datasets: [
+      { label: "Premier League", data: ranked.map((r) => r[1].league), backgroundColor: "#00ff85cc" }, { label: "FA Cup", data: ranked.map((r) => r[1].fa_cup), backgroundColor: "#ffc83dcc" },
+      { label: "League Cup", data: ranked.map((r) => r[1].league_cup), backgroundColor: "#04f5ffcc" }, { label: "Community Shield", data: ranked.map((r) => r[1].community_shield), backgroundColor: "#b388ffcc" }] },
+      options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { stepSize: 5 } } } } },
+    caption: "Source: domestic_honours.json and seasons.json — winners of each trophy by season.",
   });
 
   // ---------- render sections ----------
@@ -267,6 +322,7 @@ function renderReport(d) {
         Columns include season, matchweek, date, player, position, team, opponent, home or away, score, minutes, goals, assists, clean sheet, saves, cards and expected goals and assists (from 2022–23). It comes from the public Premier League data saved each gameweek in the open vaastav archive; fantasy-game columns (points, prices, bonus) were dropped.</li>
       <li><b>Matches — <code>matches.csv</code> and <code>team_matches.csv</code></b>: ${int(matches.length)} matches, one row per match and ${int(tm.length)} rows with one per team per match, plus the league table after every game. 1993–94 onward from football-data.co.uk; 1992–93 from the footballcsv project. Shots, fouls, cards, referees and odds exist only from 2000–01.</li>
       <li><b>Final tables, seasons, awards, honours, clubs</b>: ${int(finalTables.length)} official table rows, ${seasons.length} seasons (${int(nPromoted)} promotions), ${int(d.awards.awards.length)} award records, European and World Cup winners, and ${teams.length} club histories with ${int(C.sum(teams, (t) => t.stadiums.length))} stadium entries, all from Wikipedia (CC BY-SA 4.0).</li>
+      <li><b>Records and trophies</b>: all-time player records (career goals, assists, appearances, clean sheets) are the official lists from Wikipedia, and the winners of the FA Cup, League Cup, Community Shield and league title come from Wikipedia's lists, with each club's totals cross-checked against Wikipedia's totals. Club and league records for the Premier League era (biggest wins, longest runs, best and worst seasons) are computed from the match data here and agree with the official lists.</li>
       <li><b>Rows dropped</b>: player rows with zero minutes (the archive lists every player every gameweek, including those who did not play) are removed (${int(noMin)} remain in the final file); 6 duplicate rows for one 2025–26 player who was entered twice in the source were dropped. Seasons before 2016–17 have no player-level data, and 1992–93 has no shots, cards or odds.</li>
       <li><b>Matchweek</b> means a club's nth game of the season. Every club has played the same number of games at game n, so the table at game n is a fair comparison. Points deductions (Middlesbrough 1996–97, Portsmouth 2009–10, Everton and Nottingham Forest 2023–24) are applied from the date they took effect, and the final points match the official tables.</li>
       <li><b>How the numbers are computed</b>: goals per game = goals ÷ matches; home win % = home wins ÷ matches; cards per game = (home + away cards) ÷ matches with card data; margin = champion points − runner-up points; safety points = points of the last club not relegated; goals per 90 = goals ÷ minutes × 90; players used = distinct players with at least one minute for a club in a season. Each is calculated by the same code (<code>assets/js/calc.js</code>) on this page, the dashboard and the check script <code>tests/check_numbers.js</code>.</li>

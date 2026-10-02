@@ -5,9 +5,10 @@ const PL = (() => {
     playerMatches: "data/player_matches.csv", transfers: "data/transfers.csv",
     seasons: "data/seasons.json", awards: "data/awards.json", honours: "data/honours.json", teams: "data/teams.json",
     players: "data/current_players.json", map: "data/uk_map.json",
+    domestic: "data/domestic_honours.json", records: "data/records.json",
   };
   // approximate download sizes (MB) so the progress bar moves smoothly
-  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1 };
+  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1, domestic: 0.15, records: 0.2 };
 
   async function load(names, onProgress) {
     const total = names.reduce((s, n) => s + weight[n], 0);
@@ -81,5 +82,28 @@ const PL = (() => {
     Chart.defaults.animation.duration = 500;
   }
 
-  return { load, renderNav, int, dec, pct, esc, short, clubColor, palette, chartDefaults };
+  // ---- club facts shared by the map card and the dashboard ----
+  const ordinal = (n) => { const v = n % 100; return n + (["th", "st", "nd", "rd"][(v - 20) % 10] || ["th", "st", "nd", "rd"][v] || "th"); };
+  const year = (d) => String(d).slice(0, 4);
+  function trophyChips(c) {
+    if (!c) return "";
+    const item = (n, label) => `<span class="chip ${n ? "up" : ""}"><b>${n}</b> ${label}</span>`;
+    return item(c.league, "league title" + (c.league === 1 ? "" : "s")) + item(c.fa_cup, "FA Cup" + (c.fa_cup === 1 ? "" : "s")) +
+      item(c.league_cup, "League Cup" + (c.league_cup === 1 ? "" : "s")) + item(c.community_shield, "Community Shield" + (c.community_shield === 1 ? "" : "s"));
+  }
+  function recordLines(r) {
+    if (!r) return [];
+    const m = (x) => (x ? `${x.score} ${esc(x.home)} v ${esc(x.away)} (${year(x.date)})` : "–");
+    const run = (x) => (x ? `${x.length} games (${x.from_season === x.to_season ? x.from_season : x.from_season + " to " + x.to_season})` : "–");
+    return [
+      ["Best finish", `${ordinal(r.best_finish.position)} in ${r.best_finish.season} (${r.best_finish.points} points)`],
+      ["Most points in a season", `${r.most_points.points} in ${r.most_points.season}`],
+      ["Most goals in a season", `${r.most_goals_scored.goals_for} in ${r.most_goals_scored.season}`],
+      ["Biggest win", m(r.biggest_win)], ["Heaviest defeat", m(r.biggest_defeat)],
+      ["Longest unbeaten run", run(r.longest_unbeaten)], ["Longest winning run", run(r.longest_winning)], ["Longest losing run", run(r.longest_losing)],
+      ["Top Premier League scorer", esc(r.top_scorer)],
+    ];
+  }
+
+  return { load, renderNav, ordinal, trophyChips, recordLines, int, dec, pct, esc, short, clubColor, palette, chartDefaults };
 })();
