@@ -30,7 +30,7 @@
     }
     function kickSprite() {
       // the ball that gets kicked: a classic white-and-black football
-      const d = Math.ceil(R * 2.7 * dpr), c = document.createElement("canvas"); c.width = c.height = d;
+      const d = Math.ceil(R * 3.2 * dpr), c = document.createElement("canvas"); c.width = c.height = d;
       const x = c.getContext("2d"), r = d / 2;
       x.beginPath(); x.arc(r, r, r - 1, 0, 7); x.fillStyle = "#fff"; x.fill();
       x.save(); x.beginPath(); x.arc(r, r, r - 1, 0, 7); x.clip();
@@ -63,7 +63,7 @@
       b.vx = (Math.random() - 0.5) * 120; b.vy = 60 + Math.random() * 120; b.w = (Math.random() - 0.5) * 5; bodies.push(b);
     }
     function solve(all) {
-      for (let it = 0; it < 6; it++) {
+      for (let it = 0; it < 8; it++) {
         for (const b of all) {
           if (b.x < b.r) { b.x = b.r; if (b.vx < 0) b.vx = -b.vx * WALL_BOUNCE; }
           if (b.x > W - b.r) { b.x = W - b.r; if (b.vx > 0) b.vx = -b.vx * WALL_BOUNCE; }
@@ -118,11 +118,11 @@
     function kickAt(tx, ty) {
       if (!kickImg) kickImg = kickSprite();
       const fromLeft = tx > W / 2 ? Math.random() < 0.7 : Math.random() < 0.3;   // usually from the side farther from the click
-      const r = R * 1.35, sx = fromLeft ? r + 2 : W - r - 2, sy = H - r - 4 - Math.random() * H * 0.35;
-      const dist = Math.hypot(tx - sx, ty - sy), speed = Math.max(1500, Math.min(2300, 1100 + W * 0.6)), t = dist / speed;
+      const r = R * 1.6, sx = fromLeft ? r + 2 : W - r - 2, sy = H - r - 4 - Math.random() * H * 0.35;
+      const dist = Math.hypot(tx - sx, ty - sy), speed = Math.max(2300, Math.min(3200, 1400 + W * 0.8)), t = dist / speed;
       const k = body(sx, sy, r, kickImg, "ball");
-      k.m = r * r * 0.035; k.im = 1 / k.m; k.I = 0.5 * k.m * r * r;
-      k.vx = (tx - sx) / t; k.vy = (ty - sy) / t - 0.5 * GRAVITY * t; k.w = (fromLeft ? 1 : -1) * 18;
+      k.m = r * r * 0.1; k.im = 1 / k.m; k.I = 0.5 * k.m * r * r;
+      k.vx = (tx - sx) / t; k.vy = (ty - sy) / t - 0.5 * GRAVITY * t; k.w = (fromLeft ? 1 : -1) * 22;
       kickers.push(k); if (kickers.length > 4) kickers.shift();
       wake();
     }
