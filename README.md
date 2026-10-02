@@ -1,59 +1,79 @@
-# Premier League History Dashboard
+# Premier League History: Report and Dashboard
 
-A data dashboard covering every Premier League season since it began in 1992–93.
-Planned pages: **Report** and **Dashboard**, plus an animated intro (a spinning soccer ball
-that explodes into a rotating map of the UK showing where each club plays).
+A two-page website about every Premier League season since it began in 1992–93.
 
-**Status: Step 1 (data) is done. No website code has been written yet.**
+* **Report** (`index.html`) — 14 findings, each with a chart, a table of every season's winners, and a closing section on the data. It opens with an interactive spinning football that explodes into a rotating map of the UK once the data has loaded.
+* **Dashboard** (`dashboard.html`) — loads the data in the browser and recalculates everything as you filter: four charts with a measure switch and a breakdown switch, summary numbers, a sortable table, a reset button, and extra tools (matchweek table race, club comparison, season and award explorer, player profiles, signings and departures).
 
-## The data (in `data/`)
+Live site: https://ethankaufman.github.io/PL-History-Dashboard/
 
-| File | What it holds |
+## The data set
+
+The main data set is `data/player_matches.csv`: **one row is one player in one Premier League match he played in** (at least one minute). It has **108,681 rows and 26 columns** across 10 seasons (2016–17 to 2025–26), 1,909 players and 34 clubs. Time column: season and matchweek. Group column: player and club. Categorical columns include season, club, opponent, position and venue; numeric columns include minutes, goals, assists, clean sheets, saves, cards and expected goals.
+
+Supporting tables cover every season back to 1992–93: 13,166 matches, 686 official final-table rows, 34 seasons, 359 awards, honours, and 51 club histories with every stadium.
+
+## Where the data comes from
+
+| Data | Source |
 |---|---|
-| `seasons.json` | One entry per season (1992–93 to 2025–26): champion, European qualifiers, relegated and promoted clubs, top scorer. |
-| `awards.json` | 359 award records, one per winner per season. `award_types` explains each award; `awards` is the list. |
-| `teams.json` | All 51 clubs that have played in the Premier League: brief history, every stadium in order up to the current one, current ground, map coordinates, Premier League record. |
+| Player appearances (2016–17 to 2025–26) and today's player list | The open [vaastav/Fantasy-Premier-League](https://github.com/vaastav/Fantasy-Premier-League) archive of the Premier League's public data, and the Premier League's public API. Only real football facts are kept; fantasy-game columns (points, prices, bonus) are dropped. |
+| Match results, shots, cards, referees, odds (1993–94 on) | [football-data.co.uk](https://www.football-data.co.uk/englandm.php) |
+| 1992–93 match results | [footballcsv/england](https://github.com/footballcsv/england) |
+| Final tables, seasons, awards, European and World Cup winners, Ballon d'Or, club histories, stadiums, club coordinates | Wikipedia via its public API (CC BY-SA 4.0). Club histories were written for this project from the club pages. |
+| Player photos | Linked from premierleague.com; initials are shown if a photo does not load. |
 
-### Awards included
-- Premier League: Player of the Season (from 1994–95), Young Player of the Season (from 2019–20),
-  Golden Boot, Golden Glove (from 2004–05), most assists every season, Playmaker of the Season (from 2017–18),
-  Goal of the Season, Manager of the Season (from 1993–94).
-- Other long-running awards, every season since 1992–93: PFA Players' Player of the Year,
-  PFA Young Player of the Year, FWA Footballer of the Year, LMA Manager of the Year.
+## Files
 
-The Premier League's own awards only started in the mid-1990s or later, which is why some seasons are empty for them.
-That is how the awards were created, not missing data.
+**Pages**
+* `index.html` — the report page and the intro overlay.
+* `dashboard.html` — the dashboard page.
 
-### How a club record looks (`teams.json`)
-- `status`: `current` (in the 2026–27 Premier League — 20 clubs), `former`, or `defunct` (Wimbledon only).
-- `map`: latitude and longitude of the current ground (for Wimbledon, the old Plough Lane ground).
-- `stadiums`: in date order. A blank `from`/`to` means the year isn't known. `current: true` marks today's ground.
-  `temporary: true` marks a short stay, such as a ground-share while a stadium was rebuilt.
-- `premier_league.seasons_completed` counts finished seasons only (the 2026–27 season is still in progress).
+**Site code (`assets/`)**
+* `css/style.css` — one set of colours, fonts and layout used by both pages.
+* `js/app.js` — navigation bar, data loading, number formatting, club colours, chart look.
+* `js/calc.js` — every calculation (goals per game, home win %, title margins, upsets, squad sizes...). Used by the report, the dashboard and the test script, so numbers agree everywhere.
+* `js/report.js` — builds the report: headline numbers, 14 findings, winners table, data section. All text and numbers are computed from the data.
+* `js/dashboard.js` — the dashboard: filters, charts, table and the extra tabs.
+* `js/intro.js` — the spinning ball, the explosion and the rotating UK club map (Three.js).
+* `vendor/` — Chart.js, PapaParse (CSV reader) and Three.js, saved locally.
 
-## Where the data came from
-Wikipedia, downloaded through its public API and saved untouched in `data/raw/`.
-Facts and figures are from Wikipedia (CC BY-SA 4.0). The club histories were written for this project from
-the club pages, in our own words. Keep this credit on the website, e.g. in the footer.
+**Data (`data/`)**
+* `player_matches.csv` — the main data set (see above).
+* `matches.csv` — one row per match, 1992–93 to 2025–26.
+* `team_matches.csv` — one row per team per match, with the running league table (points, goal difference, position) after every game.
+* `final_tables.csv` — official final league tables, including points deductions.
+* `seasons.json` — champion, European places, promoted and relegated clubs, top scorer for each season.
+* `awards.json` — every award winner by season (Premier League, PFA, FWA and LMA awards).
+* `honours.json` — Champions League, UEFA Cup/Europa League, Ballon d'Or and World Cup winners by year.
+* `teams.json` — the 51 clubs: history, every stadium in order, map coordinates, Premier League record.
+* `current_players.json` — profiles of the 667 players in 2026–27 squads, with career Premier League stats.
+* `transfers.csv` — signings and departures by season, derived from where players played (no fees).
+* `uk_map.json` — simplified outline of the UK and Ireland for the intro map.
+* `curated/` — the hand-written club histories and stadium lists. `raw/` — files exactly as downloaded.
 
-Everything was checked as it was built: all club names match one official list of 51 clubs; the number of
-club-seasons adds up exactly (3 seasons of 22 teams + 31 of 20 teams = 686); every ground is inside the UK;
-stadium timelines are in date order.
+**Scripts (`scripts/`, Python 3, no installs needed)**
+* `fetch_wikipedia.py`, `fetch_matches.py`, `fetch_players.py`, `fetch_coordinates.py` — download the raw data politely (they wait between requests).
+* `wikitables.py`, `extract_club_text.py` — read tables and text out of the Wikipedia pages.
+* `build_awards_seasons.py`, `build_teams.py`, `build_honours.py`, `build_tables.py`, `build_matches.py`, `build_players.py`, `build_profiles_transfers.py`, `build_map.py` — turn the raw files into the files in `data/`, running checks as they go.
+* `verify.py` — recomputes the headline numbers in plain Python and compares them with the website's code.
 
-## Rebuilding the data
-You need Python 3 (no extra installs). From this folder:
+**Tests (`tests/`)**
+* `check_numbers.js` — run `node tests/check_numbers.js`. 11 checks, for example: the match count is exactly 3 × 462 + 31 × 380; every club-season's results agree with the official final tables; every player row links to a real match with the same score.
+
+## How to rebuild
 
 ```
-python3 scripts/build_awards_seasons.py   # awards.json + seasons.json
-python3 scripts/build_teams.py            # teams.json
+python3 scripts/fetch_matches.py && python3 scripts/fetch_players.py     # download (a few minutes)
+python3 scripts/build_matches.py && python3 scripts/build_tables.py
+python3 scripts/build_players.py && python3 scripts/build_profiles_transfers.py
+node tests/check_numbers.js && python3 scripts/verify.py                  # check everything
+python3 -m http.server                                                    # then open http://localhost:8000
 ```
 
-To re-download from Wikipedia first (takes a few minutes; it waits between requests on purpose):
-`scripts/fetch_wikipedia.py` and `scripts/fetch_coordinates.py`.
-The hand-written club histories and stadium lists live in `data/curated/`.
-
-## Known gaps / ideas
-- No final league tables yet (so no runners-up, points, or relegation battles).
-- No team-level awards beyond champions (for example Fair Play), and no monthly awards or PFA Team of the Year.
-- Some early grounds have no known dates; a few clubs' earliest grounds aren't named on Wikipedia (Manchester City, Arsenal's very first pitch).
-- Wikipedia changes over time, so re-run the download occasionally.
+## Method notes and limits
+* **Matchweek** means a club's nth game, so every club has played the same number of games at each point. Points deductions (Middlesbrough 1996–97, Portsmouth 2009–10, Everton and Nottingham Forest 2023–24) count from the day they took effect.
+* Player-level data does not exist in free bulk form before 2016–17; shots, cards, referees and odds start in 2000–01.
+* **Signings and departures** are derived (a player turning out for a different club than before), so loans count as moves and fees are not known. 2026–27 moves compare 2025–26 appearances with today's squad lists.
+* The 2026 Ballon d'Or is not announced until 26 October 2026; 2020 had no award.
+* Student project, not affiliated with the Premier League.
