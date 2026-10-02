@@ -692,6 +692,7 @@
     "from": 1997,
     "to": 1999,
     "note": "Shared with Gillingham, about 70 miles away",
+    "temporary": true,
     "current": false
    },
    {
@@ -1358,6 +1359,7 @@
     "from": 2002,
     "to": 2004,
     "note": "Ground-share with Queens Park Rangers during the renovation of Craven Cottage",
+    "temporary": true,
     "current": false
    },
    {
@@ -3027,6 +3029,7 @@
     "from": 2017,
     "to": 2019,
     "note": "Temporary home during construction: all home games in 2017–18 and all but five in 2018–19",
+    "temporary": true,
     "current": false
    },
    {

@@ -127,7 +127,8 @@
     "name": "Priestfield Stadium (Gillingham)",
     "from": 1997,
     "to": 1999,
-    "note": "Shared with Gillingham, about 70 miles away"
+    "note": "Shared with Gillingham, about 70 miles away",
+    "temporary": true
    },
    {
     "name": "Withdean Stadium",
