@@ -1,0 +1,1132 @@
+match_id,season,home,away,field,football_data_co_uk,official_record_used
+1992-143,1992–93,Wimbledon,Tottenham Hotspur,date,1992-10-24,1992-10-25
+1992-176,1992–93,Queens Park Rangers,Liverpool,date,1992-11-22,1992-11-23
+1992-414,1992–93,Oldham Athletic,Sheffield United,date,1993-04-14,1993-04-13
+1993-312,1993–94,Ipswich Town,Sheffield United,date,1994-02-26,1994-02-22
+1993-358,1993–94,Newcastle United,Ipswich Town,date,1994-03-22,1994-03-23
+1993-367,1993–94,Wimbledon,Leeds United,date,1994-03-27,1994-03-26
+1994-187,1994–95,Everton,Leeds United,date,1994-12-04,1994-12-05
+1994-418,1994–95,Blackburn Rovers,Crystal Palace,date,1995-04-19,1995-04-20
+1995-187,1995–96,Tottenham Hotspur,Bolton Wanderers,half-time score,1-0,0-0
+1995-202,1995–96,Everton,Leeds United,half-time score,2-0,1-0
+1995-234,1995–96,West Ham United,Manchester United,date,1996-01-23,1996-01-22
+1995-318,1995–96,Tottenham Hotspur,Coventry City,half-time score,1-0,0-1
+1995-371,1995–96,Arsenal,Bolton Wanderers,date,1996-05-04,1996-05-05
+1995-372,1995–96,Chelsea,Blackburn Rovers,date,1996-05-04,1996-05-05
+1995-373,1995–96,Coventry City,Leeds United,date,1996-05-04,1996-05-05
+1995-374,1995–96,Everton,Aston Villa,date,1996-05-04,1996-05-05
+1995-375,1995–96,Manchester City,Liverpool,date,1996-05-04,1996-05-05
+1995-376,1995–96,Middlesbrough,Manchester United,date,1996-05-04,1996-05-05
+1995-377,1995–96,Newcastle United,Tottenham Hotspur,date,1996-05-04,1996-05-05
+1995-378,1995–96,Nottingham Forest,Queens Park Rangers,date,1996-05-04,1996-05-05
+1995-379,1995–96,Southampton,Wimbledon,date,1996-05-04,1996-05-05
+1995-380,1995–96,West Ham United,Sheffield Wednesday,date,1996-05-04,1996-05-05
+1997-305,1997–98,Blackburn Rovers,Barnsley,half-time score,2-0,1-0
+1998-231,1998–99,Manchester United,Derby County,date,1999-02-02,1999-02-03
+1999-031,1999–2000,Everton,Southampton,half-time score,2-0,1-0
+2000-001,2000–01,Charlton Athletic,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2000-002,2000–01,Chelsea,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2000-003,2000–01,Coventry City,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(5, 3, 1, 0)","(4, 3, 1, 0)"
+2000-009,2000–01,Tottenham Hotspur,Ipswich Town,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(1, 0, 0, 0)"
+2000-011,2000–01,Arsenal,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 4, 1, 2)","(1, 3, 1, 2)"
+2000-015,2000–01,Everton,Charlton Athletic,referee,Andy Hall,Neale Barry
+2000-016,2000–01,Manchester City,Sunderland,referee,David Ellaray,David Elleray
+2000-018,2000–01,Southampton,Coventry City,referee,F Taylor,Paul Taylor
+2000-019,2000–01,West Ham United,Leicester City,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 3, 1, 0)"
+2000-026,2000–01,Newcastle United,Tottenham Hotspur,referee,David Ellaray,David Elleray
+2000-031,2000–01,Manchester United,Bradford City,referee,Ian Harris,Rob Harris
+2000-034,2000–01,Charlton Athletic,Southampton,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 4, 1, 0)"
+2000-039,2000–01,Liverpool,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(1, 3, 0, 0)"
+2000-052,2000–01,Charlton Athletic,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 2, 0, 0)"
+2000-053,2000–01,Everton,Manchester United,"cards (home yellow, away yellow, home red, away red)","(4, 1, 0, 0)","(5, 1, 0, 0)"
+2000-059,2000–01,West Ham United,Liverpool,referee,David Ellaray,David Elleray
+2000-070,2000–01,Aston Villa,Derby County,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(0, 1, 0, 0)"
+2000-070,2000–01,Aston Villa,Derby County,referee,David Ellaray,David Elleray
+2000-080,2000–01,Arsenal,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2000-081,2000–01,Coventry City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 4, 1, 0)","(0, 5, 1, 0)"
+2000-082,2000–01,Everton,Southampton,referee,David Ellaray,David Elleray
+2000-087,2000–01,Sunderland,Chelsea,"cards (home yellow, away yellow, home red, away red)","(0, 1, 1, 1)","(0, 0, 1, 1)"
+2000-093,2000–01,Liverpool,Leicester City,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2000-096,2000–01,Tottenham Hotspur,Derby County,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(2, 2, 0, 0)"
+2000-098,2000–01,Aston Villa,Sunderland,referee,Rob Styles,Peter Jones
+2000-100,2000–01,Arsenal,Manchester City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2000-101,2000–01,Aston Villa,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(3, 3, 0, 0)"
+2000-110,2000–01,Charlton Athletic,Bradford City,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 0, 0, 1)"
+2000-112,2000–01,Leeds United,Liverpool,referee,David Ellaray,David Elleray
+2000-113,2000–01,Manchester City,Leicester City,referee,Mark Halsey,Andy D'Urso
+2000-114,2000–01,Middlesbrough,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(2, 1, 1, 0)"
+2000-117,2000–01,Tottenham Hotspur,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 0, 1, 0)","(0, 1, 1, 0)"
+2000-129,2000–01,Liverpool,Coventry City,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(0, 1, 0, 0)"
+2000-139,2000–01,Coventry City,Ipswich Town,referee,David Ellaray,David Elleray
+2000-142,2000–01,Derby County,Manchester United,referee,David Ellaray,David Elleray
+2000-145,2000–01,Middlesbrough,Bradford City,"cards (home yellow, away yellow, home red, away red)","(0, 2, 1, 0)","(1, 2, 1, 0)"
+2000-147,2000–01,Tottenham Hotspur,Leicester City,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2000-151,2000–01,Aston Villa,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2000-151,2000–01,Aston Villa,Newcastle United,referee,David Ellaray,David Elleray
+2000-154,2000–01,Leicester City,Leeds United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2000-157,2000–01,West Ham United,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2000-157,2000–01,West Ham United,Middlesbrough,referee,Roy Burton,Andy D'Urso
+2000-162,2000–01,Charlton Athletic,Manchester United,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2000-163,2000–01,Chelsea,Derby County,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 1, 0, 0)"
+2000-165,2000–01,Southampton,Leeds United,"cards (home yellow, away yellow, home red, away red)","(3, 4, 1, 0)","(2, 4, 1, 0)"
+2000-176,2000–01,Middlesbrough,Chelsea,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 3, 0, 0)"
+2000-188,2000–01,Sunderland,Manchester City,referee,David Ellaray,David Elleray
+2000-199,2000–01,Southampton,Tottenham Hotspur,referee,David Ellaray,David Elleray
+2000-210,2000–01,Leeds United,Middlesbrough,referee,David Ellaray,David Elleray
+2000-216,2000–01,Arsenal,Chelsea,referee,David Ellaray,David Elleray
+2000-230,2000–01,Leicester City,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2000-231,2000–01,Liverpool,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2000-240,2000–01,Everton,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 5, 0, 0)","(1, 6, 0, 0)"
+2000-244,2000–01,Sunderland,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 0, 2, 1)","(1, 0, 2, 1)"
+2000-251,2000–01,Liverpool,West Ham United,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 1, 0, 0)"
+2000-254,2000–01,Tottenham Hotspur,Charlton Athletic,referee,David Ellaray,David Elleray
+2000-255,2000–01,Everton,Leeds United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2000-256,2000–01,Arsenal,Ipswich Town,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2000-258,2000–01,Chelsea,Manchester United,referee,David Ellaray,David Elleray
+2000-269,2000–01,Ipswich Town,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2000-270,2000–01,Leicester City,Sunderland,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 1)","(0, 3, 0, 1)"
+2000-278,2000–01,Everton,Newcastle United,referee,David Ellaray,David Elleray
+2000-291,2000–01,Newcastle United,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(1, 2, 0, 1)"
+2000-292,2000–01,Southampton,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2000-293,2000–01,Tottenham Hotspur,Coventry City,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2000-295,2000–01,Aston Villa,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2000-300,2000–01,Coventry City,Derby County,referee,David Ellaray,David Elleray
+2000-301,2000–01,Liverpool,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(0, 1, 1, 0)"
+2000-302,2000–01,Manchester City,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(6, 4, 1, 0)","(5, 4, 1, 0)"
+2000-303,2000–01,Sunderland,Leeds United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2000-304,2000–01,West Ham United,Everton,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(2, 2, 1, 0)"
+2000-312,2000–01,Everton,Manchester City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 1, 1)","(0, 4, 1, 1)"
+2000-312,2000–01,Everton,Manchester City,referee,David Ellaray,David Elleray
+2000-313,2000–01,Middlesbrough,Sunderland,"cards (home yellow, away yellow, home red, away red)","(5, 3, 1, 0)","(4, 3, 1, 0)"
+2000-319,2000–01,Liverpool,Leeds United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2000-321,2000–01,Aston Villa,Everton,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 4, 0, 0)"
+2000-322,2000–01,Chelsea,Southampton,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(3, 2, 0, 0)"
+2000-326,2000–01,Sunderland,Tottenham Hotspur,referee,David Ellaray,David Elleray
+2000-328,2000–01,Coventry City,Sunderland,"cards (home yellow, away yellow, home red, away red)","(3, 0, 0, 0)","(2, 4, 0, 1)"
+2000-329,2000–01,Derby County,Leicester City,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(4, 2, 1, 0)"
+2000-330,2000–01,Everton,Liverpool,"cards (home yellow, away yellow, home red, away red)","(4, 2, 1, 0)","(6, 4, 0, 1)"
+2000-331,2000–01,Middlesbrough,Ipswich Town,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(1, 1, 0, 0)"
+2000-332,2000–01,Newcastle United,West Ham United,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 1, 0, 0)"
+2000-333,2000–01,Charlton Athletic,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(3, 4, 1, 0)","(3, 2, 1, 0)"
+2000-334,2000–01,Tottenham Hotspur,Chelsea,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2000-335,2000–01,Arsenal,Everton,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2000-341,2000–01,Manchester United,Manchester City,referee,David Ellaray,David Elleray
+2000-360,2000–01,Chelsea,Everton,referee,Rob Harris,Rob Styles
+2000-367,2000–01,Liverpool,Chelsea,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(1, 5, 0, 0)"
+2000-367,2000–01,Liverpool,Chelsea,referee,Dermot Gallagher,Michael Riley
+2000-368,2000–01,Leeds United,Bradford City,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2000-374,2000–01,Everton,Sunderland,"cards (home yellow, away yellow, home red, away red)","(5, 3, 0, 1)","(6, 3, 0, 1)"
+2000-375,2000–01,Leeds United,Leicester City,referee,David Ellaray,David Elleray
+2001-006,2001–02,Middlesbrough,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 1)","(2, 2, 1, 1)"
+2001-007,2001–02,Sunderland,Ipswich Town,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2001-011,2001–02,Everton,Tottenham Hotspur,referee,D. R. Elleray,Neale Barry
+2001-012,2001–02,Arsenal,Leeds United,"cards (home yellow, away yellow, home red, away red)","(4, 5, 0, 2)","(4, 3, 0, 2)"
+2001-015,2001–02,Blackburn Rovers,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2001-017,2001–02,Arsenal,Leicester City,"cards (home yellow, away yellow, home red, away red)","(1, 4, 1, 1)","(0, 4, 1, 1)"
+2001-031,2001–02,Liverpool,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(3, 2, 1, 0)"
+2001-035,2001–02,Charlton Athletic,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 0, 0, 0)"
+2001-037,2001–02,Bolton Wanderers,Southampton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2001-041,2001–02,Middlesbrough,West Ham United,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2001-046,2001–02,Tottenham Hotspur,Chelsea,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(2, 3, 0, 1)"
+2001-053,2001–02,Liverpool,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2001-056,2001–02,Chelsea,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(4, 1, 0, 0)","(4, 2, 0, 0)"
+2001-059,2001–02,Southampton,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(1, 2, 1, 1)","(0, 2, 1, 1)"
+2001-063,2001–02,Derby County,Arsenal,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(3, 2, 0, 1)"
+2001-068,2001–02,Fulham,Chelsea,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2001-071,2001–02,Bolton Wanderers,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(3, 2, 1, 0)"
+2001-074,2001–02,Ipswich Town,Everton,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2001-076,2001–02,Southampton,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2001-083,2001–02,Everton,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2001-086,2001–02,West Ham United,Southampton,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 1, 0, 0)"
+2001-095,2001–02,Charlton Athletic,Liverpool,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 0, 0, 1)"
+2001-096,2001–02,Everton,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2001-104,2001–02,Bolton Wanderers,Everton,"cards (home yellow, away yellow, home red, away red)","(4, 2, 1, 0)","(3, 2, 1, 0)"
+2001-107,2001–02,Newcastle United,Aston Villa,referee,C. R. Wilkes,Barry Knight
+2001-114,2001–02,Aston Villa,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 4, 0, 0)"
+2001-133,2001–02,Middlesbrough,Ipswich Town,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 1, 0, 0)"
+2001-138,2001–02,Ipswich Town,Arsenal,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(1, 2, 0, 0)"
+2001-144,2001–02,Chelsea,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2001-148,2001–02,Fulham,Everton,"cards (home yellow, away yellow, home red, away red)","(2, 4, 1, 1)","(2, 3, 1, 1)"
+2001-153,2001–02,Blackburn Rovers,Leeds United,"cards (home yellow, away yellow, home red, away red)","(1, 5, 0, 0)","(2, 5, 0, 0)"
+2001-159,2001–02,Everton,Derby County,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2001-168,2001–02,Arsenal,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 1)","(2, 3, 1, 1)"
+2001-170,2001–02,Charlton Athletic,Blackburn Rovers,referee,"Wiley, A. G.",Alan Wiley
+2001-171,2001–02,Derby County,Aston Villa,referee,"Elleray, D. R.",David Elleray
+2001-172,2001–02,Leeds United,Newcastle United,referee,"Winter, J. T.",Jeff Winter
+2001-173,2001–02,Leicester City,West Ham United,referee,"Wolstenholme, E. K.",Dermot Gallagher
+2001-174,2001–02,Manchester United,Southampton,referee,"Dunn, S. W.",Stephen Dunn
+2001-175,2001–02,Sunderland,Everton,referee,"Knight, B.",Barry Knight
+2001-176,2001–02,Tottenham Hotspur,Ipswich Town,referee,"Riley, M. A.",Michael Riley
+2001-177,2001–02,Chelsea,Bolton Wanderers,referee,"Rennie, U. D.",Uriah Rennie
+2001-178,2001–02,Liverpool,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2001-178,2001–02,Liverpool,Arsenal,referee,"Durkin, P. A.",Paul Durkin
+2001-179,2001–02,Arsenal,Chelsea,referee,"Barber, G. P.",Graham Barber
+2001-180,2001–02,Aston Villa,Liverpool,referee,"D'Urso, A. P.",Andy D'Urso
+2001-181,2001–02,Blackburn Rovers,Sunderland,referee,"Wilkes, C. R.",Clive Wilkes
+2001-182,2001–02,Bolton Wanderers,Leeds United,referee,"Wiley, A. G.",Alan Wiley
+2001-183,2001–02,Everton,Manchester United,referee,"Rennie, U. D.",Uriah Rennie
+2001-184,2001–02,Fulham,Charlton Athletic,referee,"Bennett, S. G.",Stephen Bennett
+2001-185,2001–02,Ipswich Town,Leicester City,referee,"Barry, N. S.",Neale Barry
+2001-186,2001–02,Newcastle United,Middlesbrough,referee,"Halsey, M. R.",Mark Halsey
+2001-187,2001–02,Southampton,Tottenham Hotspur,referee,"Jones, P.",Peter Jones
+2001-188,2001–02,West Ham United,Derby County,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2001-188,2001–02,West Ham United,Derby County,referee,"Poll, G.",Graham Poll
+2001-189,2001–02,Arsenal,Middlesbrough,referee,"D'Urso, A. P.",Andy D'Urso
+2001-190,2001–02,Aston Villa,Tottenham Hotspur,referee,"Wolstenholme, E. K.",Eddie Wolstenholme
+2001-191,2001–02,Blackburn Rovers,Derby County,referee,"Pugh, D.",David Pugh
+2001-192,2001–02,Bolton Wanderers,Leicester City,"cards (home yellow, away yellow, home red, away red)","(2, 3, 2, 1)","(2, 2, 2, 1)"
+2001-192,2001–02,Bolton Wanderers,Leicester City,referee,"Riley, M. A.",Michael Riley
+2001-193,2001–02,Everton,Charlton Athletic,referee,"Barber, G. P.",Graham Barber
+2001-194,2001–02,Ipswich Town,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2001-194,2001–02,Ipswich Town,Sunderland,referee,"Poll, G.",Graham Poll
+2001-195,2001–02,Newcastle United,Chelsea,referee,"Bennett, S. G.",Stephen Bennett
+2001-196,2001–02,Southampton,Leeds United,referee,"Halsey, M. R.",Mark Halsey
+2001-197,2001–02,West Ham United,Liverpool,referee,"Styles, R.",Rob Styles
+2001-198,2001–02,Fulham,Manchester United,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-199,2001–02,Charlton Athletic,Ipswich Town,referee,"Rennie, U. D.",Uriah Rennie
+2001-200,2001–02,Chelsea,Southampton,referee,"Wolstenholme, E. K.",Eddie Wolstenholme
+2001-201,2001–02,Leeds United,West Ham United,referee,"Dunn, S. W.",Stephen Dunn
+2001-202,2001–02,Liverpool,Bolton Wanderers,referee,"Wilkes, C. R.",Clive Wilkes
+2001-203,2001–02,Middlesbrough,Everton,referee,"Styles, R.",Rob Styles
+2001-204,2001–02,Sunderland,Aston Villa,referee,"Riley, M. A.",Michael Riley
+2001-205,2001–02,Tottenham Hotspur,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2001-205,2001–02,Tottenham Hotspur,Blackburn Rovers,referee,"Winter, J. T.",Jeff Winter
+2001-206,2001–02,Derby County,Fulham,referee,"Knight, B.",Barry Knight
+2001-207,2001–02,Manchester United,Newcastle United,referee,"Jones, P.",Peter Jones
+2001-208,2001–02,Southampton,Liverpool,referee,"Poll, G.",Neale Barry
+2001-209,2001–02,Aston Villa,Derby County,referee,"Halsey, M. R.",Mark Halsey
+2001-210,2001–02,Blackburn Rovers,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 1)","(0, 1, 0, 1)"
+2001-210,2001–02,Blackburn Rovers,Charlton Athletic,referee,"Barry, N. S.",Neale Barry
+2001-211,2001–02,Bolton Wanderers,Chelsea,referee,"Winter, J. T.",Jeff Winter
+2001-212,2001–02,Everton,Sunderland,referee,"Elleray, D. R.",David Elleray
+2001-213,2001–02,Fulham,Middlesbrough,referee,"Dean, M. L",Mike Dean
+2001-214,2001–02,Ipswich Town,Tottenham Hotspur,referee,"Messias, M. D.",Matt Messias
+2001-215,2001–02,Newcastle United,Leeds United,referee,"Barber, G. P.",Graham Barber
+2001-216,2001–02,West Ham United,Leicester City,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-217,2001–02,Arsenal,Liverpool,referee,"Dunn, S. W.",Stephen Dunn
+2001-218,2001–02,Southampton,Manchester United,referee,"Bennett, S. G.",Stephen Bennett
+2001-219,2001–02,Derby County,Ipswich Town,referee,"Durkin, P. A.",Paul Durkin
+2001-220,2001–02,Leicester City,Newcastle United,referee,"Wiley, A. G.",Alan Wiley
+2001-221,2001–02,Liverpool,Southampton,referee,"Barry, N. S.",Neale Barry
+2001-222,2001–02,Manchester United,Blackburn Rovers,referee,"Rennie, U. D.",Uriah Rennie
+2001-223,2001–02,Middlesbrough,Bolton Wanderers,referee,"Poll, G.",Graham Poll
+2001-224,2001–02,Sunderland,Fulham,referee,"Jones, P.",Peter Jones
+2001-225,2001–02,Tottenham Hotspur,Everton,referee,"Wilkes, C. R.",Clive Wilkes
+2001-226,2001–02,Chelsea,West Ham United,referee,"D'Urso, A. P.",Andy D'Urso
+2001-227,2001–02,Leeds United,Arsenal,referee,"Halsey, M. R.",Mark Halsey
+2001-228,2001–02,Charlton Athletic,Aston Villa,referee,"Styles, R",Rob Styles
+2001-229,2001–02,Manchester United,Liverpool,referee,"Barber, G. P.",Graham Barber
+2001-230,2001–02,Leicester City,Arsenal,referee,"Elleray, D. R.",David Elleray
+2001-231,2001–02,Bolton Wanderers,Manchester United,referee,"D'Urso, A. P.",Andy D'Urso
+2001-232,2001–02,Charlton Athletic,Derby County,referee,"Pugh, D.",David Pugh
+2001-233,2001–02,Sunderland,Middlesbrough,referee,"Durkin, P.",Paul Durkin
+2001-234,2001–02,Aston Villa,Everton,referee,"Foy, C. J.",Chris Foy
+2001-235,2001–02,Blackburn Rovers,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2001-235,2001–02,Blackburn Rovers,Arsenal,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-236,2001–02,Chelsea,Leeds United,referee,"Bennett, S. G.",Stephen Bennett
+2001-237,2001–02,Ipswich Town,Fulham,referee,"Wiley, A. G.",Alan Wiley
+2001-238,2001–02,Liverpool,Leicester City,referee,"Knight, B.",Barry Knight
+2001-239,2001–02,Southampton,West Ham United,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(1, 3, 0, 0)"
+2001-239,2001–02,Southampton,West Ham United,referee,"Dowd, P.",Phil Dowd
+2001-240,2001–02,Tottenham Hotspur,Newcastle United,referee,"Dean, M. L",Mike Dean
+2001-241,2001–02,Arsenal,Southampton,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 2, 0, 0)"
+2001-241,2001–02,Arsenal,Southampton,referee,"Wilkes, C. R.",Clive Wilkes
+2001-242,2001–02,Derby County,Tottenham Hotspur,referee,"Rennie, U. D.",Uriah Rennie
+2001-243,2001–02,Everton,Ipswich Town,referee,"Dunn, S. W.",Stephen Dunn
+2001-244,2001–02,Fulham,Aston Villa,referee,"Messias, M. D.",Matt Messias
+2001-245,2001–02,Leicester City,Chelsea,referee,"Barber, G. P.",Graham Barber
+2001-246,2001–02,Manchester United,Sunderland,referee,"Styles, R.",Rob Styles
+2001-247,2001–02,Newcastle United,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 1, 0, 0)"
+2001-247,2001–02,Newcastle United,Bolton Wanderers,referee,"Elleray, D. R.",David Elleray
+2001-248,2001–02,West Ham United,Blackburn Rovers,referee,"Jones, P.",Peter Jones
+2001-249,2001–02,Leeds United,Liverpool,referee,"Poll, G.",Graham Poll
+2001-250,2001–02,Middlesbrough,Charlton Athletic,referee,"Riley, M. A.",Michael Riley
+2001-251,2001–02,Aston Villa,Chelsea,referee,"Durkin, P. A.",Paul Durkin
+2001-252,2001–02,Bolton Wanderers,West Ham United,referee,"Pugh, D.",David Pugh
+2001-253,2001–02,Derby County,Sunderland,referee,"Poll, G.",Graham Poll
+2001-254,2001–02,Fulham,Blackburn Rovers,referee,"Halsey, M. R.",Mark Halsey
+2001-255,2001–02,Ipswich Town,Liverpool,referee,"Bennett, S. G.",Stephen Bennett
+2001-256,2001–02,Middlesbrough,Leeds United,referee,"Barry, N. S.",Neale Barry
+2001-257,2001–02,Newcastle United,Southampton,referee,"Knight, B.",Barry Knight
+2001-258,2001–02,Tottenham Hotspur,Leicester City,referee,"D'Urso, A. P.",Andy D'Urso
+2001-259,2001–02,Charlton Athletic,Manchester United,referee,"Wiley, A. G.",Alan Wiley
+2001-260,2001–02,Everton,Arsenal,referee,"Winter, J. T.",Jeff Winter
+2001-261,2001–02,Middlesbrough,Fulham,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-262,2001–02,Arsenal,Fulham,referee,"Rennie, U. D.",Uriah Rennie
+2001-263,2001–02,Leicester City,Derby County,referee,"Riley, M. A.",Michael Riley
+2001-264,2001–02,Liverpool,Everton,referee,"Elleray, D. R.",David Elleray
+2001-265,2001–02,Manchester United,Aston Villa,referee,"Winter, J. T.",Graham Poll
+2001-266,2001–02,Southampton,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 0)","(0, 3, 1, 0)"
+2001-266,2001–02,Southampton,Bolton Wanderers,referee,"Wolstenholme, E. K.",Eddie Wolstenholme
+2001-267,2001–02,West Ham United,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(2, 5, 0, 1)","(2, 4, 0, 1)"
+2001-267,2001–02,West Ham United,Middlesbrough,referee,"Foy, C. J.",Chris Foy
+2001-268,2001–02,Leeds United,Charlton Athletic,referee,"Dean, M. L",Mike Dean
+2001-269,2001–02,Sunderland,Newcastle United,referee,"Barber, G. P.",Graham Barber
+2001-270,2001–02,Aston Villa,West Ham United,referee,"Barber, G. P.",Graham Barber
+2001-271,2001–02,Bolton Wanderers,Blackburn Rovers,referee,"Durkin, P. A.",Paul Durkin
+2001-272,2001–02,Charlton Athletic,Chelsea,referee,"Poll, G.",Graham Poll
+2001-273,2001–02,Fulham,Liverpool,referee,"Wiley, A. G.",Alan Wiley
+2001-274,2001–02,Ipswich Town,Southampton,referee,"Halsey, M. R.",Mark Halsey
+2001-275,2001–02,Middlesbrough,Leicester City,referee,"Wolstenholme, E. K.",Eddie Wolstenholme
+2001-276,2001–02,Newcastle United,Arsenal,referee,"Barry, N. S.",Alan Wiley
+2001-277,2001–02,Tottenham Hotspur,Sunderland,referee,"Styles, R.",Rob Styles
+2001-278,2001–02,Derby County,Manchester United,referee,"Dunn, S. W.",Stephen Dunn
+2001-279,2001–02,Everton,Leeds United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2001-279,2001–02,Everton,Leeds United,referee,"D'Urso, A. P.",Andy D'Urso
+2001-280,2001–02,Arsenal,Derby County,referee,"Barber, G. P.",Graham Barber
+2001-281,2001–02,Blackburn Rovers,Aston Villa,referee,"Bennett, S. G.",Stephen Bennett
+2001-282,2001–02,Sunderland,Bolton Wanderers,referee,"Poll, G.",Graham Poll
+2001-283,2001–02,Chelsea,Fulham,referee,"Jones, P.",Peter Jones
+2001-284,2001–02,Leeds United,Ipswich Town,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-285,2001–02,Liverpool,Newcastle United,referee,"Winter, J. T.",Jeff Winter
+2001-286,2001–02,Manchester United,Tottenham Hotspur,referee,"Riley, M. A.",Michael Riley
+2001-287,2001–02,Southampton,Middlesbrough,referee,"Rennie, U. D.",Uriah Rennie
+2001-288,2001–02,West Ham United,Everton,referee,"Knight, B.",Barry Knight
+2001-289,2001–02,Leicester City,Charlton Athletic,referee,"Wilkes, C. R.",Clive Wilkes
+2001-290,2001–02,Blackburn Rovers,Ipswich Town,referee,"Dowd, P.",Phil Dowd
+2001-291,2001–02,Chelsea,Tottenham Hotspur,referee,"Wiley, A. G.",Alan Wiley
+2001-292,2001–02,Bolton Wanderers,Derby County,referee,"Elleray, D. R.",David Elleray
+2001-293,2001–02,Chelsea,Sunderland,referee,"Knight, B.",Barry Knight
+2001-294,2001–02,Everton,Fulham,referee,"Barber, G. P.",Graham Barber
+2001-295,2001–02,Middlesbrough,Liverpool,referee,"D'Urso, A. P.",Andy D'Urso
+2001-296,2001–02,Newcastle United,Ipswich Town,referee,"Riley, M. A.",Michael Riley
+2001-297,2001–02,Southampton,Leicester City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 4, 0, 0)"
+2001-297,2001–02,Southampton,Leicester City,referee,"Dean, M. L",Mike Dean
+2001-298,2001–02,West Ham United,Manchester United,referee,"Halsey, M. R.",Mark Halsey
+2001-299,2001–02,Aston Villa,Arsenal,half-time score,1-0,0-1
+2001-299,2001–02,Aston Villa,Arsenal,referee,"Dunn, S. W.",Stephen Dunn
+2001-300,2001–02,Leeds United,Blackburn Rovers,referee,"Poll, G.",Graham Poll
+2001-301,2001–02,Tottenham Hotspur,Charlton Athletic,referee,"Winter, J. T.",Jeff Winter
+2001-302,2001–02,Charlton Athletic,Bolton Wanderers,referee,"Foy, C. J.",Chris Foy
+2001-303,2001–02,Derby County,Everton,referee,"Barry, N. S.",Neale Barry
+2001-304,2001–02,Ipswich Town,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(0, 2, 0, 0)"
+2001-304,2001–02,Ipswich Town,Aston Villa,referee,"Pugh, D.",David Pugh
+2001-305,2001–02,Leicester City,Leeds United,referee,"Dunn, S. W.",Stephen Dunn
+2001-306,2001–02,Manchester United,Middlesbrough,referee,"Bennett, S. G.",Stephen Bennett
+2001-307,2001–02,Sunderland,Southampton,referee,"Messias, M. D.",Matt Messias
+2001-308,2001–02,Fulham,Tottenham Hotspur,referee,"Durkin, P. A.",Paul Durkin
+2001-309,2001–02,Liverpool,Chelsea,referee,"Halsey, M. R.",Mark Halsey
+2001-310,2001–02,Newcastle United,Everton,referee,"Poll, G.",Graham Poll
+2001-311,2001–02,Arsenal,Sunderland,referee,"Durkin, P. A.",Paul Durkin
+2001-312,2001–02,Bolton Wanderers,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2001-312,2001–02,Bolton Wanderers,Aston Villa,referee,"Styles, R.",Rob Styles
+2001-313,2001–02,Chelsea,Derby County,referee,"Dean, M. L",Mike Dean
+2001-314,2001–02,Leeds United,Manchester United,referee,"Elleray, D. R.",David Elleray
+2001-315,2001–02,Leicester City,Blackburn Rovers,referee,"Barber, G. P.",Graham Barber
+2001-316,2001–02,Liverpool,Charlton Athletic,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-317,2001–02,Middlesbrough,Tottenham Hotspur,referee,"Dowd, P.",Phil Dowd
+2001-318,2001–02,Southampton,Fulham,referee,"Winter, J. T.",Jeff Winter
+2001-319,2001–02,West Ham United,Ipswich Town,referee,"Wiley, A. G.",Alan Wiley
+2001-320,2001–02,Blackburn Rovers,Southampton,referee,"Wilkes, C. R.",Clive Wilkes
+2001-321,2001–02,Charlton Athletic,Arsenal,referee,"D'Urso, A. P.",Andy D'Urso
+2001-322,2001–02,Derby County,Middlesbrough,referee,"Durkin, P. A.",Paul Durkin
+2001-323,2001–02,Everton,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 1)","(2, 0, 1, 1)"
+2001-323,2001–02,Everton,Bolton Wanderers,referee,"Bennett, S. G.",Stephen Bennett
+2001-324,2001–02,Fulham,West Ham United,referee,"Halsey, M. R.",Mark Halsey
+2001-325,2001–02,Ipswich Town,Chelsea,referee,"Wolstenholme, E. K.",Eddie Wolstenholme
+2001-326,2001–02,Sunderland,Leicester City,referee,"Barry, N. S.",Neale Barry
+2001-327,2001–02,Tottenham Hotspur,Leeds United,referee,"Rennie, U. D.",Uriah Rennie
+2001-328,2001–02,Aston Villa,Newcastle United,referee,"Dunn, S. W.",Stephen Dunn
+2001-329,2001–02,Arsenal,Tottenham Hotspur,referee,"Halsey, M. R.",Mark Halsey
+2001-330,2001–02,Bolton Wanderers,Ipswich Town,referee,"Winter, J. T.",Jeff Winter
+2001-331,2001–02,Chelsea,Everton,referee,"Elleray, D. R.",David Elleray
+2001-332,2001–02,Leicester City,Manchester United,referee,"D'Urso, A. P.",Andy D'Urso
+2001-333,2001–02,Middlesbrough,Aston Villa,referee,"Barber, G. P.",Graham Barber
+2001-334,2001–02,Southampton,Derby County,referee,"Bennett, S. G.",Stephen Bennett
+2001-335,2001–02,West Ham United,Charlton Athletic,referee,"Riley, M. A.",Michael Riley
+2001-336,2001–02,Leeds United,Sunderland,referee,"Jones, P.",Peter Jones
+2001-337,2001–02,Newcastle United,Fulham,referee,"Wiley, A. G.",Alan Wiley
+2001-338,2001–02,Blackburn Rovers,Chelsea,referee,"Dunn, S. W.",Stephen Dunn
+2001-339,2001–02,Aston Villa,Leeds United,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(3, 3, 0, 0)"
+2001-339,2001–02,Aston Villa,Leeds United,referee,"Knight, B.",Barry Knight
+2001-340,2001–02,Charlton Athletic,Southampton,referee,"Dowd, P.",Phil Dowd
+2001-341,2001–02,Derby County,Newcastle United,referee,"Styles, R.",Rob Styles
+2001-342,2001–02,Everton,Leicester City,referee,"Rennie, U. D.",Uriah Rennie
+2001-343,2001–02,Sunderland,Liverpool,"cards (home yellow, away yellow, home red, away red)","(1, 2, 1, 0)","(0, 2, 1, 0)"
+2001-343,2001–02,Sunderland,Liverpool,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-344,2001–02,Tottenham Hotspur,West Ham United,referee,"Barry, N. S.",Neale Barry
+2001-345,2001–02,Bolton Wanderers,Tottenham Hotspur,referee,"Messias, M. D.",Matt Messias
+2001-346,2001–02,Chelsea,Manchester United,referee,"Barber, G. P.",Graham Barber
+2001-347,2001–02,Leeds United,Fulham,referee,"Styles, R.",Rob Styles
+2001-348,2001–02,Leicester City,Aston Villa,referee,"Poll, G.",Graham Poll
+2001-349,2001–02,Liverpool,Derby County,referee,"Riley, M. A.",Michael Riley
+2001-350,2001–02,Middlesbrough,Blackburn Rovers,referee,"Barry, N. S.",Neale Barry
+2001-351,2001–02,Newcastle United,Charlton Athletic,referee,"Dean, M. L",Mike Dean
+2001-352,2001–02,Southampton,Everton,referee,"Halsey, M. R.",Mark Halsey
+2001-353,2001–02,West Ham United,Sunderland,referee,"Bennett, S. G.",Stephen Bennett
+2001-354,2001–02,Arsenal,Ipswich Town,referee,"Wiley, A. G.",Alan Wiley
+2001-355,2001–02,Blackburn Rovers,Newcastle United,referee,"Rennie, U. D.",Uriah Rennie
+2001-356,2001–02,Fulham,Bolton Wanderers,referee,"Durkin, P. A.",Paul Durkin
+2001-357,2001–02,Arsenal,West Ham United,referee,"Dunn, S. W.",Stephen Dunn
+2001-358,2001–02,Ipswich Town,Middlesbrough,referee,"D'Urso, A. P.",Andy D'Urso
+2001-359,2001–02,Aston Villa,Southampton,referee,"Elleray, D. R.",David Elleray
+2001-360,2001–02,Charlton Athletic,Sunderland,referee,"Wolstenholme, E. K.",Eddie Wolstenholme
+2001-361,2001–02,Derby County,Leeds United,referee,"Poll, G.",Graham Poll
+2001-362,2001–02,Fulham,Leicester City,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 0)","(4, 4, 0, 0)"
+2001-362,2001–02,Fulham,Leicester City,referee,"Yates, N",David Pugh
+2001-363,2001–02,Ipswich Town,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(3, 0, 0, 0)"
+2001-363,2001–02,Ipswich Town,Manchester United,referee,"Styles, R.",Rob Styles
+2001-364,2001–02,Middlesbrough,Chelsea,referee,"Knight, B.",Barry Knight
+2001-365,2001–02,Newcastle United,West Ham United,referee,"Durkin, P. A.",Paul Durkin
+2001-366,2001–02,Tottenham Hotspur,Liverpool,referee,"Jones, P.",Peter Jones
+2001-367,2001–02,Everton,Blackburn Rovers,referee,"Winter, J. T.",Jeff Winter
+2001-368,2001–02,Bolton Wanderers,Arsenal,referee,"Gallagher, D. J.",Dermot Gallagher
+2001-369,2001–02,Liverpool,Blackburn Rovers,referee,"Wiley, A. G.",Alan Wiley
+2001-370,2001–02,Manchester United,Arsenal,referee,"Durkin, P. A.",Paul Durkin
+2001-371,2001–02,Arsenal,Everton,referee,"Halsey, M. R.",Mark Halsey
+2001-372,2001–02,Blackburn Rovers,Fulham,referee,"Foy, C. J.",Chris Foy
+2001-373,2001–02,Chelsea,Aston Villa,referee,"Bennett, S. G.",Stephen Bennett
+2001-374,2001–02,Leeds United,Middlesbrough,referee,"Rennie, U. D.",Uriah Rennie
+2001-375,2001–02,Leicester City,Tottenham Hotspur,referee,"Elleray, D. R.",David Elleray
+2001-376,2001–02,Liverpool,Ipswich Town,referee,"Dunn, S. W.",Stephen Dunn
+2001-377,2001–02,Manchester United,Charlton Athletic,referee,"Poll, G.",Graham Poll
+2001-378,2001–02,Southampton,Newcastle United,referee,"D'Urso, A. P.",Andy D'Urso
+2001-379,2001–02,Sunderland,Derby County,referee,"Wiley, A. G.",Alan Wiley
+2001-380,2001–02,West Ham United,Bolton Wanderers,referee,"Dean, M. L",Mike Dean
+2002-009,2002–03,Aston Villa,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2002-016,2002–03,Middlesbrough,Fulham,"cards (home yellow, away yellow, home red, away red)","(4, 2, 0, 0)","(3, 3, 0, 0)"
+2002-017,2002–03,Sunderland,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2002-025,2002–03,Everton,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 1, 0)","(1, 3, 1, 0)"
+2002-027,2002–03,Southampton,Chelsea,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2002-033,2002–03,West Bromwich Albion,Fulham,"cards (home yellow, away yellow, home red, away red)","(4, 3, 0, 0)","(4, 4, 0, 0)"
+2002-036,2002–03,Chelsea,Arsenal,"cards (home yellow, away yellow, home red, away red)","(5, 2, 0, 1)","(5, 1, 0, 1)"
+2002-039,2002–03,Arsenal,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2002-052,2002–03,Everton,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2002-055,2002–03,West Bromwich Albion,Southampton,referee,D Gallagher,Clive Wilkes
+2002-057,2002–03,Tottenham Hotspur,West Ham United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2002-058,2002–03,Birmingham City,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(3, 3, 0, 0)"
+2002-073,2002–03,Everton,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(2, 3, 0, 0)"
+2002-081,2002–03,Southampton,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2002-085,2002–03,Blackburn Rovers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2002-095,2002–03,West Bromwich Albion,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2002-100,2002–03,Arsenal,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2002-105,2002–03,Middlesbrough,Leeds United,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 1)","(2, 1, 1, 1)"
+2002-108,2002–03,West Ham United,Everton,referee,A Wiley,Michael Riley
+2002-110,2002–03,Birmingham City,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 3, 0, 1)"
+2002-118,2002–03,Tottenham Hotspur,Chelsea,referee,R Styles,Mark Halsey
+2002-119,2002–03,Newcastle United,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2002-122,2002–03,Bolton Wanderers,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(3, 2, 1, 0)"
+2002-127,2002–03,Southampton,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2002-130,2002–03,Arsenal,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2002-134,2002–03,West Bromwich Albion,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(3, 3, 0, 0)"
+2002-139,2002–03,West Ham United,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2002-140,2002–03,Aston Villa,West Ham United,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(3, 3, 0, 0)"
+2002-142,2002–03,Everton,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2002-143,2002–03,Fulham,Liverpool,"cards (home yellow, away yellow, home red, away red)","(1, 0, 1, 0)","(1, 1, 1, 0)"
+2002-145,2002–03,Middlesbrough,Manchester City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2002-148,2002–03,Charlton Athletic,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(2, 1, 0, 0)"
+2002-167,2002–03,Southampton,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(1, 2, 0, 0)"
+2002-169,2002–03,Sunderland,Manchester City,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(1, 2, 0, 0)"
+2002-170,2002–03,Aston Villa,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2002-172,2002–03,Everton,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2002-176,2002–03,Fulham,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(3, 7, 0, 1)","(3, 6, 0, 1)"
+2002-179,2002–03,Bolton Wanderers,Leeds United,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(2, 3, 0, 0)"
+2002-180,2002–03,Arsenal,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2002-181,2002–03,Birmingham City,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(4, 4, 1, 0)","(4, 5, 1, 0)"
+2002-185,2002–03,West Bromwich Albion,Sunderland,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2002-189,2002–03,Manchester City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2002-190,2002–03,Birmingham City,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 2, 0, 1)"
+2002-195,2002–03,Middlesbrough,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2002-196,2002–03,Sunderland,Leeds United,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2002-197,2002–03,Tottenham Hotspur,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2002-200,2002–03,Aston Villa,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2002-215,2002–03,Manchester United,Sunderland,referee,G Poll,Phil Dowd
+2002-232,2002–03,Leeds United,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2002-238,2002–03,Charlton Athletic,West Ham United,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(2, 2, 0, 0)"
+2002-266,2002–03,West Bromwich Albion,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(1, 4, 0, 0)"
+2002-268,2002–03,Newcastle United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2002-279,2002–03,Tottenham Hotspur,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 1)","(1, 2, 1, 1)"
+2002-283,2002–03,Newcastle United,Chelsea,referee,J Winter,Brian Winter
+2002-287,2002–03,Aston Villa,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(1, 2, 2, 0)","(0, 2, 2, 0)"
+2002-296,2002–03,Leeds United,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(3, 3, 0, 0)"
+2002-298,2002–03,Manchester City,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2002-311,2002–03,Aston Villa,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2002-320,2002–03,Fulham,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 3, 0, 0)"
+2002-335,2002–03,Everton,Liverpool,"cards (home yellow, away yellow, home red, away red)","(4, 3, 2, 0)","(2, 4, 2, 0)"
+2002-336,2002–03,Fulham,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2002-339,2002–03,Southampton,Leeds United,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 1)","(0, 3, 0, 1)"
+2002-341,2002–03,Birmingham City,Southampton,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 3, 0, 0)"
+2002-346,2002–03,Newcastle United,Aston Villa,referee,J Winter,Brian Winter
+2002-347,2002–03,West Bromwich Albion,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(3, 2, 0, 0)"
+2002-350,2002–03,Birmingham City,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2002-351,2002–03,Bolton Wanderers,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2002-363,2002–03,Liverpool,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2002-371,2002–03,Birmingham City,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2002-372,2002–03,Bolton Wanderers,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 3, 0, 1)"
+2002-373,2002–03,Charlton Athletic,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 0)","(3, 3, 1, 0)"
+2002-374,2002–03,Chelsea,Liverpool,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 1)","(3, 0, 0, 1)"
+2002-376,2002–03,Leeds United,Aston Villa,referee,M Halsey,Paul Durkin
+2003-001,2003–04,Arsenal,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 1)","(1, 2, 1, 1)"
+2003-002,2003–04,Birmingham City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(3, 5, 0, 0)","(3, 6, 0, 0)"
+2003-006,2003–04,Manchester United,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 0)","(0, 5, 0, 0)"
+2003-007,2003–04,Portsmouth,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(2, 2, 0, 1)"
+2003-008,2003–04,Charlton Athletic,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(2, 2, 1, 0)"
+2003-009,2003–04,Leeds United,Newcastle United,referee,R Martin,Alan Wiley
+2003-013,2003–04,Everton,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(3, 4, 0, 0)"
+2003-018,2003–04,Wolverhampton Wanderers,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(2, 2, 0, 1)"
+2003-022,2003–04,Charlton Athletic,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2003-028,2003–04,Manchester United,Wolverhampton Wanderers,half-time score,0-0,1-0
+2003-029,2003–04,Aston Villa,Leicester City,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2003-031,2003–04,Chelsea,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 0)","(1, 4, 0, 0)"
+2003-033,2003–04,Middlesbrough,Leeds United,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 4, 0, 0)"
+2003-039,2003–04,Arsenal,Portsmouth,date,2003-09-13,2003-09-12
+2003-040,2003–04,Blackburn Rovers,Liverpool,date,2003-09-13,2003-09-12
+2003-041,2003–04,Bolton Wanderers,Middlesbrough,date,2003-09-13,2003-09-12
+2003-041,2003–04,Bolton Wanderers,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(4, 3, 0, 0)"
+2003-042,2003–04,Charlton Athletic,Manchester United,date,2003-09-13,2003-09-12
+2003-042,2003–04,Charlton Athletic,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2003-043,2003–04,Everton,Newcastle United,date,2003-09-13,2003-09-12
+2003-043,2003–04,Everton,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(5, 5, 1, 1)","(5, 4, 1, 1)"
+2003-044,2003–04,Chelsea,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(2, 4, 0, 0)"
+2003-046,2003–04,Birmingham City,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 4, 1, 1)","(2, 3, 1, 1)"
+2003-047,2003–04,Manchester City,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2003-049,2003–04,Aston Villa,Charlton Athletic,date,2003-09-20,2003-09-19
+2003-049,2003–04,Aston Villa,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(3, 3, 0, 0)"
+2003-050,2003–04,Liverpool,Leicester City,date,2003-09-20,2003-09-19
+2003-051,2003–04,Newcastle United,Bolton Wanderers,date,2003-09-20,2003-09-19
+2003-052,2003–04,Portsmouth,Blackburn Rovers,date,2003-09-20,2003-09-19
+2003-054,2003–04,Leeds United,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(4, 2, 1, 0)","(3, 2, 1, 0)"
+2003-055,2003–04,Middlesbrough,Everton,date,2003-09-21,2003-09-20
+2003-056,2003–04,Tottenham Hotspur,Southampton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2003-058,2003–04,Manchester United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(4, 3, 0, 1)","(4, 2, 0, 1)"
+2003-060,2003–04,Birmingham City,Portsmouth,date,2003-09-27,2003-09-26
+2003-061,2003–04,Bolton Wanderers,Wolverhampton Wanderers,date,2003-09-27,2003-09-26
+2003-062,2003–04,Chelsea,Aston Villa,date,2003-09-27,2003-09-26
+2003-063,2003–04,Leicester City,Manchester United,date,2003-09-27,2003-09-26
+2003-064,2003–04,Blackburn Rovers,Fulham,date,2003-09-28,2003-09-27
+2003-065,2003–04,Charlton Athletic,Liverpool,date,2003-09-28,2003-09-27
+2003-065,2003–04,Charlton Athletic,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2003-069,2003–04,Fulham,Leicester City,date,2003-10-04,2003-10-03
+2003-070,2003–04,Manchester United,Birmingham City,date,2003-10-04,2003-10-03
+2003-071,2003–04,Portsmouth,Charlton Athletic,date,2003-10-04,2003-10-03
+2003-074,2003–04,Middlesbrough,Chelsea,date,2003-10-05,2003-10-04
+2003-080,2003–04,Arsenal,Chelsea,date,2003-10-18,2003-10-17
+2003-080,2003–04,Arsenal,Chelsea,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(0, 2, 0, 0)"
+2003-081,2003–04,Fulham,Wolverhampton Wanderers,date,2003-10-18,2003-10-17
+2003-082,2003–04,Middlesbrough,Newcastle United,date,2003-10-18,2003-10-17
+2003-083,2003–04,Portsmouth,Liverpool,date,2003-10-18,2003-10-17
+2003-084,2003–04,Birmingham City,Aston Villa,date,2003-10-19,2003-10-18
+2003-086,2003–04,Manchester City,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(2, 1, 1, 0)"
+2003-091,2003–04,Aston Villa,Everton,date,2003-10-25,2003-10-24
+2003-092,2003–04,Manchester United,Fulham,date,2003-10-25,2003-10-24
+2003-093,2003–04,Newcastle United,Portsmouth,date,2003-10-25,2003-10-24
+2003-093,2003–04,Newcastle United,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2003-094,2003–04,Wolverhampton Wanderers,Leicester City,date,2003-10-25,2003-10-24
+2003-096,2003–04,Charlton Athletic,Arsenal,date,2003-10-26,2003-10-25
+2003-098,2003–04,Liverpool,Leeds United,referee,J Winter,Brian Winter
+2003-102,2003–04,Leeds United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(2, 0, 0, 0)"
+2003-104,2003–04,Middlesbrough,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(2, 2, 0, 1)"
+2003-105,2003–04,Newcastle United,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2003-126,2003–04,Middlesbrough,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2003-133,2003–04,Bolton Wanderers,Everton,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 1, 0, 0)"
+2003-141,2003–04,Birmingham City,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(0, 1, 1, 0)"
+2003-142,2003–04,Fulham,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(2, 2, 0, 0)"
+2003-146,2003–04,Middlesbrough,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2003-176,2003–04,Liverpool,Bolton Wanderers,referee,J Winter,Brian Winter
+2003-180,2003–04,Bolton Wanderers,Leicester City,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2003-184,2003–04,Middlesbrough,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2003-187,2003–04,Wolverhampton Wanderers,Leeds United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2003-191,2003–04,Chelsea,Liverpool,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2003-194,2003–04,Middlesbrough,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2003-206,2003–04,Portsmouth,Manchester City,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(1, 2, 0, 0)"
+2003-228,2003–04,Arsenal,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(3, 2, 0, 1)"
+2003-236,2003–04,Tottenham Hotspur,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2003-237,2003–04,Wolverhampton Wanderers,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2003-241,2003–04,Leeds United,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(2, 2, 0, 0)"
+2003-243,2003–04,Birmingham City,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(2, 0, 0, 0)"
+2003-252,2003–04,Chelsea,Arsenal,"cards (home yellow, away yellow, home red, away red)","(4, 2, 1, 0)","(3, 2, 1, 0)"
+2003-258,2003–04,Tottenham Hotspur,Leicester City,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(1, 3, 0, 1)"
+2003-263,2003–04,Leicester City,Wolverhampton Wanderers,referee,J Winter,Brian Winter
+2003-269,2003–04,Middlesbrough,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(0, 2, 0, 0)"
+2003-269,2003–04,Middlesbrough,Tottenham Hotspur,referee,A D'Urso,Mark Halsey
+2003-284,2003–04,Leicester City,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 5, 0, 1)","(1, 4, 0, 1)"
+2003-301,2003–04,Fulham,Birmingham City,date,2004-04-03,2004-04-02
+2003-302,2003–04,Middlesbrough,Bolton Wanderers,date,2004-04-03,2004-04-02
+2003-303,2003–04,Newcastle United,Everton,date,2004-04-03,2004-04-02
+2003-304,2003–04,Tottenham Hotspur,Chelsea,date,2004-04-03,2004-04-02
+2003-308,2003–04,Leeds United,Leicester City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 2, 1, 0)"
+2003-309,2003–04,Arsenal,Liverpool,date,2004-04-09,2004-04-08
+2003-310,2003–04,Everton,Tottenham Hotspur,date,2004-04-09,2004-04-08
+2003-310,2003–04,Everton,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(1, 2, 0, 1)"
+2003-311,2003–04,Birmingham City,Manchester United,date,2004-04-10,2004-04-09
+2003-312,2003–04,Bolton Wanderers,Aston Villa,date,2004-04-10,2004-04-09
+2003-313,2003–04,Charlton Athletic,Portsmouth,date,2004-04-10,2004-04-09
+2003-314,2003–04,Chelsea,Middlesbrough,date,2004-04-10,2004-04-09
+2003-315,2003–04,Leicester City,Fulham,date,2004-04-10,2004-04-09
+2003-315,2003–04,Leicester City,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(2, 1, 0, 0)"
+2003-318,2003–04,Newcastle United,Arsenal,date,2004-04-11,2004-04-10
+2003-319,2003–04,Aston Villa,Chelsea,date,2004-04-12,2004-04-11
+2003-320,2003–04,Fulham,Blackburn Rovers,date,2004-04-12,2004-04-11
+2003-321,2003–04,Liverpool,Charlton Athletic,date,2004-04-12,2004-04-11
+2003-321,2003–04,Liverpool,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(2, 0, 0, 0)"
+2003-322,2003–04,Portsmouth,Birmingham City,date,2004-04-12,2004-04-11
+2003-323,2003–04,Wolverhampton Wanderers,Bolton Wanderers,date,2004-04-12,2004-04-11
+2003-324,2003–04,Manchester United,Leicester City,date,2004-04-13,2004-04-12
+2003-329,2003–04,Blackburn Rovers,Leicester City,date,2004-04-17,2004-04-16
+2003-329,2003–04,Blackburn Rovers,Leicester City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2003-330,2003–04,Bolton Wanderers,Tottenham Hotspur,date,2004-04-17,2004-04-16
+2003-331,2003–04,Charlton Athletic,Birmingham City,date,2004-04-17,2004-04-16
+2003-331,2003–04,Charlton Athletic,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2003-332,2003–04,Chelsea,Everton,date,2004-04-17,2004-04-16
+2003-333,2003–04,Liverpool,Fulham,date,2004-04-17,2004-04-16
+2003-334,2003–04,Portsmouth,Manchester United,date,2004-04-17,2004-04-16
+2003-335,2003–04,Wolverhampton Wanderers,Middlesbrough,date,2004-04-17,2004-04-16
+2003-336,2003–04,Aston Villa,Newcastle United,date,2004-04-18,2004-04-17
+2003-338,2003–04,Manchester United,Charlton Athletic,date,2004-04-20,2004-04-19
+2003-338,2003–04,Manchester United,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2003-339,2003–04,Everton,Blackburn Rovers,date,2004-04-24,2004-04-23
+2003-340,2003–04,Fulham,Charlton Athletic,date,2004-04-24,2004-04-23
+2003-341,2003–04,Manchester United,Liverpool,date,2004-04-24,2004-04-23
+2003-341,2003–04,Manchester United,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2003-342,2003–04,Middlesbrough,Aston Villa,date,2004-04-24,2004-04-23
+2003-342,2003–04,Middlesbrough,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(1, 2, 0, 1)"
+2003-343,2003–04,Birmingham City,Wolverhampton Wanderers,date,2004-04-25,2004-04-24
+2003-344,2003–04,Leicester City,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 3, 0, 0)"
+2003-345,2003–04,Newcastle United,Chelsea,date,2004-04-25,2004-04-24
+2003-348,2003–04,Tottenham Hotspur,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2003-349,2003–04,Arsenal,Birmingham City,date,2004-05-01,2004-04-30
+2003-350,2003–04,Blackburn Rovers,Manchester United,date,2004-05-01,2004-04-30
+2003-351,2003–04,Charlton Athletic,Leicester City,date,2004-05-01,2004-04-30
+2003-352,2003–04,Portsmouth,Fulham,date,2004-05-01,2004-04-30
+2003-353,2003–04,Wolverhampton Wanderers,Everton,date,2004-05-01,2004-04-30
+2003-354,2003–04,Aston Villa,Tottenham Hotspur,date,2004-05-02,2004-05-01
+2003-356,2003–04,Liverpool,Middlesbrough,date,2004-05-02,2004-05-01
+2003-358,2003–04,Bolton Wanderers,Leeds United,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(4, 1, 0, 1)"
+2003-360,2003–04,Birmingham City,Liverpool,date,2004-05-08,2004-05-07
+2003-361,2003–04,Everton,Bolton Wanderers,date,2004-05-08,2004-05-07
+2003-362,2003–04,Leicester City,Portsmouth,date,2004-05-08,2004-05-07
+2003-363,2003–04,Manchester United,Chelsea,date,2004-05-08,2004-05-07
+2003-363,2003–04,Manchester United,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2003-364,2003–04,Tottenham Hotspur,Blackburn Rovers,date,2004-05-08,2004-05-07
+2003-365,2003–04,Fulham,Arsenal,date,2004-05-09,2004-05-08
+2003-365,2003–04,Fulham,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(2, 3, 0, 0)"
+2003-368,2003–04,Newcastle United,Wolverhampton Wanderers,date,2004-05-09,2004-05-08
+2003-371,2003–04,Arsenal,Leicester City,date,2004-05-15,2004-05-14
+2003-372,2003–04,Aston Villa,Manchester United,date,2004-05-15,2004-05-14
+2003-372,2003–04,Aston Villa,Manchester United,"cards (home yellow, away yellow, home red, away red)","(4, 3, 0, 2)","(4, 2, 0, 2)"
+2003-373,2003–04,Blackburn Rovers,Birmingham City,date,2004-05-15,2004-05-14
+2003-374,2003–04,Bolton Wanderers,Fulham,date,2004-05-15,2004-05-14
+2003-375,2003–04,Liverpool,Newcastle United,date,2004-05-15,2004-05-14
+2003-376,2003–04,Portsmouth,Middlesbrough,date,2004-05-15,2004-05-14
+2003-377,2003–04,Wolverhampton Wanderers,Tottenham Hotspur,date,2004-05-15,2004-05-14
+2003-377,2003–04,Wolverhampton Wanderers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(0, 1, 1, 0)"
+2004-013,2004–05,Crystal Palace,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2004-015,2004–05,Liverpool,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2004-018,2004–05,Southampton,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 2, 0, 1)"
+2004-030,2004–05,Blackburn Rovers,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2004-044,2004–05,Manchester City,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2004-048,2004–05,Tottenham Hotspur,Norwich City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2004-051,2004–05,Birmingham City,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(1, 2, 1, 0)"
+2004-060,2004–05,Aston Villa,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2004-066,2004–05,Newcastle United,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2004-070,2004–05,Arsenal,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2004-073,2004–05,Norwich City,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(1, 3, 0, 0)"
+2004-082,2004–05,Blackburn Rovers,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2004-085,2004–05,Fulham,Liverpool,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2004-115,2004–05,Southampton,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(3, 0, 0, 0)"
+2004-117,2004–05,Manchester United,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2004-135,2004–05,Middlesbrough,Liverpool,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(2, 2, 0, 0)"
+2004-143,2004–05,Fulham,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2004-157,2004–05,Portsmouth,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(1, 2, 0, 0)"
+2004-160,2004–05,Crystal Palace,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(4, 2, 0, 1)"
+2004-162,2004–05,Manchester City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 1, 0, 0)"
+2004-178,2004–05,Liverpool,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2004-201,2004–05,Aston Villa,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2004-211,2004–05,Blackburn Rovers,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 2, 0, 0)"
+2004-224,2004–05,Liverpool,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 3, 0, 1)"
+2004-227,2004–05,Portsmouth,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 6, 2, 0)","(1, 6, 2, 0)"
+2004-236,2004–05,Norwich City,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(1, 3, 0, 0)"
+2004-242,2004–05,Bolton Wanderers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2004-245,2004–05,West Bromwich Albion,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 1)","(1, 1, 0, 1)"
+2004-255,2004–05,Middlesbrough,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(1, 2, 1, 0)","(0, 2, 1, 0)"
+2004-272,2004–05,Southampton,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 1)","(0, 0, 1, 1)"
+2004-276,2004–05,Norwich City,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2004-279,2004–05,Crystal Palace,Manchester United,"cards (home yellow, away yellow, home red, away red)","(5, 4, 1, 0)","(4, 4, 1, 0)"
+2004-288,2004–05,Charlton Athletic,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(2, 3, 0, 0)"
+2004-294,2004–05,Manchester United,Fulham,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2004-321,2004–05,Charlton Athletic,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2004-331,2004–05,Everton,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 2)","(3, 1, 0, 2)"
+2004-340,2004–05,Everton,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(3, 3, 0, 0)"
+2004-343,2004–05,Manchester United,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2004-344,2004–05,Portsmouth,Southampton,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2004-346,2004–05,West Bromwich Albion,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 0)","(3, 3, 0, 0)"
+2004-350,2004–05,Fulham,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 0)","(0, 3, 1, 0)"
+2004-353,2004–05,Newcastle United,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2005-008,2005–06,West Ham United,Blackburn Rovers,referee,A Wiley,Michael Riley
+2005-009,2005–06,Arsenal,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 3, 0, 0)"
+2005-025,2005–06,Blackburn Rovers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2005-029,2005–06,Fulham,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2005-031,2005–06,Tottenham Hotspur,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(3, 4, 1, 0)"
+2005-042,2005–06,Newcastle United,Fulham,"cards (home yellow, away yellow, home red, away red)","(4, 1, 1, 0)","(3, 1, 1, 0)"
+2005-044,2005–06,West Bromwich Albion,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2005-052,2005–06,Blackburn Rovers,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 5, 0, 1)","(1, 4, 0, 1)"
+2005-095,2005–06,Newcastle United,Sunderland,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(1, 2, 0, 0)"
+2005-121,2005–06,Sunderland,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2005-127,2005–06,Aston Villa,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2005-133,2005–06,Fulham,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 7, 0, 0)","(3, 5, 0, 1)"
+2005-136,2005–06,Sunderland,Liverpool,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2005-144,2005–06,West Bromwich Albion,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2005-152,2005–06,Liverpool,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2005-153,2005–06,Newcastle United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(2, 0, 0, 1)"
+2005-154,2005–06,West Bromwich Albion,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2005-162,2005–06,Manchester City,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2005-169,2005–06,Charlton Athletic,Arsenal,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(2, 2, 1, 0)"
+2005-174,2005–06,Portsmouth,West Ham United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2005-176,2005–06,Tottenham Hotspur,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(4, 1, 0, 1)","(4, 0, 0, 1)"
+2005-180,2005–06,Everton,Liverpool,"cards (home yellow, away yellow, home red, away red)","(4, 2, 2, 0)","(2, 2, 2, 0)"
+2005-194,2005–06,Wigan Athletic,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2005-198,2005–06,Everton,Charlton Athletic,referee,U Rennie,Graham Poll
+2005-205,2005–06,Arsenal,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2005-207,2005–06,Blackburn Rovers,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 5, 0, 1)","(2, 4, 0, 1)"
+2005-209,2005–06,Fulham,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(1, 2, 0, 0)"
+2005-213,2005–06,Sunderland,Chelsea,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2005-214,2005–06,Wigan Athletic,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2005-220,2005–06,Tottenham Hotspur,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2005-222,2005–06,Chelsea,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2005-225,2005–06,Charlton Athletic,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(2, 4, 1, 0)","(0, 3, 0, 0)"
+2005-225,2005–06,Charlton Athletic,West Bromwich Albion,referee,I Williamson,Peter Walton
+2005-226,2005–06,Fulham,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2005-231,2005–06,Blackburn Rovers,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(3, 2, 0, 1)"
+2005-235,2005–06,Birmingham City,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 0)","(1, 3, 1, 0)"
+2005-237,2005–06,Everton,Manchester City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2005-242,2005–06,West Ham United,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2005-252,2005–06,Wigan Athletic,Liverpool,referee,R Styles,Matteo Trefoloni
+2005-254,2005–06,Sunderland,Tottenham Hotspur,referee,A Marriner,Marco Gabriele
+2005-266,2005–06,Liverpool,Manchester City,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2005-275,2005–06,Manchester City,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2005-278,2005–06,Birmingham City,West Bromwich Albion,referee,P Dowd,Michael Riley
+2005-285,2005–06,Arsenal,Liverpool,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2005-291,2005–06,Blackburn Rovers,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 3, 1, 0)"
+2005-295,2005–06,West Bromwich Albion,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(1, 2, 0, 0)"
+2005-300,2005–06,Chelsea,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 1, 0, 1)"
+2005-301,2005–06,Liverpool,Everton,"cards (home yellow, away yellow, home red, away red)","(3, 7, 1, 1)","(2, 7, 1, 1)"
+2005-314,2005–06,Newcastle United,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2005-316,2005–06,Manchester City,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 0, 0, 0)"
+2005-332,2005–06,Bolton Wanderers,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 3, 1, 0)"
+2005-348,2005–06,Arsenal,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2005-360,2005–06,Manchester City,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2005-372,2005–06,Aston Villa,Sunderland,"cards (home yellow, away yellow, home red, away red)","(4, 2, 0, 0)","(2, 1, 0, 0)"
+2005-373,2005–06,Blackburn Rovers,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 4, 1, 0)","(2, 3, 1, 0)"
+2006-002,2006–07,Bolton Wanderers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 0, 0, 0)"
+2006-005,2006–07,Portsmouth,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 2)","(2, 0, 0, 2)"
+2006-008,2006–07,West Ham United,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2006-009,2006–07,Chelsea,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2006-016,2006–07,Fulham,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 3, 0, 0)"
+2006-023,2006–07,Tottenham Hotspur,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2006-029,2006–07,Arsenal,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(1, 6, 0, 1)","(1, 5, 0, 1)"
+2006-047,2006–07,Tottenham Hotspur,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(3, 2, 0, 0)"
+2006-058,2006–07,Newcastle United,Everton,"cards (home yellow, away yellow, home red, away red)","(2, 4, 1, 1)","(1, 3, 1, 1)"
+2006-071,2006–07,Aston Villa,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 1, 0, 0)"
+2006-076,2006–07,Reading,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 1)","(2, 1, 1, 1)"
+2006-091,2006–07,Bolton Wanderers,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(3, 2, 0, 0)"
+2006-108,2006–07,Tottenham Hotspur,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 5, 0, 1)","(3, 4, 0, 1)"
+2006-122,2006–07,Everton,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(3, 0, 0, 0)","(3, 1, 0, 0)"
+2006-126,2006–07,Reading,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 4, 0, 0)"
+2006-139,2006–07,Watford,Sheffield United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2006-143,2006–07,Liverpool,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(2, 3, 0, 0)"
+2006-148,2006–07,Portsmouth,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 4, 1, 0)","(1, 4, 1, 0)"
+2006-161,2006–07,Manchester United,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2006-189,2006–07,Wigan Athletic,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 0)","(2, 4, 0, 0)"
+2006-197,2006–07,Watford,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(1, 0, 0, 0)"
+2006-202,2006–07,Charlton Athletic,Aston Villa,referee,R Styles,Mark Halsey
+2006-205,2006–07,Manchester United,Reading,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2006-207,2006–07,Tottenham Hotspur,Liverpool,referee,M Halsey,Stephen Bennett
+2006-208,2006–07,West Ham United,Manchester City,referee,S Bennett,Rob Styles
+2006-209,2006–07,Fulham,Watford,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2006-213,2006–07,Newcastle United,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2006-219,2006–07,Blackburn Rovers,Arsenal,referee,C Foy,Rob Styles
+2006-226,2006–07,West Ham United,Fulham,"cards (home yellow, away yellow, home red, away red)","(3, 6, 1, 0)","(2, 6, 1, 0)"
+2006-230,2006–07,Fulham,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(2, 3, 1, 0)"
+2006-235,2006–07,Portsmouth,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 2, 0, 0)"
+2006-249,2006–07,Blackburn Rovers,Sheffield United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 1, 0)","(0, 4, 1, 0)"
+2006-277,2006–07,Wigan Athletic,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(6, 2, 0, 0)","(5, 1, 0, 0)"
+2006-287,2006–07,West Ham United,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(6, 1, 0, 0)","(6, 2, 0, 0)"
+2006-290,2006–07,Blackburn Rovers,West Ham United,"cards (home yellow, away yellow, home red, away red)","(4, 4, 1, 0)","(3, 4, 1, 0)"
+2006-310,2006–07,Everton,Fulham,referee,D Gallagh,Dermot Gallagher
+2006-316,2006–07,Portsmouth,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2006-326,2006–07,Arsenal,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2006-335,2006–07,Manchester United,Sheffield United,"cards (home yellow, away yellow, home red, away red)","(5, 3, 0, 0)","(3, 3, 0, 0)"
+2006-349,2006–07,Blackburn Rovers,Charlton Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2006-352,2006–07,Manchester City,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(2, 0, 0, 0)"
+2006-361,2006–07,Fulham,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2006-364,2006–07,Reading,Watford,referee,D Gallaghe,Dermot Gallagher
+2006-368,2006–07,Charlton Athletic,Tottenham Hotspur,referee,G Poll,Mark Halsey
+2006-378,2006–07,Sheffield United,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(3, 5, 0, 1)","(3, 4, 0, 1)"
+2007-015,2007–08,Portsmouth,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 1)","(1, 1, 1, 1)"
+2007-016,2007–08,Reading,Chelsea,"cards (home yellow, away yellow, home red, away red)","(4, 5, 1, 0)","(3, 5, 1, 0)"
+2007-019,2007–08,Fulham,Middlesbrough,referee,L Mason,Andy D'Urso
+2007-025,2007–08,Blackburn Rovers,Arsenal,"cards (home yellow, away yellow, home red, away red)","(4, 4, 1, 0)","(3, 4, 1, 0)"
+2007-029,2007–08,Aston Villa,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2007-043,2007–08,Newcastle United,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 3, 0, 1)"
+2007-047,2007–08,Blackburn Rovers,Manchester City,"cards (home yellow, away yellow, home red, away red)","(5, 1, 1, 1)","(4, 0, 1, 1)"
+2007-069,2007–08,Chelsea,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(0, 1, 1, 0)"
+2007-077,2007–08,Tottenham Hotspur,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(1, 3, 0, 0)"
+2007-089,2007–08,Aston Villa,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 2, 0)","(1, 2, 2, 0)"
+2007-103,2007–08,Sunderland,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 4, 1, 0)","(0, 4, 1, 0)"
+2007-107,2007–08,Tottenham Hotspur,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(4, 3, 0, 0)","(4, 5, 0, 0)"
+2007-112,2007–08,Fulham,Reading,"cards (home yellow, away yellow, home red, away red)","(3, 0, 1, 0)","(2, 0, 1, 0)"
+2007-124,2007–08,Manchester United,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2007-150,2007–08,Aston Villa,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(2, 5, 0, 0)","(2, 4, 0, 0)"
+2007-167,2007–08,Wigan Athletic,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(4, 4, 0, 1)","(4, 3, 0, 1)"
+2007-168,2007–08,Arsenal,Chelsea,"cards (home yellow, away yellow, home red, away red)","(5, 5, 0, 0)","(4, 5, 0, 0)"
+2007-175,2007–08,Middlesbrough,West Ham United,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 2, 0, 0)"
+2007-181,2007–08,Chelsea,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(3, 2, 2, 1)","(2, 2, 2, 1)"
+2007-186,2007–08,Tottenham Hotspur,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2007-190,2007–08,Birmingham City,Fulham,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2007-191,2007–08,Chelsea,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 4, 0, 0)"
+2007-192,2007–08,Everton,Arsenal,"cards (home yellow, away yellow, home red, away red)","(0, 5, 1, 1)","(0, 4, 1, 1)"
+2007-206,2007–08,Blackburn Rovers,Sunderland,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 1)","(3, 3, 0, 1)"
+2007-213,2007–08,Derby County,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 2, 1, 0)","(0, 2, 1, 0)"
+2007-235,2007–08,Chelsea,Reading,referee,M Dean,Chris Foy
+2007-252,2007–08,Derby County,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(4, 1, 0, 0)"
+2007-261,2007–08,Fulham,West Ham United,"cards (home yellow, away yellow, home red, away red)","(3, 0, 1, 0)","(2, 0, 1, 0)"
+2007-284,2007–08,Tottenham Hotspur,West Ham United,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2007-286,2007–08,Aston Villa,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 0)","(0, 6, 0, 0)"
+2007-288,2007–08,Portsmouth,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2007-289,2007–08,Arsenal,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(1, 2, 0, 1)"
+2007-292,2007–08,Portsmouth,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 1)","(2, 0, 1, 1)"
+2007-302,2007–08,Blackburn Rovers,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 1)","(1, 2, 1, 1)"
+2007-310,2007–08,Manchester United,Liverpool,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2007-313,2007–08,Derby County,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(3, 4, 0, 0)"
+2007-316,2007–08,Reading,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(3, 5, 1, 0)","(2, 5, 1, 0)"
+2007-332,2007–08,Bolton Wanderers,West Ham United,referee,P Walton,Chris Foy
+2007-335,2007–08,Reading,Fulham,referee,C Foy,Rob Styles
+2007-365,2007–08,Manchester United,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 0)","(1, 2, 1, 0)"
+2008-018,2008–09,Manchester City,West Ham United,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2008-032,2008–09,Liverpool,Manchester United,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2008-037,2008–09,Wigan Athletic,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(0, 1, 1, 0)"
+2008-040,2008–09,Blackburn Rovers,Fulham,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(3, 0, 0, 0)"
+2008-053,2008–09,Fulham,West Ham United,"cards (home yellow, away yellow, home red, away red)","(4, 1, 1, 0)","(3, 1, 1, 0)"
+2008-058,2008–09,Portsmouth,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(4, 3, 1, 0)","(3, 3, 1, 0)"
+2008-059,2008–09,Wigan Athletic,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 0)","(3, 3, 0, 0)"
+2008-071,2008–09,Aston Villa,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2008-074,2008–09,Liverpool,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2008-087,2008–09,Tottenham Hotspur,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2008-093,2008–09,Bolton Wanderers,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(2, 2, 0, 0)"
+2008-096,2008–09,Liverpool,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 2, 0, 0)"
+2008-107,2008–09,West Bromwich Albion,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2008-119,2008–09,Manchester City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 2, 2, 1)","(0, 1, 2, 1)"
+2008-125,2008–09,Newcastle United,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2008-138,2008–09,Tottenham Hotspur,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2008-146,2008–09,Manchester City,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 5, 0, 1)","(2, 4, 0, 1)"
+2008-172,2008–09,Fulham,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 3, 0, 0)"
+2008-173,2008–09,Hull City,Sunderland,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2008-175,2008–09,Arsenal,Liverpool,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 3, 1, 0)"
+2008-185,2008–09,Stoke City,Manchester United,"cards (home yellow, away yellow, home red, away red)","(4, 2, 1, 0)","(3, 2, 1, 0)"
+2008-188,2008–09,Wigan Athletic,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(3, 3, 0, 1)"
+2008-189,2008–09,Arsenal,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2008-208,2008–09,Blackburn Rovers,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2008-218,2008–09,Portsmouth,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2008-238,2008–09,Blackburn Rovers,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(2, 1, 0, 0)"
+2008-246,2008–09,Tottenham Hotspur,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2008-266,2008–09,Hull City,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 1)","(2, 2, 1, 1)"
+2008-277,2008–09,Wigan Athletic,West Ham United,"cards (home yellow, away yellow, home red, away red)","(2, 5, 1, 1)","(2, 4, 1, 1)"
+2008-285,2008–09,Middlesbrough,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 0)","(0, 3, 1, 0)"
+2008-291,2008–09,Fulham,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 2)","(2, 3, 0, 2)"
+2008-298,2008–09,Manchester City,Sunderland,"cards (home yellow, away yellow, home red, away red)","(3, 6, 0, 1)","(3, 5, 0, 1)"
+2008-300,2008–09,Arsenal,Manchester City,referee,A Marriner,Howard Webb
+2008-301,2008–09,Blackburn Rovers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2008-304,2008–09,Hull City,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2008-316,2008–09,Tottenham Hotspur,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(1, 5, 0, 0)"
+2008-326,2008–09,Tottenham Hotspur,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 1, 0, 0)"
+2008-359,2008–09,Newcastle United,Middlesbrough,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2008-361,2008–09,Bolton Wanderers,Hull City,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(2, 2, 0, 0)"
+2008-372,2008–09,Aston Villa,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2009-028,2009–10,Bolton Wanderers,Liverpool,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2009-035,2009–10,Everton,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 5, 0, 0)","(1, 6, 0, 0)"
+2009-043,2009–10,Tottenham Hotspur,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2009-046,2009–10,Fulham,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2009-056,2009–10,Wolverhampton Wanderers,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2009-058,2009–10,Blackburn Rovers,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 0)","(1, 2, 1, 0)"
+2009-063,2009–10,Tottenham Hotspur,Burnley,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2009-067,2009–10,Bolton Wanderers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2009-070,2009–10,Manchester United,Sunderland,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2009-079,2009–10,Everton,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2009-081,2009–10,Portsmouth,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 1)","(2, 3, 1, 1)"
+2009-085,2009–10,Wigan Athletic,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(2, 0, 0, 1)"
+2009-094,2009–10,Liverpool,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 1)","(1, 2, 1, 1)"
+2009-096,2009–10,West Ham United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(2, 2, 1, 0)"
+2009-099,2009–10,Burnley,Hull City,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 2, 0, 1)"
+2009-100,2009–10,Everton,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 1)","(1, 2, 1, 1)"
+2009-105,2009–10,Sunderland,West Ham United,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 1)","(3, 2, 1, 1)"
+2009-106,2009–10,Birmingham City,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 2, 1, 0)"
+2009-107,2009–10,West Ham United,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 3, 0, 1)"
+2009-114,2009–10,Hull City,Stoke City,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2009-134,2009–10,Portsmouth,Manchester United,"cards (home yellow, away yellow, home red, away red)","(4, 3, 0, 0)","(5, 3, 0, 0)"
+2009-150,2009–10,Birmingham City,West Ham United,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 1)","(3, 2, 0, 1)"
+2009-151,2009–10,Bolton Wanderers,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(3, 1, 0, 1)"
+2009-157,2009–10,Sunderland,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(4, 3, 0, 1)","(4, 2, 0, 1)"
+2009-163,2009–10,Sunderland,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2009-173,2009–10,Portsmouth,Liverpool,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(2, 3, 0, 1)"
+2009-177,2009–10,Birmingham City,Chelsea,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2009-180,2009–10,Liverpool,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 0, 0, 1)"
+2009-189,2009–10,Everton,Burnley,"cards (home yellow, away yellow, home red, away red)","(1, 5, 0, 1)","(1, 4, 0, 1)"
+2009-206,2009–10,Wolverhampton Wanderers,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(4, 3, 1, 1)","(3, 2, 1, 1)"
+2009-219,2009–10,Chelsea,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 1, 0, 0)"
+2009-236,2009–10,Liverpool,Everton,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 1)","(3, 2, 1, 1)"
+2009-238,2009–10,Stoke City,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2009-241,2009–10,Birmingham City,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(5, 3, 0, 0)","(5, 4, 0, 0)"
+2009-243,2009–10,Fulham,Burnley,referee,C Foy,Stephen Bennett
+2009-245,2009–10,Portsmouth,Sunderland,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 2)","(3, 0, 1, 2)"
+2009-257,2009–10,Portsmouth,Stoke City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(2, 0, 0, 1)"
+2009-258,2009–10,West Ham United,Hull City,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2009-268,2009–10,Burnley,Portsmouth,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2009-269,2009–10,Chelsea,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 1, 2, 0)","(2, 1, 2, 0)"
+2009-275,2009–10,West Ham United,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 5, 0, 1)","(2, 4, 0, 1)"
+2009-280,2009–10,Sunderland,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2009-286,2009–10,Hull City,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2009-296,2009–10,Portsmouth,Hull City,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2009-297,2009–10,Stoke City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2009-319,2009–10,Bolton Wanderers,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(4, 1, 0, 0)"
+2009-321,2009–10,Manchester United,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2009-322,2009–10,Portsmouth,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 0)","(1, 1, 1, 0)"
+2009-344,2009–10,Tottenham Hotspur,Chelsea,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 3, 0, 1)"
+2009-375,2009–10,Chelsea,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 3, 0, 1)"
+2009-380,2009–10,Wolverhampton Wanderers,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 2)","(1, 0, 0, 2)"
+2010-005,2010–11,Sunderland,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 3, 1, 0)"
+2010-009,2010–11,Liverpool,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 1)","(1, 2, 1, 1)"
+2010-015,2010–11,West Bromwich Albion,Sunderland,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(3, 2, 0, 0)"
+2010-026,2010–11,Wolverhampton Wanderers,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(7, 4, 0, 0)","(7, 5, 0, 0)"
+2010-033,2010–11,Fulham,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(3, 6, 0, 1)","(3, 5, 0, 1)"
+2010-038,2010–11,Wigan Athletic,Sunderland,"cards (home yellow, away yellow, home red, away red)","(4, 2, 0, 1)","(4, 1, 0, 1)"
+2010-045,2010–11,Sunderland,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(3, 1, 0, 1)"
+2010-073,2010–11,Bolton Wanderers,Stoke City,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2010-079,2010–11,Everton,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2010-107,2010–11,Sunderland,Stoke City,"cards (home yellow, away yellow, home red, away red)","(0, 5, 0, 0)","(0, 4, 0, 1)"
+2010-108,2010–11,Arsenal,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 2, 1, 0)"
+2010-110,2010–11,West Bromwich Albion,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 4, 1, 1)","(2, 4, 1, 1)"
+2010-115,2010–11,Everton,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 3, 1, 0)","(0, 2, 1, 0)"
+2010-124,2010–11,Stoke City,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2010-134,2010–11,Bolton Wanderers,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(1, 2, 0, 1)"
+2010-136,2010–11,Manchester United,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 2)","(0, 1, 0, 2)"
+2010-143,2010–11,Everton,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 1)","(1, 2, 1, 1)"
+2010-155,2010–11,Manchester City,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(2, 2, 1, 0)"
+2010-156,2010–11,Wigan Athletic,Stoke City,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(1, 3, 0, 0)"
+2010-166,2010–11,Bolton Wanderers,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(4, 3, 1, 0)","(3, 3, 1, 0)"
+2010-172,2010–11,Manchester City,Everton,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 1)","(2, 1, 1, 1)"
+2010-188,2010–11,Chelsea,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2010-198,2010–11,West Ham United,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2010-205,2010–11,Aston Villa,Sunderland,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 1)","(3, 2, 1, 1)"
+2010-205,2010–11,Aston Villa,Sunderland,referee,P Walton,Kevin Friend
+2010-206,2010–11,Blackburn Rovers,Liverpool,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2010-221,2010–11,Tottenham Hotspur,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 3, 0, 1)"
+2010-225,2010–11,Everton,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 1, 0, 1)"
+2010-234,2010–11,Liverpool,Fulham,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 1, 0, 0)"
+2010-269,2010–11,Aston Villa,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 2, 0, 1)"
+2010-277,2010–11,Chelsea,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2010-281,2010–11,Fulham,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 3, 0, 1)"
+2010-297,2010–11,Chelsea,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 5, 0, 0)","(2, 4, 0, 0)"
+2010-321,2010–11,Everton,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(1, 3, 0, 0)"
+2010-336,2010–11,Bolton Wanderers,Arsenal,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(4, 3, 0, 0)"
+2010-344,2010–11,West Bromwich Albion,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2010-347,2010–11,Birmingham City,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 3, 1, 0)"
+2010-367,2010–11,Chelsea,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(4, 2, 0, 0)","(4, 3, 0, 0)"
+2010-369,2010–11,Wigan Athletic,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2010-373,2010–11,Everton,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(2, 2, 1, 0)"
+2010-378,2010–11,Tottenham Hotspur,Birmingham City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 4, 0, 0)"
+2011-010,2011–12,Arsenal,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2011-014,2011–12,Sunderland,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(3, 3, 1, 0)","(2, 3, 1, 0)"
+2011-021,2011–12,Blackburn Rovers,Everton,"cards (home yellow, away yellow, home red, away red)","(5, 2, 0, 0)","(5, 1, 0, 0)"
+2011-026,2011–12,Manchester United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2011-049,2011–12,Tottenham Hotspur,Liverpool,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 2)","(1, 2, 0, 2)"
+2011-054,2011–12,Newcastle United,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 1)","(0, 3, 0, 1)"
+2011-057,2011–12,Wigan Athletic,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 0)","(2, 1, 1, 0)"
+2011-058,2011–12,Queens Park Rangers,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(1, 6, 1, 0)","(0, 6, 1, 0)"
+2011-088,2011–12,Manchester United,Manchester City,"cards (home yellow, away yellow, home red, away red)","(4, 4, 1, 0)","(4, 3, 1, 0)"
+2011-095,2011–12,Swansea City,Bolton Wanderers,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 1)","(3, 3, 0, 1)"
+2011-103,2011–12,Liverpool,Swansea City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2011-110,2011–12,Everton,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2011-117,2011–12,Wigan Athletic,Blackburn Rovers,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2011-123,2011–12,Manchester United,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2011-128,2011–12,Liverpool,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 1)","(1, 3, 0, 1)"
+2011-131,2011–12,Blackburn Rovers,Swansea City,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 0, 0, 1)"
+2011-146,2011–12,West Bromwich Albion,Wigan Athletic,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2011-147,2011–12,Stoke City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 1, 0, 1)"
+2011-149,2011–12,Chelsea,Manchester City,"cards (home yellow, away yellow, home red, away red)","(4, 2, 0, 1)","(4, 1, 0, 1)"
+2011-155,2011–12,Wolverhampton Wanderers,Stoke City,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(2, 3, 0, 0)"
+2011-162,2011–12,Aston Villa,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 0)","(1, 3, 1, 0)"
+2011-188,2011–12,Sunderland,Manchester City,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2011-192,2011–12,Fulham,Arsenal,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 0, 0, 1)"
+2011-195,2011–12,Manchester City,Liverpool,"cards (home yellow, away yellow, home red, away red)","(1, 2, 1, 0)","(0, 1, 1, 0)"
+2011-223,2011–12,Swansea City,Chelsea,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(2, 2, 0, 1)"
+2011-254,2011–12,Queens Park Rangers,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 4, 1, 0)","(0, 4, 1, 0)"
+2011-256,2011–12,Wigan Athletic,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 0)","(0, 5, 0, 0)"
+2011-257,2011–12,Arsenal,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(3, 2, 0, 1)"
+2011-268,2011–12,Newcastle United,Sunderland,"cards (home yellow, away yellow, home red, away red)","(5, 3, 0, 1)","(5, 4, 0, 2)"
+2011-276,2011–12,Manchester United,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 0, 0, 1)"
+2011-284,2011–12,Wolverhampton Wanderers,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 0)","(0, 1, 1, 0)"
+2011-294,2011–12,Norwich City,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(1, 2, 1, 0)"
+2011-318,2011–12,Arsenal,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 3, 0, 1)"
+2011-337,2011–12,Aston Villa,Sunderland,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 1)","(0, 1, 0, 1)"
+2011-342,2011–12,Queens Park Rangers,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(4, 0, 1, 0)","(3, 0, 1, 0)"
+2011-372,2011–12,Everton,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 1, 0)"
+2012-018,2012–13,Tottenham Hotspur,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2012-078,2012–13,Queens Park Rangers,Everton,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(2, 0, 0, 1)"
+2012-081,2012–13,Aston Villa,Norwich City,"cards (home yellow, away yellow, home red, away red)","(2, 0, 1, 0)","(1, 0, 1, 0)"
+2012-086,2012–13,Chelsea,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 2, 0)","(1, 2, 2, 0)"
+2012-091,2012–13,Manchester United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(5, 3, 0, 1)","(5, 2, 0, 1)"
+2012-121,2012–13,Everton,Norwich City,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(1, 3, 0, 0)"
+2012-124,2012–13,Sunderland,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(3, 3, 0, 0)"
+2012-151,2012–13,Aston Villa,Stoke City,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 1)","(0, 0, 0, 1)"
+2012-156,2012–13,Everton,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(3, 2, 0, 0)"
+2012-167,2012–13,Tottenham Hotspur,Swansea City,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(3, 3, 0, 0)"
+2012-182,2012–13,Fulham,Southampton,referee,M Oliver,Phil Dowd
+2012-196,2012–13,Sunderland,Tottenham Hotspur,referee,L Mason,Martin Atkinson
+2012-228,2012–13,Tottenham Hotspur,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(2, 4, 0, 0)"
+2012-255,2012–13,Sunderland,Arsenal,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 1)","(3, 1, 0, 1)"
+2012-288,2012–13,Everton,Manchester City,"cards (home yellow, away yellow, home red, away red)","(4, 3, 1, 0)","(3, 3, 1, 0)"
+2012-296,2012–13,Wigan Athletic,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2012-335,2012–13,Liverpool,Chelsea,"cards (home yellow, away yellow, home red, away red)","(5, 2, 0, 0)","(5, 3, 0, 0)"
+2012-336,2012–13,Tottenham Hotspur,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(3, 2, 0, 0)"
+2012-340,2012–13,Newcastle United,Liverpool,"cards (home yellow, away yellow, home red, away red)","(3, 2, 1, 0)","(2, 2, 1, 0)"
+2012-361,2012–13,Aston Villa,Chelsea,"cards (home yellow, away yellow, home red, away red)","(2, 3, 1, 1)","(1, 2, 1, 1)"
+2012-366,2012–13,Queens Park Rangers,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2012-367,2012–13,Stoke City,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(4, 1, 1, 0)","(3, 1, 1, 0)"
+2012-371,2012–13,Chelsea,Everton,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 1, 0, 0)"
+2012-377,2012–13,Tottenham Hotspur,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 1)","(1, 2, 0, 1)"
+2013-102,2013–14,Chelsea,West Bromwich Albion,referee,L Probert,Andre Marriner
+2013-106,2013–14,Southampton,Hull City,referee,H Webb,Phil Dowd
+2013-119,2013–14,Manchester City,Tottenham Hotspur,referee,M Atkinson,Howard Webb
+2013-158,2013–14,Aston Villa,Manchester United,referee,C Foy,Lee Mason
+2013-192,2013–14,Crystal Palace,Norwich City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(3, 1, 0, 1)"
+2013-193,2013–14,Fulham,West Ham United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(2, 2, 0, 1)"
+2013-212,2013–14,Crystal Palace,Stoke City,referee,M Clattenburg,Lee Mason
+2013-224,2013–14,Norwich City,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 1, 1)","(1, 2, 1, 1)"
+2013-282,2013–14,Aston Villa,Chelsea,"cards (home yellow, away yellow, home red, away red)","(4, 0, 0, 2)","(4, 1, 0, 2)"
+2013-296,2013–14,Manchester City,Fulham,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 4, 0, 1)"
+2013-331,2013–14,Sunderland,Everton,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2013-337,2013–14,Manchester City,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2014-089,2014–15,Tottenham Hotspur,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(2, 3, 0, 0)"
+2014-153,2014–15,Chelsea,Hull City,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(3, 4, 0, 1)"
+2014-192,2014–15,Hull City,Everton,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 1)","(3, 3, 0, 1)"
+2014-280,2014–15,Arsenal,West Ham United,referee,A Taylor,Chris Foy
+2014-321,2014–15,Chelsea,Manchester United,"cards (home yellow, away yellow, home red, away red)","(7, 1, 0, 0)","(3, 1, 0, 0)"
+2015-026,2015–16,West Ham United,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(0, 0, 1, 0)","(0, 1, 1, 0)"
+2015-034,2015–16,Liverpool,West Ham United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 1, 1)","(3, 2, 1, 1)"
+2015-053,2015–16,Chelsea,Arsenal,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 2)","(3, 2, 0, 2)"
+2015-075,2015–16,Manchester City,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2015-106,2015–16,Watford,West Ham United,"cards (home yellow, away yellow, home red, away red)","(3, 0, 0, 1)","(3, 1, 0, 1)"
+2015-209,2015–16,Swansea City,Sunderland,"cards (home yellow, away yellow, home red, away red)","(2, 0, 1, 0)","(0, 2, 1, 0)"
+2015-252,2015–16,Chelsea,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(0, 1, 1, 0)","(0, 2, 0, 0)"
+2015-252,2015–16,Chelsea,Newcastle United,referee,R Madley,Roger East
+2015-253,2015–16,Crystal Palace,Watford,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 1, 1, 0)"
+2015-253,2015–16,Crystal Palace,Watford,referee,R East,Robert Madley
+2015-254,2015–16,Everton,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(1, 4, 0, 0)"
+2015-310,2015–16,Sunderland,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2016-093,2016–17,Middlesbrough,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2016-112,2016–17,Everton,Swansea City,"cards (home yellow, away yellow, home red, away red)","(4, 2, 0, 0)","(5, 2, 0, 0)"
+2016-115,2016–17,Stoke City,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(3, 3, 0, 0)"
+2016-144,2016–17,Leicester City,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2016-153,2016–17,Crystal Palace,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2016-167,2016–17,AFC Bournemouth,Southampton,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 3, 0, 0)"
+2016-171,2016–17,Arsenal,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2016-176,2016–17,Manchester United,Sunderland,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2016-196,2016–17,West Ham United,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 1, 0)","(2, 2, 1, 0)"
+2016-211,2016–17,AFC Bournemouth,Watford,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2016-226,2016–17,Sunderland,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 0, 0, 0)"
+2016-242,2016–17,Liverpool,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 0)","(3, 5, 0, 0)"
+2016-278,2016–17,Sunderland,Burnley,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(3, 1, 0, 0)"
+2016-334,2016–17,Manchester City,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 1)","(1, 1, 0, 1)"
+2017-019,2017–18,Tottenham Hotspur,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(4, 3, 0, 0)"
+2017-028,2017–18,Liverpool,Arsenal,referee,C Pawson,Martin Atkinson
+2017-049,2017–18,Chelsea,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 3, 1, 0)","(2, 3, 1, 0)"
+2017-164,2017–18,Liverpool,West Bromwich Albion,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(1, 1, 0, 0)"
+2017-170,2017–18,West Ham United,Arsenal,"cards (home yellow, away yellow, home red, away red)","(1, 0, 0, 0)","(2, 0, 0, 0)"
+2017-177,2017–18,Watford,Huddersfield Town,"cards (home yellow, away yellow, home red, away red)","(2, 1, 1, 1)","(2, 2, 1, 1)"
+2017-200,2017–18,Crystal Palace,Arsenal,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(1, 1, 0, 0)"
+2017-260,2017–18,Watford,Chelsea,referee,M Dean,Craig Pawson
+2017-286,2017–18,Tottenham Hotspur,Huddersfield Town,referee,K Friend,Mike Jones
+2017-310,2017–18,Watford,AFC Bournemouth,referee,A Marriner,Andy Madley
+2017-377,2017–18,Southampton,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2018-030,2018–19,Manchester United,Tottenham Hotspur,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(2, 3, 0, 0)"
+2018-043,2018–19,Huddersfield Town,Crystal Palace,referee,L Mason,Graham Scott
+2018-076,2018–19,Tottenham Hotspur,Cardiff City,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 1)","(3, 1, 0, 1)"
+2018-262,2018–19,Cardiff City,Watford,referee,S Hooper,Roger East
+2018-328,2018–19,Burnley,Cardiff City,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 4, 0, 0)"
+2019-018,2019–20,Chelsea,Leicester City,referee,O Langford,Graham Scott
+2019-046,2019–20,Tottenham Hotspur,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(4, 2, 0, 0)","(4, 3, 0, 0)"
+2019-127,2019–20,Watford,Burnley,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(1, 3, 0, 0)"
+2019-140,2019–20,Wolverhampton Wanderers,Sheffield United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 0, 0)","(1, 5, 0, 0)"
+2019-163,2019–20,Leicester City,Norwich City,"cards (home yellow, away yellow, home red, away red)","(0, 4, 0, 0)","(0, 5, 0, 0)"
+2019-187,2019–20,Sheffield United,Watford,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(0, 3, 0, 0)"
+2019-222,2019–20,Manchester City,Crystal Palace,referee,S Scott,Graham Scott
+2019-253,2019–20,Sheffield United,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2019-273,2019–20,Brighton & Hove Albion,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2019-328,2019–20,Newcastle United,West Ham United,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(1, 0, 0, 0)"
+2019-376,2019–20,Leicester City,Manchester United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 1, 0)","(1, 5, 1, 0)"
+2020-112,2020–21,Wolverhampton Wanderers,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 5, 0, 0)","(2, 5, 1, 1)"
+2020-130,2020–21,Newcastle United,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 3, 0, 1)"
+2020-209,2020–21,Wolverhampton Wanderers,Arsenal,referee,C Pawson,Mike Dean
+2020-218,2020–21,Fulham,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 1)","(1, 3, 0, 1)"
+2020-351,2020–21,Aston Villa,Everton,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(2, 1, 0, 0)"
+2020-352,2020–21,Manchester United,Liverpool,referee,A Taylor,Michael Oliver
+2020-354,2020–21,Brighton & Hove Albion,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 0, 0, 0)"
+2020-358,2020–21,Everton,Sheffield United,referee,A Moss,Jonathan Moss
+2020-362,2020–21,Chelsea,Leicester City,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(2, 5, 0, 0)"
+2020-372,2020–21,Aston Villa,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 1)","(3, 4, 0, 1)"
+2021-060,2021–22,Crystal Palace,Brighton & Hove Albion,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 5, 0, 0)"
+2021-131,2021–22,Newcastle United,Norwich City,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 1)","(0, 0, 1, 0)"
+2021-207,2021–22,Everton,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(5, 3, 0, 0)","(5, 4, 0, 0)"
+2021-285,2021–22,Wolverhampton Wanderers,Leeds United,"cards (home yellow, away yellow, home red, away red)","(1, 4, 1, 0)","(1, 5, 1, 0)"
+2021-297,2021–22,West Ham United,Everton,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 1)","(1, 2, 0, 1)"
+2021-318,2021–22,Everton,Leicester City,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(4, 2, 0, 0)"
+2021-379,2021–22,Manchester City,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(0, 1, 0, 0)","(0, 2, 0, 0)"
+2022-055,2022–23,Newcastle United,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2022-126,2022–23,Manchester United,West Ham United,referee,C Kavanagh,William Cavanagh
+2022-140,2022–23,Newcastle United,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(5, 2, 0, 0)"
+2022-168,2022–23,Arsenal,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(4, 4, 0, 0)","(4, 5, 0, 0)"
+2022-201,2022–23,Aston Villa,Leicester City,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 3, 0, 0)"
+2022-216,2022–23,Southampton,Wolverhampton Wanderers,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 1)","(2, 3, 0, 1)"
+2022-221,2022–23,Arsenal,Manchester City,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 4, 0, 0)"
+2022-222,2022–23,Aston Villa,Arsenal,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2022-259,2022–23,Manchester United,Southampton,"cards (home yellow, away yellow, home red, away red)","(2, 0, 0, 0)","(2, 0, 1, 0)"
+2022-269,2022–23,Wolverhampton Wanderers,Leeds United,"cards (home yellow, away yellow, home red, away red)","(3, 5, 1, 0)","(3, 5, 2, 0)"
+2022-288,2022–23,Brentford,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(0, 2, 0, 0)"
+2022-302,2022–23,Tottenham Hotspur,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2023-022,2023–24,Arsenal,Fulham,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 1)","(0, 4, 0, 1)"
+2023-029,2023–24,Sheffield United,Manchester City,"cards (home yellow, away yellow, home red, away red)","(3, 0, 0, 0)","(4, 0, 0, 0)"
+2023-057,2023–24,Chelsea,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 3, 1, 0)"
+2023-059,2023–24,Sheffield United,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(3, 0, 0, 0)","(4, 0, 0, 0)"
+2023-067,2023–24,Wolverhampton Wanderers,Manchester City,"cards (home yellow, away yellow, home red, away red)","(5, 4, 0, 0)","(6, 5, 0, 0)"
+2023-080,2023–24,Wolverhampton Wanderers,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(2, 2, 1, 0)","(3, 2, 1, 0)"
+2023-126,2023–24,Nottingham Forest,Brighton & Hove Albion,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 6, 0, 1)"
+2023-168,2023–24,Liverpool,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 1)","(2, 5, 0, 1)"
+2023-174,2023–24,Luton Town,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 2, 0, 0)"
+2023-178,2023–24,Wolverhampton Wanderers,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 5, 0, 0)","(3, 6, 0, 0)"
+2023-196,2023–24,Tottenham Hotspur,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(3, 2, 0, 0)"
+2023-264,2023–24,Nottingham Forest,Liverpool,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(3, 2, 0, 0)"
+2023-286,2023–24,Brentford,Manchester United,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(3, 2, 0, 0)"
+2023-291,2023–24,Tottenham Hotspur,Luton Town,"cards (home yellow, away yellow, home red, away red)","(2, 4, 0, 0)","(3, 4, 0, 0)"
+2023-297,2023–24,Nottingham Forest,Fulham,"cards (home yellow, away yellow, home red, away red)","(0, 0, 0, 0)","(1, 0, 0, 0)"
+2023-302,2023–24,Chelsea,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 0, 0, 0)","(3, 1, 0, 0)"
+2023-313,2023–24,Tottenham Hotspur,Nottingham Forest,"cards (home yellow, away yellow, home red, away red)","(2, 3, 0, 0)","(2, 4, 0, 0)"
+2023-329,2023–24,Everton,Nottingham Forest,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(4, 2, 0, 0)"
+2024-042,2024–25,Crystal Palace,Manchester United,"cards (home yellow, away yellow, home red, away red)","(3, 1, 0, 0)","(3, 2, 0, 0)"
+2024-054,2024–25,Everton,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 0, 0, 0)"
+2024-081,2024–25,Leicester City,Nottingham Forest,"cards (home yellow, away yellow, home red, away red)","(5, 2, 0, 0)","(5, 3, 0, 0)"
+2024-082,2024–25,Aston Villa,AFC Bournemouth,referee,A Madley,Chris Kavanagh
+2024-093,2024–25,Liverpool,Brighton & Hove Albion,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(1, 2, 0, 0)"
+2024-126,2024–25,Wolverhampton Wanderers,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(4, 1, 0, 0)","(5, 1, 0, 0)"
+2024-142,2024–25,Brentford,Newcastle United,referee,T Robinson,Simon Hooper
+2024-148,2024–25,Tottenham Hotspur,Chelsea,"cards (home yellow, away yellow, home red, away red)","(2, 2, 0, 0)","(2, 3, 0, 0)"
+2024-154,2024–25,Wolverhampton Wanderers,Ipswich Town,"cards (home yellow, away yellow, home red, away red)","(0, 2, 1, 0)","(0, 3, 1, 0)"
+2024-221,2024–25,Brighton & Hove Albion,Everton,"cards (home yellow, away yellow, home red, away red)","(3, 4, 0, 0)","(4, 4, 0, 0)"
+2024-241,2024–25,Brighton & Hove Albion,Chelsea,referee,K Kavanagh,Chris Kavanagh
+2024-267,2024–25,Liverpool,Newcastle United,referee,C Kavanagh,Stuart Attwell
+2024-271,2024–25,West Ham United,Leicester City,referee,S Attwell,Anthony Taylor
+2024-290,2024–25,Arsenal,Fulham,"cards (home yellow, away yellow, home red, away red)","(1, 2, 0, 0)","(1, 3, 0, 0)"
+2024-294,2024–25,Brighton & Hove Albion,Aston Villa,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(2, 3, 0, 0)"
+2024-319,2024–25,AFC Bournemouth,Fulham,referee,O Oliver,Michael Oliver
+2024-333,2024–25,Brighton & Hove Albion,West Ham United,"cards (home yellow, away yellow, home red, away red)","(1, 1, 0, 0)","(2, 1, 0, 0)"
+2024-352,2024–25,Fulham,Everton,referee,M Salisbury,Darren England
+2024-368,2024–25,Brighton & Hove Albion,Liverpool,referee,J Brooks,Andy Madley
+2024-374,2024–25,Liverpool,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(1, 0, 1, 0)","(2, 0, 1, 0)"
+2025-039,2025–26,Burnley,Liverpool,"cards (home yellow, away yellow, home red, away red)","(0, 2, 0, 0)","(0, 2, 1, 0)"
+2025-046,2025–26,West Ham United,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(4, 3, 0, 0)"
+2025-107,2025–26,Brentford,Newcastle United,"cards (home yellow, away yellow, home red, away red)","(2, 1, 0, 0)","(2, 1, 0, 1)"
+2025-235,2025–26,Wolverhampton Wanderers,AFC Bournemouth,"cards (home yellow, away yellow, home red, away red)","(3, 3, 0, 0)","(2, 3, 0, 0)"
+2025-236,2025–26,Aston Villa,Brentford,"cards (home yellow, away yellow, home red, away red)","(0, 3, 0, 0)","(0, 3, 0, 1)"
+2025-238,2025–26,Nottingham Forest,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(1, 3, 0, 0)","(1, 3, 1, 0)"
+2025-291,2025–26,Tottenham Hotspur,Crystal Palace,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(3, 2, 1, 0)"
+2025-378,2025–26,Sunderland,Chelsea,"cards (home yellow, away yellow, home red, away red)","(3, 2, 0, 0)","(5, 3, 0, 1)"
+2025-379,2025–26,Tottenham Hotspur,Everton,"cards (home yellow, away yellow, home red, away red)","(5, 3, 0, 1)","(3, 2, 0, 0)"

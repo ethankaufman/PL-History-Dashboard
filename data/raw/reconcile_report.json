@@ -1,0 +1,1639 @@
+{
+ "counts": {
+  "matches compared": 13166,
+  "score agrees": 13166,
+  "date agrees": 13062,
+  "half-time scores compared": 11780,
+  "half-time score agrees": 11773,
+  "referees compared": 9880,
+  "referee agrees": 9576,
+  "card counts compared": 9880,
+  "cards agree under: official (second yellow counts as a red only)": 9164
+ },
+ "filled": {
+  "gaps filled: half-time score": 1386,
+  "gaps filled: cards (home yellow, away yellow, home red, away red)": 3286,
+  "gaps filled: referee": 3286,
+  "disagreements settled with the official record: date": 104,
+  "disagreements settled with the official record: half-time score": 7,
+  "disagreements settled with the official record: cards (home yellow, away yellow, home red, away red)": 716,
+  "referee spelling made consistent": 9297,
+  "disagreements settled with the official record: referee": 304
+ },
+ "differences": {
+  "date": [
+   [
+    "1992-143",
+    "Wimbledon",
+    "Tottenham Hotspur",
+    "1992-10-24",
+    "1992-10-25"
+   ],
+   [
+    "1992-176",
+    "Queens Park Rangers",
+    "Liverpool",
+    "1992-11-22",
+    "1992-11-23"
+   ],
+   [
+    "1992-414",
+    "Oldham Athletic",
+    "Sheffield United",
+    "1993-04-14",
+    "1993-04-13"
+   ],
+   [
+    "1993-312",
+    "Ipswich Town",
+    "Sheffield United",
+    "1994-02-26",
+    "1994-02-22"
+   ],
+   [
+    "1993-358",
+    "Newcastle United",
+    "Ipswich Town",
+    "1994-03-22",
+    "1994-03-23"
+   ],
+   [
+    "1993-367",
+    "Wimbledon",
+    "Leeds United",
+    "1994-03-27",
+    "1994-03-26"
+   ],
+   [
+    "1994-187",
+    "Everton",
+    "Leeds United",
+    "1994-12-04",
+    "1994-12-05"
+   ],
+   [
+    "1994-418",
+    "Blackburn Rovers",
+    "Crystal Palace",
+    "1995-04-19",
+    "1995-04-20"
+   ],
+   [
+    "1995-234",
+    "West Ham United",
+    "Manchester United",
+    "1996-01-23",
+    "1996-01-22"
+   ],
+   [
+    "1995-371",
+    "Arsenal",
+    "Bolton Wanderers",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-372",
+    "Chelsea",
+    "Blackburn Rovers",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-373",
+    "Coventry City",
+    "Leeds United",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-374",
+    "Everton",
+    "Aston Villa",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-375",
+    "Manchester City",
+    "Liverpool",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-376",
+    "Middlesbrough",
+    "Manchester United",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-377",
+    "Newcastle United",
+    "Tottenham Hotspur",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-378",
+    "Nottingham Forest",
+    "Queens Park Rangers",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-379",
+    "Southampton",
+    "Wimbledon",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1995-380",
+    "West Ham United",
+    "Sheffield Wednesday",
+    "1996-05-04",
+    "1996-05-05"
+   ],
+   [
+    "1998-231",
+    "Manchester United",
+    "Derby County",
+    "1999-02-02",
+    "1999-02-03"
+   ],
+   [
+    "2003-039",
+    "Arsenal",
+    "Portsmouth",
+    "2003-09-13",
+    "2003-09-12"
+   ],
+   [
+    "2003-040",
+    "Blackburn Rovers",
+    "Liverpool",
+    "2003-09-13",
+    "2003-09-12"
+   ],
+   [
+    "2003-041",
+    "Bolton Wanderers",
+    "Middlesbrough",
+    "2003-09-13",
+    "2003-09-12"
+   ],
+   [
+    "2003-042",
+    "Charlton Athletic",
+    "Manchester United",
+    "2003-09-13",
+    "2003-09-12"
+   ],
+   [
+    "2003-043",
+    "Everton",
+    "Newcastle United",
+    "2003-09-13",
+    "2003-09-12"
+   ],
+   [
+    "2003-049",
+    "Aston Villa",
+    "Charlton Athletic",
+    "2003-09-20",
+    "2003-09-19"
+   ],
+   [
+    "2003-050",
+    "Liverpool",
+    "Leicester City",
+    "2003-09-20",
+    "2003-09-19"
+   ],
+   [
+    "2003-051",
+    "Newcastle United",
+    "Bolton Wanderers",
+    "2003-09-20",
+    "2003-09-19"
+   ],
+   [
+    "2003-052",
+    "Portsmouth",
+    "Blackburn Rovers",
+    "2003-09-20",
+    "2003-09-19"
+   ],
+   [
+    "2003-055",
+    "Middlesbrough",
+    "Everton",
+    "2003-09-21",
+    "2003-09-20"
+   ],
+   [
+    "2003-060",
+    "Birmingham City",
+    "Portsmouth",
+    "2003-09-27",
+    "2003-09-26"
+   ],
+   [
+    "2003-061",
+    "Bolton Wanderers",
+    "Wolverhampton Wanderers",
+    "2003-09-27",
+    "2003-09-26"
+   ],
+   [
+    "2003-062",
+    "Chelsea",
+    "Aston Villa",
+    "2003-09-27",
+    "2003-09-26"
+   ],
+   [
+    "2003-063",
+    "Leicester City",
+    "Manchester United",
+    "2003-09-27",
+    "2003-09-26"
+   ],
+   [
+    "2003-064",
+    "Blackburn Rovers",
+    "Fulham",
+    "2003-09-28",
+    "2003-09-27"
+   ],
+   [
+    "2003-065",
+    "Charlton Athletic",
+    "Liverpool",
+    "2003-09-28",
+    "2003-09-27"
+   ],
+   [
+    "2003-069",
+    "Fulham",
+    "Leicester City",
+    "2003-10-04",
+    "2003-10-03"
+   ],
+   [
+    "2003-070",
+    "Manchester United",
+    "Birmingham City",
+    "2003-10-04",
+    "2003-10-03"
+   ],
+   [
+    "2003-071",
+    "Portsmouth",
+    "Charlton Athletic",
+    "2003-10-04",
+    "2003-10-03"
+   ],
+   [
+    "2003-074",
+    "Middlesbrough",
+    "Chelsea",
+    "2003-10-05",
+    "2003-10-04"
+   ],
+   [
+    "2003-080",
+    "Arsenal",
+    "Chelsea",
+    "2003-10-18",
+    "2003-10-17"
+   ],
+   [
+    "2003-081",
+    "Fulham",
+    "Wolverhampton Wanderers",
+    "2003-10-18",
+    "2003-10-17"
+   ],
+   [
+    "2003-082",
+    "Middlesbrough",
+    "Newcastle United",
+    "2003-10-18",
+    "2003-10-17"
+   ],
+   [
+    "2003-083",
+    "Portsmouth",
+    "Liverpool",
+    "2003-10-18",
+    "2003-10-17"
+   ],
+   [
+    "2003-084",
+    "Birmingham City",
+    "Aston Villa",
+    "2003-10-19",
+    "2003-10-18"
+   ],
+   [
+    "2003-091",
+    "Aston Villa",
+    "Everton",
+    "2003-10-25",
+    "2003-10-24"
+   ],
+   [
+    "2003-092",
+    "Manchester United",
+    "Fulham",
+    "2003-10-25",
+    "2003-10-24"
+   ],
+   [
+    "2003-093",
+    "Newcastle United",
+    "Portsmouth",
+    "2003-10-25",
+    "2003-10-24"
+   ],
+   [
+    "2003-094",
+    "Wolverhampton Wanderers",
+    "Leicester City",
+    "2003-10-25",
+    "2003-10-24"
+   ],
+   [
+    "2003-096",
+    "Charlton Athletic",
+    "Arsenal",
+    "2003-10-26",
+    "2003-10-25"
+   ]
+  ],
+  "half-time": [
+   [
+    "1995-187",
+    "Tottenham Hotspur",
+    "Bolton Wanderers",
+    "1-0",
+    "0-0"
+   ],
+   [
+    "1995-202",
+    "Everton",
+    "Leeds United",
+    "2-0",
+    "1-0"
+   ],
+   [
+    "1995-318",
+    "Tottenham Hotspur",
+    "Coventry City",
+    "1-0",
+    "0-1"
+   ],
+   [
+    "1997-305",
+    "Blackburn Rovers",
+    "Barnsley",
+    "2-0",
+    "1-0"
+   ],
+   [
+    "1999-031",
+    "Everton",
+    "Southampton",
+    "2-0",
+    "1-0"
+   ],
+   [
+    "2001-299",
+    "Aston Villa",
+    "Arsenal",
+    "1-0",
+    "0-1"
+   ],
+   [
+    "2003-028",
+    "Manchester United",
+    "Wolverhampton Wanderers",
+    "0-0",
+    "1-0"
+   ]
+  ],
+  "cards": [
+   [
+    "2000-001",
+    "Charlton Athletic",
+    "Manchester City",
+    [
+     1,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     3,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-002",
+    "Chelsea",
+    "West Ham United",
+    [
+     1,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     3,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-003",
+    "Coventry City",
+    "Middlesbrough",
+    [
+     5,
+     3,
+     1,
+     0
+    ],
+    [
+     4,
+     3,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-009",
+    "Tottenham Hotspur",
+    "Ipswich Town",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-011",
+    "Arsenal",
+    "Liverpool",
+    [
+     2,
+     4,
+     1,
+     2
+    ],
+    [
+     1,
+     3,
+     1,
+     2
+    ]
+   ],
+   [
+    "2000-019",
+    "West Ham United",
+    "Leicester City",
+    [
+     3,
+     3,
+     1,
+     0
+    ],
+    [
+     2,
+     3,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-034",
+    "Charlton Athletic",
+    "Southampton",
+    [
+     3,
+     3,
+     1,
+     0
+    ],
+    [
+     2,
+     4,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-039",
+    "Liverpool",
+    "Aston Villa",
+    [
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     3,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-052",
+    "Charlton Athletic",
+    "Tottenham Hotspur",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     2,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-053",
+    "Everton",
+    "Manchester United",
+    [
+     4,
+     1,
+     0,
+     0
+    ],
+    [
+     5,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-070",
+    "Aston Villa",
+    "Derby County",
+    [
+     1,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-080",
+    "Arsenal",
+    "Aston Villa",
+    [
+     1,
+     4,
+     0,
+     1
+    ],
+    [
+     1,
+     3,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-081",
+    "Coventry City",
+    "Tottenham Hotspur",
+    [
+     0,
+     4,
+     1,
+     0
+    ],
+    [
+     0,
+     5,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-087",
+    "Sunderland",
+    "Chelsea",
+    [
+     0,
+     1,
+     1,
+     1
+    ],
+    [
+     0,
+     0,
+     1,
+     1
+    ]
+   ],
+   [
+    "2000-093",
+    "Liverpool",
+    "Leicester City",
+    [
+     1,
+     2,
+     0,
+     0
+    ],
+    [
+     1,
+     3,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-096",
+    "Tottenham Hotspur",
+    "Derby County",
+    [
+     1,
+     2,
+     0,
+     0
+    ],
+    [
+     2,
+     2,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-100",
+    "Arsenal",
+    "Manchester City",
+    [
+     0,
+     3,
+     0,
+     1
+    ],
+    [
+     0,
+     2,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-101",
+    "Aston Villa",
+    "Charlton Athletic",
+    [
+     3,
+     2,
+     0,
+     0
+    ],
+    [
+     3,
+     3,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-110",
+    "Charlton Athletic",
+    "Bradford City",
+    [
+     0,
+     1,
+     0,
+     1
+    ],
+    [
+     0,
+     0,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-114",
+    "Middlesbrough",
+    "Arsenal",
+    [
+     1,
+     1,
+     1,
+     0
+    ],
+    [
+     2,
+     1,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-117",
+    "Tottenham Hotspur",
+    "Sunderland",
+    [
+     1,
+     0,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-129",
+    "Liverpool",
+    "Coventry City",
+    [
+     1,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-145",
+    "Middlesbrough",
+    "Bradford City",
+    [
+     0,
+     2,
+     1,
+     0
+    ],
+    [
+     1,
+     2,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-147",
+    "Tottenham Hotspur",
+    "Leicester City",
+    [
+     1,
+     3,
+     0,
+     1
+    ],
+    [
+     1,
+     2,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-151",
+    "Aston Villa",
+    "Newcastle United",
+    [
+     2,
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     2,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-154",
+    "Leicester City",
+    "Leeds United",
+    [
+     1,
+     2,
+     0,
+     1
+    ],
+    [
+     1,
+     1,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-157",
+    "West Ham United",
+    "Middlesbrough",
+    [
+     1,
+     4,
+     0,
+     1
+    ],
+    [
+     1,
+     3,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-162",
+    "Charlton Athletic",
+    "Manchester United",
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     1,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-163",
+    "Chelsea",
+    "Derby County",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-165",
+    "Southampton",
+    "Leeds United",
+    [
+     3,
+     4,
+     1,
+     0
+    ],
+    [
+     2,
+     4,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-176",
+    "Middlesbrough",
+    "Chelsea",
+    [
+     0,
+     2,
+     0,
+     0
+    ],
+    [
+     0,
+     3,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-230",
+    "Leicester City",
+    "Arsenal",
+    [
+     2,
+     2,
+     1,
+     0
+    ],
+    [
+     1,
+     2,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-231",
+    "Liverpool",
+    "Middlesbrough",
+    [
+     1,
+     1,
+     0,
+     0
+    ],
+    [
+     1,
+     2,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-240",
+    "Everton",
+    "Middlesbrough",
+    [
+     1,
+     5,
+     0,
+     0
+    ],
+    [
+     1,
+     6,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-244",
+    "Sunderland",
+    "Manchester United",
+    [
+     2,
+     0,
+     2,
+     1
+    ],
+    [
+     1,
+     0,
+     2,
+     1
+    ]
+   ],
+   [
+    "2000-251",
+    "Liverpool",
+    "West Ham United",
+    [
+     0,
+     1,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-255",
+    "Everton",
+    "Leeds United",
+    [
+     2,
+     1,
+     0,
+     0
+    ],
+    [
+     3,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-256",
+    "Arsenal",
+    "Ipswich Town",
+    [
+     2,
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     2,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-269",
+    "Ipswich Town",
+    "Everton",
+    [
+     1,
+     2,
+     0,
+     1
+    ],
+    [
+     1,
+     1,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-270",
+    "Leicester City",
+    "Sunderland",
+    [
+     0,
+     4,
+     0,
+     1
+    ],
+    [
+     0,
+     3,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-291",
+    "Newcastle United",
+    "Middlesbrough",
+    [
+     0,
+     3,
+     0,
+     1
+    ],
+    [
+     1,
+     2,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-292",
+    "Southampton",
+    "Everton",
+    [
+     1,
+     1,
+     0,
+     0
+    ],
+    [
+     2,
+     1,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-293",
+    "Tottenham Hotspur",
+    "Coventry City",
+    [
+     0,
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     2,
+     0,
+     0
+    ]
+   ],
+   [
+    "2000-295",
+    "Aston Villa",
+    "Arsenal",
+    [
+     2,
+     2,
+     0,
+     1
+    ],
+    [
+     2,
+     1,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-301",
+    "Liverpool",
+    "Manchester United",
+    [
+     1,
+     1,
+     1,
+     0
+    ],
+    [
+     0,
+     1,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-302",
+    "Manchester City",
+    "Aston Villa",
+    [
+     6,
+     4,
+     1,
+     0
+    ],
+    [
+     5,
+     4,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-303",
+    "Sunderland",
+    "Leeds United",
+    [
+     2,
+     2,
+     0,
+     1
+    ],
+    [
+     2,
+     1,
+     0,
+     1
+    ]
+   ],
+   [
+    "2000-304",
+    "West Ham United",
+    "Everton",
+    [
+     3,
+     2,
+     1,
+     0
+    ],
+    [
+     2,
+     2,
+     1,
+     0
+    ]
+   ],
+   [
+    "2000-312",
+    "Everton",
+    "Manchester City",
+    [
+     0,
+     3,
+     1,
+     1
+    ],
+    [
+     0,
+     4,
+     1,
+     1
+    ]
+   ],
+   [
+    "2000-313",
+    "Middlesbrough",
+    "Sunderland",
+    [
+     5,
+     3,
+     1,
+     0
+    ],
+    [
+     4,
+     3,
+     1,
+     0
+    ]
+   ]
+  ],
+  "referee": [
+   [
+    "2000-015",
+    "Everton",
+    "Charlton Athletic",
+    "Andy Hall",
+    "Neale Barry"
+   ],
+   [
+    "2000-016",
+    "Manchester City",
+    "Sunderland",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-018",
+    "Southampton",
+    "Coventry City",
+    "F Taylor",
+    "Paul Taylor"
+   ],
+   [
+    "2000-026",
+    "Newcastle United",
+    "Tottenham Hotspur",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-031",
+    "Manchester United",
+    "Bradford City",
+    "Ian Harris",
+    "Rob Harris"
+   ],
+   [
+    "2000-059",
+    "West Ham United",
+    "Liverpool",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-070",
+    "Aston Villa",
+    "Derby County",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-082",
+    "Everton",
+    "Southampton",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-098",
+    "Aston Villa",
+    "Sunderland",
+    "Rob Styles",
+    "Peter Jones"
+   ],
+   [
+    "2000-112",
+    "Leeds United",
+    "Liverpool",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-113",
+    "Manchester City",
+    "Leicester City",
+    "Mark Halsey",
+    "Andy D'Urso"
+   ],
+   [
+    "2000-139",
+    "Coventry City",
+    "Ipswich Town",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-142",
+    "Derby County",
+    "Manchester United",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-151",
+    "Aston Villa",
+    "Newcastle United",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-157",
+    "West Ham United",
+    "Middlesbrough",
+    "Roy Burton",
+    "Andy D'Urso"
+   ],
+   [
+    "2000-188",
+    "Sunderland",
+    "Manchester City",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-199",
+    "Southampton",
+    "Tottenham Hotspur",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-210",
+    "Leeds United",
+    "Middlesbrough",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-216",
+    "Arsenal",
+    "Chelsea",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-254",
+    "Tottenham Hotspur",
+    "Charlton Athletic",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-258",
+    "Chelsea",
+    "Manchester United",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-278",
+    "Everton",
+    "Newcastle United",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-300",
+    "Coventry City",
+    "Derby County",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-312",
+    "Everton",
+    "Manchester City",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-326",
+    "Sunderland",
+    "Tottenham Hotspur",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-341",
+    "Manchester United",
+    "Manchester City",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2000-360",
+    "Chelsea",
+    "Everton",
+    "Rob Harris",
+    "Rob Styles"
+   ],
+   [
+    "2000-367",
+    "Liverpool",
+    "Chelsea",
+    "Dermot Gallagher",
+    "Michael Riley"
+   ],
+   [
+    "2000-375",
+    "Leeds United",
+    "Leicester City",
+    "David Ellaray",
+    "David Elleray"
+   ],
+   [
+    "2001-011",
+    "Everton",
+    "Tottenham Hotspur",
+    "D. R. Elleray",
+    "Neale Barry"
+   ],
+   [
+    "2001-107",
+    "Newcastle United",
+    "Aston Villa",
+    "C. R. Wilkes",
+    "Barry Knight"
+   ],
+   [
+    "2001-170",
+    "Charlton Athletic",
+    "Blackburn Rovers",
+    "Wiley, A. G.",
+    "Alan Wiley"
+   ],
+   [
+    "2001-171",
+    "Derby County",
+    "Aston Villa",
+    "Elleray, D. R.",
+    "David Elleray"
+   ],
+   [
+    "2001-172",
+    "Leeds United",
+    "Newcastle United",
+    "Winter, J. T.",
+    "Jeff Winter"
+   ],
+   [
+    "2001-173",
+    "Leicester City",
+    "West Ham United",
+    "Wolstenholme, E. K.",
+    "Dermot Gallagher"
+   ],
+   [
+    "2001-174",
+    "Manchester United",
+    "Southampton",
+    "Dunn, S. W.",
+    "Stephen Dunn"
+   ],
+   [
+    "2001-175",
+    "Sunderland",
+    "Everton",
+    "Knight, B.",
+    "Barry Knight"
+   ],
+   [
+    "2001-176",
+    "Tottenham Hotspur",
+    "Ipswich Town",
+    "Riley, M. A.",
+    "Michael Riley"
+   ],
+   [
+    "2001-177",
+    "Chelsea",
+    "Bolton Wanderers",
+    "Rennie, U. D.",
+    "Uriah Rennie"
+   ],
+   [
+    "2001-178",
+    "Liverpool",
+    "Arsenal",
+    "Durkin, P. A.",
+    "Paul Durkin"
+   ],
+   [
+    "2001-179",
+    "Arsenal",
+    "Chelsea",
+    "Barber, G. P.",
+    "Graham Barber"
+   ],
+   [
+    "2001-180",
+    "Aston Villa",
+    "Liverpool",
+    "D'Urso, A. P.",
+    "Andy D'Urso"
+   ],
+   [
+    "2001-181",
+    "Blackburn Rovers",
+    "Sunderland",
+    "Wilkes, C. R.",
+    "Clive Wilkes"
+   ],
+   [
+    "2001-182",
+    "Bolton Wanderers",
+    "Leeds United",
+    "Wiley, A. G.",
+    "Alan Wiley"
+   ],
+   [
+    "2001-183",
+    "Everton",
+    "Manchester United",
+    "Rennie, U. D.",
+    "Uriah Rennie"
+   ],
+   [
+    "2001-184",
+    "Fulham",
+    "Charlton Athletic",
+    "Bennett, S. G.",
+    "Stephen Bennett"
+   ],
+   [
+    "2001-185",
+    "Ipswich Town",
+    "Leicester City",
+    "Barry, N. S.",
+    "Neale Barry"
+   ],
+   [
+    "2001-186",
+    "Newcastle United",
+    "Middlesbrough",
+    "Halsey, M. R.",
+    "Mark Halsey"
+   ],
+   [
+    "2001-187",
+    "Southampton",
+    "Tottenham Hotspur",
+    "Jones, P.",
+    "Peter Jones"
+   ],
+   [
+    "2001-188",
+    "West Ham United",
+    "Derby County",
+    "Poll, G.",
+    "Graham Poll"
+   ]
+  ]
+ },
+ "difference_counts": {
+  "date": 104,
+  "half-time": 7,
+  "cards": 716,
+  "referee": 304
+ },
+ "best_card_convention": "cards agree under: official (second yellow counts as a red only)"
+}

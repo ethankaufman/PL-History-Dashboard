@@ -1,0 +1,35 @@
+{
+ "player_matches": {
+  "rows": 355716,
+  "players": 5112,
+  "seasons": 34,
+  "clubs": 51,
+  "goals": 34275,
+  "assists": 24161,
+  "columns": 19
+ },
+ "appearances_lean": {
+  "rows": 355716
+ },
+ "player_seasons": {
+  "rows": 18662
+ },
+ "matches": {
+  "rows": 13166
+ },
+ "team_matches": {
+  "rows": 26332
+ },
+ "final_tables": {
+  "rows": 686
+ },
+ "match_events": {
+  "rows": 79048
+ },
+ "match_details": {
+  "rows": 13166
+ },
+ "transfers": {
+  "rows": 16439
+ }
+}
