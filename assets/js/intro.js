@@ -3,7 +3,7 @@
  */
 import * as THREE from "../vendor/three.module.min.js";
 
-const REPORT_DATA = ["matches", "teamMatches", "finalTables", "playerMatches", "seasons", "awards", "honours", "teams", "map", "domestic", "records", "playerSeasons"];
+const REPORT_DATA = ["matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "map", "domestic", "records", "playerSeasons", "audit", "disagreements", "manifest"];
 const CODES = { "Arsenal": "ARS", "Aston Villa": "AVL", "AFC Bournemouth": "BOU", "Brentford": "BRE", "Brighton & Hove Albion": "BHA", "Chelsea": "CHE", "Coventry City": "COV", "Crystal Palace": "CRY", "Everton": "EVE", "Fulham": "FUL", "Hull City": "HUL", "Ipswich Town": "IPS", "Leeds United": "LEE", "Liverpool": "LIV", "Manchester City": "MCI", "Manchester United": "MUN", "Newcastle United": "NEW", "Nottingham Forest": "NFO", "Tottenham Hotspur": "TOT", "Sunderland": "SUN" };
 
 const root = document.getElementById("intro");
@@ -22,7 +22,9 @@ function finishWithoutIntro(data) {
   document.body.classList.remove("no-scroll");
   if (!reportDone && data) { reportDone = true; renderReport(data); }
 }
+let loadFailed = false;
 function showError(err) {
+  loadFailed = true;
   console.error(err);
   statusEl.innerHTML = `<span style="color:#ff7aa5">Couldn't load the data (${PL.esc(err.message)}).</span> <button class="btn small" onclick="location.reload()">Try again</button>`;
 }
@@ -32,7 +34,7 @@ let renderer = null;
 try {
   const test = document.createElement("canvas");
   if (reduceMotion || !(test.getContext("webgl2") || test.getContext("webgl"))) throw new Error("no webgl or reduced motion");
-  renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("intro-canvas"), antialias: true });
+  renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("intro-canvas"), antialias: true, alpha: true });
 } catch (e) { renderer = null; }
 
 document.body.classList.add("no-scroll");
@@ -41,7 +43,7 @@ PL.renderNav("report");
 if (!renderer) {
   // no 3D available (or the visitor asked for less motion): skip the show, still load everything
   statusEl.textContent = "Loading Premier League data…";
-  PL.load(REPORT_DATA, (p) => (barEl.style.width = Math.round(p * 100) + "%")).then((d) => { window.PLDATA = d; finishWithoutIntro(d); setupMapButton(null, d); }).catch(showError);
+  PL.load(REPORT_DATA, (p) => { if (!loadFailed) barEl.style.width = Math.round(p * 100) + "%"; }).then((d) => { window.PLDATA = d; finishWithoutIntro(d); setupMapButton(null, d); }).catch(showError);
 } else {
   runIntro();
 }
@@ -54,7 +56,7 @@ function setupMapButton(api) {
 
 function runIntro() {
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  renderer.setClearColor(0x0d0416, 1);
+  renderer.setClearColor(0x000000, 0);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
   camera.position.set(0, 0, 7);
@@ -222,15 +224,15 @@ function runIntro() {
         line.position.z = z + 0.002; mapSpin.add(line);
       }
     }
-    addPolys(data.map.ireland, 0x2b1448, 0x6a4a9a, 0.7, 0.55, 0);
-    addPolys(data.map.uk, 0x35125c, 0x00ff85, 0.95, 0.95, 0.01);
+    addPolys(data.map.ireland, 0x3a0a42, 0x9a6aa5, 0.75, 0.6, 0);
+    addPolys(data.map.uk, 0x5a1565, 0x00ff85, 0.97, 0.95, 0.01);
     // faint graticule for a "radar" look
-    const grid = new THREE.GridHelper(14, 28, 0x00ff85, 0x3a1d5e); grid.rotation.x = Math.PI / 2; grid.position.z = -0.02; grid.material.transparent = true; grid.material.opacity = 0.35; mapSpin.add(grid);
+    const grid = new THREE.GridHelper(14, 28, 0x00ff85, 0x6a2a75); grid.rotation.x = Math.PI / 2; grid.position.z = -0.02; grid.material.transparent = true; grid.material.opacity = 0.35; mapSpin.add(grid);
     mapSpin.add(pinGroup);
     data.teams.forEach((t) => {
       const cur = t.status === "current";
       const p = project(t.map.lng, t.map.lat);
-      const col = new THREE.Color(PL.clubColor(t.name));
+      const col = new THREE.Color(PL.clubColor(t.name, true));
       const g = new THREE.Group(); g.position.copy(p);
       const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, cur ? 0.34 : 0.2, 6), new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: cur ? 0.9 : 0.5 }));
       stem.rotation.x = Math.PI / 2; stem.position.z = cur ? 0.17 : 0.1; g.add(stem);
@@ -244,7 +246,7 @@ function runIntro() {
       pinMeshes.push(head);
       if (cur) {
         const d = document.createElement("div"); d.className = "plabel"; d.textContent = CODES[t.name] || t.name.slice(0, 3).toUpperCase();
-        d.style.color = PL.clubColor(t.name); labelsEl.appendChild(d); labelDivs.push({ el: d, pos: p.clone().setZ(0.5), pin: pins[pins.length - 1] });
+        d.style.color = PL.clubColor(t.name, true); labelsEl.appendChild(d); labelDivs.push({ el: d, pos: p.clone().setZ(0.5), pin: pins[pins.length - 1] });
       }
     });
     window.__introPins = pins;   // handy for testing in the browser console
@@ -274,7 +276,7 @@ function runIntro() {
       tooltip.hidden = false;
       tooltip.style.left = e.clientX + 14 + "px"; tooltip.style.top = e.clientY + 14 + "px";
       if (hit.group.length > 1) {
-        tooltip.innerHTML = `<b>${hit.group.length} clubs close together</b><br>` + hit.group.map((p) => `<span style="color:${PL.clubColor(p.team.name)}">●</span> ${PL.esc(p.team.name)}`).join("<br>") + `<br><span class="muted">Click to choose · scroll to zoom in</span>`;
+        tooltip.innerHTML = `<b>${hit.group.length} clubs close together</b><br>` + hit.group.map((p) => `<span style="color:${PL.clubColor(p.team.name, true)}">●</span> ${PL.esc(p.team.name)}`).join("<br>") + `<br><span class="muted">Click to choose · scroll to zoom in</span>`;
       } else {
         const g = hovered.current_ground;
         tooltip.innerHTML = `<b>${PL.esc(hovered.name)}</b><br><span class="muted">${PL.esc(g ? g.name : "Defunct (home 1912–91)")} · ${PL.esc(hovered.city)}</span>`;
@@ -287,7 +289,7 @@ function runIntro() {
     const hit = pickAt(e.clientX, e.clientY);
     if (!hit) { hideChooser(); return; }
     if (hit.group.length === 1) { hideChooser(); openCard(hit.pin.team); return; }
-    chooser.innerHTML = `<div class="muted" style="margin-bottom:6px">${hit.group.length} clubs here, pick one:</div>` + hit.group.map((p, i) => `<button data-i="${i}" class="btn small" style="border-color:${PL.clubColor(p.team.name)}">${PL.esc(p.team.name)}</button>`).join("");
+    chooser.innerHTML = `<div class="muted" style="margin-bottom:6px">${hit.group.length} clubs here, pick one:</div>` + hit.group.map((p, i) => `<button data-i="${i}" class="btn small" style="border-color:${PL.clubColor(p.team.name, true)}">${PL.esc(p.team.name)}</button>`).join("");
     chooser.hidden = false; tooltip.hidden = true;
     chooser.style.left = Math.min(e.clientX + 10, window.innerWidth - 230) + "px"; chooser.style.top = Math.min(e.clientY + 10, window.innerHeight - 40 - hit.group.length * 36) + "px";
     chooser.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { hideChooser(); openCard(hit.group[+b.dataset.i].team); }));
@@ -312,7 +314,7 @@ function runIntro() {
     const rows = t.stadiums.map((s) => `<li${s.current ? ' class="cur"' : ""}><b>${PL.esc(s.name)}</b> <span class="muted">${s.from ?? "?"}–${s.current ? "now" : s.to ?? "?"}${s.temporary ? " · temporary" : ""}</span></li>`).join("");
     const pl = t.premier_league;
     card.innerHTML = `<button class="x" aria-label="Close" id="card-x">×</button><div class="eyebrow">${t.status === "current" ? "In the 2026–27 Premier League" : t.status === "defunct" ? "Defunct club" : "Former Premier League club"}</div>
-      <h3 style="color:${PL.clubColor(t.name)}">${PL.esc(t.name)}</h3>
+      <h3 style="color:${PL.clubColor(t.name, true)}">${PL.esc(t.name)}</h3>
       <p class="muted">${PL.esc(t.city)}${t.area ? " (" + PL.esc(t.area) + ")" : ""} · founded ${t.founded} · ${pl.seasons_completed} Premier League seasons${pl.titles ? " · " + pl.titles + " title" + (pl.titles > 1 ? "s" : "") : ""}</p>
       <p>${PL.esc(t.summary)}</p>
       <h4>Domestic trophies (all-time)</h4><div class="chips">${PL.trophyChips(window.PLDATA.domestic.by_club[t.name]?.counts)}</div>
@@ -417,7 +419,7 @@ function runIntro() {
   // ---------------- load the data ----------------
   statusEl.textContent = "Loading 34 seasons of Premier League history…";
   hintEl.textContent = "Drag the ball to spin it · click to kick";
-  PL.load(REPORT_DATA, (p, name) => { barEl.style.width = Math.round(p * 100) + "%"; statusEl.textContent = `Loading Premier League history… ${Math.round(p * 100)}%`; })
+  PL.load(REPORT_DATA, (p, name) => { if (loadFailed) return; barEl.style.width = Math.round(p * 100) + "%"; statusEl.textContent = `Loading Premier League history… ${Math.round(p * 100)}%`; })
     .then((d) => {
       data = d; window.PLDATA = d;
       buildMap(d);

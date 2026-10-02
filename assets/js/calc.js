@@ -126,8 +126,8 @@
     const m = new Map();
     for (const r of rows) {
       let p = m.get(r.player_id);
-      if (!p) m.set(r.player_id, (p = { id: r.player_id, name: r.player, position: r.position, nationality: r.nationality, appearances: 0, goals: 0, assists: 0, cleanSheets: 0, first: r.season, last: r.season }));
-      p.appearances += r.appearances; p.goals += r.goals; p.assists += r.assists; p.cleanSheets += r.clean_sheets;
+      if (!p) m.set(r.player_id, (p = { id: r.player_id, name: r.player, position: r.position, nationality: r.nationality, appearances: 0, minutes: 0, goals: 0, assists: 0, cleanSheets: 0, first: r.season, last: r.season }));
+      p.appearances += r.appearances; p.minutes += r.minutes || 0; p.goals += r.goals; p.assists += r.assists; p.cleanSheets += r.clean_sheets;
       if (bySeason(r.season, p.first) < 0) p.first = r.season;
       if (bySeason(r.season, p.last) > 0) p.last = r.season;
     }

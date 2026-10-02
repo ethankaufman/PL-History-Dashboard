@@ -5,7 +5,8 @@ function renderReport(d) {
   PL.chartDefaults();
   document.getElementById("report-root").hidden = false;   // show the page (still under the intro overlay) BEFORE drawing charts, so they measure their real size
 
-  const matches = d.matches, seasons = d.seasons, finalTables = d.finalTables, pm = d.playerMatches, teams = d.teams;
+  const matches = d.matches, seasons = d.seasons, finalTables = d.finalTables, teams = d.teams;
+  const appearancesTotal = d.manifest.player_matches.rows;   // rows of the match-by-match player table (counted from the file by scripts/make_manifest.py)
   const seasonStats = C.seasonStats(matches);
   const totalGoals = C.sum(matches, (m) => m.home_goals + m.away_goals);
   const lastSeason = seasonStats[seasonStats.length - 1];
@@ -18,7 +19,7 @@ function renderReport(d) {
   // ---------- hero ----------
   document.getElementById("summary").innerHTML =
     `This report follows every Premier League season from 1992–93 to 2025–26: ${int(matches.length)} matches, ${int(totalGoals)} goals ` +
-    `and ${int(seasons.length)} champions' stories, plus season-by-season stats for every player since 1992–93 and ${int(pm.length)} match-by-match appearances from 2016–17. ` +
+    `and ${int(seasons.length)} champions' stories, plus ${int(appearancesTotal)} player appearances (every player in every match since 1992–93). ` +
     `The league has become a little less home-friendly (home wins fell from ${pct(firstSeason.homeWinPct)} of matches in ${firstSeason.season} to ${pct(lastSeason.homeWinPct)} in ${lastSeason.season}), ` +
     `goals have crept up to ${dec(lastSeason.goalsPerGame)} a game, and a handful of clubs still win everything: only ${titleCounts.length} clubs have ever won the title, ` +
     `and ${titleCounts[0][0]} alone won ${titleCounts[0][1]}.`;
@@ -26,7 +27,7 @@ function renderReport(d) {
     [int(matches.length), "matches played, 1992–93 to 2025–26"],
     [int(totalGoals), "goals scored in those matches"],
     [int(seasons.length), "seasons covered"],
-    [int(pm.length), "player appearances in the player dataset (2016–17 onward)"],
+    [int(appearancesTotal), "player appearances, one for each player in each match"],
     [int(teams.length), "clubs that have played in the Premier League"],
     [int(titleCounts.length), "different clubs have won the title"],
   ];
@@ -49,7 +50,7 @@ function renderReport(d) {
     body: [`Across ${int(matches.length)} matches the Premier League has produced ${int(totalGoals)} goals, an average of ${dec(totalGoals / matches.length)} per match. ` +
       `The quietest season was ${gLow.season} with ${dec(gLow.goalsPerGame)} a game; the first season, ${firstSeason.season}, averaged ${dec(firstSeason.goalsPerGame)}.`,
       `Goals per game is total goals divided by matches played in the season. The latest season, ${lastSeason.season}, averaged ${dec(lastSeason.goalsPerGame)}.`],
-    chart: { type: "line", data: { labels: seasonStats.map((s) => s.season), datasets: [{ label: "Goals per game", data: seasonStats.map((s) => +s.goalsPerGame.toFixed(3)), borderColor: palette[0], backgroundColor: "#00ff8522", fill: true, tension: .3, pointRadius: 2 }] }, options: lineOpts({ y: { min: 2, title: { display: true, text: "Goals per game" } } }) },
+    chart: { type: "line", data: { labels: seasonStats.map((s) => s.season), datasets: [{ label: "Goals per game", data: seasonStats.map((s) => +s.goalsPerGame.toFixed(3)), borderColor: palette[0], backgroundColor: "#00c76f22", fill: true, tension: .3, pointRadius: 2 }] }, options: lineOpts({ y: { min: 2, title: { display: true, text: "Goals per game" } } }) },
     caption: "Source: matches.csv — every Premier League match, 1992–93 to 2025–26.",
   });
 
@@ -103,7 +104,7 @@ function renderReport(d) {
     body: [`In ${tight.season}, ${tight.champion} and ${tight.runnerUp} finished on ${ch.points} and ${ru.points} points; ${tight.champion}'s goal difference was ${ch.goal_difference > 0 ? "+" : ""}${ch.goal_difference} against ${ru.goal_difference > 0 ? "+" : ""}${ru.goal_difference}. ` +
       `At the other extreme ${wide.champion} won ${wide.season} by ${wide.margin} points over ${wide.runnerUp}.`,
       `Margin is the champion's points minus the runner-up's points. In ${races.filter((r) => r.margin <= 3).length} of ${races.length} seasons it was 3 points or fewer, one win's worth.`],
-    chart: { type: "bar", data: { labels: races.map((r) => r.season), datasets: [{ label: "Winning margin (points)", data: races.map((r) => r.margin), backgroundColor: races.map((r) => (r === tight ? palette[1] : r === wide ? palette[3] : "#00ff8599")) }] }, options: lineOpts({ y: { title: { display: true, text: "Points ahead of 2nd place" } } }) },
+    chart: { type: "bar", data: { labels: races.map((r) => r.season), datasets: [{ label: "Winning margin (points)", data: races.map((r) => r.margin), backgroundColor: races.map((r) => (r === tight ? palette[1] : r === wide ? palette[3] : "#00c76f99")) }] }, options: lineOpts({ y: { title: { display: true, text: "Points ahead of 2nd place" } } }) },
     caption: "Source: final_tables.csv. Pink = closest race, gold = widest margin.",
   });
 
@@ -114,7 +115,7 @@ function renderReport(d) {
   add({
     title: `Red cards fell from ${dec(redPeak.redPerGame)} a game in ${redPeak.season} to ${dec(redLast.redPerGame)} in ${redLast.season}, while yellows hit a record ${dec(yelPeak.yellowPerGame)} in ${yelPeak.season}`,
     body: [`Referees show far more yellow cards than they used to, but fewer players are sent off. Yellow cards per game rose from ${dec(cardSeasons[0].yellowPerGame)} in ${cardSeasons[0].season} to a peak of ${dec(yelPeak.yellowPerGame)} in ${yelPeak.season}; red cards were ${dec(cardSeasons[0].redPerGame)} per game then and ${dec(redLast.redPerGame)} in ${redLast.season}.`,
-      `Card data exists for every match from ${cardSeasons[0].season} on, so earlier seasons are left out. Cards per game is total yellow (or red) cards, both teams combined, divided by matches.`],
+      `Card counts come from the official Premier League match records for every match since ${cardSeasons[0].season}; a second yellow card counts as one yellow and one red. Cards per game is total yellow (or red) cards, both teams combined, divided by matches.`],
     chart: { type: "line", data: { labels: cardSeasons.map((s) => s.season), datasets: [
       { label: "Yellow cards per game", data: cardSeasons.map((s) => +s.yellowPerGame.toFixed(3)), borderColor: palette[3], yAxisID: "y", tension: .3, pointRadius: 2 },
       { label: "Red cards per game", data: cardSeasons.map((s) => +s.redPerGame.toFixed(3)), borderColor: palette[1], yAxisID: "y2", tension: .3, pointRadius: 2 }] },
@@ -142,7 +143,7 @@ function renderReport(d) {
     body: [`Squad rotation has increased. Across ${squad.length} seasons of player data, the average club used between ${dec(sqLow.avgPlayersUsed, 1)} (${sqLow.season}) and ${dec(sqHigh.avgPlayersUsed, 1)} (${sqHigh.season}) different players in the league. ` +
       `In ${squad[0].season} it was ${dec(squad[0].avgPlayersUsed, 1)}; in ${squad[squad.length - 1].season} it was ${dec(squad[squad.length - 1].avgPlayersUsed, 1)}.`,
       `A player counts for a club in a season if he made at least one appearance for that club (substitute appearances included). The average is over all clubs in the season. Source: player_seasons.csv, the Premier League's season statistics.`],
-    chart: { type: "bar", data: { labels: squad.map((x) => x.season), datasets: [{ label: "Average players used per club", data: squad.map((x) => +x.avgPlayersUsed.toFixed(2)), backgroundColor: "#04f5ffaa" }] }, options: lineOpts({ y: { min: 20, title: { display: true, text: "Players used" } } }) },
+    chart: { type: "bar", data: { labels: squad.map((x) => x.season), datasets: [{ label: "Average players used per club", data: squad.map((x) => +x.avgPlayersUsed.toFixed(2)), backgroundColor: "#0aa5c2aa" }] }, options: lineOpts({ y: { min: 20, title: { display: true, text: "Players used" } } }) },
     caption: "Source: player_seasons.csv — distinct players with at least one appearance, per club per season.",
   });
 
@@ -157,7 +158,7 @@ function renderReport(d) {
     body: [`London clubs made up ${london[0].n} of ${london[0].of} (${pct(100 * london[0].n / london[0].of, 0)}) in ${london[0].season}. The share peaked at ${lMax.n} of ${lMax.of} (${pct(100 * lMax.n / lMax.of, 0)}) in ${lSeasons.length > 1 ? `${lSeasons[0].season} to ${lSeasons[lSeasons.length - 1].season}` : lSeasons[0].season}. ` +
       `The league's centre of gravity sits in the capital and the northwest; the club map on this site shows where every club plays.`,
       `A club counts as a London club when its ground's city in teams.json is London. Clubs per season come from the matches actually played.`],
-    chart: { type: "bar", data: { labels: london.map((l) => l.season), datasets: [{ label: "London clubs", data: london.map((l) => l.n), backgroundColor: "#ffc83dcc" }] }, options: lineOpts({ y: { min: 0, ticks: { stepSize: 1 }, title: { display: true, text: "London clubs in the league" } } }) },
+    chart: { type: "bar", data: { labels: london.map((l) => l.season), datasets: [{ label: "London clubs", data: london.map((l) => l.n), backgroundColor: "#f2a900cc" }] }, options: lineOpts({ y: { min: 0, ticks: { stepSize: 1 }, title: { display: true, text: "London clubs in the league" } } }) },
     caption: "Source: matches.csv (clubs per season) and teams.json (city).",
   });
 
@@ -171,7 +172,7 @@ function renderReport(d) {
     body: [`The Taylor Report's all-seater rules pushed clubs into new stadiums in the 1990s and 2000s: Middlesbrough (1995), Sunderland and Derby (1997), Southampton (2001), Manchester City (2003) and Arsenal (2006), among others. ` +
       `The most recent moves were West Ham (2016), Tottenham (2019), Brentford (2020) and Everton (${moves.filter((m) => m.club === "Everton").map((m) => m.year).join("")}).`,
       `Counted: every change of home ground between 1992 and 2026 recorded in teams.json, excluding temporary ground-shares (such as Tottenham at Wembley in 2017–19). A club returning to its previous ground is not counted as a move.`],
-    chart: { type: "bar", data: { labels: blocks.map(([a, b]) => `${a}–${String(b).slice(2)}`), datasets: [{ label: "Ground moves", data: blockCounts, backgroundColor: "#b388ffcc" }] }, options: lineOpts({ y: { min: 0, ticks: { stepSize: 1 }, title: { display: true, text: "Ground moves" } } }) },
+    chart: { type: "bar", data: { labels: blocks.map(([a, b]) => `${a}–${String(b).slice(2)}`), datasets: [{ label: "Ground moves", data: blockCounts, backgroundColor: "#963cffcc" }] }, options: lineOpts({ y: { min: 0, ticks: { stepSize: 1 }, title: { display: true, text: "Ground moves" } } }) },
     caption: "Source: teams.json — stadium timeline of every club.",
   });
 
@@ -186,8 +187,8 @@ function renderReport(d) {
       `${seasons.length} seasons produced ${C.sum(seasons, (s) => s.promoted.length)} promotions in total; the 2025–26 promotions (Coventry, Ipswich, Hull) are still to play out.`,
       `For each season's promoted clubs, we check whether the club appears in the next season's relegated list. Seasons with 22 clubs promoted more clubs.`],
     chart: { type: "bar", data: { labels: poSeasons, datasets: [
-      { label: "Survived", data: poSeasons.map((s) => perSeason.get(s).filter((p) => !p.relegatedFirstSeason).length), backgroundColor: "#00ff85cc" },
-      { label: "Relegated at once", data: poSeasons.map((s) => perSeason.get(s).filter((p) => p.relegatedFirstSeason).length), backgroundColor: "#ff2d78cc" }] },
+      { label: "Survived", data: poSeasons.map((s) => perSeason.get(s).filter((p) => !p.relegatedFirstSeason).length), backgroundColor: "#00c76fcc" },
+      { label: "Relegated at once", data: poSeasons.map((s) => perSeason.get(s).filter((p) => p.relegatedFirstSeason).length), backgroundColor: "#e90052cc" }] },
       options: { responsive: true, aspectRatio: 1.6, plugins: { legend: { display: true } }, scales: { x: { stacked: true, ticks: { maxTicksLimit: 9 } }, y: { stacked: true, ticks: { stepSize: 1 }, title: { display: true, text: "Promoted clubs" } } } } },
     caption: "Source: seasons.json — promoted and relegated lists for every season.",
   });
@@ -203,7 +204,7 @@ function renderReport(d) {
     body: [`The top scorer used to be English: ${eng[0]} of the ${eng[0] + oth[0]} Golden Boot wins in the 1990s. In the 2000s the figure was ${eng[1]} of ${eng[1] + oth[1]}. ` +
       `Overall, ${C.sum(eng)} of ${C.sum(eng) + C.sum(oth)} Golden Boots went to English players and ${C.sum(oth)} to players from other countries.`,
       `Golden Boots are counted per winner, so a shared award in the same season counts once for each player. Nationality is from the Premier League's award records. The 2020s cover 2020–21 to 2025–26.`],
-    chart: { type: "bar", data: { labels: decades.map((x) => `${x}s`), datasets: [{ label: "English winners", data: eng, backgroundColor: "#ff2d78cc" }, { label: "Winners from other countries", data: oth, backgroundColor: "#04f5ffcc" }] }, options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { stepSize: 2 } } } } },
+    chart: { type: "bar", data: { labels: decades.map((x) => `${x}s`), datasets: [{ label: "English winners", data: eng, backgroundColor: "#e90052cc" }, { label: "Winners from other countries", data: oth, backgroundColor: "#0aa5c2cc" }] }, options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { stepSize: 2 } } } } },
     caption: "Source: awards.json — Premier League Golden Boot winners by season.",
   });
 
@@ -211,15 +212,15 @@ function renderReport(d) {
   const careers = C.playerTotalsSeasons(d.playerSeasons).sort((a, b) => b.goals - a.goals);
   const top10 = careers.slice(0, 10), c0 = top10[0], c1 = top10[1];
   const hundred = careers.filter((p) => p.goals >= 100).length;
-  const rate = C.playerTotals(pm).filter((p) => p.minutes >= 5000).sort((a, b) => b.goals / b.minutes - a.goals / a.minutes)[0];
+  const rate = careers.filter((p) => p.minutes >= 5000).sort((a, b) => b.goals / b.minutes - a.goals / a.minutes)[0];
   const official = d.records.official.most_goals[0];
   add({
     title: `${c0.name}'s ${c0.goals} goals are still the Premier League record, ${c0.goals - c1.goals} clear of ${c1.name}`,
     body: [`Adding up every player's goals for every club in every season since 1992–93, ${c0.name} scored ${c0.goals} in ${c0.appearances} games (${parseInt(c0.first, 10)} to ${parseInt(c0.last, 10) + 1}). ` +
       `${c1.name} is second with ${c1.goals} and ${top10[2].name} third with ${top10[2].goals}; ${hundred} players have reached 100. ` +
-      `Where minutes are recorded (2016–17 onward), ${rate.name} scores fastest: a goal every ${int(rate.minutes / rate.goals)} minutes.`,
+      `Among players with 5,000 or more minutes, ${rate.name} scores fastest: a goal every ${int(rate.minutes / rate.goals)} minutes.`,
       `Goals are summed from player_seasons.csv over every club a player appeared for. The total matches the official all-time list (${official.Player}: ${official.Goals}). Own goals are not credited to players.`],
-    chart: { type: "bar", data: { labels: top10.map((p) => p.name), datasets: [{ label: "Premier League goals, all time", data: top10.map((p) => p.goals), backgroundColor: top10.map((p, i) => (i === 0 ? "#ffc83dcc" : "#00ff85aa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.4, plugins: { legend: { display: false } } } },
+    chart: { type: "bar", data: { labels: top10.map((p) => p.name), datasets: [{ label: "Premier League goals, all time", data: top10.map((p) => p.goals), backgroundColor: top10.map((p, i) => (i === 0 ? "#f2a900cc" : "#00c76faa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.4, plugins: { legend: { display: false } } } },
     caption: "Source: player_seasons.csv — goals by player across every club and season, 1992–93 to 2025–26. Gold = record holder.",
   });
 
@@ -246,7 +247,7 @@ function renderReport(d) {
     title: `English clubs have won the Champions League ${uclBy.England} times since 1992–93, ${engRank === 1 ? "more than any other country" : engRank === 2 ? "second only to " + uclList[0][0] : "behind " + uclList.slice(0, engRank - 1).map((x) => x[0]).join(" and ")}`,
     body: [`${uclList.map(([c, n]) => `${c} ${n}`).slice(0, 4).join(", ")}: that is how the ${d.honours.length} European Cups since the Premier League began are shared. English winners: ${engWins.join(", ")}.`,
       `Counted by the country of the winning club in each season's final, from the list of Champions League finals. Season labels follow the Premier League season in which the final was played.`],
-    chart: { type: "bar", data: { labels: uclList.map((x) => x[0]), datasets: [{ label: "Champions League wins since 1992–93", data: uclList.map((x) => x[1]), backgroundColor: uclList.map((x) => (x[0] === "England" ? "#ff2d78cc" : "#8f7bb8aa")) }] }, options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: false } }, scales: { y: { ticks: { stepSize: 2 } } } } },
+    chart: { type: "bar", data: { labels: uclList.map((x) => x[0]), datasets: [{ label: "Champions League wins since 1992–93", data: uclList.map((x) => x[1]), backgroundColor: uclList.map((x) => (x[0] === "England" ? "#e90052cc" : "#a58fb0aa")) }] }, options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: false } }, scales: { y: { ticks: { stepSize: 2 } } } } },
     caption: "Source: honours.json — Champions League finals by season.",
   });
 
@@ -257,7 +258,7 @@ function renderReport(d) {
     body: [`The best seasons: ${best5.slice(0, 3).map((r) => `${r.team} ${r.season} (${r.points})`).join(", ")}. The worst: ${worst5.slice(0, 3).map((r) => `${r.team} ${r.season} (${r.points})`).join(", ")}. ` +
       `${best5[0].team}'s record came with ${best5[0].won} wins, ${best5[0].drawn} draws and ${best5[0].lost} defeats; ${worst5[0].team} won ${worst5[0].won} game${worst5[0].won === 1 ? "" : "s"}.`,
       `Points are the official totals in 38-game seasons (the three 42-game seasons are left out so that totals compare fairly). Both lists were computed from final_tables.csv and agree with the official records list.`],
-    chart: { type: "bar", data: { labels: [...best5, ...worst5].map((r) => `${PL.short(r.team)} ${r.season}`), datasets: [{ label: "Points", data: [...best5, ...worst5].map((r) => r.points), backgroundColor: [...best5.map(() => "#00ff85cc"), ...worst5.map(() => "#ff2d78cc")] }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.2, plugins: { legend: { display: false } } } },
+    chart: { type: "bar", data: { labels: [...best5, ...worst5].map((r) => `${PL.short(r.team)} ${r.season}`), datasets: [{ label: "Points", data: [...best5, ...worst5].map((r) => r.points), backgroundColor: [...best5.map(() => "#00c76fcc"), ...worst5.map(() => "#e90052cc")] }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.2, plugins: { legend: { display: false } } } },
     caption: "Source: final_tables.csv. Green = five best seasons, pink = five worst.",
   });
 
@@ -285,8 +286,8 @@ function renderReport(d) {
       `${Object.keys(tally).length} different clubs have won at least one of the four trophies in that time.`,
       `Each season's FA Cup and League Cup winner is the final played in that season; the Community Shield is the match played at the start of the season. All-time club totals, back to the 1800s, are in the dashboard's Records tab.`],
     chart: { type: "bar", data: { labels: ranked.map((r) => PL.short(r[0])), datasets: [
-      { label: "Premier League", data: ranked.map((r) => r[1].league), backgroundColor: "#00ff85cc" }, { label: "FA Cup", data: ranked.map((r) => r[1].fa_cup), backgroundColor: "#ffc83dcc" },
-      { label: "League Cup", data: ranked.map((r) => r[1].league_cup), backgroundColor: "#04f5ffcc" }, { label: "Community Shield", data: ranked.map((r) => r[1].community_shield), backgroundColor: "#b388ffcc" }] },
+      { label: "Premier League", data: ranked.map((r) => r[1].league), backgroundColor: "#00c76fcc" }, { label: "FA Cup", data: ranked.map((r) => r[1].fa_cup), backgroundColor: "#f2a900cc" },
+      { label: "League Cup", data: ranked.map((r) => r[1].league_cup), backgroundColor: "#0aa5c2cc" }, { label: "Community Shield", data: ranked.map((r) => r[1].community_shield), backgroundColor: "#963cffcc" }] },
       options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { stepSize: 5 } } } } },
     caption: "Source: domestic_honours.json and seasons.json — winners of each trophy by season.",
   });
@@ -316,23 +317,32 @@ function renderReport(d) {
 
   // ---------- closing: about the data (all counts computed) ----------
   const nPromoted = C.sum(seasons, (s) => s.promoted.length);
-  const noMin = pm.filter((r) => !(r.minutes > 0)).length;
   const tm = d.teamMatches;
+  const playerCount = d.manifest.player_matches.players;
+  const dis = C.byKey(d.disagreements, (r) => r.field);
+  const disText = [...dis].map(([k, v]) => `${int(v.length)} ${k === "cards (home yellow, away yellow, home red, away red)" ? "card counts" : k === "half-time score" ? "half-time scores" : k + "s"}`).join(", ");
   document.getElementById("dataset").innerHTML = `
     <h2>About the data</h2>
     <p>This site is built from open data. Everything on it can be rebuilt from the scripts in the repository.</p>
     <ul>
-      <li><b>The main data set — <code>player_matches.csv</code></b>: one row is one player in one Premier League match he played in (at least one minute), ${int(pm.length)} rows across ${new Set(pm.map((r) => r.season)).size} seasons (2016–17 to 2025–26), ${int(new Set(pm.map((r) => r.player_id)).size)} players and ${new Set(pm.map((r) => r.team)).size} clubs.
-        Columns include season, matchweek, date, player, position, team, opponent, home or away, score, minutes, goals, assists, clean sheet, saves, cards and expected goals and assists (from 2022–23). It comes from the public Premier League data saved each gameweek in the open vaastav archive; fantasy-game columns (points, prices, bonus) were dropped.</li>
-      <li><b>Every player, every season — <code>player_seasons.csv</code></b>: ${int(d.playerSeasons.length)} rows, one per player per club per season from 1992–93 to 2025–26 (${int(new Set(d.playerSeasons.map((r) => r.player_id)).size)} players): appearances, goals, assists, clean sheets, cards, nationality and position, and minutes where recorded (from 2006–07). From the Premier League's public statistics service, and checked against the official career records (Shearer's 260 goals, Giggs' 162 assists and so on).</li>
-      <li><b>Matches — <code>matches.csv</code> and <code>team_matches.csv</code></b>: ${int(matches.length)} matches, one row per match and ${int(tm.length)} rows with one per team per match, plus the league table after every game. 1993–94 onward from football-data.co.uk; 1992–93 from the footballcsv project. Shots, fouls, cards, referees and odds exist only from 2000–01.</li>
+      <li><b>The main data set — <code>player_matches.csv</code></b>: one row is one player in one Premier League match he played in, as a starter or as a substitute who came on. It has <b>${int(appearancesTotal)} rows</b> covering all ${seasons.length} seasons (1992–93 to 2025–26), ${int(playerCount)} players and ${teams.length} clubs.
+        Columns include season, matchweek, player, position, team, opponent, home or away, minutes, started, goals, assists, own goals, clean sheet and yellow and red cards, plus expected goals and assists from 2022–23. It is built from the Premier League's official match records: the line-ups, the substitution times and every goal, assist and card of all ${int(matches.length)} matches.</li>
+      <li><b>Season totals — <code>player_seasons.csv</code></b>: ${int(d.playerSeasons.length)} rows, one per player per club per season, from the Premier League's own statistics service. Every figure is checked against the match-by-match rows above.</li>
+      <li><b>Matches — <code>matches.csv</code> and <code>team_matches.csv</code></b>: ${int(matches.length)} matches, one row per match and ${int(tm.length)} rows with one per team per match, plus the league table after every game. Results come from football-data.co.uk (1993–94 on) and the footballcsv project (1992–93) and were compared with the official record for every match. Dates, half-time scores, referees and cards use the official record; where football-data.co.uk disagreed (${disText}) the official value was used and the difference is logged in <code>source_disagreements.csv</code>. Shots, fouls, corners and betting odds exist only in football-data.co.uk, from 2000–01.</li>
       <li><b>Final tables, seasons, awards, honours, clubs</b>: ${int(finalTables.length)} official table rows, ${seasons.length} seasons (${int(nPromoted)} promotions), ${int(d.awards.awards.length)} award records, European and World Cup winners, and ${teams.length} club histories with ${int(C.sum(teams, (t) => t.stadiums.length))} stadium entries, all from Wikipedia (CC BY-SA 4.0).</li>
-      <li><b>Records and trophies</b>: all-time player records (career goals, assists, appearances, clean sheets) are the official lists from Wikipedia, and the winners of the FA Cup, League Cup, Community Shield and league title come from Wikipedia's lists, with each club's totals cross-checked against Wikipedia's totals. Club and league records for the Premier League era (biggest wins, longest runs, best and worst seasons) are computed from the match data here and agree with the official lists.</li>
-      <li><b>Rows dropped</b>: player rows with zero minutes (the archive lists every player every gameweek, including those who did not play) are removed (${int(noMin)} remain in the final file); 6 duplicate rows for one 2025–26 player who was entered twice in the source were dropped. Seasons before 2016–17 have no player-level data, and 1992–93 has no shots, cards or odds.</li>
+      <li><b>Records and trophies</b>: the winners of the FA Cup, League Cup, Community Shield and league title come from Wikipedia's lists, with each club's totals cross-checked against Wikipedia's totals. All-time player records are rebuilt from the player table and match the official lists. Club and league records (biggest wins, longest runs, best and worst seasons) are computed from the match data here.</li>
+      <li><b>Left out</b>: unused substitutes (they have no minutes) are not rows. Fantasy-game statistics are not used anywhere.</li>
       <li><b>Matchweek</b> means a club's nth game of the season. Every club has played the same number of games at game n, so the table at game n is a fair comparison. Points deductions (Middlesbrough 1996–97, Portsmouth 2009–10, Everton and Nottingham Forest 2023–24) are applied from the date they took effect, and the final points match the official tables.</li>
-      <li><b>How the numbers are computed</b>: goals per game = goals ÷ matches; home win % = home wins ÷ matches; cards per game = (home + away cards) ÷ matches with card data; margin = champion points − runner-up points; safety points = points of the last club not relegated; goals per 90 = goals ÷ minutes × 90; players used = distinct players with at least one minute for a club in a season. Each is calculated by the same code (<code>assets/js/calc.js</code>) on this page, the dashboard and the check script <code>tests/check_numbers.js</code>.</li>
-      <li><b>Checks</b>: every club name matches one official list; the number of matches is exactly 3 × 462 + 31 × 380; every season's champion and relegated clubs agree with the official record; the final points computed from results equal the official final tables; every player row links to a real match with a matching score.</li>
+      <li><b>How the numbers are computed</b>: goals per game = goals ÷ matches; home win % = home wins ÷ matches; cards per game = (home + away cards) ÷ matches; margin = champion points − runner-up points; safety points = points of the last club not relegated; goals per 90 = goals ÷ minutes × 90; players used = distinct players with at least one appearance for a club in a season; minutes = from the start (or the minute a substitute came on) until substituted, sent off or the 90th minute, with stoppage time not counted. Each is calculated by the same code (<code>assets/js/calc.js</code>) on this page, the dashboard and the check script <code>tests/check_numbers.js</code>.</li>
     </ul>`;
+
+  // ---------- data quality: the audit results, live ----------
+  const checks = d.audit, passed = checks.filter((c) => c.ok).length;
+  document.getElementById("quality").innerHTML = `
+    <h2>How we know the numbers are right</h2>
+    <p>Every data set was collected from at least two independent places and compared. <b>${passed} of ${checks.length} audit checks pass</b>. Each line below compares two sources; a mistake in either one would show up as a disagreement. Where two sources disagreed, the one that agrees with a third independent count was used.</p>
+    <div class="chartbox" style="max-height:560px;overflow:auto"><table class="plain"><thead><tr><th></th><th>Check</th><th>Compares</th><th>Result</th></tr></thead><tbody>${checks.map((c) => `<tr><td>${c.ok ? "✅" : "⚠️"}</td><td>${esc(c.name)}</td><td class="muted">${esc(c.scope)}</td><td>${esc(c.detail)}</td></tr>`).join("")}</tbody></table></div>
+    <p class="note" style="margin-top:12px">Run <code>python3 scripts/audit.py</code> to repeat every check. Source disagreements are listed in <code>data/source_disagreements.csv</code>.</p>`;
   document.getElementById("report-root").hidden = false;
   return charts;
 }

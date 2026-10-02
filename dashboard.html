@@ -3,48 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Premier League Dashboard: explore 108,681 appearances</title>
-  <meta name="description" content="Interactive Premier League dashboard: filter 108,681 player appearances, race the table matchweek by matchweek, compare clubs, browse player profiles, transfers and every season's awards.">
+  <title>Premier League Dashboard: explore 34 seasons</title>
+  <meta name="description" content="Interactive Premier League dashboard: filter every player's season, race the table matchweek by matchweek, compare clubs, browse records, trophies, player profiles and transfers.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <div id="loading" class="loading"><div><div class="eyebrow">Premier League dashboard</div><h2 id="load-text">Loading the data…</h2><div class="bar"><i id="load-bar"></i></div></div></div>
   <div id="nav"></div>
-  <main class="wrap" id="app" hidden>
-    <div class="dash-head">
-      <div class="eyebrow">The Dashboard</div>
-      <h1>Explore the Premier League</h1>
-      <p class="muted" style="max-width:70ch">Filter by season, club, position and more — the numbers below recalculate in your browser from the same data files the report uses.</p>
-    </div>
-    <div class="tabs" role="tablist" id="tabs">
-      <button class="tab" role="tab" aria-selected="true" data-tab="explore">Explore appearances</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="race">Table race</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="compare">Compare clubs</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="seasons">Seasons &amp; awards</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="records">Records &amp; trophies</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="players">Player profiles</button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="transfers">Signings &amp; departures</button>
-    </div>
-
-    <!-- ===== Explore: filters, summary numbers, four charts, table, reset ===== -->
-    <section class="panel" id="panel-explore">
-      <div class="filters" id="filters"></div>
-      <div class="kpis" id="kpis"></div>
-      <div class="grid2" id="charts"></div>
-      <div class="card">
-        <div class="row"><div><label for="tbl-group">Table grouped by</label><select id="tbl-group"></select></div>
-          <div class="grow"><span class="note" id="tbl-note"></span></div><div><button class="btn small" id="tbl-csv" type="button">Download CSV</button></div></div>
-        <div class="tablewrap"><table class="plain" id="tbl"></table></div>
+  <main id="app" hidden>
+    <div class="band">
+      <div class="wrap dash-head">
+        <div class="eyebrow">The Dashboard</div>
+        <h1>Explore the Premier League</h1>
+        <p class="lead">Every match, player, club and record from 1992–93 to 2025–26. Choose a section, then a view. Everything recalculates in your browser as you change a filter.</p>
+        <div class="sectiontabs" id="sectiontabs" role="tablist" aria-label="Sections"></div>
       </div>
-    </section>
+    </div>
+    <div class="wrap">
+      <div class="subnav" id="subnav" role="tablist" aria-label="Views"></div>
 
-    <section class="panel" id="panel-race" hidden></section>
-    <section class="panel" id="panel-compare" hidden></section>
-    <section class="panel" id="panel-seasons" hidden></section>
-    <section class="panel" id="panel-records" hidden></section>
-    <section class="panel" id="panel-players" hidden></section>
-    <section class="panel" id="panel-transfers" hidden></section>
-    <footer><div>Data: football-data.co.uk, footballcsv, the open vaastav archive of the Premier League's public data, and Wikipedia (CC BY-SA 4.0). See the <a href="index.html">report</a> for how every number is computed.</div></footer>
+      <!-- Players: explore the numbers (filters, summary numbers, four charts with switches, table, reset) -->
+      <section class="panel" id="panel-explore">
+        <p class="intro">Pick a data set and a time period, then see who scored, assisted and played the most. Each chart can show a different measure, split a different way.</p>
+        <div class="filters" id="filters"></div>
+        <div class="kpis" id="kpis"></div>
+        <div class="grid2" id="charts"></div>
+        <div class="card">
+          <div class="row"><div><label for="tbl-group">Table grouped by</label><select id="tbl-group"></select></div>
+            <div class="grow"><span class="note" id="tbl-note"></span></div><div><button class="btn small" id="tbl-csv" type="button">Download CSV</button></div></div>
+          <div class="tablewrap"><table class="plain" id="tbl"></table></div>
+        </div>
+      </section>
+
+      <section class="panel" id="panel-players" hidden></section>
+      <section class="panel" id="panel-compare" hidden></section>
+      <section class="panel" id="panel-clubrecords" hidden></section>
+      <section class="panel" id="panel-transfers" hidden></section>
+      <section class="panel" id="panel-race" hidden></section>
+      <section class="panel" id="panel-seasons" hidden></section>
+      <section class="panel" id="panel-records" hidden></section>
+    </div>
+    <footer><div class="wrap">Data: football-data.co.uk, footballcsv, the open vaastav archive, the Premier League's public statistics service, and Wikipedia (CC BY-SA 4.0). See the <a href="index.html">report</a> for how every number is computed.</div></footer>
   </main>
   <dialog id="dlg"></dialog>
 

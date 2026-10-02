@@ -5,20 +5,34 @@
   const { int, dec, pct, esc, clubColor, palette } = PL;
   const C = Calc;
   const $ = (id) => document.getElementById(id);
-  let d;
+  let d, failed = false;
   try {
-    d = await PL.load(["playerMatches", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers", "domestic", "records", "playerSeasons"], (p) => {
+    d = await PL.load(["appearances", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers", "domestic", "records", "playerSeasons"], (p) => {
+      if (failed) return;
       $("load-bar").style.width = Math.round(p * 100) + "%"; $("load-text").textContent = `Loading the data… ${Math.round(p * 100)}%`;
     });
-  } catch (e) { $("load-text").innerHTML = `Couldn't load the data: ${esc(e.message)} <button class="btn small" onclick="location.reload()">Retry</button>`; return; }
+  } catch (e) { failed = true; $("load-text").innerHTML = `Couldn't load the data: ${esc(e.message)} <button class="btn small" onclick="location.reload()">Retry</button>`; return; }
   $("loading").remove(); $("app").hidden = false;
 
-  const pm = d.playerMatches;
-  for (const r of pm) { r.goals = r.goals || 0; r.assists = r.assists || 0; r.clean_sheet = r.clean_sheet || 0; r.yellow_cards = r.yellow_cards || 0; r.red_cards = r.red_cards || 0; }
-  // second data set: season totals for every player, every club, every season since 1992-93
+  // The slim appearance file holds only ids; rebuild each full row by joining it with the match, club and player tables.
   const ps = d.playerSeasons;
-  for (const r of ps) { r.n = r.appearances; r.team = r.club; r.clean_sheet = r.clean_sheets; r.minutes = r.minutes || 0; r.nationality = r.nationality || "Unknown"; }
-  const DATASETS = { matches: { rows: pm, label: "Every appearance, 2016–17 to 2025–26" }, seasons: { rows: ps, label: "Season totals, 1992–93 to 2025–26" } };
+  const matchById = new Map(d.matches.map((m) => [m.match_id, m]));
+  const gameNo = new Map(d.teamMatches.map((r) => [r.match_id + "|" + r.team, r.game_no]));
+  const info = new Map(), positionOf = new Map();
+  for (const r of ps) {
+    if (!info.has(r.player_id)) info.set(r.player_id, { name: r.player, nationality: r.nationality || "Unknown" });
+    positionOf.set(r.player_id + "|" + r.season, r.position || "Unknown");
+  }
+  const pm = d.appearances.map((r) => {
+    const m = matchById.get(r.match_id), home = r.side === "H", team = home ? m.home : m.away, who = info.get(r.player_id) || { name: "Unknown player", nationality: "Unknown" };
+    return { match_id: r.match_id, season: m.season, team, opponent: home ? m.away : m.home, venue: home ? "Home" : "Away", game_no: gameNo.get(r.match_id + "|" + team),
+      player_id: r.player_id, player: who.name, nationality: who.nationality, position: positionOf.get(r.player_id + "|" + m.season) || "Unknown",
+      minutes: r.minutes || 0, goals: r.goals || 0, assists: r.assists || 0, own_goals: r.own_goals || 0, yellow_cards: r.yellow_cards || 0, red_cards: r.red_cards || 0,
+      clean_sheet: (home ? m.away_goals : m.home_goals) === 0 && r.minutes === 90 ? 1 : 0 };
+  });
+  // second data set: season totals for every player, every club, every season since 1992-93 (the Premier League's own season statistics)
+  for (const r of ps) { r.n = r.appearances; r.team = r.club; r.clean_sheet = r.clean_sheets; r.minutes = r.minutes || 0; r.nationality = r.nationality || "Unknown"; r.position = r.position || "Unknown"; }
+  const DATASETS = { matches: { rows: pm, label: "Every appearance, 1992–93 to 2025–26" }, seasons: { rows: ps, label: "Season totals (official statistics)" } };
   let dataset = "matches";
   const seasonsOf = (rows) => [...new Set(rows.map((r) => r.season))].sort(C.bySeason);
   const seasonList = seasonsOf(pm);
@@ -26,34 +40,50 @@
   const positions = ["Goalkeeper", "Defender", "Midfielder", "Forward"];
   const optionHtml = (items, all) => (all ? `<option value="">${all}</option>` : "") + items.map((x) => `<option value="${esc(x)}">${esc(x)}</option>`).join("");
 
-  // ---------------- tabs ----------------
+  // ---------------- sections and views ----------------
+  // Four sections, each with a few views. A view is one panel; panels are only built the first time you open them.
+  const SECTIONS = [
+    { id: "players", label: "Players", views: [["explore", "Explore the numbers"], ["players", "Player profiles"]] },
+    { id: "clubs", label: "Clubs", views: [["compare", "Compare clubs"], ["clubrecords", "Club records & trophies"], ["transfers", "Signings & departures"]] },
+    { id: "seasons", label: "Seasons", views: [["race", "Table race"], ["seasons", "Season summary & awards"]] },
+    { id: "records", label: "League records", views: [["records", "Record books & all-time table"]] },
+  ];
   const inited = { explore: true };
   const initFns = {};
-  document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => {
-    document.querySelectorAll(".tab").forEach((t) => t.setAttribute("aria-selected", t === b));
-    document.querySelectorAll(".panel").forEach((p) => (p.hidden = p.id !== "panel-" + b.dataset.tab));
-    if (!inited[b.dataset.tab]) { inited[b.dataset.tab] = true; initFns[b.dataset.tab](); }
-    history.replaceState(null, "", "#" + b.dataset.tab);
-  }));
+  const sectionOf = (view) => SECTIONS.find((sec) => sec.views.some((v) => v[0] === view));
+  function showView(view) {
+    const sec = sectionOf(view);
+    $("sectiontabs").innerHTML = SECTIONS.map((x) => `<button class="sectiontab" role="tab" data-section="${x.id}" aria-selected="${x === sec}">${x.label}</button>`).join("");
+    $("subnav").innerHTML = sec.views.length > 1 ? sec.views.map(([id, label]) => `<button class="pill" role="tab" data-view="${id}" aria-selected="${id === view}">${label}</button>`).join("") : "";
+    $("sectiontabs").querySelectorAll(".sectiontab").forEach((b) => b.addEventListener("click", () => showView(SECTIONS.find((x) => x.id === b.dataset.section).views[0][0])));
+    $("subnav").querySelectorAll(".pill").forEach((b) => b.addEventListener("click", () => showView(b.dataset.view)));
+    document.querySelectorAll(".panel").forEach((pn) => (pn.hidden = pn.id !== "panel-" + view));
+    if (!inited[view]) { inited[view] = true; initFns[view](); }
+    history.replaceState(null, "", "#" + view);
+  }
 
   // =====================================================================
   // EXPLORE: filters, summary numbers, four charts with switches, table, reset
   // =====================================================================
   const FILTERS = [
-    { id: "f-data", label: "Data", html: Object.entries(DATASETS).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join(""), def: "matches", wide: true },
-    { id: "f-from", label: "From season", html: optionHtml(seasonList), def: seasonList[0] },
-    { id: "f-to", label: "To season", html: optionHtml(seasonList), def: seasonList[seasonList.length - 1] },
-    { id: "f-club", label: "Club", html: optionHtml(clubList, "All clubs"), def: "" },
+    { id: "f-data", label: "Data", html: Object.entries(DATASETS).map(([k, v]) => `<option value="${k}">${v.label}</option>`).join(""), def: "matches", wide: true, primary: true },
+    { id: "f-from", label: "From season", html: optionHtml(seasonList), def: seasonList[0], primary: true },
+    { id: "f-to", label: "To season", html: optionHtml(seasonList), def: seasonList[seasonList.length - 1], primary: true },
+    { id: "f-club", label: "Club", html: optionHtml(clubList, "All clubs"), def: "", primary: true },
     { id: "f-opp", label: "Opponent", html: optionHtml(clubList, "All opponents"), def: "", matchOnly: true },
-    { id: "f-pos", label: "Position", html: optionHtml(positions, "All positions"), def: "" },
+    { id: "f-pos", label: "Position", html: optionHtml(positions, "All positions"), def: "", primary: true },
     { id: "f-venue", label: "Venue", html: optionHtml(["Home", "Away"], "Home and away"), def: "", matchOnly: true },
     { id: "f-mw1", label: "Matchweek from", html: null, def: 1, type: "number", matchOnly: true },
-    { id: "f-mw2", label: "Matchweek to", html: null, def: 38, type: "number", matchOnly: true },
+    { id: "f-mw2", label: "Matchweek to", html: null, def: 42, type: "number", matchOnly: true },
     { id: "f-player", label: "Player name contains", html: null, def: "", type: "search" },
   ];
-  $("filters").innerHTML = FILTERS.map((f) => `<div id="w-${f.id}" ${f.wide ? 'style="grid-column: span 2"' : ""}><label for="${f.id}">${f.label}</label>` +
-    (f.html !== null ? `<select id="${f.id}">${f.html}</select>` : `<input id="${f.id}" type="${f.type}" ${f.type === "number" ? 'min="1" max="42"' : 'placeholder="e.g. Salah"'}>`) + `</div>`).join("") +
-    `<div><button class="btn primary" id="reset" type="button" style="width:100%">Reset all filters</button></div>`;
+  const filterHtml = (f) => `<div id="w-${f.id}" ${f.wide ? 'style="grid-column: span 2"' : ""}><label for="${f.id}">${f.label}</label>` +
+    (f.html !== null ? `<select id="${f.id}">${f.html}</select>` : `<input id="${f.id}" type="${f.type}" ${f.type === "number" ? 'min="1" max="42"' : 'placeholder="e.g. Haaland"'}>`) + `</div>`;
+  $("filters").innerHTML = FILTERS.filter((f) => f.primary).map(filterHtml).join("") +
+    `<div><button class="btn" id="more-btn" type="button" aria-expanded="false" style="width:100%">More filters ▾</button></div>` +
+    `<div><button class="btn primary" id="reset" type="button" style="width:100%">Reset all filters</button></div>` +
+    `<div class="more" id="more-filters" hidden>${FILTERS.filter((f) => !f.primary).map(filterHtml).join("")}</div>`;
+  $("more-btn").addEventListener("click", () => { const m = $("more-filters"); m.hidden = !m.hidden; $("more-btn").setAttribute("aria-expanded", String(!m.hidden)); $("more-btn").textContent = m.hidden ? "More filters ▾" : "Fewer filters ▴"; });
   const resetFilters = () => { $("f-data").value = "matches"; applyDataset(); FILTERS.forEach((f) => ($(f.id).value = f.def)); redrawExplore(); };
   FILTERS.forEach((f) => $(f.id).addEventListener(f.type === "search" ? "input" : "change", () => (f.id === "f-data" ? (applyDataset(), redrawExplore()) : redrawExplore())));
   $("reset").addEventListener("click", resetFilters);
@@ -67,13 +97,13 @@
     $("f-from").value = seasons[0]; $("f-to").value = seasons[seasons.length - 1];
     $("f-club").innerHTML = optionHtml(clubs, "All clubs");
     FILTERS.filter((f) => f.matchOnly).forEach((f) => { $("w-" + f.id).hidden = dataset !== "matches"; $(f.id).value = f.def; });
-    const allowed = Object.keys(BREAKDOWNS).filter((k) => dataset === "seasons" ? k !== "opponent" && k !== "venue" && k !== "matchweek" : k !== "nationality");
+    const allowed = Object.keys(BREAKDOWNS).filter((k) => (dataset === "seasons" ? k !== "opponent" && k !== "venue" && k !== "matchweek" : true));
     const fill = (id, keep, fallback) => { $(id).innerHTML = allowed.map((k) => `<option value="${k}">${BREAKDOWNS[k].label}</option>`).join(""); $(id).value = allowed.includes(keep) ? keep : fallback; };
     CHARTS.forEach((c) => fill(c.id + "-b", $(c.id + "-b").value, c.breakdown === "matchweek" ? "season" : c.breakdown));
     fill("tbl-group", $("tbl-group").value, "player");
     $("data-note").textContent = dataset === "matches"
-      ? "One row per player per match (minutes, goals, assists, cards and more) for the ten seasons with match-by-match data."
-      : "One row per player per club per season, 1992–93 to 2025–26. Minutes are recorded from about 2006–07; before that, only appearances, goals, assists, clean sheets and cards exist.";
+      ? "One row per player per match he played in: minutes, goals, assists and cards, from the official match records of all 13,166 matches."
+      : "One row per player per club per season: the Premier League's own season statistics, which every match-by-match total is checked against.";
   }
   function filtered() {
     const from = C.seasonStart($("f-from").value), to = C.seasonStart($("f-to").value);
@@ -125,8 +155,7 @@
   // KPIs
   function drawKpis(rows) {
     const g = [...group(rows, () => 1).values()][0] || { n: 0, minutes: 0, gm: 0, goals: 0, assists: 0, cs: 0, yellow: 0, red: 0, ids: new Set() };
-    const tiles = [[int(g.n), "appearances in view"], [int(g.ids.size), "different players"], [int(g.goals), "goals"], [int(g.assists), "assists"],
-      [g.minutes ? dec((g.gm * 90) / g.minutes, 3) : "–", "goals per 90 minutes (where minutes are recorded)"], [int(g.yellow + g.red), `cards (${int(g.yellow)} yellow, ${int(g.red)} red)`]];
+    const tiles = [[int(g.n), "appearances in view"], [int(g.ids.size), "different players"], [int(g.goals), "goals"], [int(g.assists), "assists"]];
     $("kpis").innerHTML = tiles.map(([n, l]) => `<div class="kpi"><div class="n">${n}</div><div class="l">${l}</div></div>`).join("");
   }
 
@@ -156,7 +185,7 @@
     const type = useDoughnut ? "doughnut" : useLine ? "line" : "bar";
     const colors = items.map((x, i) => (bKey === "club" || bKey === "opponent" ? clubColor(x.k) : palette[i % palette.length]));
     const data = { labels: items.map((x) => x.label), datasets: [{ label: M.label, data: items.map((x) => (M.rate ? +x.v.toFixed(4) : x.v)),
-      backgroundColor: type === "line" ? "#00ff8533" : colors.map((cl) => cl + (type === "doughnut" ? "" : "")), borderColor: type === "line" ? palette[0] : type === "doughnut" ? "#150726" : colors, fill: type === "line", tension: 0.3, pointRadius: 2 }] };
+      backgroundColor: type === "line" ? "#00c76f33" : colors.map((cl) => cl + (type === "doughnut" ? "" : "")), borderColor: type === "line" ? palette[0] : type === "doughnut" ? "#ffffff" : colors, fill: type === "line", tension: 0.3, pointRadius: 2 }] };
     const horizontal = type === "bar" && !timeline;
     const options = { responsive: true, maintainAspectRatio: true, aspectRatio: 1.45, indexAxis: horizontal ? "y" : "x",
       plugins: { legend: { display: type === "doughnut" } }, scales: type === "doughnut" ? {} : { x: { ticks: { maxTicksLimit: horizontal ? 12 : 9 } }, y: { beginAtZero: true } } };
@@ -207,7 +236,7 @@
     for (const m of bySeasonTeam.values()) for (const rows of m.values()) rows.sort((a, b) => a.game_no - b.game_no);
     const seasonsDesc = [...bySeasonTeam.keys()].sort((a, b) => C.bySeason(b, a));
     const root = $("panel-race");
-    root.innerHTML = `<div class="row"><div><label for="r-season">Season</label><select id="r-season">${optionHtml(seasonsDesc)}</select></div>
+    root.innerHTML = `<p class="intro">Watch a season unfold. The bars show the table after any matchweek; the lines show every club's position, week by week. Press play, or drag the slider.</p><div class="row"><div><label for="r-season">Season</label><select id="r-season">${optionHtml(seasonsDesc)}</select></div>
       <div class="grow"><label for="r-mw" id="r-mw-l">Matchweek</label><input id="r-mw" type="range" min="1" max="38" value="38" style="width:100%"></div>
       <div><button class="btn primary" id="r-play" type="button">▶ Play the season</button></div>
       <div><label for="r-hi">Highlight a club</label><select id="r-hi"></select></div></div>
@@ -216,7 +245,7 @@
       <div class="card"><h3>League position after every matchweek</h3><canvas id="r-bump"></canvas><div class="note" id="r-sum"></div></div></div>
       <div class="card"><h3 id="r-title2">League table</h3><div class="tablewrap"><table class="plain" id="r-table"></table></div></div>`;
     let race, bump, timer = null;
-    const marker = { id: "marker", afterDatasetsDraw(ch) { const mw = +$("r-mw").value; const x = ch.scales.x.getPixelForValue(mw - 1); const { ctx, chartArea } = ch; ctx.save(); ctx.strokeStyle = "#00ff85"; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(x, chartArea.top); ctx.lineTo(x, chartArea.bottom); ctx.stroke(); ctx.restore(); } };
+    const marker = { id: "marker", afterDatasetsDraw(ch) { const mw = +$("r-mw").value; const x = ch.scales.x.getPixelForValue(mw - 1); const { ctx, chartArea } = ch; ctx.save(); ctx.strokeStyle = "#38003c"; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(x, chartArea.top); ctx.lineTo(x, chartArea.bottom); ctx.stroke(); ctx.restore(); } };
     function state() {
       const season = $("r-season").value, teams = bySeasonTeam.get(season), games = teams.values().next().value.length;
       return { season, teams, games };
@@ -274,7 +303,7 @@
     const root = $("panel-compare"), teamsBy = Object.fromEntries(d.teams.map((t) => [t.name, t]));
     const names = d.teams.map((t) => t.name).sort();
     const defaults = ["Arsenal", "Chelsea", "", ""];
-    root.innerHTML = `<div class="row">${[0, 1, 2, 3].map((i) => `<div><label for="cmp${i}">Club ${i + 1}${i > 1 ? " (optional)" : ""}</label><select id="cmp${i}">${optionHtml(names, i > 1 ? "—" : "")}</select></div>`).join("")}</div>
+    root.innerHTML = `<p class="intro">Pick two to four clubs to compare their records, their finishes season by season, their trophies and how they play. With exactly two clubs you also get their head-to-head.</p><div class="row">${[0, 1, 2, 3].map((i) => `<div><label for="cmp${i}">Club ${i + 1}${i > 1 ? " (optional)" : ""}</label><select id="cmp${i}">${optionHtml(names, i > 1 ? "—" : "")}</select></div>`).join("")}</div>
       <div id="cmp-cards" class="cmpgrid"></div><div id="cmp-h2h"></div>
       <div class="grid2"><div class="card"><h3>Points in each Premier League season</h3><canvas id="cmp-pts"></canvas></div>
       <div class="card"><h3>League position in each season</h3><canvas id="cmp-pos"></canvas></div></div>
@@ -308,7 +337,7 @@
       const rows = [["Seasons in the Premier League", "seasons"], ["Matches played", "played"], ["Won", "w"], ["Drawn", "d"], ["Lost", "l"], ["Goals scored", "gf"], ["Goals conceded", "ga"], ["Points (official)", "pts"], ["Titles", "titles"], ["Top-four finishes", "top4"], ["Best finish", "best"], ["Relegations", "rel"], ["League titles (all time)", "dl"], ["FA Cups", "dfa"], ["League Cups", "dlc"], ["Community Shields", "dcs"], ["Domestic trophies in all", "dtot"]];
       $("cmp-tbl").innerHTML = `<thead><tr><th>Measure</th>${stats.map((s) => `<th class="num" style="color:${clubColor(s.n)}">${esc(PL.short(s.n))}</th>`).join("")}</tr></thead><tbody>` + rows.map(([l, k]) => `<tr><td>${l}</td>${stats.map((s) => `<td class="num">${s[k] === null ? "–" : int(s[k])}</td>`).join("")}</tr>`).join("") + "</tbody>";
       const mx = (k) => Math.max(...stats.map((s) => s[k])) || 1, mn = (k) => Math.min(...stats.map((s) => s[k])) || 1;
-      make("cmp-radar", { type: "radar", data: { labels: ["Points per game", "Goals scored", "Goals conceded (fewer)", "Win %", "Clean sheets %"], datasets: sel.map((n, i) => { const s = stats[i]; return { label: n, data: [100 * s.ppg / mx("ppg"), 100 * s.gfpg / mx("gfpg"), 100 * mn("gapg") / s.gapg, 100 * s.winp / mx("winp"), 100 * s.csp / mx("csp")], borderColor: clubColor(n), backgroundColor: clubColor(n) + "33", pointBackgroundColor: clubColor(n) }; }) }, options: { responsive: true, aspectRatio: 1.3, scales: { r: { min: 0, max: 100, ticks: { display: false }, grid: { color: "#ffffff22" }, angleLines: { color: "#ffffff22" } } }, plugins: { legend: { display: true } } } });
+      make("cmp-radar", { type: "radar", data: { labels: ["Points per game", "Goals scored", "Goals conceded (fewer)", "Win %", "Clean sheets %"], datasets: sel.map((n, i) => { const s = stats[i]; return { label: n, data: [100 * s.ppg / mx("ppg"), 100 * s.gfpg / mx("gfpg"), 100 * mn("gapg") / s.gapg, 100 * s.winp / mx("winp"), 100 * s.csp / mx("csp")], borderColor: clubColor(n), backgroundColor: clubColor(n) + "33", pointBackgroundColor: clubColor(n) }; }) }, options: { responsive: true, aspectRatio: 1.3, scales: { r: { min: 0, max: 100, ticks: { display: false }, grid: { color: "rgba(56,0,60,.15)" }, angleLines: { color: "rgba(56,0,60,.15)" } } }, plugins: { legend: { display: true } } } });
       // head to head
       if (sel.length === 2) {
         const [a, b] = sel, meet = d.matches.filter((m) => (m.home === a && m.away === b) || (m.home === b && m.away === a));
@@ -333,7 +362,7 @@
     const root = $("panel-seasons");
     const all = d.seasons.map((s) => s.season).sort((a, b) => C.bySeason(b, a));
     const info = d.awards.award_types;
-    root.innerHTML = `<div class="row"><div><label for="s-season">Season</label><select id="s-season">${optionHtml(all)}</select></div></div><div id="s-body"></div>`;
+    root.innerHTML = `<p class="intro">Everything about one season: the champions, the cup winners, who went up and down, the top scorers and every award, plus the final table.</p><div class="row"><div><label for="s-season">Season</label><select id="s-season">${optionHtml(all)}</select></div></div><div id="s-body"></div>`;
     function draw() {
       const season = $("s-season").value, s = d.seasons.find((x) => x.season === season), h = d.honours.find((x) => x.season === season);
       const table = d.finalTables.filter((r) => r.season === season).sort((a, b) => a.position - b.position);
@@ -362,8 +391,11 @@
   // =====================================================================
   // RECORDS & TROPHIES (league records, club records, domestic trophies)
   // =====================================================================
-  initFns.records = function () {
-    const root = $("panel-records"), R = d.records, off = R.official, L = R.league;
+  let recordsBuilt = false;
+  initFns.records = initFns.clubrecords = function () {
+    if (recordsBuilt) return;
+    recordsBuilt = true;
+    const R = d.records, off = R.official, L = R.league;
     const clubNames = Object.keys(R.clubs).sort();
     const BOOKS = {
       most_goals: ["Most goals (career)", "Goals", ["Rank", "Player", "Goals", "Games", "Ratio", "Position", "First goal", "Last goal"]],
@@ -373,17 +405,19 @@
       most_penalties: ["Most penalties scored (career)", "Scored", ["Rank", "Player", "Scored", "Taken", "Ratio", "Playing position"]],
       most_free_kicks: ["Most direct free-kick goals (career)", "Goals", ["Rank", "Player", "Goals", "Games", "Ratio", "Playing position"]],
     };
-    root.innerHTML = `<h2>League records</h2>
-      <p class="note">All-time Premier League player records, 1992–93 to 2025–26, as listed by Wikipedia. (In the Explore tab, choose the 'Season totals' data to rebuild these from the player table.)</p>
+    $("panel-records").innerHTML = `<p class="intro">The Premier League's all-time record books, the biggest wins and longest runs, and the table of every club's total Premier League record.</p>
+      <h2>Record books</h2>
+      <p class="note">All-time player records, 1992–93 to 2025–26, as listed by Wikipedia and reproduced exactly from the season-by-season player table.</p>
       <div class="row"><div><label for="rb-pick">Record book</label><select id="rb-pick">${Object.entries(BOOKS).map(([k, b]) => `<option value="${k}">${b[0]}</option>`).join("")}</select></div></div>
       <div class="grid2"><div class="card"><canvas id="rb-chart"></canvas></div><div class="card"><div class="tablewrap" style="max-height:380px"><table class="plain" id="rb-tbl"></table></div></div></div>
+      <h2>Matches, seasons and runs</h2>
       <div class="grid2" id="lg-records"></div>
-      <h2 style="margin-top:34px">Club records</h2>
+      <h2>All-time Premier League table</h2>
+      <div class="card"><div class="tablewrap" style="max-height:520px"><table class="plain" id="at-tbl"></table></div></div>`;
+    $("panel-clubrecords").innerHTML = `<p class="intro">Pick a club to see its Premier League records and every domestic trophy it has ever won, then compare all clubs' trophy counts.</p>
       <div class="row"><div><label for="cr-club">Club</label><select id="cr-club">${optionHtml(clubNames)}</select></div></div>
       <div id="cr-body"></div>
-      <h2 style="margin-top:34px">All-time Premier League table</h2>
-      <div class="card"><div class="tablewrap" style="max-height:520px"><table class="plain" id="at-tbl"></table></div></div>
-      <h2 style="margin-top:34px">Domestic trophies, all time</h2>
+      <h2>Domestic trophies, all time</h2>
       <p class="note">League titles are top-flight titles since 1888; FA Cup, League Cup and Community Shield winners go back to each competition's first year. Click a column heading to sort.</p>
       <div class="card"><div class="tablewrap" style="max-height:520px"><table class="plain" id="tr-tbl"></table></div></div>`;
     let rbChart;
@@ -391,7 +425,7 @@
       const k = $("rb-pick").value, [title, valKey, cols] = BOOKS[k], rows = off[k];
       $("rb-tbl").innerHTML = `<thead><tr>${cols.map((c) => `<th>${c}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr>${cols.map((c, i) => `<td class="${i === 1 || i > 5 ? "" : "num"}">${esc(r[c] ?? "")}</td>`).join("")}</tr>`).join("")}</tbody>`;
       if (rbChart) rbChart.destroy();
-      rbChart = new Chart($("rb-chart"), { type: "bar", data: { labels: rows.map((r) => r.Player), datasets: [{ label: title, data: rows.map((r) => +String(r[valKey]).replace(/,/g, "")), backgroundColor: rows.map((r, i) => (i === 0 ? "#ffc83dcc" : "#00ff85aa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.15, plugins: { legend: { display: false }, title: { display: true, text: title } } } });
+      rbChart = new Chart($("rb-chart"), { type: "bar", data: { labels: rows.map((r) => r.Player), datasets: [{ label: title, data: rows.map((r) => +String(r[valKey]).replace(/,/g, "")), backgroundColor: rows.map((r, i) => (i === 0 ? "#f2a900cc" : "#00c76faa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.15, plugins: { legend: { display: false }, title: { display: true, text: title } } } });
     }
     $("rb-pick").addEventListener("change", drawBook); drawBook();
 
@@ -440,7 +474,7 @@
   // =====================================================================
   initFns.players = function () {
     const root = $("panel-players"), P = d.players;
-    root.innerHTML = `<div class="filters"><div><label for="p-club">Club</label><select id="p-club">${optionHtml([...new Set(P.map((p) => p.club))].sort(), "All clubs")}</select></div>
+    root.innerHTML = `<p class="intro">Every player in a 2026–27 squad, with his full Premier League career since 1992–93. Click a card for his season-by-season record.</p><div class="filters"><div><label for="p-club">Club</label><select id="p-club">${optionHtml([...new Set(P.map((p) => p.club))].sort(), "All clubs")}</select></div>
       <div><label for="p-pos">Position</label><select id="p-pos">${optionHtml(positions, "All positions")}</select></div>
       <div><label for="p-q">Name contains</label><input id="p-q" type="search" placeholder="e.g. Haaland"></div>
       <div><label for="p-sort">Sort by</label><select id="p-sort"><option value="name">Name</option><option value="goals">Career PL goals</option><option value="apps">Career PL appearances</option><option value="age">Age (youngest)</option><option value="mins">Minutes this season</option></select></div></div>
@@ -459,7 +493,7 @@
     }
     function open(p) {
       const c = p.premier_league_career, t = p.this_season, dlg = $("dlg");
-      dlg.innerHTML = `<div style="display:flex;gap:16px;align-items:center;margin-bottom:12px"><img src="${esc(p.photo)}" alt="" style="width:84px;height:106px;object-fit:cover;object-position:top;border-radius:12px;background:#2d1650" onerror="this.style.display='none'"><div><h3 style="margin:0">${esc(p.name)}</h3><div class="muted">${esc(p.club)} · ${esc(p.position)}${p.squad_number ? " · #" + p.squad_number : ""}${p.nationality ? " · " + esc(p.nationality) : ""}</div><div class="muted">${p.birth_date ? "Born " + p.birth_date + " (age " + p.age + ")" : "Birth date not listed"} · at the club since ${esc(p.joined_club || "?")}</div><div>${esc(p.availability)}${p.news ? " — " + esc(p.news) : ""}</div></div></div>
+      dlg.innerHTML = `<div style="display:flex;gap:16px;align-items:center;margin-bottom:12px"><img src="${esc(p.photo)}" alt="" style="width:84px;height:106px;object-fit:cover;object-position:top;border-radius:12px;background:#efe6f3" onerror="this.style.display='none'"><div><h3 style="margin:0">${esc(p.name)}</h3><div class="muted">${esc(p.club)} · ${esc(p.position)}${p.squad_number ? " · #" + p.squad_number : ""}${p.nationality ? " · " + esc(p.nationality) : ""}</div><div class="muted">${p.birth_date ? "Born " + p.birth_date + " (age " + p.age + ")" : "Birth date not listed"} · at the club since ${esc(p.joined_club || "?")}</div><div>${esc(p.availability)}${p.news ? " — " + esc(p.news) : ""}</div></div></div>
         <div class="kpis"><div class="kpi"><div class="n">${int(c.appearances)}</div><div class="l">PL appearances, 1992–2026</div></div><div class="kpi"><div class="n">${int(c.goals)}</div><div class="l">goals</div></div><div class="kpi"><div class="n">${int(c.assists)}</div><div class="l">assists</div></div><div class="kpi"><div class="n">${int(t.minutes)}</div><div class="l">minutes in 2026–27 so far (${t.goals} goals, ${t.assists} assists)</div></div></div>
         ${c.seasons.length ? `<div class="tablewrap" style="max-height:260px"><table class="plain"><thead><tr><th>Season</th><th>Club</th><th class="num">Apps</th><th class="num">Min</th><th class="num">Goals</th><th class="num">Assists</th><th class="num">Yellow</th><th class="num">Red</th></tr></thead><tbody>${c.seasons.map((s) => `<tr><td>${s.season}</td><td>${esc(s.club)}</td><td class="num">${s.appearances}</td><td class="num">${s.minutes == null ? "–" : int(s.minutes)}</td><td class="num">${s.goals}</td><td class="num">${s.assists}</td><td class="num">${s.yellow_cards}</td><td class="num">${s.red_cards}</td></tr>`).join("")}</tbody></table></div>` : `<p class="muted">No Premier League appearances before 2026–27.</p>`}
         <p style="text-align:right;margin:14px 0 0"><button class="btn" onclick="document.getElementById('dlg').close()">Close</button></p>`;
@@ -479,7 +513,7 @@
     const seasonsT = [...new Set(T.map((r) => r.season))].sort((a, b) => C.bySeason(b, a));
     const clubsT = [...new Set(T.map((r) => r.club))].sort();
     const kinds = [...new Set(T.map((r) => r.kind))].sort();
-    root.innerHTML = `<div class="filters"><div><label for="t-season">Season</label><select id="t-season">${optionHtml(seasonsT)}</select></div>
+    root.innerHTML = `<p class="intro">Who joined and who left each club, season by season, worked out from where players actually played.</p><div class="filters"><div><label for="t-season">Season</label><select id="t-season">${optionHtml(seasonsT)}</select></div>
       <div><label for="t-club">Club</label><select id="t-club">${optionHtml(clubsT, "All clubs")}</select></div>
       <div><label for="t-dir">Direction</label><select id="t-dir"><option value="">Signings and departures</option><option>Signing</option><option>Departure</option></select></div>
       <div><label for="t-kind">Type of move</label><select id="t-kind">${optionHtml(kinds, "All types")}</select></div>
@@ -497,7 +531,7 @@
       const clubs = C.byKey(rows, (r) => r.club);
       const items = [...clubs].map(([c, rs]) => ({ c, sig: rs.filter((r) => r.direction === "Signing").length, dep: rs.filter((r) => r.direction === "Departure").length })).sort((a, b) => b.sig + b.dep - (a.sig + a.dep)).slice(0, 14);
       if (chart) chart.destroy();
-      chart = new Chart($("t-chart"), { type: "bar", data: { labels: items.map((x) => PL.short(x.c)), datasets: [{ label: "Signings", data: items.map((x) => x.sig), backgroundColor: "#00ff85cc" }, { label: "Departures", data: items.map((x) => x.dep), backgroundColor: "#ff2d78cc" }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.1, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { autoSkip: false, font: { size: 10 } } } } } });
+      chart = new Chart($("t-chart"), { type: "bar", data: { labels: items.map((x) => PL.short(x.c)), datasets: [{ label: "Signings", data: items.map((x) => x.sig), backgroundColor: "#00c76fcc" }, { label: "Departures", data: items.map((x) => x.dep), backgroundColor: "#e90052cc" }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.1, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { autoSkip: false, font: { size: 10 } } } } } });
       rows.sort((a, b) => (b.appearances_that_season || 0) - (a.appearances_that_season || 0) || (b.goals_that_season || 0) - (a.goals_that_season || 0));
       $("t-tbl").innerHTML = `<thead><tr><th>Club</th><th>Player</th><th></th><th>From → to</th><th class="num">Apps</th></tr></thead><tbody>` + rows.slice(0, 300).map((r) => `<tr><td>${esc(r.club)}</td><td>${esc(r.player)} <span class="muted">${esc(r.position)}</span></td><td><span class="chip ${r.direction === "Signing" ? "up" : "down"}">${r.direction}</span></td><td class="muted">${esc(r.from_club || "outside the PL")} → ${esc(r.to_club || "left the PL")}<br>${esc(r.kind)}</td><td class="num">${int(r.appearances_that_season)}</td></tr>`).join("") + "</tbody>";
     }
@@ -506,6 +540,6 @@
     draw();
   };
 
-  const startTab = location.hash.slice(1);
-  if (startTab && initFns[startTab]) document.querySelector(`.tab[data-tab="${startTab}"]`).click();
+  const startView = location.hash.slice(1);
+  showView(startView && (initFns[startView] || startView === "explore") ? startView : "explore");
 })();
