@@ -1,0 +1,908 @@
+[
+ {
+  "season": "1992–93",
+  "champions_league": {
+   "winner": "Marseille",
+   "winner_country": "France",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Milan",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Juventus",
+   "winner_country": "Italy",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Borussia Dortmund",
+   "runner_up_country": "Germany"
+  },
+  "ballon_dor": {
+   "player": "Roberto Baggio",
+   "club": "Juventus"
+  },
+  "ballon_dor_year": 1993,
+  "world_cup": null
+ },
+ {
+  "season": "1993–94",
+  "champions_league": {
+   "winner": "Milan",
+   "winner_country": "Italy",
+   "score": "4–0",
+   "score_note": "",
+   "runner_up": "Barcelona",
+   "runner_up_country": "Spain"
+  },
+  "europa_league": {
+   "winner": "Inter Milan",
+   "winner_country": "Italy",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Austria Salzburg",
+   "runner_up_country": "Austria"
+  },
+  "ballon_dor": {
+   "player": "Hristo Stoichkov",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 1994,
+  "world_cup": {
+   "winner": "Brazil",
+   "score": "0–0",
+   "runner_up": "Italy",
+   "host": "United States",
+   "year": 1994
+  }
+ },
+ {
+  "season": "1994–95",
+  "champions_league": {
+   "winner": "Ajax",
+   "winner_country": "Netherlands",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Milan",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Parma",
+   "winner_country": "Italy",
+   "score": "1–1",
+   "score_note": "",
+   "runner_up": "Juventus",
+   "runner_up_country": "Italy"
+  },
+  "ballon_dor": {
+   "player": "George Weah",
+   "club": "Milan"
+  },
+  "ballon_dor_year": 1995,
+  "world_cup": null
+ },
+ {
+  "season": "1995–96",
+  "champions_league": {
+   "winner": "Juventus",
+   "winner_country": "Italy",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Ajax",
+   "runner_up_country": "Netherlands"
+  },
+  "europa_league": {
+   "winner": "Bayern Munich",
+   "winner_country": "Germany",
+   "score": "3–1",
+   "score_note": "",
+   "runner_up": "Bordeaux",
+   "runner_up_country": "France"
+  },
+  "ballon_dor": {
+   "player": "Matthias Sammer",
+   "club": "Borussia Dortmund"
+  },
+  "ballon_dor_year": 1996,
+  "world_cup": null
+ },
+ {
+  "season": "1996–97",
+  "champions_league": {
+   "winner": "Borussia Dortmund",
+   "winner_country": "Germany",
+   "score": "3–1",
+   "score_note": "",
+   "runner_up": "Juventus",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Schalke 04",
+   "winner_country": "Germany",
+   "score": "0–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Inter Milan",
+   "runner_up_country": "Italy"
+  },
+  "ballon_dor": {
+   "player": "Ronaldo",
+   "club": "Inter Milan"
+  },
+  "ballon_dor_year": 1997,
+  "world_cup": null
+ },
+ {
+  "season": "1997–98",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Juventus",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Inter Milan",
+   "winner_country": "Italy",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Lazio",
+   "runner_up_country": "Italy"
+  },
+  "ballon_dor": {
+   "player": "Zinedine Zidane",
+   "club": "Juventus"
+  },
+  "ballon_dor_year": 1998,
+  "world_cup": {
+   "winner": "France",
+   "score": "3–0",
+   "runner_up": "Brazil",
+   "host": "France",
+   "year": 1998
+  }
+ },
+ {
+  "season": "1998–99",
+  "champions_league": {
+   "winner": "Manchester United",
+   "winner_country": "England",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Bayern Munich",
+   "runner_up_country": "Germany"
+  },
+  "europa_league": {
+   "winner": "Parma",
+   "winner_country": "Italy",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Marseille",
+   "runner_up_country": "France"
+  },
+  "ballon_dor": {
+   "player": "Rivaldo",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 1999,
+  "world_cup": null
+ },
+ {
+  "season": "1999–2000",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Valencia",
+   "runner_up_country": "Spain"
+  },
+  "europa_league": {
+   "winner": "Galatasaray",
+   "winner_country": "Turkey",
+   "score": "0–0",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Arsenal",
+   "runner_up_country": "England"
+  },
+  "ballon_dor": {
+   "player": "Luís Figo",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2000,
+  "world_cup": null
+ },
+ {
+  "season": "2000–01",
+  "champions_league": {
+   "winner": "Bayern Munich",
+   "winner_country": "Germany",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Valencia",
+   "runner_up_country": "Spain"
+  },
+  "europa_league": {
+   "winner": "Liverpool",
+   "winner_country": "England",
+   "score": "5–4",
+   "score_note": "",
+   "runner_up": "Alavés",
+   "runner_up_country": "Spain"
+  },
+  "ballon_dor": {
+   "player": "Michael Owen",
+   "club": "Liverpool"
+  },
+  "ballon_dor_year": 2001,
+  "world_cup": null
+ },
+ {
+  "season": "2001–02",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Bayer Leverkusen",
+   "runner_up_country": "Germany"
+  },
+  "europa_league": {
+   "winner": "Feyenoord",
+   "winner_country": "Netherlands",
+   "score": "3–2",
+   "score_note": "",
+   "runner_up": "Borussia Dortmund",
+   "runner_up_country": "Germany"
+  },
+  "ballon_dor": {
+   "player": "Ronaldo",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2002,
+  "world_cup": {
+   "winner": "Brazil",
+   "score": "2–0",
+   "runner_up": "Germany",
+   "host": "Japan",
+   "year": 2002
+  }
+ },
+ {
+  "season": "2002–03",
+  "champions_league": {
+   "winner": "Milan",
+   "winner_country": "Italy",
+   "score": "0–0",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Juventus",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Porto",
+   "winner_country": "Portugal",
+   "score": "3–2",
+   "score_note": "",
+   "runner_up": "Celtic",
+   "runner_up_country": "Scotland"
+  },
+  "ballon_dor": {
+   "player": "Pavel Nedvěd",
+   "club": "Juventus"
+  },
+  "ballon_dor_year": 2003,
+  "world_cup": null
+ },
+ {
+  "season": "2003–04",
+  "champions_league": {
+   "winner": "Porto",
+   "winner_country": "Portugal",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Monaco",
+   "runner_up_country": "France"
+  },
+  "europa_league": {
+   "winner": "Valencia",
+   "winner_country": "Spain",
+   "score": "2–0",
+   "score_note": "",
+   "runner_up": "Marseille",
+   "runner_up_country": "France"
+  },
+  "ballon_dor": {
+   "player": "Andriy Shevchenko",
+   "club": "Milan"
+  },
+  "ballon_dor_year": 2004,
+  "world_cup": null
+ },
+ {
+  "season": "2004–05",
+  "champions_league": {
+   "winner": "Liverpool",
+   "winner_country": "England",
+   "score": "3–3",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Milan",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "CSKA Moscow",
+   "winner_country": "Russia",
+   "score": "3–1",
+   "score_note": "",
+   "runner_up": "Sporting CP",
+   "runner_up_country": "Portugal"
+  },
+  "ballon_dor": {
+   "player": "Ronaldinho",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 2005,
+  "world_cup": null
+ },
+ {
+  "season": "2005–06",
+  "champions_league": {
+   "winner": "Barcelona",
+   "winner_country": "Spain",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Arsenal",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Sevilla",
+   "winner_country": "Spain",
+   "score": "4–0",
+   "score_note": "",
+   "runner_up": "Middlesbrough",
+   "runner_up_country": "England"
+  },
+  "ballon_dor": {
+   "player": "Fabio Cannavaro",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2006,
+  "world_cup": {
+   "winner": "Italy",
+   "score": "1–1",
+   "runner_up": "France",
+   "host": "Germany",
+   "year": 2006
+  }
+ },
+ {
+  "season": "2006–07",
+  "champions_league": {
+   "winner": "Milan",
+   "winner_country": "Italy",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Liverpool",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Sevilla",
+   "winner_country": "Spain",
+   "score": "2–2",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Espanyol",
+   "runner_up_country": "Spain"
+  },
+  "ballon_dor": {
+   "player": "Kaká",
+   "club": "Milan"
+  },
+  "ballon_dor_year": 2007,
+  "world_cup": null
+ },
+ {
+  "season": "2007–08",
+  "champions_league": {
+   "winner": "Manchester United",
+   "winner_country": "England",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Chelsea",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Zenit Saint Petersburg",
+   "winner_country": "Russia",
+   "score": "2–0",
+   "score_note": "",
+   "runner_up": "Rangers",
+   "runner_up_country": "Scotland"
+  },
+  "ballon_dor": {
+   "player": "Cristiano Ronaldo",
+   "club": "Manchester United"
+  },
+  "ballon_dor_year": 2008,
+  "world_cup": null
+ },
+ {
+  "season": "2008–09",
+  "champions_league": {
+   "winner": "Barcelona",
+   "winner_country": "Spain",
+   "score": "2–0",
+   "score_note": "",
+   "runner_up": "Manchester United",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Shakhtar Donetsk",
+   "winner_country": "Ukraine",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Werder Bremen",
+   "runner_up_country": "Germany"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 2009,
+  "world_cup": null
+ },
+ {
+  "season": "2009–10",
+  "champions_league": {
+   "winner": "Inter Milan",
+   "winner_country": "Italy",
+   "score": "2–0",
+   "score_note": "",
+   "runner_up": "Bayern Munich",
+   "runner_up_country": "Germany"
+  },
+  "europa_league": {
+   "winner": "Atlético Madrid",
+   "winner_country": "Spain",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Fulham",
+   "runner_up_country": "England"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 2010,
+  "world_cup": {
+   "winner": "Spain",
+   "score": "1–0",
+   "runner_up": "Netherlands",
+   "host": "South Africa",
+   "year": 2010
+  }
+ },
+ {
+  "season": "2010–11",
+  "champions_league": {
+   "winner": "Barcelona",
+   "winner_country": "Spain",
+   "score": "3–1",
+   "score_note": "",
+   "runner_up": "Manchester United",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Porto",
+   "winner_country": "Portugal",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Braga",
+   "runner_up_country": "Portugal"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 2011,
+  "world_cup": null
+ },
+ {
+  "season": "2011–12",
+  "champions_league": {
+   "winner": "Chelsea",
+   "winner_country": "England",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Bayern Munich",
+   "runner_up_country": "Germany"
+  },
+  "europa_league": {
+   "winner": "Atlético Madrid",
+   "winner_country": "Spain",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Athletic Bilbao",
+   "runner_up_country": "Spain"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 2012,
+  "world_cup": null
+ },
+ {
+  "season": "2012–13",
+  "champions_league": {
+   "winner": "Bayern Munich",
+   "winner_country": "Germany",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Borussia Dortmund",
+   "runner_up_country": "Germany"
+  },
+  "europa_league": {
+   "winner": "Chelsea",
+   "winner_country": "England",
+   "score": "2–1",
+   "score_note": "",
+   "runner_up": "Benfica",
+   "runner_up_country": "Portugal"
+  },
+  "ballon_dor": {
+   "player": "Cristiano Ronaldo",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2013,
+  "world_cup": null
+ },
+ {
+  "season": "2013–14",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "4–1",
+   "score_note": "",
+   "runner_up": "Atlético Madrid",
+   "runner_up_country": "Spain"
+  },
+  "europa_league": {
+   "winner": "Sevilla",
+   "winner_country": "Spain",
+   "score": "0–0",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Benfica",
+   "runner_up_country": "Portugal"
+  },
+  "ballon_dor": {
+   "player": "Cristiano Ronaldo",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2014,
+  "world_cup": {
+   "winner": "Germany",
+   "score": "1–0",
+   "runner_up": "Argentina",
+   "host": "Brazil",
+   "year": 2014
+  }
+ },
+ {
+  "season": "2014–15",
+  "champions_league": {
+   "winner": "Barcelona",
+   "winner_country": "Spain",
+   "score": "3–1",
+   "score_note": "",
+   "runner_up": "Juventus",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Sevilla",
+   "winner_country": "Spain",
+   "score": "3–2",
+   "score_note": "",
+   "runner_up": "Dnipro Dnipropetrovsk",
+   "runner_up_country": "Ukraine"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 2015,
+  "world_cup": null
+ },
+ {
+  "season": "2015–16",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Atlético Madrid",
+   "runner_up_country": "Spain"
+  },
+  "europa_league": {
+   "winner": "Sevilla",
+   "winner_country": "Spain",
+   "score": "3–1",
+   "score_note": "",
+   "runner_up": "Liverpool",
+   "runner_up_country": "England"
+  },
+  "ballon_dor": {
+   "player": "Cristiano Ronaldo",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2016,
+  "world_cup": null
+ },
+ {
+  "season": "2016–17",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "4–1",
+   "score_note": "",
+   "runner_up": "Juventus",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Manchester United",
+   "winner_country": "England",
+   "score": "2–0",
+   "score_note": "",
+   "runner_up": "Ajax",
+   "runner_up_country": "Netherlands"
+  },
+  "ballon_dor": {
+   "player": "Cristiano Ronaldo",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2017,
+  "world_cup": null
+ },
+ {
+  "season": "2017–18",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "3–1",
+   "score_note": "",
+   "runner_up": "Liverpool",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Atlético Madrid",
+   "winner_country": "Spain",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Marseille",
+   "runner_up_country": "France"
+  },
+  "ballon_dor": {
+   "player": "Luka Modrić",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2018,
+  "world_cup": {
+   "winner": "France",
+   "score": "4–2",
+   "runner_up": "Croatia",
+   "host": "Russia",
+   "year": 2018
+  }
+ },
+ {
+  "season": "2018–19",
+  "champions_league": {
+   "winner": "Liverpool",
+   "winner_country": "England",
+   "score": "2–0",
+   "score_note": "",
+   "runner_up": "Tottenham Hotspur",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Chelsea",
+   "winner_country": "England",
+   "score": "4–1",
+   "score_note": "",
+   "runner_up": "Arsenal",
+   "runner_up_country": "England"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Barcelona"
+  },
+  "ballon_dor_year": 2019,
+  "world_cup": null
+ },
+ {
+  "season": "2019–20",
+  "champions_league": {
+   "winner": "Bayern Munich",
+   "winner_country": "Germany",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Paris Saint-Germain",
+   "runner_up_country": "France"
+  },
+  "europa_league": {
+   "winner": "Sevilla",
+   "winner_country": "Spain",
+   "score": "3–2",
+   "score_note": "",
+   "runner_up": "Inter Milan",
+   "runner_up_country": "Italy"
+  },
+  "ballon_dor": {
+   "player": null,
+   "club": null,
+   "note": "Not awarded in 2020 (COVID-19)"
+  },
+  "ballon_dor_year": 2020,
+  "world_cup": null
+ },
+ {
+  "season": "2020–21",
+  "champions_league": {
+   "winner": "Chelsea",
+   "winner_country": "England",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Manchester City",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Villarreal",
+   "winner_country": "Spain",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Manchester United",
+   "runner_up_country": "England"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Paris Saint-Germain"
+  },
+  "ballon_dor_year": 2021,
+  "world_cup": null
+ },
+ {
+  "season": "2021–22",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Liverpool",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Eintracht Frankfurt",
+   "winner_country": "Germany",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Rangers",
+   "runner_up_country": "Scotland"
+  },
+  "ballon_dor": {
+   "player": "Karim Benzema",
+   "club": "Real Madrid"
+  },
+  "ballon_dor_year": 2022,
+  "world_cup": {
+   "winner": "Argentina",
+   "score": "3–3",
+   "runner_up": "France",
+   "host": "Qatar",
+   "year": 2022
+  }
+ },
+ {
+  "season": "2022–23",
+  "champions_league": {
+   "winner": "Manchester City",
+   "winner_country": "England",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Inter Milan",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Sevilla",
+   "winner_country": "Spain",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Roma",
+   "runner_up_country": "Italy"
+  },
+  "ballon_dor": {
+   "player": "Lionel Messi",
+   "club": "Inter Miami"
+  },
+  "ballon_dor_year": 2023,
+  "world_cup": null
+ },
+ {
+  "season": "2023–24",
+  "champions_league": {
+   "winner": "Real Madrid",
+   "winner_country": "Spain",
+   "score": "2–0",
+   "score_note": "",
+   "runner_up": "Borussia Dortmund",
+   "runner_up_country": "Germany"
+  },
+  "europa_league": {
+   "winner": "Atalanta",
+   "winner_country": "Italy",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "Bayer Leverkusen",
+   "runner_up_country": "Germany"
+  },
+  "ballon_dor": {
+   "player": "Rodri",
+   "club": "Manchester City"
+  },
+  "ballon_dor_year": 2024,
+  "world_cup": null
+ },
+ {
+  "season": "2024–25",
+  "champions_league": {
+   "winner": "Paris Saint-Germain",
+   "winner_country": "France",
+   "score": "5–0",
+   "score_note": "",
+   "runner_up": "Inter Milan",
+   "runner_up_country": "Italy"
+  },
+  "europa_league": {
+   "winner": "Tottenham Hotspur",
+   "winner_country": "England",
+   "score": "1–0",
+   "score_note": "",
+   "runner_up": "Manchester United",
+   "runner_up_country": "England"
+  },
+  "ballon_dor": {
+   "player": "Ousmane Dembélé",
+   "club": "Paris Saint-Germain"
+  },
+  "ballon_dor_year": 2025,
+  "world_cup": null
+ },
+ {
+  "season": "2025–26",
+  "champions_league": {
+   "winner": "Paris Saint-Germain",
+   "winner_country": "France",
+   "score": "1–1",
+   "score_note": "after extra time or penalties",
+   "runner_up": "Arsenal",
+   "runner_up_country": "England"
+  },
+  "europa_league": {
+   "winner": "Aston Villa",
+   "winner_country": "England",
+   "score": "3–0",
+   "score_note": "",
+   "runner_up": "SC Freiburg",
+   "runner_up_country": "Germany"
+  },
+  "ballon_dor": {
+   "player": null,
+   "club": null,
+   "note": "To be announced on 26 October 2026"
+  },
+  "ballon_dor_year": 2026,
+  "world_cup": {
+   "winner": "Spain",
+   "score": "1–0",
+   "runner_up": "Argentina",
+   "host": "United States",
+   "year": 2026
+  }
+ }
+]
