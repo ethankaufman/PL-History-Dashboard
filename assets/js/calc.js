@@ -79,7 +79,8 @@
       const winnerIsHome = m.result === "H";
       rows.push({
         season: m.season, date: m.date, winner: winnerIsHome ? m.home : m.away, loser: winnerIsHome ? m.away : m.home,
-        score: `${m.home_goals}–${m.away_goals}`, odds: winnerIsHome ? m.odds_home : m.odds_away, home: m.home, away: m.away,
+        score: `${m.home_goals}–${m.away_goals}`, winnerAway: !winnerIsHome,
+        winnerScore: winnerIsHome ? `${m.home_goals}–${m.away_goals}` : `${m.away_goals}–${m.home_goals}`, odds: winnerIsHome ? m.odds_home : m.odds_away, home: m.home, away: m.away,
       });
     }
     return rows.sort((a, b) => b.odds - a.odds).slice(0, n);

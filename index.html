@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Premier League 1992–2026: The Report</title>
+  <meta name="description" content="Every Premier League season since 1992–93: matches, goals, champions, awards, stadiums and 108,681 player appearances, with ten findings and a club map.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- intro: spinning ball while the data loads, then an explosion into the rotating UK club map -->
+  <div id="intro" role="dialog" aria-label="Introduction">
+    <canvas id="intro-canvas"></canvas>
+    <div id="intro-labels"></div>
+    <button class="btn small" id="intro-skip" type="button">Skip intro</button>
+    <div class="intro-ui">
+      <div><h2>Premier League</h2><h1>1992 – 2026</h1></div>
+      <div class="intro-bottom">
+        <div id="intro-status" role="status" aria-live="polite"></div>
+        <div id="intro-bar-wrap"><div id="intro-bar"></div></div>
+        <div id="intro-hint"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+          <button class="btn small" id="intro-all" type="button" hidden>Show all 51 clubs</button>
+          <button class="btn primary" id="intro-enter" type="button" hidden>Enter the report ↓</button>
+        </div>
+      </div>
+    </div>
+    <div id="club-card" hidden></div>
+  </div>
+  <div id="intro-tip" hidden></div>
+
+  <div id="nav"></div>
+
+  <main id="report-root" hidden>
+    <header class="hero wrap">
+      <div class="eyebrow">The Report</div>
+      <h1>Every Premier League season,<br>1992 to today</h1>
+      <div class="byline">By Ethan Kaufman · Financial Data Analytics · Data through the 2025–26 season</div>
+      <p class="lead" id="summary"></p>
+      <div class="stats" id="stats"></div>
+      <p style="margin-top:18px"><a class="btn primary" href="dashboard.html" style="text-decoration:none;display:inline-block">Open the interactive dashboard →</a></p>
+    </header>
+    <div class="wrap" id="sections"></div>
+    <div class="wrap section full" id="honours"></div>
+    <div class="wrap section full dataset" id="dataset"></div>
+    <footer><div class="wrap">Built by Ethan Kaufman. Data: football-data.co.uk, the footballcsv project, the open vaastav archive of the Premier League's public data, and Wikipedia (CC BY-SA 4.0). Source code and data files are in the
+      <a href="https://github.com/ethankaufman/PL-History-Dashboard">GitHub repository</a>. This is a student project and is not affiliated with the Premier League.</div></footer>
+  </main>
+
+  <script src="assets/vendor/papaparse.min.js"></script>
+  <script src="assets/vendor/chart.umd.min.js"></script>
+  <script src="assets/js/calc.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/report.js"></script>
+  <script type="module" src="assets/js/intro.js"></script>
+</body>
+</html>
