@@ -40,7 +40,13 @@
   <div id="nav"></div>
 
   <main id="report-root" hidden>
-    <div class="band"><header class="hero wrap">
+    <div class="band">
+    <div class="wrap pile-wrap"><div class="pile" data-pile>
+      <canvas role="img" aria-label="A pile of balls, one for every club that has played in the Premier League. Click to kick a ball at them."></canvas>
+      <div class="pile-hint">Click anywhere to kick a ball at the clubs</div>
+      <button class="btn small pile-again" type="button">Rebuild the pile</button>
+    </div></div>
+    <header class="hero wrap">
       <div class="eyebrow">The Report</div>
       <h1>Every Premier League season,<br>1992 to today</h1>
       <div class="byline">By Ethan Kaufman · Financial Data Analytics · Data through the 2025–26 season</div>
@@ -61,6 +67,7 @@
   <script src="assets/js/calc.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/report.js"></script>
+  <script src="assets/js/pile.js"></script>
   <script type="module" src="assets/js/intro.js"></script>
 </body>
 </html>

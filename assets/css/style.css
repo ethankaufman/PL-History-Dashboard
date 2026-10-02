@@ -123,7 +123,10 @@ body.no-scroll { overflow: hidden; }
 #intro.exploding .intro-ui h1, #intro.exploding .intro-ui h2 { opacity: 0; transition: opacity .6s; }
 #intro.zoomed .intro-ui h1, #intro.zoomed .intro-ui h2 { opacity: 0; transition: opacity .5s; }
 #intro-skip { position: absolute; right: 18px; top: 16px; z-index: 105; }
-.plabel { position: absolute; left: 0; top: 0; font-weight: 800; font-size: 11px; letter-spacing: .1em; text-shadow: 0 0 6px #000, 0 0 2px #000; pointer-events: none; opacity: 0; transition: opacity .4s; will-change: transform; }
+.clabel { position: absolute; left: 0; top: 0; font-size: 11px; font-weight: 600; letter-spacing: .04em; color: #e9d5f0; text-shadow: 0 0 5px #1d0022, 0 0 2px #1d0022; pointer-events: none; opacity: 0; transition: opacity .35s; will-change: transform; white-space: nowrap; }
+.clabel.t1 { font-size: 12px; font-weight: 800; color: #fff; }
+#club-card h3 { display: flex; align-items: center; gap: 10px; }
+#club-card .crest { object-fit: contain; flex: none; }
 #intro-tip { position: fixed; z-index: 130; background: #240028f2; border: 1px solid var(--green); border-radius: 10px; padding: 8px 12px; font-size: .88rem; pointer-events: none; color: #fff; }
 #club-card { position: absolute; right: 18px; top: 64px; bottom: 18px; width: min(390px, 92vw); overflow: auto; z-index: 110; background: #2a0030f5; border: 1px solid var(--line); border-radius: 18px; padding: 20px 20px 24px; box-shadow: 0 20px 60px #000a; color: #fff; }
 #club-card p { color: #ecdff1; }
@@ -206,3 +209,12 @@ details.more-details { margin-bottom: 14px; }
 details.more-details summary { cursor: pointer; font-weight: 800; color: var(--purple); padding: 8px 0; }
 @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } .sectiontab { padding: 10px 14px; } }
 input[type="range"] { accent-color: var(--purple); }
+
+/* ---------- the pile of club balls at the top of each page ---------- */
+.pile-wrap { padding-top: 20px; padding-bottom: 4px; }
+.pile { position: relative; height: 240px; border-radius: 18px; overflow: hidden; background: linear-gradient(180deg, #2b0030, #1b0020); border: 1px solid rgba(255, 255, 255, .16); box-shadow: inset 0 -26px 40px -26px #00ff8540; }
+.pile canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: crosshair; touch-action: manipulation; }
+.pile-hint { position: absolute; left: 14px; top: 12px; font-size: .85rem; color: #e9d5f0; background: #00000040; border-radius: 99px; padding: 4px 12px; pointer-events: none; transition: opacity .6s; }
+.pile-hint.done { opacity: 0; }
+.pile-again { position: absolute; right: 12px; top: 10px; }
+@media (max-width: 600px) { .pile { height: 280px; } .pile-hint { font-size: .78rem; right: 120px; } }

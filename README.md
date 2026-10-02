@@ -2,7 +2,8 @@
 
 A two-page website about every Premier League season since it began in 1992–93, in the league's purple and white.
 
-* **Report** (`index.html`) — 18 findings, each with a chart, a table of every season's winners, a closing section on the data, and a live "How we know the numbers are right" section. It opens with an interactive spinning football (the pink-and-purple 2026–27 Premier League ball, the Puma Stellar Nitro Ultimate, recreated in 3D) that explodes into a rotating map of the UK once the data has loaded. On the map you can hover or click any club, zoom to the cursor, jump to London or Manchester and Liverpool, and open each club's history, trophies, records and every ground.
+* **Report** (`index.html`) — 18 findings, each with a chart, a table of every season's winners, a closing section on the data, and a live "How we know the numbers are right" section. It opens with an interactive spinning football (the pink-and-purple 2026–27 Premier League ball, the Puma Stellar Nitro Ultimate, recreated in 3D) that explodes into a rotating map of the UK once the data has loaded. Every club is a pin topped with its crest, and the largest cities (and capitals) are named, with more appearing as you zoom in. On the map you can hover or click any club, zoom to the cursor, jump to London or Manchester and Liverpool, and open each club's history, trophies, records and every ground.
+* **Both pages** open with a pile of balls, one per club, each showing its crest. Click or tap anywhere in the pile and a ball is kicked at that spot, knocking the crests around (simple 2D physics, no library; `assets/js/pile.js`).
 * **Dashboard** (`dashboard.html`) — four sections (Players, Clubs, Seasons, League records), each with a few views: filters, summary numbers, four charts with a measure switch and a breakdown switch, a sortable table and a reset button (Explore the numbers); player profiles; club comparison; club records and trophies; signings and departures; matchweek table race; season summary and awards; record books.
 
 Live site: https://ethankaufman.github.io/PL-History-Dashboard/
@@ -49,6 +50,8 @@ Nothing is hidden: every disagreement is written to `data/source_disagreements.c
 | Expected goals and assists (2022–23 on) and today's squad lists | The open [vaastav](https://github.com/vaastav/Fantasy-Premier-League) archive and the Premier League's public API |
 | Final tables, seasons, awards, European and World Cup winners, Ballon d'Or, FA Cup / League Cup / Community Shield / league champions, all-time records, club histories, stadiums, coordinates | Wikipedia via its public API (CC BY-SA 4.0); club histories were written for this project from the club pages |
 | Player photos | Linked from premierleague.com; initials are shown if a photo does not load |
+| Club crests | Downloaded from premierleague.com (`scripts/fetch_badges.py`, saved in `assets/badges/`). The crests belong to their clubs and appear only to identify them, in a non-commercial student project |
+| City names on the map | A chosen list of large cities and capitals; coordinates from each city's Wikipedia page (`scripts/build_cities.py`) |
 
 The Premier League's service is not an official, documented API and could change. The processed tables are in the repository, so the site would keep working. football-data.org was also considered: every request needs a personal access key, and it holds nothing the Premier League's own records do not.
 
@@ -56,17 +59,17 @@ The Premier League's service is not an official, documented API and could change
 
 **Pages**: `index.html` (report + intro), `dashboard.html`.
 
-**Site code (`assets/`)**: `css/style.css` (one purple-and-white style for both pages); `js/app.js` (navigation, data loading, formatting, club colours, chart look); `js/calc.js` (every calculation, shared by the pages and the tests); `js/report.js`; `js/dashboard.js`; `js/intro.js` (ball, explosion and map, Three.js); `vendor/` (Chart.js, PapaParse, Three.js).
+**Site code (`assets/`)**: `css/style.css` (one purple-and-white style for both pages); `js/app.js` (navigation, data loading, formatting, club colours, chart look); `js/calc.js` (every calculation, shared by the pages and the tests); `js/report.js`; `js/dashboard.js`; `js/intro.js` (ball, explosion and map, Three.js); `js/pile.js` (the pile of club balls); `badges/` (51 club crests); `vendor/` (Chart.js, PapaParse, Three.js).
 
 **Data (`data/`)**
 * `player_matches.csv` — the main data set (see above). `appearances_lean.csv` — the same rows with ids, which the dashboard loads (smaller and faster).
 * `player_seasons.csv` — the Premier League's season statistics: one row per player per club per season (18,662 rows). Minutes before 2006–07 are computed from line-ups and substitutions.
 * `matches.csv`, `team_matches.csv` — 13,166 matches (and one row per team per match with the league table after every game); `match_details.csv` (official referee, attendance, ground), `match_events.csv` (79,000 goals and cards with minutes).
-* `final_tables.csv`, `seasons.json`, `awards.json`, `honours.json`, `domestic_honours.json`, `records.json`, `teams.json`, `current_players.json`, `transfers.csv` (signings and departures by season, derived from where players played; no fees), `uk_map.json`.
+* `final_tables.csv`, `seasons.json`, `awards.json`, `honours.json`, `domestic_honours.json`, `records.json`, `teams.json`, `current_players.json`, `transfers.csv` (signings and departures by season, derived from where players played; no fees), `uk_map.json`, `cities.json` (map city labels), `badges.json` (club name to crest file).
 * `audit.json` (the audit results shown in the report), `manifest.json` (row counts), `source_disagreements*.csv`.
 * `curated/` — hand-written club histories and stadium lists. `raw/` — files as downloaded (plus small check outputs).
 
-**Scripts (`scripts/`, Python 3)** — downloads: `fetch_wikipedia.py`, `fetch_matches.py`, `fetch_pl_stats.py`, `fetch_pl_matches.py` (about an hour), `fetch_players.py`, `fetch_coordinates.py`. Builders: `build_*.py`, `finish_player_seasons.py`, `reconcile_matches.py`, `reconcile_awards.py`, `make_manifest.py`. Checks: `audit.py`, `verify.py`. `rebuild_all.sh` runs the builders and the checks in the right order.
+**Scripts (`scripts/`, Python 3)** — downloads: `fetch_wikipedia.py`, `fetch_matches.py`, `fetch_pl_stats.py`, `fetch_pl_matches.py` (about an hour), `fetch_players.py`, `fetch_coordinates.py`, `fetch_badges.py`, `build_cities.py`. Builders: `build_*.py`, `finish_player_seasons.py`, `reconcile_matches.py`, `reconcile_awards.py`, `make_manifest.py`. Checks: `audit.py`, `verify.py`. `rebuild_all.sh` runs the builders and the checks in the right order.
 
 **Tests**: `tests/check_numbers.js` (30 checks).
 
