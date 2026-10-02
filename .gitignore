@@ -4,3 +4,6 @@ __pycache__/
 venv/
 # big third-party downloads that scripts can re-create
 data/raw/vaastav/
+
+# raw downloads that scripts re-create (large)
+data/raw/plmatches/

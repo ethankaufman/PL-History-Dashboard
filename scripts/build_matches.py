@@ -117,6 +117,14 @@ def read_matches():
         out.append(dict(season=season_label(1992), date=parse_date(r["Date"]), home=club(r["Team 1"]), away=club(r["Team 2"]),
                         hg=hg, ag=ag, hthg=None, htag=None, referee="", hs=None, as_=None, hst=None, ast=None, hf=None,
                         af=None, hc=None, ac=None, hy=None, ay=None, hr=None, ar=None, oh=None, od=None, oa=None))
+    # the official Premier League kick-off dates (written by reconcile_matches.py) replace football-data.co.uk's where the two differ
+    official = ROOT / "data" / "raw" / "official_dates.csv"
+    if official.exists():
+        fixed = {(r["season"], r["home"], r["away"]): r["date"] for r in csv.DictReader(open(official))}
+        for m in out:
+            d = fixed.get((m["season"], m["home"], m["away"]))
+            if d:
+                m["date"] = datetime.strptime(d, "%Y-%m-%d").date()
     out.sort(key=lambda m: (m["date"], m["home"]))
     return out
 
