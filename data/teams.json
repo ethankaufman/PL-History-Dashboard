@@ -1,0 +1,3444 @@
+[
+ {
+  "slug": "bournemouth",
+  "name": "AFC Bournemouth",
+  "status": "current",
+  "city": "Bournemouth",
+  "area": null,
+  "founded": 1899,
+  "nicknames": [
+   "The Cherries",
+   "Boscombe"
+  ],
+  "map": {
+   "lat": 50.73528,
+   "lng": -1.83833,
+   "label": "Dean Court"
+  },
+  "current_ground": {
+   "name": "Dean Court",
+   "capacity": 12357,
+   "timeline_name": "Dean Court"
+  },
+  "premier_league": {
+   "seasons_completed": 9,
+   "in_2026_27": true,
+   "spells": "2015–2020, 2022–",
+   "titles": 0,
+   "highest_finish": "6th",
+   "last_season_result": "6th",
+   "top_scorer": "Joshua King (48)"
+  },
+  "summary": "Formed in 1899 as Boscombe, the club became Bournemouth & Boscombe Athletic and has been AFC Bournemouth since 1971. For most of their history they were a lower-league side, entering administration in 1997 and 2008. Eddie Howe led them to three promotions in six years, and they reached the Premier League for the first time in 2015. They were relegated in 2020 and came straight back in 2022. In 2025–26 they finished sixth, their highest league finish, and qualified for the Europa League for the first time.",
+  "stadiums": [
+   {
+    "name": "Castlemain Avenue (Pokesdown)",
+    "from": 1899,
+    "to": 1901,
+    "note": "A football pitch used for the club's first two seasons, as Boscombe",
+    "current": false
+   },
+   {
+    "name": "King's Park pitch",
+    "from": 1901,
+    "to": 1910,
+    "note": "Played on a pitch in King's Park from the third season",
+    "current": false
+   },
+   {
+    "name": "Dean Court",
+    "from": 1910,
+    "to": null,
+    "note": "Built on wasteland leased from local businessman J.E. Cooper-Dean, who gave the ground its name",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "AFC Bournemouth",
+   "url": "https://en.wikipedia.org/wiki/AFC_Bournemouth",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "arsenal",
+  "name": "Arsenal",
+  "status": "current",
+  "city": "London",
+  "area": "Holloway",
+  "founded": 1886,
+  "nicknames": [
+   "The Gunners"
+  ],
+  "map": {
+   "lat": 51.555,
+   "lng": -0.10833,
+   "label": "Emirates Stadium"
+  },
+  "current_ground": {
+   "name": "Emirates Stadium",
+   "capacity": 60704,
+   "timeline_name": "Emirates Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 34,
+   "in_2026_27": true,
+   "spells": "1992–",
+   "titles": 4,
+   "highest_finish": "1st",
+   "last_season_result": "1st",
+   "top_scorer": "Thierry Henry (175)"
+  },
+  "summary": "Founded in 1886 by munitions workers at the Royal Arsenal in Woolwich as Dial Square, Arsenal were the first southern club to join the Football League (1893) and have been in the top division continuously since 1919. Herbert Chapman's 1930s side won five league titles, and under Arsène Wenger the club went unbeaten through the 2003–04 league season, earning the nickname 'The Invincibles'. They crossed London from Woolwich to Highbury in 1913 and moved to the Emirates Stadium in 2006. Arsenal were Premier League champions in 2025–26.",
+  "stadiums": [
+   {
+    "name": "Plumstead Common",
+    "from": null,
+    "to": null,
+    "note": "Briefly, before joining the Football League",
+    "current": false
+   },
+   {
+    "name": "Manor Ground (Plumstead)",
+    "from": null,
+    "to": 1890,
+    "current": false
+   },
+   {
+    "name": "Invicta Ground (Plumstead)",
+    "from": 1890,
+    "to": 1893,
+    "current": false
+   },
+   {
+    "name": "Manor Ground (Plumstead)",
+    "from": 1893,
+    "to": 1913,
+    "note": "Returned on joining the Football League, apart from two matches in 1894–95",
+    "current": false
+   },
+   {
+    "name": "Arsenal Stadium (Highbury)",
+    "from": 1913,
+    "to": 2006,
+    "note": "Designed by Archibald Leitch; Champions League home games were played at Wembley in 1998–2000",
+    "current": false
+   },
+   {
+    "name": "Emirates Stadium",
+    "from": 2006,
+    "to": null,
+    "note": "Built at Ashburton Grove, about 500 metres from Highbury",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Arsenal F.C.",
+   "url": "https://en.wikipedia.org/wiki/Arsenal_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "aston_villa",
+  "name": "Aston Villa",
+  "status": "current",
+  "city": "Birmingham",
+  "area": "Aston",
+  "founded": 1874,
+  "nicknames": [
+   "The Villans",
+   "The Lions"
+  ],
+  "map": {
+   "lat": 52.50917,
+   "lng": -1.88472,
+   "label": "Villa Park"
+  },
+  "current_ground": {
+   "name": "Villa Park",
+   "capacity": 43205,
+   "timeline_name": "Villa Park"
+  },
+  "premier_league": {
+   "seasons_completed": 31,
+   "in_2026_27": true,
+   "spells": "1992–2016, 2019–",
+   "titles": 0,
+   "highest_finish": "2nd",
+   "last_season_result": "4th",
+   "top_scorer": "Ollie Watkins (91)"
+  },
+  "summary": "Founded in 1874, Aston Villa are one of England's oldest and most successful clubs: founder members of the Football League in 1888 (the idea came from Villa director William McGregor) and of the Premier League in 1992. They won seven league titles, the last in 1980–81, and the European Cup in 1981–82. Villa's only Premier League relegation came in 2015–16, and they returned in 2019. Under Unai Emery they reached the Champions League and won the Europa League in 2025–26.",
+  "stadiums": [
+   {
+    "name": "Aston Park",
+    "from": 1874,
+    "to": 1876,
+    "current": false
+   },
+   {
+    "name": "Wellington Road (Perry Barr)",
+    "from": 1876,
+    "to": 1897,
+    "current": false
+   },
+   {
+    "name": "Villa Park",
+    "from": 1897,
+    "to": null,
+    "note": "Largest football stadium in the English Midlands; has hosted 55 FA Cup semi-finals",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Aston Villa F.C.",
+   "url": "https://en.wikipedia.org/wiki/Aston_Villa_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "barnsley",
+  "name": "Barnsley",
+  "status": "former",
+  "city": "Barnsley",
+  "area": null,
+  "founded": 1887,
+  "nicknames": [
+   "The Reds",
+   "The Tykes"
+  ],
+  "map": {
+   "lat": 53.55222,
+   "lng": -1.4675,
+   "label": "Oakwell"
+  },
+  "current_ground": {
+   "name": "Oakwell",
+   "capacity": 23287,
+   "timeline_name": "Oakwell"
+  },
+  "premier_league": {
+   "seasons_completed": 1,
+   "in_2026_27": false,
+   "spells": "1997–1998",
+   "titles": 0,
+   "highest_finish": "19th (relegated)",
+   "last_season_result": "League One 15th",
+   "top_scorer": "Neil Redfearn (10)"
+  },
+  "summary": "Founded in 1887 by Reverend Tiverton Preedy, Barnsley moved to Oakwell the following year and won the FA Cup in 1912 while a Second Division side. Their only Premier League season was 1997–98, after finishing second in the First Division, and they were relegated straight away. They have spent more seasons at English football's second level than any other club and now play in League One.",
+  "stadiums": [
+   {
+    "name": "Oakwell",
+    "from": 1888,
+    "to": null,
+    "note": "Name comes from a well and an oak tree on the original site",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Barnsley F.C.",
+   "url": "https://en.wikipedia.org/wiki/Barnsley_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "birmingham_city",
+  "name": "Birmingham City",
+  "status": "former",
+  "city": "Birmingham",
+  "area": "Bordesley",
+  "founded": 1875,
+  "nicknames": [
+   "Blues"
+  ],
+  "map": {
+   "lat": 52.47583,
+   "lng": -1.86806,
+   "label": "St Andrew's"
+  },
+  "current_ground": {
+   "name": "St Andrew's",
+   "capacity": 29409,
+   "timeline_name": "St Andrew's"
+  },
+  "premier_league": {
+   "seasons_completed": 7,
+   "in_2026_27": false,
+   "spells": "2002–2006, 2007–2008, 2009–2011",
+   "titles": 0,
+   "highest_finish": "9th",
+   "last_season_result": "Championship 10th",
+   "top_scorer": "Mikael Forssell (29)"
+  },
+  "summary": "Formed in 1875 as Small Heath Alliance, the club became Small Heath in 1888, Birmingham in 1905 and Birmingham City in 1943. They were the first champions of the Football League Second Division and in 1960 became the first English club to reach a major European final (the Inter-Cities Fairs Cup). They won the League Cup in 1963 and 2011 and share the 'Second City derby' with Aston Villa. They now play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Arthur Street waste ground (Bordesley Green)",
+    "from": 1875,
+    "to": null,
+    "note": "First home games, on waste ground",
+    "current": false
+   },
+   {
+    "name": "Ladypool Road (Sparkbrook)",
+    "from": null,
+    "to": null,
+    "note": "A fenced-off field where admission could be charged",
+    "current": false
+   },
+   {
+    "name": "Muntz Street (Small Heath)",
+    "from": null,
+    "to": 1906,
+    "note": "Capacity grew to around 30,000",
+    "current": false
+   },
+   {
+    "name": "St Andrew's",
+    "from": 1906,
+    "to": null,
+    "note": "Opened on Boxing Day 1906; currently branded St. Andrew's @ Knighthead Park",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Birmingham City F.C.",
+   "url": "https://en.wikipedia.org/wiki/Birmingham_City_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "blackburn_rovers",
+  "name": "Blackburn Rovers",
+  "status": "former",
+  "city": "Blackburn",
+  "area": null,
+  "founded": 1875,
+  "nicknames": [
+   "Rovers",
+   "The Blue and Whites",
+   "The Riversiders"
+  ],
+  "map": {
+   "lat": 53.72861,
+   "lng": -2.48917,
+   "label": "Ewood Park"
+  },
+  "current_ground": {
+   "name": "Ewood Park",
+   "capacity": 31367,
+   "timeline_name": "Ewood Park"
+  },
+  "premier_league": {
+   "seasons_completed": 18,
+   "in_2026_27": false,
+   "spells": "1992–1999, 2001–2012",
+   "titles": 1,
+   "highest_finish": "1st",
+   "last_season_result": "Championship 20th",
+   "top_scorer": "Alan Shearer (112)"
+  },
+  "summary": "Founded in 1875, Blackburn Rovers were founder members of the Football League in 1888 and won five FA Cups in the 19th century. Taken over by local businessman Jack Walker in 1991, who installed Kenny Dalglish as manager, they won promotion to the new Premier League in 1992 and became champions in 1994–95. They were relegated in 2012, dropped to the third tier in 2017, and returned to the Championship in 2018.",
+  "stadiums": [
+   {
+    "name": "Oozehead Ground",
+    "from": 1875,
+    "to": 1877,
+    "note": "A farm field on Preston New Road",
+    "current": false
+   },
+   {
+    "name": "Pleasington Cricket Ground",
+    "from": 1877,
+    "to": 1877,
+    "current": false
+   },
+   {
+    "name": "Alexandra Meadows",
+    "from": 1877,
+    "to": 1881,
+    "note": "In the town centre; sources differ on the date of Rovers' first match there",
+    "current": false
+   },
+   {
+    "name": "Leamington Road",
+    "from": 1881,
+    "to": 1890,
+    "note": "First purpose-built ground; left because of rising lease costs",
+    "current": false
+   },
+   {
+    "name": "Ewood Park",
+    "from": 1890,
+    "to": null,
+    "note": "Beside the River Darwen; floodlights installed in 1892",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Blackburn Rovers F.C.",
+   "url": "https://en.wikipedia.org/wiki/Blackburn_Rovers_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "blackpool",
+  "name": "Blackpool",
+  "status": "former",
+  "city": "Blackpool",
+  "area": null,
+  "founded": 1887,
+  "nicknames": [
+   "The Seasiders",
+   "The Tangerines"
+  ],
+  "map": {
+   "lat": 53.80472,
+   "lng": -3.04806,
+   "label": "Bloomfield Road"
+  },
+  "current_ground": {
+   "name": "Bloomfield Road",
+   "capacity": 16500,
+   "timeline_name": "Bloomfield Road"
+  },
+  "premier_league": {
+   "seasons_completed": 1,
+   "in_2026_27": false,
+   "spells": "2010–2011",
+   "titles": 0,
+   "highest_finish": "19th (relegated)",
+   "last_season_result": "League One 13th",
+   "top_scorer": "DJ Campbell (13)"
+  },
+  "summary": "Founded in 1887, Blackpool won the FA Cup in 1953 (the 'Matthews final', a 4–3 win over Bolton) and finished league runners-up in 1955–56. They became the first club to win promotion from every division of the Football League through the play-offs, reaching the Premier League in 2010. Their one Premier League season, 2010–11 under Ian Holloway, ended in relegation. They now play in League One.",
+  "stadiums": [
+   {
+    "name": "Raikes Hall",
+    "from": 1887,
+    "to": null,
+    "current": false
+   },
+   {
+    "name": "Athletic Grounds",
+    "from": null,
+    "to": 1901,
+    "current": false
+   },
+   {
+    "name": "Bloomfield Road",
+    "from": 1901,
+    "to": null,
+    "note": "Temporary East Stand built in 2010 for the Premier League season",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Blackpool F.C.",
+   "url": "https://en.wikipedia.org/wiki/Blackpool_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "bolton_wanderers",
+  "name": "Bolton Wanderers",
+  "status": "former",
+  "city": "Bolton",
+  "area": null,
+  "founded": 1874,
+  "nicknames": [
+   "The Trotters",
+   "The Wanderers",
+   "The Whites"
+  ],
+  "map": {
+   "lat": 53.58056,
+   "lng": -2.53556,
+   "label": "Toughsheet Community Stadium"
+  },
+  "current_ground": {
+   "name": "Toughsheet Community Stadium",
+   "capacity": 28723,
+   "timeline_name": "Reebok Stadium (now Toughsheet Community Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 13,
+   "in_2026_27": false,
+   "spells": "1995–1996, 1997–1998, 2001–2012",
+   "titles": 0,
+   "highest_finish": "6th",
+   "last_season_result": "League One 5th (promoted)",
+   "top_scorer": "Kevin Davies (68)"
+  },
+  "summary": "Formed in 1874 as Christ Church F.C. and renamed Bolton Wanderers in 1877, the club was one of the twelve founder members of the Football League in 1888. Bolton won the FA Cup four times (1923, 1926, 1929 and 1958); the 1923 final was the first ever held at Wembley, the 'White Horse Final'. They played in the Premier League for eleven straight seasons under Sam Allardyce, reaching the 2004 League Cup final, and have spent more seasons in the top flight than any other club without winning the league. Financial trouble led to administration in 2019, but they climbed back and won promotion to the Championship in 2026.",
+  "stadiums": [
+   {
+    "name": "Various local pitches",
+    "from": 1874,
+    "to": 1881,
+    "note": "As Christ Church, the club played at several locations in the area",
+    "current": false
+   },
+   {
+    "name": "Pike's Lane",
+    "from": 1881,
+    "to": 1895,
+    "current": false
+   },
+   {
+    "name": "Burnden Park",
+    "from": 1895,
+    "to": 1997,
+    "note": "Could hold around 70,000 at its peak",
+    "current": false
+   },
+   {
+    "name": "Reebok Stadium (now Toughsheet Community Stadium)",
+    "from": 1997,
+    "to": null,
+    "note": "Built in Horwich; renamed Macron Stadium (2014), University of Bolton Stadium (2018) and Toughsheet Community Stadium (2023)",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Bolton Wanderers F.C.",
+   "url": "https://en.wikipedia.org/wiki/Bolton_Wanderers_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "bradford_city",
+  "name": "Bradford City",
+  "status": "former",
+  "city": "Bradford",
+  "area": null,
+  "founded": 1903,
+  "nicknames": [
+   "The Bantams",
+   "The Paraders",
+   "The Citizens"
+  ],
+  "map": {
+   "lat": 53.80417,
+   "lng": -1.75889,
+   "label": "Valley Parade"
+  },
+  "current_ground": {
+   "name": "Valley Parade",
+   "capacity": 24840,
+   "timeline_name": "Valley Parade"
+  },
+  "premier_league": {
+   "seasons_completed": 2,
+   "in_2026_27": false,
+   "spells": "1999–2001",
+   "titles": 0,
+   "highest_finish": "17th",
+   "last_season_result": "League One 4th",
+   "top_scorer": "Dean Windass (13)"
+  },
+  "summary": "Founded in 1903 and elected straight into the Football League, Bradford City won the Second Division in 1907–08 and the FA Cup in 1911, still their only major honour. They reached the Premier League in 1999, their first top-flight season in 77 years, and were relegated in 2001. Two administrations followed and they fell to the fourth tier before reaching the 2013 League Cup final. The club also suffered the Valley Parade fire of 11 May 1985, in which 56 supporters died. They now play in League One.",
+  "stadiums": [
+   {
+    "name": "Valley Parade",
+    "from": 1903,
+    "to": 1985,
+    "note": "Previously a quarry and Manningham rugby club's ground; Archibald Leitch redeveloped it in 1908",
+    "current": false
+   },
+   {
+    "name": "Odsal Stadium, Elland Road and Leeds Road (temporary)",
+    "from": 1985,
+    "to": 1986,
+    "temporary": true,
+    "note": "Used after the Valley Parade fire of 11 May 1985, which killed 56 supporters",
+    "current": false
+   },
+   {
+    "name": "Valley Parade",
+    "from": 1986,
+    "to": null,
+    "note": "Reopened on 14 December 1986 after rebuilding",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Bradford City A.F.C.",
+   "url": "https://en.wikipedia.org/wiki/Bradford_City_A.F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "brentford",
+  "name": "Brentford",
+  "status": "current",
+  "city": "London",
+  "area": "Brentford",
+  "founded": 1889,
+  "nicknames": [
+   "The Bees"
+  ],
+  "map": {
+   "lat": 51.49083,
+   "lng": -0.28861,
+   "label": "Brentford Community Stadium"
+  },
+  "current_ground": {
+   "name": "Brentford Community Stadium",
+   "capacity": 17250,
+   "timeline_name": "Brentford Community Stadium (Gtech Community Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 5,
+   "in_2026_27": true,
+   "spells": "2021–",
+   "titles": 0,
+   "highest_finish": "9th",
+   "last_season_result": "9th",
+   "top_scorer": "Yoane Wissa (45)"
+  },
+  "summary": "Founded in 1889, Brentford reached their highest league finish, fifth in the First Division, in 1935–36, then spent decades in the lower leagues. After promotion in 2014, they were promoted to the Premier League by winning the 2021 Championship play-off final, their first top-flight season since 1946–47. They left Griffin Park, their home since 1904, for a new stadium in 2020. Their main rivals are Fulham and Queens Park Rangers.",
+  "stadiums": [
+   {
+    "name": "Clifden Road",
+    "from": 1889,
+    "to": 1891,
+    "current": false
+   },
+   {
+    "name": "Benn's Field",
+    "from": 1891,
+    "to": 1895,
+    "current": false
+   },
+   {
+    "name": "Shotter's Field",
+    "from": 1895,
+    "to": 1898,
+    "current": false
+   },
+   {
+    "name": "Cross Roads",
+    "from": 1898,
+    "to": 1900,
+    "current": false
+   },
+   {
+    "name": "York Road",
+    "from": 1900,
+    "to": 1904,
+    "current": false
+   },
+   {
+    "name": "Griffin Park",
+    "from": 1904,
+    "to": 2020,
+    "current": false
+   },
+   {
+    "name": "Brentford Community Stadium (Gtech Community Stadium)",
+    "from": 2020,
+    "to": null,
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Brentford F.C.",
+   "url": "https://en.wikipedia.org/wiki/Brentford_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "brighton_and_hove_albion",
+  "name": "Brighton & Hove Albion",
+  "status": "current",
+  "city": "Brighton",
+  "area": null,
+  "founded": 1901,
+  "nicknames": [
+   "The Seagulls",
+   "The Albion"
+  ],
+  "map": {
+   "lat": 50.86182,
+   "lng": -0.08328,
+   "label": "Falmer Stadium"
+  },
+  "current_ground": {
+   "name": "Falmer Stadium",
+   "capacity": 32176,
+   "timeline_name": "Falmer Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 9,
+   "in_2026_27": true,
+   "spells": "2017–",
+   "titles": 0,
+   "highest_finish": "6th",
+   "last_season_result": "8th",
+   "top_scorer": "Danny Welbeck (46)"
+  },
+  "summary": "Founded in 1901, Brighton spent most of the 20th century at the Goldstone Ground and played in the top flight from 1979 to 1983, reaching the 1983 FA Cup final. After the Goldstone was sold in 1997 the club nearly went out of the Football League and spent 14 years without a permanent home. Falmer Stadium opened in 2011, Brighton reached the Premier League in 2017, and in 2022–23 finished sixth, their best top-flight finish, to qualify for Europe for the first time. Their fiercest rivals are Crystal Palace.",
+  "stadiums": [
+   {
+    "name": "Goldstone Ground (Hove)",
+    "from": 1902,
+    "to": 1997,
+    "note": "Albion first played there on 22 February 1902 and it became the permanent home the next season; sold by the board in 1997 amid widespread fan protests",
+    "current": false
+   },
+   {
+    "name": "Priestfield Stadium (Gillingham)",
+    "from": 1997,
+    "to": 1999,
+    "note": "Shared with Gillingham, about 70 miles away",
+    "current": false
+   },
+   {
+    "name": "Withdean Stadium",
+    "from": 1999,
+    "to": 2011,
+    "note": "Mainly an athletics stadium, and previously a zoo",
+    "current": false
+   },
+   {
+    "name": "Falmer Stadium",
+    "from": 2011,
+    "to": null,
+    "note": "Opened for the 2011–12 season; capacity expanded from 22,374 to over 30,000",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Brighton & Hove Albion F.C.",
+   "url": "https://en.wikipedia.org/wiki/Brighton_%26_Hove_Albion_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "burnley",
+  "name": "Burnley",
+  "status": "former",
+  "city": "Burnley",
+  "area": null,
+  "founded": 1882,
+  "nicknames": [
+   "The Clarets"
+  ],
+  "map": {
+   "lat": 53.78917,
+   "lng": -2.23028,
+   "label": "Turf Moor"
+  },
+  "current_ground": {
+   "name": "Turf Moor",
+   "capacity": 21944,
+   "timeline_name": "Turf Moor"
+  },
+  "premier_league": {
+   "seasons_completed": 10,
+   "in_2026_27": false,
+   "spells": "2009–2010, 2014–2015, 2016–2022, 2023–2024, 2025–2026",
+   "titles": 0,
+   "highest_finish": "7th",
+   "last_season_result": "19th (relegated)",
+   "top_scorer": "Chris Wood (49)"
+  },
+  "summary": "Founded in 1882, Burnley were one of the first clubs to turn professional (1883) and one of the twelve founder members of the Football League. They have been English champions twice (1920–21 and 1959–60) and won the FA Cup in 1914, and are one of only five clubs to have won all four professional divisions. The 1959–60 title team came largely through the club's own youth system, making Burnley one of the smallest towns to produce a top-flight champion. They were relegated from the Premier League in 2025–26 and rival nearby Blackburn Rovers in the East Lancashire derby.",
+  "stadiums": [
+   {
+    "name": "Calder Vale",
+    "from": 1882,
+    "to": 1883,
+    "current": false
+   },
+   {
+    "name": "Turf Moor",
+    "from": 1883,
+    "to": null,
+    "note": "Shares its site with Burnley Cricket Club; only Preston North End have used their stadium continuously for longer",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Burnley F.C.",
+   "url": "https://en.wikipedia.org/wiki/Burnley_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "cardiff_city",
+  "name": "Cardiff City",
+  "status": "former",
+  "city": "Cardiff",
+  "area": null,
+  "founded": 1899,
+  "nicknames": [
+   "The Bluebirds",
+   "Yr Adar Gleision (Welsh)"
+  ],
+  "map": {
+   "lat": 51.47278,
+   "lng": -3.20306,
+   "label": "Cardiff City Stadium"
+  },
+  "current_ground": {
+   "name": "Cardiff City Stadium",
+   "capacity": 33316,
+   "timeline_name": "Cardiff City Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 2,
+   "in_2026_27": false,
+   "spells": "2013–2014, 2018–2019",
+   "titles": 0,
+   "highest_finish": "18th (relegated)",
+   "last_season_result": "League One 2nd (promoted)",
+   "top_scorer": "Jordon Mutch (7)"
+  },
+  "summary": "Founded in 1899 as Riverside A.F.C. and renamed Cardiff City in 1908, the Welsh club is the only team from outside England to have won the FA Cup, in 1927. They have also lost FA Cup finals in 1925 and 2008 and the 2012 League Cup final. Their most recent Premier League season was 2018–19, and they won promotion back to the Championship in 2026. They contest the South Wales derby with Swansea City.",
+  "stadiums": [
+   {
+    "name": "Sophia Gardens",
+    "from": 1899,
+    "to": 1910,
+    "note": "A recreational park",
+    "current": false
+   },
+   {
+    "name": "Ninian Park",
+    "from": 1910,
+    "to": 2009,
+    "note": "Named after Lord Ninian Crichton-Stuart, who drove its construction",
+    "current": false
+   },
+   {
+    "name": "Cardiff City Stadium",
+    "from": 2009,
+    "to": null,
+    "note": "Opened in July 2009 on the site of the old Cardiff Athletics Stadium; capacity expanded to 33,316 by 2014",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Cardiff City F.C.",
+   "url": "https://en.wikipedia.org/wiki/Cardiff_City_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "charlton_athletic",
+  "name": "Charlton Athletic",
+  "status": "former",
+  "city": "London",
+  "area": "Charlton",
+  "founded": 1905,
+  "nicknames": [
+   "The Addicks"
+  ],
+  "map": {
+   "lat": 51.48639,
+   "lng": 0.03639,
+   "label": "The Valley"
+  },
+  "current_ground": {
+   "name": "The Valley",
+   "capacity": 27111,
+   "timeline_name": "The Valley"
+  },
+  "premier_league": {
+   "seasons_completed": 8,
+   "in_2026_27": false,
+   "spells": "1998–1999, 2000–2007",
+   "titles": 0,
+   "highest_finish": "7th",
+   "last_season_result": "Championship 19th",
+   "top_scorer": "Jason Euell (34)"
+  },
+  "summary": "Founded in 1905, Charlton won the FA Cup in 1947 and finished second in the First Division in 1936–37. They reached the Premier League by winning the 1998 play-off final, went straight back down, and then returned as First Division champions in 1999–2000 under Alan Curbishley, spending seven successive years in the top flight. Their history includes a long exile from The Valley: financial problems and safety concerns forced them to ground-share at Selhurst Park and then Upton Park before they returned in December 1992. They are now in the Championship.",
+  "stadiums": [
+   {
+    "name": "Siemens Meadow",
+    "from": 1905,
+    "to": 1907,
+    "note": "Rough ground by the Thames, beside the Siemens Brothers Telegraph Works",
+    "current": false
+   },
+   {
+    "name": "Woolwich Common",
+    "from": 1907,
+    "to": 1908,
+    "current": false
+   },
+   {
+    "name": "Pound Park",
+    "from": 1908,
+    "to": 1913,
+    "current": false
+   },
+   {
+    "name": "Angerstein Lane",
+    "from": 1913,
+    "to": 1915,
+    "current": false
+   },
+   {
+    "name": "The Valley",
+    "from": 1919,
+    "to": 1923,
+    "note": "Built in a former chalk quarry known as 'the Swamps'",
+    "current": false
+   },
+   {
+    "name": "The Mount (Catford)",
+    "from": 1923,
+    "to": 1924,
+    "note": "Part of a proposed merger with Catford Southend that collapsed",
+    "current": false
+   },
+   {
+    "name": "The Valley",
+    "from": 1924,
+    "to": 1985,
+    "current": false
+   },
+   {
+    "name": "Selhurst Park",
+    "from": 1985,
+    "to": 1991,
+    "note": "Ground-share with Crystal Palace, after the East Terrace was closed following the Bradford fire",
+    "current": false
+   },
+   {
+    "name": "Upton Park (Boleyn Ground)",
+    "from": 1991,
+    "to": 1992,
+    "note": "West Ham's ground, used for 1991–92 and part of 1992–93 after Wimbledon moved into Selhurst Park",
+    "current": false
+   },
+   {
+    "name": "The Valley",
+    "from": 1992,
+    "to": null,
+    "note": "Returned in December 1992 with a 1–0 win over Portsmouth; the Valley Party and supporter fundraising helped bring the return about",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Charlton Athletic F.C.",
+   "url": "https://en.wikipedia.org/wiki/Charlton_Athletic_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "chelsea",
+  "name": "Chelsea",
+  "status": "current",
+  "city": "London",
+  "area": "Fulham",
+  "founded": 1905,
+  "nicknames": [
+   "The Blues"
+  ],
+  "map": {
+   "lat": 51.48167,
+   "lng": -0.19111,
+   "label": "Stamford Bridge"
+  },
+  "current_ground": {
+   "name": "Stamford Bridge",
+   "capacity": 40044,
+   "timeline_name": "Stamford Bridge"
+  },
+  "premier_league": {
+   "seasons_completed": 34,
+   "in_2026_27": true,
+   "spells": "1992–",
+   "titles": 5,
+   "highest_finish": "1st",
+   "last_season_result": "10th",
+   "top_scorer": "Frank Lampard (147)"
+  },
+  "summary": "Chelsea were founded in 1905 specifically to play at Stamford Bridge, which they named themselves after the neighbouring area. They won their first league title in 1955 and their first Premier League title in 2004–05, and have since won two Champions Leagues (2012 and 2021) and the Europa League in 2013 and 2019. In 2025 they became the first club to win all of UEFA's men's club competitions. They have only ever had one home ground.",
+  "stadiums": [
+   {
+    "name": "Stamford Bridge",
+    "from": 1905,
+    "to": null,
+    "note": "Opened in 1877 as an athletics arena; the club was founded to play there. Fans own the freehold through Chelsea Pitch Owners",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Chelsea F.C.",
+   "url": "https://en.wikipedia.org/wiki/Chelsea_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "coventry_city",
+  "name": "Coventry City",
+  "status": "current",
+  "city": "Coventry",
+  "area": null,
+  "founded": 1883,
+  "nicknames": [
+   "The Sky Blues"
+  ],
+  "map": {
+   "lat": 52.44806,
+   "lng": -1.49556,
+   "label": "Coventry Building Society Arena"
+  },
+  "current_ground": {
+   "name": "Coventry Building Society Arena",
+   "capacity": 32609,
+   "timeline_name": "Coventry Building Society Arena (formerly Ricoh Arena)"
+  },
+  "premier_league": {
+   "seasons_completed": 9,
+   "in_2026_27": true,
+   "spells": "1992–2001, 2026–",
+   "titles": 0,
+   "highest_finish": "11th",
+   "last_season_result": "Championship 1st (promoted)",
+   "top_scorer": "Dion Dublin (61)"
+  },
+  "summary": "Formed as Singers F.C. in 1883 and renamed Coventry City in 1898, the club won the FA Cup in 1987, still its only major trophy. Coventry spent 34 straight seasons in the top flight (1967–2001), including the first nine Premier League seasons, before sliding down to League Two by 2017. They climbed back, won the Championship in 2025–26, and return to the Premier League in 2026–27. They bought their stadium outright in August 2025 after a long rent dispute.",
+  "stadiums": [
+   {
+    "name": "Dowells Field",
+    "from": 1883,
+    "to": 1887,
+    "note": "Played here as Singers F.C.",
+    "current": false
+   },
+   {
+    "name": "Stoke Road",
+    "from": 1887,
+    "to": 1899,
+    "note": "Enclosed by hedges and trees, with a small stand",
+    "current": false
+   },
+   {
+    "name": "Highfield Road",
+    "from": 1899,
+    "to": 2005,
+    "note": "Final league game was a 6–2 win over Derby County in 2005",
+    "current": false
+   },
+   {
+    "name": "Coventry Building Society Arena (formerly Ricoh Arena)",
+    "from": 2005,
+    "to": 2013,
+    "note": "Opened August 2005",
+    "current": false
+   },
+   {
+    "name": "Sixfields Stadium (Northampton)",
+    "from": 2013,
+    "to": 2014,
+    "temporary": true,
+    "note": "Ground-share with Northampton Town, a 70-mile round trip, after a rent dispute",
+    "current": false
+   },
+   {
+    "name": "Coventry Building Society Arena (formerly Ricoh Arena)",
+    "from": 2014,
+    "to": 2019,
+    "current": false
+   },
+   {
+    "name": "St Andrew's (Birmingham City's ground)",
+    "from": 2019,
+    "to": 2021,
+    "temporary": true,
+    "note": "Ground-share that helped the club avoid expulsion during the rent dispute",
+    "current": false
+   },
+   {
+    "name": "Coventry Building Society Arena (formerly Ricoh Arena)",
+    "from": 2021,
+    "to": null,
+    "note": "The club bought the stadium outright in August 2025",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Coventry City F.C.",
+   "url": "https://en.wikipedia.org/wiki/Coventry_City_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "crystal_palace",
+  "name": "Crystal Palace",
+  "status": "current",
+  "city": "London",
+  "area": "Selhurst",
+  "founded": 1905,
+  "nicknames": [
+   "The Eagles",
+   "The Glaziers"
+  ],
+  "map": {
+   "lat": 51.39833,
+   "lng": -0.08556,
+   "label": "Selhurst Park"
+  },
+  "current_ground": {
+   "name": "Selhurst Park",
+   "capacity": 25194,
+   "timeline_name": "Selhurst Park"
+  },
+  "premier_league": {
+   "seasons_completed": 17,
+   "in_2026_27": true,
+   "spells": "1992–1993, 1994–1995, 1997–1998, 2004–2005, 2013–",
+   "titles": 0,
+   "highest_finish": "10th",
+   "last_season_result": "15th",
+   "top_scorer": "Wilfried Zaha (68)"
+  },
+  "summary": "Crystal Palace was formed as a professional club in 1905 to play in the FA Cup final stadium inside the Crystal Palace exhibition grounds. They finished third in the top flight in 1990–91, their best league finish, and were founder members of the Premier League. After relegation in 1998 and two spells in administration, they returned in 2013 and have played top-flight football ever since. They won the FA Cup in 2025, their first major trophy, and the Conference League in 2025–26. Their fiercest rivals are Brighton & Hove Albion.",
+  "stadiums": [
+   {
+    "name": "Crystal Palace Stadium (FA Cup final venue)",
+    "from": 1905,
+    "to": 1915,
+    "note": "Inside the Crystal Palace exhibition grounds; the club had to leave when the First World War began",
+    "current": false
+   },
+   {
+    "name": "Herne Hill Velodrome",
+    "from": 1915,
+    "to": 1917,
+    "note": "Temporary base; dates approximate",
+    "current": false
+   },
+   {
+    "name": "The Nest (Croydon)",
+    "from": 1917,
+    "to": 1924,
+    "note": "Taken over from Croydon Common F.C., which folded in 1917; dates approximate",
+    "current": false
+   },
+   {
+    "name": "Selhurst Park",
+    "from": 1924,
+    "to": null,
+    "note": "Designed by Archibald Leitch; also shared with Charlton Athletic (1985–91) and Wimbledon (1991–2003)",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Crystal Palace F.C.",
+   "url": "https://en.wikipedia.org/wiki/Crystal_Palace_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "derby_county",
+  "name": "Derby County",
+  "status": "former",
+  "city": "Derby",
+  "area": null,
+  "founded": 1884,
+  "nicknames": [
+   "The Rams"
+  ],
+  "map": {
+   "lat": 52.915,
+   "lng": -1.44722,
+   "label": "Pride Park Stadium"
+  },
+  "current_ground": {
+   "name": "Pride Park Stadium",
+   "capacity": 33597,
+   "timeline_name": "Pride Park Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 7,
+   "in_2026_27": false,
+   "spells": "1996–2002, 2007–2008",
+   "titles": 0,
+   "highest_finish": "8th",
+   "last_season_result": "Championship 8th",
+   "top_scorer": "Dean Sturridge (32)"
+  },
+  "summary": "Founded in 1884 as an offshoot of Derbyshire County Cricket Club, Derby were one of the twelve founder members of the Football League in 1888. They won the FA Cup in 1946 and the league title twice in the 1970s, reaching the European Cup semi-finals. They moved from the Baseball Ground to Pride Park in 1997, and are one of only nine clubs to have played in every season of the English league system. Their great rivals are Nottingham Forest in the East Midlands derby. They play in the Championship.",
+  "stadiums": [
+   {
+    "name": "County Cricket Ground (Racecourse Ground)",
+    "from": 1884,
+    "to": 1895,
+    "note": "Hosted the 1886 FA Cup final replay and an England international",
+    "current": false
+   },
+   {
+    "name": "Baseball Ground",
+    "from": 1895,
+    "to": 1997,
+    "note": "Known to fans as 'the BBG'; last first-team game was a 3–1 loss to Arsenal in May 1997",
+    "current": false
+   },
+   {
+    "name": "Pride Park Stadium",
+    "from": 1997,
+    "to": null,
+    "note": "Opened by Queen Elizabeth II; renamed iPro Stadium 2013–2017",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Derby County F.C.",
+   "url": "https://en.wikipedia.org/wiki/Derby_County_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "everton",
+  "name": "Everton",
+  "status": "current",
+  "city": "Liverpool",
+  "area": "Vauxhall",
+  "founded": 1878,
+  "nicknames": [
+   "The Blues",
+   "The Toffees",
+   "The People's Club",
+   "The School of Science"
+  ],
+  "map": {
+   "lat": 53.4251,
+   "lng": -3.0028,
+   "label": "Hill Dickinson Stadium"
+  },
+  "current_ground": {
+   "name": "Hill Dickinson Stadium",
+   "capacity": 52769,
+   "timeline_name": "Hill Dickinson Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 34,
+   "in_2026_27": true,
+   "spells": "1992–",
+   "titles": 0,
+   "highest_finish": "4th",
+   "last_season_result": "13th",
+   "top_scorer": "Romelu Lukaku (68)"
+  },
+  "summary": "Founded in 1878, Everton were founder members of both the Football League (1888) and the Premier League (1992), one of only three clubs to be both. They have won nine league titles, five FA Cups and the 1985 European Cup Winners' Cup, and have played more top-flight seasons than any other club, missing only four. The club left Anfield in 1892 after a rent dispute with landlord John Houlding, who then founded Liverpool. After 133 years at Goodison Park they moved to the new Hill Dickinson Stadium on the Liverpool waterfront in 2025. Their rivals are Liverpool in the Merseyside derby.",
+  "stadiums": [
+   {
+    "name": "Stanley Park",
+    "from": 1878,
+    "to": 1882,
+    "note": "Played in the south-east corner of the park; first official match in 1879",
+    "current": false
+   },
+   {
+    "name": "Priory Road",
+    "from": 1883,
+    "to": 1884,
+    "note": "Land donated by J. Cruitt in 1882; the club used Walton Stiles for at least one game while it was prepared, and was told to leave after one season over noise and crowd behaviour",
+    "current": false
+   },
+   {
+    "name": "Anfield",
+    "from": 1884,
+    "to": 1892,
+    "note": "Rented from John Orrell and then John Houlding; the club left after rent rose from £100 to £240 a year",
+    "current": false
+   },
+   {
+    "name": "Goodison Park",
+    "from": 1892,
+    "to": 2025,
+    "note": "The first major football stadium built in England; hosted a 1966 World Cup semi-final. Now home to Everton Women",
+    "current": false
+   },
+   {
+    "name": "Hill Dickinson Stadium",
+    "from": 2025,
+    "to": null,
+    "note": "Built at Bramley-Moore Dock; first stadium sponsor announced in May 2025",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Everton F.C.",
+   "url": "https://en.wikipedia.org/wiki/Everton_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "fulham",
+  "name": "Fulham",
+  "status": "current",
+  "city": "London",
+  "area": "Fulham",
+  "founded": 1879,
+  "nicknames": [
+   "The Cottagers"
+  ],
+  "map": {
+   "lat": 51.475,
+   "lng": -0.22167,
+   "label": "Craven Cottage"
+  },
+  "current_ground": {
+   "name": "Craven Cottage",
+   "capacity": 28107,
+   "timeline_name": "Craven Cottage"
+  },
+  "premier_league": {
+   "seasons_completed": 19,
+   "in_2026_27": true,
+   "spells": "2001–2014, 2018–2019, 2020–2021, 2022–",
+   "titles": 0,
+   "highest_finish": "7th",
+   "last_season_result": "11th",
+   "top_scorer": "Clint Dempsey (50)"
+  },
+  "summary": "Founded in 1879 as St Andrews Cricket & Football Club, Fulham are London's oldest professional football club. They moved into Craven Cottage in 1896 and were elected to the Football League in 1907. Their best moments include the 1975 FA Cup final and, under Mohamed Al-Fayed's ownership from 1997, a rise to the Premier League by 2001, an Intertoto Cup win in 2002 and the 2010 Europa League final. Thirteen straight top-flight seasons ended in relegation in 2014; they have been back in the Premier League since 2022. Their West London derby rivals are Chelsea, Brentford and QPR.",
+  "stadiums": [
+   {
+    "name": "'The Mud Pond' (Star Road, Fulham)",
+    "from": 1879,
+    "to": 1883,
+    "current": false
+   },
+   {
+    "name": "Lillie Road (Fulham)",
+    "from": 1883,
+    "to": 1886,
+    "current": false
+   },
+   {
+    "name": "Ranelagh House (Fulham)",
+    "from": 1886,
+    "to": 1888,
+    "current": false
+   },
+   {
+    "name": "Barn Elms Playing Fields (Barnes)",
+    "from": 1888,
+    "to": 1889,
+    "note": "Site of The Ranelagh Club",
+    "current": false
+   },
+   {
+    "name": "Parsons Green and Roskell's Fields (Fulham)",
+    "from": 1889,
+    "to": 1891,
+    "current": false
+   },
+   {
+    "name": "The Half Moon (Putney)",
+    "from": 1891,
+    "to": 1895,
+    "current": false
+   },
+   {
+    "name": "Captain James Field (West Brompton)",
+    "from": 1895,
+    "to": 1896,
+    "current": false
+   },
+   {
+    "name": "Craven Cottage",
+    "from": 1896,
+    "to": 2002,
+    "note": "The club bought the site in 1894 but had to wait two years to play there",
+    "current": false
+   },
+   {
+    "name": "Loftus Road (Shepherd's Bush)",
+    "from": 2002,
+    "to": 2004,
+    "note": "Ground-share with Queens Park Rangers during the renovation of Craven Cottage",
+    "current": false
+   },
+   {
+    "name": "Craven Cottage",
+    "from": 2004,
+    "to": null,
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Fulham F.C.",
+   "url": "https://en.wikipedia.org/wiki/Fulham_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "huddersfield_town",
+  "name": "Huddersfield Town",
+  "status": "former",
+  "city": "Huddersfield",
+  "area": null,
+  "founded": 1908,
+  "nicknames": [
+   "The Terriers"
+  ],
+  "map": {
+   "lat": 53.65417,
+   "lng": -1.76833,
+   "label": "Accu Stadium"
+  },
+  "current_ground": {
+   "name": "Accu Stadium",
+   "capacity": 24121,
+   "timeline_name": "Kirklees Stadium (now Accu Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 2,
+   "in_2026_27": false,
+   "spells": "2017–2019",
+   "titles": 0,
+   "highest_finish": "16th",
+   "last_season_result": "League One 9th",
+   "top_scorer": "Steve Mounié (9)"
+  },
+  "summary": "Founded in 1908, Huddersfield won the FA Cup in 1922 and then three league titles in a row (1923–24, 1924–25 and 1925–26), the first two under Herbert Chapman. After falling to the fourth tier and nearly going out of business around 2003, they climbed back and won promotion to the Premier League in 2017 by beating Reading on penalties in the play-off final, making them the second club after Blackpool to have won all three divisional play-offs. They stayed up in 2017–18, were relegated in 2019, and now play in League One. They moved from Leeds Road to the Kirklees Stadium in 1994.",
+  "stadiums": [
+   {
+    "name": "Leeds Road",
+    "from": 1908,
+    "to": 1994,
+    "note": "Last match was a 2–1 win over Blackpool on 30 April 1994",
+    "current": false
+   },
+   {
+    "name": "Kirklees Stadium (now Accu Stadium)",
+    "from": 1994,
+    "to": null,
+    "note": "Opened as the Alfred McAlpine Stadium; later the Galpharm Stadium (2004), John Smith's Stadium (2012) and Accu Stadium (2025)",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Huddersfield Town A.F.C.",
+   "url": "https://en.wikipedia.org/wiki/Huddersfield_Town_A.F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "hull_city",
+  "name": "Hull City",
+  "status": "current",
+  "city": "Kingston upon Hull",
+  "area": null,
+  "founded": 1904,
+  "nicknames": [
+   "The Tigers"
+  ],
+  "map": {
+   "lat": 53.74611,
+   "lng": -0.36778,
+   "label": "MKM Stadium"
+  },
+  "current_ground": {
+   "name": "MKM Stadium",
+   "capacity": 24983,
+   "timeline_name": "KC Stadium (now MKM Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 5,
+   "in_2026_27": true,
+   "spells": "2008–2010, 2013–2015, 2016–2017, 2026–",
+   "titles": 0,
+   "highest_finish": "16th",
+   "last_season_result": "Championship 6th (promoted)",
+   "top_scorer": "Nikica Jelavić (12)"
+  },
+  "summary": "Founded in 1904, Hull City reached the Premier League for the first time in 2009 by winning the 2008 play-off final, and have been promoted to it four times in all. They lost the 2014 FA Cup final 3–2 to Arsenal after extra time. After dropping to the third tier in 2020 they were League One champions in 2020–21, and in 2026 won the play-off final against Middlesbrough to return to the Premier League. They moved from Boothferry Park to the KC Stadium (now the MKM Stadium) in 2002.",
+  "stadiums": [
+   {
+    "name": "The Boulevard",
+    "from": 1904,
+    "to": null,
+    "note": "A rugby league ground; the club's first home",
+    "current": false
+   },
+   {
+    "name": "The Circle",
+    "from": null,
+    "to": 1906,
+    "note": "A local cricket ground, used briefly",
+    "current": false
+   },
+   {
+    "name": "Anlaby Road",
+    "from": 1906,
+    "to": 1941,
+    "note": "The first permanent home, opened in March 1906; the club suspended operations in 1941 because of the Second World War",
+    "current": false
+   },
+   {
+    "name": "Boothferry Park",
+    "from": 1946,
+    "to": 2002,
+    "current": false
+   },
+   {
+    "name": "KC Stadium (now MKM Stadium)",
+    "from": 2002,
+    "to": null,
+    "note": "Opened in December 2002; renamed KCOM Stadium (2016) and MKM Stadium (2021)",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Hull City A.F.C.",
+   "url": "https://en.wikipedia.org/wiki/Hull_City_A.F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "ipswich_town",
+  "name": "Ipswich Town",
+  "status": "current",
+  "city": "Ipswich",
+  "area": null,
+  "founded": 1878,
+  "nicknames": [
+   "The Blues",
+   "The Tractor Boys"
+  ],
+  "map": {
+   "lat": 52.055,
+   "lng": 1.14528,
+   "label": "Portman Road"
+  },
+  "current_ground": {
+   "name": "Portman Road",
+   "capacity": 30056,
+   "timeline_name": "Portman Road"
+  },
+  "premier_league": {
+   "seasons_completed": 6,
+   "in_2026_27": true,
+   "spells": "1992–1995, 2000–2002, 2024–2025, 2026–",
+   "titles": 0,
+   "highest_finish": "5th",
+   "last_season_result": "Championship 2nd (promoted)",
+   "top_scorer": "Marcus Stewart (25)"
+  },
+  "summary": "Founded in 1878 but not professional until 1936, Ipswich won the league title in 1961–62, their first season in the top flight, and finished runners-up in 1980–81 and 1981–82. They also won the FA Cup in 1978 and the UEFA Cup in 1981. They have never lost at home in European competition. Their great rivals are Norwich City in the East Anglian derby. The club finished second in the Championship in 2025–26 and returns to the Premier League.",
+  "stadiums": [
+   {
+    "name": "Broomhill",
+    "from": 1878,
+    "to": null,
+    "note": "One of two early grounds in the town, used until 1884",
+    "current": false
+   },
+   {
+    "name": "Brook's Hall",
+    "from": null,
+    "to": 1884,
+    "current": false
+   },
+   {
+    "name": "Portman Road",
+    "from": 1884,
+    "to": null,
+    "note": "Became the first fully all-seater ground in the top flight after the Taylor Report in 1992",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Ipswich Town F.C.",
+   "url": "https://en.wikipedia.org/wiki/Ipswich_Town_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "leeds_united",
+  "name": "Leeds United",
+  "status": "current",
+  "city": "Leeds",
+  "area": null,
+  "founded": 1919,
+  "nicknames": [
+   "The Whites"
+  ],
+  "map": {
+   "lat": 53.77778,
+   "lng": -1.57222,
+   "label": "Elland Road"
+  },
+  "current_ground": {
+   "name": "Elland Road",
+   "capacity": 37633,
+   "timeline_name": "Elland Road"
+  },
+  "premier_league": {
+   "seasons_completed": 16,
+   "in_2026_27": true,
+   "spells": "1992–2004, 2020–2023, 2025–",
+   "titles": 0,
+   "highest_finish": "3rd",
+   "last_season_result": "14th",
+   "top_scorer": "Mark Viduka (59)"
+  },
+  "summary": "Leeds United were formed in 1919 and have always played at Elland Road, the ground previously used by their predecessors Leeds City, who were disbanded that year. Under manager Don Revie in the 1960s and 1970s they won three top-flight league titles, the FA Cup, the League Cup and two Inter-Cities Fairs Cups. They have also been runners-up in the league five times and in the European Cup. Their rivals include Manchester United and Chelsea. They finished 14th in the Premier League in 2025–26.",
+  "stadiums": [
+   {
+    "name": "Elland Road",
+    "from": 1919,
+    "to": null,
+    "note": "Originally 'The Old Peacock Ground', home to Holbeck Rugby Club; the club sold it in 2004 on a 25-year sale-leaseback deal",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Leeds United F.C.",
+   "url": "https://en.wikipedia.org/wiki/Leeds_United_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "leicester_city",
+  "name": "Leicester City",
+  "status": "former",
+  "city": "Leicester",
+  "area": null,
+  "founded": 1884,
+  "nicknames": [
+   "The Foxes"
+  ],
+  "map": {
+   "lat": 52.62028,
+   "lng": -1.14222,
+   "label": "King Power Stadium"
+  },
+  "current_ground": {
+   "name": "King Power Stadium",
+   "capacity": 32259,
+   "timeline_name": "King Power Stadium (formerly Walkers Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 18,
+   "in_2026_27": false,
+   "spells": "1994–1995, 1996–2002, 2003–2004, 2014–2023, 2024–2025",
+   "titles": 1,
+   "highest_finish": "1st",
+   "last_season_result": "Championship 23rd (relegated)",
+   "top_scorer": "Jamie Vardy (145)"
+  },
+  "summary": "Founded in 1884 as Leicester Fosse and renamed Leicester City in 1919, the Foxes won the Premier League in 2015–16 at odds of 5000–1, one of seven clubs to have won the competition. They also won the FA Cup in 2021, the League Cup three times (1964, 1997 and 2000) and reached the Champions League quarter-finals in 2016–17. The club moved from Filbert Street to the Walkers Stadium, now the King Power Stadium, in 2002. They were relegated from the Championship in 2025–26 and play in League One.",
+  "stadiums": [
+   {
+    "name": "Fosse Road field",
+    "from": 1884,
+    "to": null,
+    "note": "Gave the club its original name, Leicester Fosse",
+    "current": false
+   },
+   {
+    "name": "Victoria Park",
+    "from": null,
+    "to": null,
+    "current": false
+   },
+   {
+    "name": "Belgrave Road",
+    "from": null,
+    "to": null,
+    "current": false
+   },
+   {
+    "name": "Mill Lane",
+    "from": null,
+    "to": null,
+    "note": "Moved here on turning professional; the club was later evicted",
+    "current": false
+   },
+   {
+    "name": "County Cricket Ground",
+    "from": null,
+    "to": 1891,
+    "note": "Temporary home while the club looked for a new ground",
+    "current": false
+   },
+   {
+    "name": "Filbert Street",
+    "from": 1891,
+    "to": 2002,
+    "note": "Archibald Leitch made improvements; the 1927 'Double Decker' stand lasted until the ground closed",
+    "current": false
+   },
+   {
+    "name": "King Power Stadium (formerly Walkers Stadium)",
+    "from": 2002,
+    "to": null,
+    "note": "Less than 300 yards from Filbert Street; renamed King Power Stadium in 2011",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Leicester City F.C.",
+   "url": "https://en.wikipedia.org/wiki/Leicester_City_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "liverpool",
+  "name": "Liverpool",
+  "status": "current",
+  "city": "Liverpool",
+  "area": "Anfield",
+  "founded": 1892,
+  "nicknames": [
+   "The Reds"
+  ],
+  "map": {
+   "lat": 53.43083,
+   "lng": -2.96083,
+   "label": "Anfield"
+  },
+  "current_ground": {
+   "name": "Anfield",
+   "capacity": 61276,
+   "timeline_name": "Anfield"
+  },
+  "premier_league": {
+   "seasons_completed": 34,
+   "in_2026_27": true,
+   "spells": "1992–",
+   "titles": 2,
+   "highest_finish": "1st",
+   "last_season_result": "5th",
+   "top_scorer": "Mohamed Salah (191)"
+  },
+  "summary": "Liverpool were founded in 1892 by John Houlding after Everton left Anfield, which Houlding owned, over a rent dispute. They joined the Football League in 1893 and have played at Anfield ever since. They have won a joint-record twenty league titles, including the club's first in the Premier League era in 2020 under Jürgen Klopp and a twentieth in 2025 under Arne Slot, plus six European Cups. Their rivals are Everton in the Merseyside derby and Manchester United.",
+  "stadiums": [
+   {
+    "name": "Anfield",
+    "from": 1892,
+    "to": null,
+    "note": "Built in 1884 and first used by Everton; capacity now 61,276, with the Kop one of the world's most famous stands",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Liverpool F.C.",
+   "url": "https://en.wikipedia.org/wiki/Liverpool_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "luton_town",
+  "name": "Luton Town",
+  "status": "former",
+  "city": "Luton",
+  "area": null,
+  "founded": 1885,
+  "nicknames": [
+   "The Hatters"
+  ],
+  "map": {
+   "lat": 51.88417,
+   "lng": -0.43167,
+   "label": "Kenilworth Road"
+  },
+  "current_ground": {
+   "name": "Kenilworth Road",
+   "capacity": 12056,
+   "timeline_name": "Kenilworth Road"
+  },
+  "premier_league": {
+   "seasons_completed": 1,
+   "in_2026_27": false,
+   "spells": "2023–2024",
+   "titles": 0,
+   "highest_finish": "18th (relegated)",
+   "last_season_result": "League One 7th",
+   "top_scorer": "Carlton Morris (11)"
+  },
+  "summary": "Founded in 1885, Luton have played at Kenilworth Road since 1905. They won the League Cup in 1988 with a 3–2 victory over Arsenal and played in the old First Division from 1982 to 1992. Financial collapse between 2007 and 2009 dropped them from the second tier to non-league football, but they climbed back and were promoted to the Premier League through the 2023 Championship play-offs. They spent one Premier League season (2023–24) and were relegated twice in a row, so they play in League One. A new stadium at Power Court is planned.",
+  "stadiums": [
+   {
+    "name": "Dallow Lane",
+    "from": 1885,
+    "to": 1897,
+    "note": "Former ground of Luton Excelsior, beside a railway line; the club had to sell it after a financial loss in 1896–97",
+    "current": false
+   },
+   {
+    "name": "Dunstable Road",
+    "from": 1897,
+    "to": 1905,
+    "note": "Opened by the Duke of Bedford; the site was sold for housing in 1905",
+    "current": false
+   },
+   {
+    "name": "Kenilworth Road",
+    "from": 1905,
+    "to": null,
+    "note": "Capacity 12,056, one of the smallest grounds in the Premier League when Luton played there; a new Power Court Stadium is planned for 2028–29",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Luton Town F.C.",
+   "url": "https://en.wikipedia.org/wiki/Luton_Town_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "manchester_city",
+  "name": "Manchester City",
+  "status": "current",
+  "city": "Manchester",
+  "area": null,
+  "founded": 1880,
+  "nicknames": [
+   "The Citizens (Cityzens)",
+   "The Blues",
+   "The Sky Blues"
+  ],
+  "map": {
+   "lat": 53.48314,
+   "lng": -2.20039,
+   "label": "Etihad Stadium"
+  },
+  "current_ground": {
+   "name": "Etihad Stadium",
+   "capacity": 61038,
+   "timeline_name": "City of Manchester Stadium (Etihad Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 29,
+   "in_2026_27": true,
+   "spells": "1992–1996, 2000–2001, 2002–",
+   "titles": 8,
+   "highest_finish": "1st",
+   "last_season_result": "2nd",
+   "top_scorer": "Sergio Agüero (184)"
+  },
+  "summary": "Founded in 1880 as St. Mark's (West Gorton), the club became Ardwick A.F.C. in 1887 and Manchester City in 1894. City won their first FA Cup in 1904 and had a successful spell under Joe Mercer and Malcolm Allison in the late 1960s and early 1970s. They dropped to the third tier for the only time in 1998 and have been in the Premier League since 2002–03. After Sheikh Mansour's 2008 takeover they won the Premier League in 2012 and, under Pep Guardiola (2016–2026), a first English domestic treble, a continental treble in 2023 and four consecutive league titles from 2020–21 to 2023–24.",
+  "stadiums": [
+   {
+    "name": "Pitch near St Mark's Church (West Gorton)",
+    "from": 1880,
+    "to": null,
+    "note": "A dangerously bumpy patch of grass near the church where the club began; the club page doesn't name the early pitches",
+    "current": false
+   },
+   {
+    "name": "Kirkmanshulme Cricket Club ground-share",
+    "from": null,
+    "to": null,
+    "note": "The club was turfed out after about a year",
+    "current": false
+   },
+   {
+    "name": "Three further pitches on wasteland",
+    "from": null,
+    "to": 1887,
+    "note": "All proved inadequate; the fifth arrangement collapsed in 1887 when the landlord of the Bulls Head Hotel demanded more rent",
+    "current": false
+   },
+   {
+    "name": "Hyde Road",
+    "from": 1887,
+    "to": 1923,
+    "note": "Waste ground on Hyde Road in Ardwick, found by captain Kenneth Mackenzie; the Main Stand was destroyed by fire in 1920",
+    "current": false
+   },
+   {
+    "name": "Maine Road",
+    "from": 1923,
+    "to": 2003,
+    "note": "Nicknamed the 'Wembley of the North'; hosted a record 84,569 for an FA Cup tie in 1934",
+    "current": false
+   },
+   {
+    "name": "City of Manchester Stadium (Etihad Stadium)",
+    "from": 2003,
+    "to": null,
+    "note": "Built for the 2002 Commonwealth Games; renamed Etihad Stadium in 2011; the North Stand reopened in 2026 named after Pep Guardiola",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Manchester City F.C.",
+   "url": "https://en.wikipedia.org/wiki/Manchester_City_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "manchester_united",
+  "name": "Manchester United",
+  "status": "current",
+  "city": "Manchester",
+  "area": "Old Trafford",
+  "founded": 1878,
+  "nicknames": [
+   "The Red Devils",
+   "United"
+  ],
+  "map": {
+   "lat": 53.46306,
+   "lng": -2.29139,
+   "label": "Old Trafford"
+  },
+  "current_ground": {
+   "name": "Old Trafford",
+   "capacity": 74158,
+   "timeline_name": "Old Trafford"
+  },
+  "premier_league": {
+   "seasons_completed": 34,
+   "in_2026_27": true,
+   "spells": "1992–",
+   "titles": 13,
+   "highest_finish": "1st",
+   "last_season_result": "3rd",
+   "top_scorer": "Wayne Rooney (183)"
+  },
+  "summary": "Founded in 1878 as Newton Heath LYR and renamed Manchester United in 1902, the club moved to Old Trafford in 1910. Matt Busby's 'Busby Babes' won titles in the 1950s before eight players died in the 1958 Munich air disaster, and United became the first English club to win the European Cup in 1968. Alex Ferguson (1986–2013) won 13 league titles, and in 1998–99 United became the first English side to win the Premier League, FA Cup and Champions League in one season. United share a joint-record twenty league titles with Liverpool and finished third in 2025–26.",
+  "stadiums": [
+   {
+    "name": "North Road (Newton Heath)",
+    "from": 1878,
+    "to": 1893,
+    "note": "A field close to the railway yard; capacity about 12,000",
+    "current": false
+   },
+   {
+    "name": "Bank Street (Clayton)",
+    "from": 1893,
+    "to": 1910,
+    "current": false
+   },
+   {
+    "name": "Old Trafford",
+    "from": 1910,
+    "to": 1941,
+    "note": "Severely bombed in 1941",
+    "current": false
+   },
+   {
+    "name": "Maine Road (Manchester City's ground)",
+    "from": 1941,
+    "to": 1949,
+    "temporary": true,
+    "note": "Shared with City while Old Trafford was repaired after wartime bomb damage",
+    "current": false
+   },
+   {
+    "name": "Old Trafford",
+    "from": 1949,
+    "to": null,
+    "note": "Capacity 74,158; a new 100,000-seat stadium next door has been announced",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Manchester United F.C.",
+   "url": "https://en.wikipedia.org/wiki/Manchester_United_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "middlesbrough",
+  "name": "Middlesbrough",
+  "status": "former",
+  "city": "Middlesbrough",
+  "area": null,
+  "founded": 1876,
+  "nicknames": [
+   "The Boro",
+   "Teessiders"
+  ],
+  "map": {
+   "lat": 54.57833,
+   "lng": -1.21694,
+   "label": "Riverside Stadium"
+  },
+  "current_ground": {
+   "name": "Riverside Stadium",
+   "capacity": 33746,
+   "timeline_name": "Riverside Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 15,
+   "in_2026_27": false,
+   "spells": "1992–1993, 1995–1997, 1998–2009, 2016–2017",
+   "titles": 0,
+   "highest_finish": "7th",
+   "last_season_result": "Championship 5th",
+   "top_scorer": "Hamilton Ricard (31)"
+  },
+  "summary": "Formed in 1876, Middlesbrough were founder members of the Premier League in 1992. Their highest league finish is third (1913–14). The club nearly folded in 1986 before chairman Steve Gibson's consortium rescued it. Under Steve McClaren they won the League Cup in 2004, their first major trophy, and reached the 2006 UEFA Cup final. They lost both the FA Cup and League Cup finals in 1997, the same year they were relegated after a three-point deduction. They moved from Ayresome Park to the Riverside Stadium in 1995 and play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Albert Park",
+    "from": 1876,
+    "to": 1878,
+    "note": "Ordered to leave after damage by players and spectators",
+    "current": false
+   },
+   {
+    "name": "Breckon Hill",
+    "from": 1878,
+    "to": 1880,
+    "note": "Left when the owner raised the rent; the club page doesn't say where they played between 1880 and 1882",
+    "current": false
+   },
+   {
+    "name": "Linthorpe Road",
+    "from": 1882,
+    "to": 1903,
+    "note": "Shared with Middlesbrough Cricket Club until 1893–94",
+    "current": false
+   },
+   {
+    "name": "Ayresome Park",
+    "from": 1903,
+    "to": 1995,
+    "note": "Designed by Archibald Leitch; a 1966 World Cup venue",
+    "current": false
+   },
+   {
+    "name": "Riverside Stadium",
+    "from": 1995,
+    "to": null,
+    "note": "The first stadium built to the Taylor Report's all-seater recommendations; named by a fan vote",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Middlesbrough F.C.",
+   "url": "https://en.wikipedia.org/wiki/Middlesbrough_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "newcastle_united",
+  "name": "Newcastle United",
+  "status": "current",
+  "city": "Newcastle upon Tyne",
+  "area": null,
+  "founded": 1881,
+  "nicknames": [
+   "The Magpies",
+   "The Toon Army",
+   "Geordies"
+  ],
+  "map": {
+   "lat": 54.97556,
+   "lng": -1.62167,
+   "label": "St James' Park"
+  },
+  "current_ground": {
+   "name": "St James' Park",
+   "capacity": 52729,
+   "timeline_name": "St James' Park"
+  },
+  "premier_league": {
+   "seasons_completed": 31,
+   "in_2026_27": true,
+   "spells": "1993–2009, 2010–2016, 2017–",
+   "titles": 0,
+   "highest_finish": "2nd",
+   "last_season_result": "12th",
+   "top_scorer": "Alan Shearer (148)"
+  },
+  "summary": "Founded in 1881 as Stanley F.C., the club became East End F.C. in 1882 and took the name Newcastle United in 1892 after absorbing the assets of the defunct Newcastle West End, including St James' Park. They have won four league titles, six FA Cups and the Inter-Cities Fairs Cup, with their best period between 1904 and 1910. They have been in the Premier League for all but three seasons, were relegated in 2009 and 2016 and bounced straight back each time, and were bought by a Public Investment Fund-led consortium in 2021. In 2025 they won the League Cup, their first trophy in nearly 56 years. Their great rivals are Sunderland.",
+  "stadiums": [
+   {
+    "name": "Chillingham Road (Heaton), as Newcastle East End",
+    "from": 1886,
+    "to": 1892,
+    "current": false
+   },
+   {
+    "name": "St James' Park",
+    "from": 1892,
+    "to": null,
+    "note": "Football was played here from 1880 (Newcastle Rangers), then Newcastle West End from 1886; the oldest and largest football stadium in North East England",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Newcastle United F.C.",
+   "url": "https://en.wikipedia.org/wiki/Newcastle_United_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "norwich_city",
+  "name": "Norwich City",
+  "status": "former",
+  "city": "Norwich",
+  "area": null,
+  "founded": 1902,
+  "nicknames": [
+   "The Canaries",
+   "Yellows"
+  ],
+  "map": {
+   "lat": 52.62222,
+   "lng": 1.30917,
+   "label": "Carrow Road"
+  },
+  "current_ground": {
+   "name": "Carrow Road",
+   "capacity": 27150,
+   "timeline_name": "Carrow Road"
+  },
+  "premier_league": {
+   "seasons_completed": 10,
+   "in_2026_27": false,
+   "spells": "1992–1995, 2004–2005, 2011–2014, 2015–2016, 2019–2020, 2021–2022",
+   "titles": 0,
+   "highest_finish": "3rd",
+   "last_season_result": "Championship 9th",
+   "top_scorer": "Chris Sutton (33)"
+  },
+  "summary": "Founded in 1902, Norwich have won the League Cup twice (1962 and 1985) and reached the 1958–59 FA Cup semi-final as a Third Division side. Their highest league finish was third in the inaugural 1992–93 Premier League season, and in the following season's UEFA Cup they became the only English club to beat Bayern Munich at the Olympiastadion. They moved to Carrow Road in 1935 and share the East Anglian derby with Ipswich Town. They play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Newmarket Road",
+    "from": 1902,
+    "to": 1908,
+    "note": "Left after a dispute over the rent",
+    "current": false
+   },
+   {
+    "name": "The Nest (Rosary Road)",
+    "from": 1908,
+    "to": 1935,
+    "note": "A converted disused chalk pit",
+    "current": false
+   },
+   {
+    "name": "Carrow Road",
+    "from": 1935,
+    "to": null,
+    "note": "The original ground was built in just 82 days; first match was a 4–3 win over West Ham on 31 August 1935",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Norwich City F.C.",
+   "url": "https://en.wikipedia.org/wiki/Norwich_City_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "nottingham_forest",
+  "name": "Nottingham Forest",
+  "status": "current",
+  "city": "West Bridgford",
+  "area": null,
+  "founded": 1865,
+  "nicknames": [
+   "Forest",
+   "The Garibaldis",
+   "The Reds",
+   "The Tricky Trees"
+  ],
+  "map": {
+   "lat": 52.94,
+   "lng": -1.13278,
+   "label": "City Ground"
+  },
+  "current_ground": {
+   "name": "City Ground",
+   "capacity": 31212,
+   "timeline_name": "City Ground (West Bridgford)"
+  },
+  "premier_league": {
+   "seasons_completed": 9,
+   "in_2026_27": true,
+   "spells": "1992–1993, 1994–1997, 1998–1999, 2022–",
+   "titles": 0,
+   "highest_finish": "3rd",
+   "last_season_result": "16th",
+   "top_scorer": "Chris Wood (38)"
+  },
+  "summary": "Founded in 1865, Nottingham Forest are one of the oldest clubs in the world. Under Brian Clough and Peter Taylor they won back-to-back European Cups in 1979 and 1980, making Forest the only team in Europe to have won the European Cup more often than their domestic league title (they won it once). They have also won two FA Cups and four League Cups. Relegated in 1993, they returned immediately and finished third in 1995. They were relegated again in 1997 and 1999 and returned to the Premier League by winning the 2022 play-offs. Their rivals are Derby County in the East Midlands derby.",
+  "stadiums": [
+   {
+    "name": "Forest Recreation Ground (Forest Fields)",
+    "from": 1865,
+    "to": 1878,
+    "current": false
+   },
+   {
+    "name": "Castle Ground (The Meadows)",
+    "from": 1879,
+    "to": 1880,
+    "current": false
+   },
+   {
+    "name": "Trent Bridge Cricket Ground (West Bridgford)",
+    "from": 1880,
+    "to": 1882,
+    "current": false
+   },
+   {
+    "name": "Parkside Ground (Lenton)",
+    "from": 1882,
+    "to": 1885,
+    "current": false
+   },
+   {
+    "name": "Gregory Ground (Lenton)",
+    "from": 1885,
+    "to": 1890,
+    "current": false
+   },
+   {
+    "name": "Town Ground (The Meadows)",
+    "from": 1890,
+    "to": 1898,
+    "current": false
+   },
+   {
+    "name": "City Ground (West Bridgford)",
+    "from": 1898,
+    "to": null,
+    "note": "On the banks of the River Trent, just 300 yards from Notts County's Meadow Lane, the two closest professional grounds in England",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Nottingham Forest F.C.",
+   "url": "https://en.wikipedia.org/wiki/Nottingham_Forest_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "oldham_athletic",
+  "name": "Oldham Athletic",
+  "status": "former",
+  "city": "Oldham",
+  "area": null,
+  "founded": 1895,
+  "nicknames": [
+   "Latics"
+  ],
+  "map": {
+   "lat": 53.55528,
+   "lng": -2.12861,
+   "label": "Boundary Park"
+  },
+  "current_ground": {
+   "name": "Boundary Park",
+   "capacity": 13560,
+   "timeline_name": "Boundary Park"
+  },
+  "premier_league": {
+   "seasons_completed": 2,
+   "in_2026_27": false,
+   "spells": "1992–1994",
+   "titles": 0,
+   "highest_finish": "19th",
+   "last_season_result": "League Two 10th",
+   "top_scorer": "Graeme Sharp (16)"
+  },
+  "summary": "Founded in 1895 as Pine Villa, the club took the name Oldham Athletic when it moved to Boundary Park in 1899. They finished second in the First Division in 1914–15 and won the Second Division in 1990–91 under Joe Royle, which made them founder members of the Premier League in 1992 after 68 years out of the top flight. They were relegated in 1994 and in 2022 fell into the National League, becoming the first former Premier League club to play non-league football. They won back their Football League place via the 2025 National League play-off final and play in League Two.",
+  "stadiums": [
+   {
+    "name": "Boundary Park",
+    "from": 1899,
+    "to": null,
+    "note": "Originally the Athletic Ground, built for Oldham County F.C.; Pine Villa moved in after County folded. The club page doesn't cover Pine Villa's earlier grounds (1895–1899)",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Oldham Athletic A.F.C.",
+   "url": "https://en.wikipedia.org/wiki/Oldham_Athletic_A.F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "portsmouth",
+  "name": "Portsmouth",
+  "status": "former",
+  "city": "Portsmouth",
+  "area": null,
+  "founded": 1898,
+  "nicknames": [
+   "Pompey"
+  ],
+  "map": {
+   "lat": 50.79639,
+   "lng": -1.06389,
+   "label": "Fratton Park"
+  },
+  "current_ground": {
+   "name": "Fratton Park",
+   "capacity": 20867,
+   "timeline_name": "Fratton Park"
+  },
+  "premier_league": {
+   "seasons_completed": 7,
+   "in_2026_27": false,
+   "spells": "2003–2010",
+   "titles": 0,
+   "highest_finish": "8th",
+   "last_season_result": "Championship 18th",
+   "top_scorer": "Yakubu (28)"
+  },
+  "summary": "Founded in 1898, Portsmouth were league champions in 1948–49 and 1949–50, won the FA Cup in 1939 and 2008, and held the FA Cup for a record seven years because the Second World War halted football. They spent seven years in the Premier League (2003 to 2010) before relegation, two spells in administration and three relegations. The club was bought by the Pompey Supporters Trust in 2013 and won League Two in 2016–17 and League One in 2023–24. They are one of only five clubs to have been champions of all four professional tiers, and the only English professional club not on mainland Great Britain. Their arch-rivals are Southampton.",
+  "stadiums": [
+   {
+    "name": "Fratton Park",
+    "from": 1899,
+    "to": null,
+    "note": "Built on a former potato field; opened 15 August 1899 and used throughout the club's history. Home to the club's record 51,385 crowd in 1949",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Portsmouth F.C.",
+   "url": "https://en.wikipedia.org/wiki/Portsmouth_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "queens_park_rangers",
+  "name": "Queens Park Rangers",
+  "status": "former",
+  "city": "London",
+  "area": "Shepherd's Bush",
+  "founded": 1882,
+  "nicknames": [
+   "The Rs",
+   "The Hoops",
+   "Super Hoops"
+  ],
+  "map": {
+   "lat": 51.50917,
+   "lng": -0.23222,
+   "label": "Loftus Road Stadium"
+  },
+  "current_ground": {
+   "name": "Loftus Road Stadium",
+   "capacity": 18439,
+   "timeline_name": "Loftus Road"
+  },
+  "premier_league": {
+   "seasons_completed": 7,
+   "in_2026_27": false,
+   "spells": "1992–1996, 2011–2013, 2014–2015",
+   "titles": 0,
+   "highest_finish": "5th",
+   "last_season_result": "Championship 15th",
+   "top_scorer": "Les Ferdinand (60)"
+  },
+  "summary": "Founded in 1882 as Christchurch Rangers, the club took the name Queens Park Rangers in 1886 after merging with St Jude's Institute. QPR won the League Cup in 1967, their only major trophy, and finished just one point behind champions Liverpool in 1975–76. They were founder members of the Premier League in 1992 and went down in 1996, returning in 2011–12 and 2014–15 for a season each. They have been in the Championship since 2015. Their West London derby rivals are Chelsea, Fulham and Brentford.",
+  "stadiums": [
+   {
+    "name": "The Queen's Park and other grounds (unknown)",
+    "from": 1882,
+    "to": 1886,
+    "note": "The grounds used before 1886 are unknown but were probably in the Queen's Park area",
+    "current": false
+   },
+   {
+    "name": "Welford Fields",
+    "from": 1886,
+    "to": 1888,
+    "current": false
+   },
+   {
+    "name": "London Scottish Ground, Home Farm, Kensal Green, Gun Club, Wormwood Scrubs and Kilburn Cricket Ground",
+    "from": 1888,
+    "to": 1889,
+    "note": "Six different grounds in a single season",
+    "current": false
+   },
+   {
+    "name": "Barn Elms",
+    "from": 1891,
+    "to": 1891,
+    "current": false
+   },
+   {
+    "name": "Kensal Rise Athletic Ground",
+    "from": 1899,
+    "to": 1901,
+    "current": false
+   },
+   {
+    "name": "Latimer Road",
+    "from": 1901,
+    "to": 1902,
+    "current": false
+   },
+   {
+    "name": "Kensal Rise Athletic Ground",
+    "from": 1902,
+    "to": 1904,
+    "current": false
+   },
+   {
+    "name": "Royal Agricultural Society showgrounds (Park Royal)",
+    "from": 1904,
+    "to": 1907,
+    "current": false
+   },
+   {
+    "name": "Park Royal Ground",
+    "from": 1907,
+    "to": 1917,
+    "current": false
+   },
+   {
+    "name": "Loftus Road",
+    "from": 1917,
+    "to": 1931,
+    "current": false
+   },
+   {
+    "name": "White City Stadium",
+    "from": 1931,
+    "to": 1933,
+    "current": false
+   },
+   {
+    "name": "Loftus Road",
+    "from": 1933,
+    "to": 1962,
+    "current": false
+   },
+   {
+    "name": "White City Stadium",
+    "from": 1962,
+    "to": 1963,
+    "current": false
+   },
+   {
+    "name": "Loftus Road",
+    "from": 1963,
+    "to": null,
+    "note": "Called Kiyan Prince Foundation Stadium from 2019 to 2022",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Queens Park Rangers F.C.",
+   "url": "https://en.wikipedia.org/wiki/Queens_Park_Rangers_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "reading",
+  "name": "Reading",
+  "status": "former",
+  "city": "Reading",
+  "area": null,
+  "founded": 1871,
+  "nicknames": [
+   "The Royals",
+   "The Biscuitmen"
+  ],
+  "map": {
+   "lat": 51.42222,
+   "lng": -0.98278,
+   "label": "Madejski Stadium"
+  },
+  "current_ground": {
+   "name": "Madejski Stadium",
+   "capacity": 24161,
+   "timeline_name": "Madejski Stadium (now Select Car Leasing Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 3,
+   "in_2026_27": false,
+   "spells": "2006–2008, 2012–2013",
+   "titles": 0,
+   "highest_finish": "8th",
+   "last_season_result": "League One 12th",
+   "top_scorer": "Kevin Doyle (19)"
+  },
+  "summary": "Founded in 1871, Reading are one of England's oldest clubs, though they only joined the Football League in 1920. They set a record of 106 points in the 2005–06 Championship and reached the Premier League for the first time in 2006–07, finishing eighth, their highest finish. They returned for 2012–13 and went down after one season. They reached the FA Cup semi-finals in 1927 and 2015. They moved from Elm Park to the Madejski Stadium in 1998 and play in League One.",
+  "stadiums": [
+   {
+    "name": "Reading Recreation Ground",
+    "from": 1871,
+    "to": 1878,
+    "current": false
+   },
+   {
+    "name": "Reading Cricket Ground",
+    "from": 1878,
+    "to": 1882,
+    "current": false
+   },
+   {
+    "name": "Coley Park",
+    "from": 1882,
+    "to": 1889,
+    "note": "The local squire stopped football there over 'rowdyism'",
+    "current": false
+   },
+   {
+    "name": "Caversham Cricket Ground",
+    "from": 1889,
+    "to": 1896,
+    "current": false
+   },
+   {
+    "name": "Elm Park",
+    "from": 1896,
+    "to": 1998,
+    "note": "A former gravel pit; last competitive match was a 1–0 loss to Norwich on 3 May 1998",
+    "current": false
+   },
+   {
+    "name": "Madejski Stadium (now Select Car Leasing Stadium)",
+    "from": 1998,
+    "to": null,
+    "note": "Named after former chairman Sir John Madejski; opened 22 August 1998 with a 3–0 win over Luton",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Reading F.C.",
+   "url": "https://en.wikipedia.org/wiki/Reading_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "sheffield_united",
+  "name": "Sheffield United",
+  "status": "former",
+  "city": "Sheffield",
+  "area": "Highfield",
+  "founded": 1889,
+  "nicknames": [
+   "The Blades"
+  ],
+  "map": {
+   "lat": 53.37028,
+   "lng": -1.47083,
+   "label": "Bramall Lane"
+  },
+  "current_ground": {
+   "name": "Bramall Lane",
+   "capacity": 32050,
+   "timeline_name": "Bramall Lane"
+  },
+  "premier_league": {
+   "seasons_completed": 6,
+   "in_2026_27": false,
+   "spells": "1992–1994, 2006–2007, 2019–2021, 2023–2024",
+   "titles": 0,
+   "highest_finish": "9th",
+   "last_season_result": "Championship 13th",
+   "top_scorer": "Brian Deane (15)"
+  },
+  "summary": "Formed in 1889 as an offshoot of Sheffield United Cricket Club, the Blades have always played at Bramall Lane. They were English champions in 1897–98, won the FA Cup four times (1899, 1902, 1915 and 1925) and are one of only five clubs to have won all four professional divisions. They scored the first goal in Premier League history in 1992–93. Since then they have had several spells in the top flight, most recently in 2023–24. Their rivals are Sheffield Wednesday in the Steel City derby.",
+  "stadiums": [
+   {
+    "name": "Bramall Lane",
+    "from": 1889,
+    "to": null,
+    "note": "Opened in 1855 as a cricket ground; described as the oldest major league ground in the world, and the site of the first floodlit match in 1878",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Sheffield United F.C.",
+   "url": "https://en.wikipedia.org/wiki/Sheffield_United_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "sheffield_wednesday",
+  "name": "Sheffield Wednesday",
+  "status": "former",
+  "city": "Sheffield",
+  "area": "Owlerton",
+  "founded": 1867,
+  "nicknames": [
+   "The Owls"
+  ],
+  "map": {
+   "lat": 53.41139,
+   "lng": -1.50056,
+   "label": "Hillsborough Stadium"
+  },
+  "current_ground": {
+   "name": "Hillsborough Stadium",
+   "capacity": 39732,
+   "timeline_name": "Hillsborough Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 8,
+   "in_2026_27": false,
+   "spells": "1992–2000",
+   "titles": 0,
+   "highest_finish": "7th",
+   "last_season_result": "Championship 24th (relegated)",
+   "top_scorer": "Mark Bright (48)"
+  },
+  "summary": "Formed in 1867 as an offshoot of The Wednesday Cricket Club, Sheffield Wednesday are the second-oldest professional association football club in England and were known as The Wednesday until 1929. They have won four league titles, three FA Cups and the League Cup, and in 1991 beat Manchester United in the League Cup final as a second-tier side, the last team to win a major English trophy while outside the top flight. Wednesday were founder members of the Premier League in 1992 but have not played top-flight football since 2000. They were relegated to League One in 2025–26.",
+  "stadiums": [
+   {
+    "name": "Highfield",
+    "from": 1867,
+    "to": null,
+    "note": "The original ground; Wednesday then moved several times, including Myrtle Road, Heeley and Hunter's Bar",
+    "current": false
+   },
+   {
+    "name": "Sheaf House / Bramall Lane",
+    "from": null,
+    "to": 1887,
+    "note": "Used for major matches, until Sheffield United made Bramall Lane their home",
+    "current": false
+   },
+   {
+    "name": "Olive Grove",
+    "from": 1887,
+    "to": 1899,
+    "note": "First permanent ground, leased from the Duke of Norfolk; first game a 4–4 draw with Blackburn on 12 September 1887",
+    "current": false
+   },
+   {
+    "name": "Hillsborough Stadium",
+    "from": 1899,
+    "to": null,
+    "note": "Originally Owlerton Stadium; renamed in 1914. Hosted 1966 World Cup games and Euro 96",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Sheffield Wednesday F.C.",
+   "url": "https://en.wikipedia.org/wiki/Sheffield_Wednesday_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "southampton",
+  "name": "Southampton",
+  "status": "former",
+  "city": "Southampton",
+  "area": null,
+  "founded": 1885,
+  "nicknames": [
+   "The Saints"
+  ],
+  "map": {
+   "lat": 50.90583,
+   "lng": -1.39111,
+   "label": "St Mary's Stadium"
+  },
+  "current_ground": {
+   "name": "St Mary's Stadium",
+   "capacity": 32384,
+   "timeline_name": "St Mary's Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 25,
+   "in_2026_27": false,
+   "spells": "1992–2005, 2012–2023, 2024–2025",
+   "titles": 0,
+   "highest_finish": "6th",
+   "last_season_result": "Championship 4th",
+   "top_scorer": "Matt Le Tissier (100)"
+  },
+  "summary": "Founded in 1885 as St. Mary's Y.M.A., a church team, Southampton won the FA Cup in 1976 as a Second Division side and finished First Division runners-up in 1983–84. They were Premier League founder members and stayed in the top flight until 2005, dropped to the third tier by 2009, and came back to the Premier League in 2012 for 11 years. They won promotion again through the 2024 play-off final but were relegated in April 2025. They moved from The Dell to St Mary's Stadium in 2001, and their rivals are Portsmouth.",
+  "stadiums": [
+   {
+    "name": "Antelope Ground",
+    "from": 1887,
+    "to": 1896,
+    "note": "The club's first home ground",
+    "current": false
+   },
+   {
+    "name": "County Cricket Ground",
+    "from": 1896,
+    "to": 1898,
+    "current": false
+   },
+   {
+    "name": "The Dell",
+    "from": 1898,
+    "to": 2001,
+    "note": "In 1950 became the first English ground with permanent floodlights",
+    "current": false
+   },
+   {
+    "name": "St Mary's Stadium",
+    "from": 2001,
+    "to": null,
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Southampton F.C.",
+   "url": "https://en.wikipedia.org/wiki/Southampton_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "stoke_city",
+  "name": "Stoke City",
+  "status": "former",
+  "city": "Stoke-on-Trent",
+  "area": null,
+  "founded": 1863,
+  "nicknames": [
+   "The Potters"
+  ],
+  "map": {
+   "lat": 52.98833,
+   "lng": -2.17556,
+   "label": "bet365 Stadium"
+  },
+  "current_ground": {
+   "name": "bet365 Stadium",
+   "capacity": 30089,
+   "timeline_name": "Britannia Stadium (now bet365 Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 10,
+   "in_2026_27": false,
+   "spells": "2008–2018",
+   "titles": 0,
+   "highest_finish": "9th",
+   "last_season_result": "Championship 17th",
+   "top_scorer": "Peter Crouch (45)"
+  },
+  "summary": "Founded as Stoke Ramblers (the club dates itself to 1863, with the first recorded match in 1868), Stoke were one of the twelve founder members of the Football League in 1888. Stanley Matthews made his debut in 1932. They won the League Cup in 1972, and under Tony Pulis spent ten years in the Premier League (2008 to 2018), reaching the 2011 FA Cup final. They moved from the Victoria Ground to the Britannia Stadium, now the bet365 Stadium, in 1997. Their local rivals are Port Vale and they play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Lonsdale Street and Campbell Road",
+    "from": 1868,
+    "to": 1875,
+    "note": "Exact early pitches unclear; the first was on the site of a present burial ground in Lonsdale Street",
+    "current": false
+   },
+   {
+    "name": "Sweetings Field",
+    "from": 1875,
+    "to": 1878,
+    "note": "Owned by the mayor of Stoke, Alderman Sweeting",
+    "current": false
+   },
+   {
+    "name": "Victoria Ground",
+    "from": 1878,
+    "to": 1997,
+    "note": "Home for 119 years; one home league match in January 1976 was played at Vale Park after gales blew the roof off the Butler Street Stand",
+    "current": false
+   },
+   {
+    "name": "Britannia Stadium (now bet365 Stadium)",
+    "from": 1997,
+    "to": null,
+    "note": "Renamed bet365 Stadium in 2016",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Stoke City F.C.",
+   "url": "https://en.wikipedia.org/wiki/Stoke_City_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "sunderland",
+  "name": "Sunderland",
+  "status": "current",
+  "city": "Sunderland",
+  "area": null,
+  "founded": 1879,
+  "nicknames": [
+   "The Black Cats"
+  ],
+  "map": {
+   "lat": 54.91443,
+   "lng": -1.38817,
+   "label": "Stadium of Light"
+  },
+  "current_ground": {
+   "name": "Stadium of Light",
+   "capacity": 48095,
+   "timeline_name": "Stadium of Light"
+  },
+  "premier_league": {
+   "seasons_completed": 17,
+   "in_2026_27": true,
+   "spells": "1996–1997, 1999–2003, 2005–2006, 2007–2017, 2025–",
+   "titles": 0,
+   "highest_finish": "7th",
+   "last_season_result": "7th",
+   "top_scorer": "Kevin Phillips (61)"
+  },
+  "summary": "Formed in 1879 as Sunderland and District Teachers, the Black Cats have won six top-flight league titles (the last in 1936) and the FA Cup in 1937 and 1973. They played their first Premier League season in 1996–97, went down, and returned as First Division champions in 1999 with a then-record 105 points; Kevin Phillips won the European Golden Shoe with 30 goals. They left Roker Park for the Stadium of Light in 1997. Their fiercest rivals are Newcastle United in the Tyne–Wear derby. They were in the Premier League in 2025–26, finishing seventh.",
+  "stadiums": [
+   {
+    "name": "Blue House Field (Hendon)",
+    "from": 1879,
+    "to": null,
+    "note": "Close to where the club formed at Hendon Board School; rent was £10",
+    "current": false
+   },
+   {
+    "name": "A number of fields, including one near The Cedars",
+    "from": null,
+    "to": 1882,
+    "current": false
+   },
+   {
+    "name": "Groves Field (Ashbrooke)",
+    "from": 1882,
+    "to": 1883,
+    "note": "One season",
+    "current": false
+   },
+   {
+    "name": "Horatio Street (Roker)",
+    "from": 1883,
+    "to": 1884,
+    "note": "The first Sunderland ground north of the River Wear; one season",
+    "current": false
+   },
+   {
+    "name": "Abbs Field (Fulwell)",
+    "from": 1884,
+    "to": 1886,
+    "note": "The first ground where Sunderland charged admission",
+    "current": false
+   },
+   {
+    "name": "Newcastle Road",
+    "from": 1886,
+    "to": 1898,
+    "current": false
+   },
+   {
+    "name": "Roker Park",
+    "from": 1898,
+    "to": 1997,
+    "note": "Hosted the club's record 75,118 crowd in 1933; demolished in 1997",
+    "current": false
+   },
+   {
+    "name": "Stadium of Light",
+    "from": 1997,
+    "to": null,
+    "note": "Built on the site of Monkwearmouth Colliery; opened by Prince Andrew",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Sunderland A.F.C.",
+   "url": "https://en.wikipedia.org/wiki/Sunderland_A.F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "swansea_city",
+  "name": "Swansea City",
+  "status": "former",
+  "city": "Swansea",
+  "area": null,
+  "founded": 1912,
+  "nicknames": [
+   "The Swans",
+   "Yr Elyrch (Welsh)",
+   "The Jacks"
+  ],
+  "map": {
+   "lat": 51.6422,
+   "lng": -3.9351,
+   "label": "Swansea.com Stadium"
+  },
+  "current_ground": {
+   "name": "Swansea.com Stadium",
+   "capacity": 21000,
+   "timeline_name": "Liberty Stadium (now Swansea.com Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 7,
+   "in_2026_27": false,
+   "spells": "2011–2018",
+   "titles": 0,
+   "highest_finish": "8th",
+   "last_season_result": "Championship 11th",
+   "top_scorer": "Gylfi Sigurðsson (34)"
+  },
+  "summary": "Founded in 1912 as Swansea Town and renamed Swansea City in 1970, the Welsh club climbed from the fourth tier to the top flight twice. In 2011 they became the first Welsh team in the Premier League, and in 2013 won the League Cup with a 5–0 win over Bradford City, the biggest win in a League Cup final, qualifying for the Europa League. They finished eighth in 2014–15, their best Premier League finish, and were relegated in 2018. They moved from the Vetch Field to the Liberty Stadium in 2005 and rival Cardiff City in the South Wales derby.",
+  "stadiums": [
+   {
+    "name": "Vetch Field",
+    "from": 1912,
+    "to": 2005,
+    "note": "Final game was a win over Wrexham in the 2004–05 FAW Premier Cup",
+    "current": false
+   },
+   {
+    "name": "Liberty Stadium (now Swansea.com Stadium)",
+    "from": 2005,
+    "to": null,
+    "note": "Opened July 2005; shared with the Ospreys rugby team; renamed Swansea.com Stadium in 2021",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Swansea City A.F.C.",
+   "url": "https://en.wikipedia.org/wiki/Swansea_City_A.F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "swindon_town",
+  "name": "Swindon Town",
+  "status": "former",
+  "city": "Swindon",
+  "area": null,
+  "founded": 1879,
+  "nicknames": [
+   "The Robins"
+  ],
+  "map": {
+   "lat": 51.56444,
+   "lng": -1.77056,
+   "label": "The County Ground"
+  },
+  "current_ground": {
+   "name": "The County Ground",
+   "capacity": 15728,
+   "timeline_name": "County Ground"
+  },
+  "premier_league": {
+   "seasons_completed": 1,
+   "in_2026_27": false,
+   "spells": "1993–1994",
+   "titles": 0,
+   "highest_finish": "22nd (relegated)",
+   "last_season_result": "League Two 9th",
+   "top_scorer": "Jan Åge Fjørtoft (12)"
+  },
+  "summary": "Founded in 1879 as Swindon AFC, the club became Spartans and then Swindon Town in 1883. They won the League Cup in 1969, beating Arsenal 3–1 while in the Third Division. After winning the 1990 Second Division play-off final they were denied promotion for breaching Football League rules, but Glenn Hoddle's side won the 1993 play-off final to reach the top flight for the first time. Their one Premier League season (1993–94) ended in relegation. They play in League Two.",
+  "stadiums": [
+   {
+    "name": "Okus Quarry pitch (south of Bath Road)",
+    "from": 1879,
+    "to": null,
+    "note": "Original pitch; the club left after a young spectator fell into the quarry",
+    "current": false
+   },
+   {
+    "name": "Lansdown Road",
+    "from": null,
+    "to": null,
+    "current": false
+   },
+   {
+    "name": "The Croft",
+    "from": null,
+    "to": 1893,
+    "note": "Stayed about 11 years",
+    "current": false
+   },
+   {
+    "name": "County Ground (adjacent cricket pitch)",
+    "from": 1893,
+    "to": 1896,
+    "note": "Played on the cricket pitch while the football ground was built",
+    "current": false
+   },
+   {
+    "name": "County Ground",
+    "from": 1896,
+    "to": null,
+    "note": "Became the first League club ground with floodlights in 1951; the club bought it in 2023",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Swindon Town F.C.",
+   "url": "https://en.wikipedia.org/wiki/Swindon_Town_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "tottenham_hotspur",
+  "name": "Tottenham Hotspur",
+  "status": "current",
+  "city": "London",
+  "area": "Tottenham",
+  "founded": 1882,
+  "nicknames": [
+   "The Lilywhites"
+  ],
+  "map": {
+   "lat": 51.6044,
+   "lng": -0.0664,
+   "label": "Tottenham Hotspur Stadium"
+  },
+  "current_ground": {
+   "name": "Tottenham Hotspur Stadium",
+   "capacity": 62850,
+   "timeline_name": "Tottenham Hotspur Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 34,
+   "in_2026_27": true,
+   "spells": "1992–",
+   "titles": 0,
+   "highest_finish": "2nd",
+   "last_season_result": "17th",
+   "top_scorer": "Harry Kane (213)"
+  },
+  "summary": "Founded in 1882 as Hotspur F.C., Tottenham won the FA Cup in 1901 as a non-League club, and in 1960–61 became the first team of the 20th century to win the league and FA Cup double. In 1963 they were the first British club to win a European trophy, and in 1972 the inaugural UEFA Cup winners. They have won two league titles and eight FA Cups, and were Champions League runners-up in 2018–19. After 118 years at White Hart Lane they moved into the new Tottenham Hotspur Stadium in 2019, built on the same site. Their big rivals are Arsenal in the North London derby.",
+  "stadiums": [
+   {
+    "name": "Tottenham Marshes (Park Lane end)",
+    "from": 1882,
+    "to": 1888,
+    "note": "Public land where the club had to mark out its own pitch",
+    "current": false
+   },
+   {
+    "name": "Northumberland Park",
+    "from": 1888,
+    "to": 1899,
+    "note": "Rented for £17 a year; crowds of 14,000 in 1898 outgrew it",
+    "current": false
+   },
+   {
+    "name": "White Hart Lane",
+    "from": 1899,
+    "to": 2017,
+    "current": false
+   },
+   {
+    "name": "Wembley Stadium",
+    "from": 2017,
+    "to": 2019,
+    "note": "Temporary home during construction: all home games in 2017–18 and all but five in 2018–19",
+    "current": false
+   },
+   {
+    "name": "Tottenham Hotspur Stadium",
+    "from": 2019,
+    "to": null,
+    "note": "Opened 3 April 2019 with a 2–0 win over Crystal Palace, built on the White Hart Lane site",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Tottenham Hotspur F.C.",
+   "url": "https://en.wikipedia.org/wiki/Tottenham_Hotspur_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "watford",
+  "name": "Watford",
+  "status": "former",
+  "city": "Watford",
+  "area": null,
+  "founded": 1881,
+  "nicknames": [
+   "The Hornets",
+   "Yellow Army",
+   "The 'Orns",
+   "The Golden Boys"
+  ],
+  "map": {
+   "lat": 51.64972,
+   "lng": -0.40139,
+   "label": "Vicarage Road"
+  },
+  "current_ground": {
+   "name": "Vicarage Road",
+   "capacity": 22200,
+   "timeline_name": "Vicarage Road"
+  },
+  "premier_league": {
+   "seasons_completed": 8,
+   "in_2026_27": false,
+   "spells": "1999–2000, 2006–2007, 2015–2020, 2021–2022",
+   "titles": 0,
+   "highest_finish": "11th",
+   "last_season_result": "Championship 16th",
+   "top_scorer": "Troy Deeney (47)"
+  },
+  "summary": "Founded in 1881 as Watford Rovers, the Hornets rose from the fourth tier to the first under manager Graham Taylor between 1977 and 1987, finishing second in the First Division in 1982–83 and reaching the 1984 FA Cup final. They have had several Premier League spells: 1999–2000, 2006–07, 2015 to 2020 and 2021–22. They reached the 2019 FA Cup final but lost 6–0. Their rivals are nearby Luton Town. They play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Cassiobury Park, Vicarage Meadow, Market Street and other early grounds",
+    "from": 1881,
+    "to": 1890,
+    "note": "Watford Rovers moved between several grounds in the late 19th century, including what is now West Herts Sports Club",
+    "current": false
+   },
+   {
+    "name": "Cassio Road",
+    "from": 1890,
+    "to": 1922,
+    "note": "Stayed 32 years",
+    "current": false
+   },
+   {
+    "name": "Vicarage Road",
+    "from": 1922,
+    "to": null,
+    "note": "Shared with Saracens rugby union from 1997 to 2013; the East Stand is now named after Elton John",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Watford F.C.",
+   "url": "https://en.wikipedia.org/wiki/Watford_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "west_bromwich_albion",
+  "name": "West Bromwich Albion",
+  "status": "former",
+  "city": "West Bromwich",
+  "area": null,
+  "founded": 1878,
+  "nicknames": [
+   "The Baggies",
+   "The Throstles",
+   "The Albion"
+  ],
+  "map": {
+   "lat": 52.50917,
+   "lng": -1.96389,
+   "label": "The Hawthorns"
+  },
+  "current_ground": {
+   "name": "The Hawthorns",
+   "capacity": 26688,
+   "timeline_name": "The Hawthorns"
+  },
+  "premier_league": {
+   "seasons_completed": 13,
+   "in_2026_27": false,
+   "spells": "2002–2003, 2004–2006, 2008–2009, 2010–2018, 2020–2021",
+   "titles": 0,
+   "highest_finish": "8th",
+   "last_season_result": "Championship 21st",
+   "top_scorer": "Peter Odemwingie (30)"
+  },
+  "summary": "Formed in 1878, West Bromwich Albion were founder members of the Football League in 1888, won the league title in 1919–20 and have lifted the FA Cup five times (1888, 1892, 1931, 1954 and 1968). They also won the League Cup in 1966. Albion's last Premier League season was 2020–21. The Hawthorns, their home since 1900, is the highest of all 92 Premier League and Football League grounds, at 551 feet above sea level. Their traditional rivals are Aston Villa and Wolverhampton Wanderers, whom they meet in the Black Country derby.",
+  "stadiums": [
+   {
+    "name": "Cooper's Hill",
+    "from": 1878,
+    "to": 1879,
+    "current": false
+   },
+   {
+    "name": "Cooper's Hill and Dartmouth Park (alternating)",
+    "from": 1879,
+    "to": 1881,
+    "current": false
+   },
+   {
+    "name": "Bunn's Field (the Birches)",
+    "from": 1881,
+    "to": 1882,
+    "note": "First enclosed ground, so the club could charge admission",
+    "current": false
+   },
+   {
+    "name": "Four Acres",
+    "from": 1882,
+    "to": 1885,
+    "note": "Rented from West Bromwich Dartmouth Cricket Club",
+    "current": false
+   },
+   {
+    "name": "Stoney Lane",
+    "from": 1885,
+    "to": 1900,
+    "note": "Arguably the club's most successful period: two FA Cups and three runner-up places",
+    "current": false
+   },
+   {
+    "name": "The Hawthorns",
+    "from": 1900,
+    "to": null,
+    "note": "First match was a 1–1 draw with Derby County on 3 September 1900",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "West Bromwich Albion F.C.",
+   "url": "https://en.wikipedia.org/wiki/West_Bromwich_Albion_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "west_ham_united",
+  "name": "West Ham United",
+  "status": "former",
+  "city": "London",
+  "area": "Stratford",
+  "founded": 1895,
+  "nicknames": [
+   "The Irons",
+   "The Hammers"
+  ],
+  "map": {
+   "lat": 51.5386,
+   "lng": -0.0164,
+   "label": "London Stadium"
+  },
+  "current_ground": {
+   "name": "London Stadium",
+   "capacity": 62500,
+   "timeline_name": "London Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 30,
+   "in_2026_27": false,
+   "spells": "1993–2003, 2005–2011, 2012–2026",
+   "titles": 0,
+   "highest_finish": "5th",
+   "last_season_result": "18th (relegated)",
+   "top_scorer": "Michail Antonio (68)"
+  },
+  "summary": "Founded in 1895 as Thames Ironworks and reformed as West Ham United in 1900, the club played at the Boleyn Ground (Upton Park) from 1904 until 2016, when it moved into the former Olympic Stadium, now the London Stadium. West Ham won the FA Cup in 1964, 1975 and 1980 and the European Cup Winners' Cup in 1965, and in 2023 won the Europa Conference League, their first major trophy since 1980. Their highest league finish was third in 1985–86. Bobby Moore, Geoff Hurst and Martin Peters were three of England's 1966 World Cup winners. They were relegated from the Premier League in 2025–26, and their long-standing rivals are Millwall.",
+  "stadiums": [
+   {
+    "name": "Hermit Road (Canning Town)",
+    "from": 1895,
+    "to": null,
+    "note": "As Thames Ironworks",
+    "current": false
+   },
+   {
+    "name": "Browning Road (East Ham)",
+    "from": null,
+    "to": 1897,
+    "note": "Used briefly",
+    "current": false
+   },
+   {
+    "name": "Memorial Grounds (Plaistow)",
+    "from": 1897,
+    "to": 1904,
+    "note": "Kept for four more seasons after the club became West Ham United",
+    "current": false
+   },
+   {
+    "name": "Boleyn Ground (Upton Park)",
+    "from": 1904,
+    "to": 2016,
+    "note": "Capacity 35,016; also used by Charlton Athletic in 1991–93",
+    "current": false
+   },
+   {
+    "name": "London Stadium",
+    "from": 2016,
+    "to": null,
+    "note": "The former 2012 Olympic Stadium, on a 99-year lease signed in 2013",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "West Ham United F.C.",
+   "url": "https://en.wikipedia.org/wiki/West_Ham_United_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "wigan_athletic",
+  "name": "Wigan Athletic",
+  "status": "former",
+  "city": "Wigan",
+  "area": null,
+  "founded": 1932,
+  "nicknames": [
+   "The Latics",
+   "Tics"
+  ],
+  "map": {
+   "lat": 53.54778,
+   "lng": -2.65389,
+   "label": "Brick Community Stadium"
+  },
+  "current_ground": {
+   "name": "Brick Community Stadium",
+   "capacity": 25138,
+   "timeline_name": "Brick Community Stadium (formerly JJB Stadium and DW Stadium)"
+  },
+  "premier_league": {
+   "seasons_completed": 8,
+   "in_2026_27": false,
+   "spells": "2005–2013",
+   "titles": 0,
+   "highest_finish": "10th",
+   "last_season_result": "League One 16th",
+   "top_scorer": "Hugo Rodallega (24)"
+  },
+  "summary": "Founded in 1932, Wigan spent most of their early life in non-League football and were elected to the Football League in 1978. After winning promotion in 2004–05 they spent eight seasons in the Premier League, and in 2013 beat Manchester City in the FA Cup final, but were relegated the same season. Administration in 2020 and repeated points deductions followed. They have won the League One title four times and play there now. Bolton Wanderers are their main derby rivals.",
+  "stadiums": [
+   {
+    "name": "Springfield Park",
+    "from": 1932,
+    "to": 1999,
+    "note": "Former home of Wigan Borough; demolished in June 1999 and now housing",
+    "current": false
+   },
+   {
+    "name": "Brick Community Stadium (formerly JJB Stadium and DW Stadium)",
+    "from": 1999,
+    "to": null,
+    "note": "Opened on 4 August 1999 with a friendly against Manchester United; owned by the club and shared with Wigan Warriors rugby league",
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Wigan Athletic F.C.",
+   "url": "https://en.wikipedia.org/wiki/Wigan_Athletic_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ },
+ {
+  "slug": "wimbledon",
+  "name": "Wimbledon",
+  "status": "defunct",
+  "city": "London",
+  "area": "Wimbledon",
+  "founded": 1889,
+  "nicknames": [
+   "The Dons",
+   "The Wombles",
+   "The Crazy Gang"
+  ],
+  "map": {
+   "lat": 51.42847,
+   "lng": -0.18967,
+   "label": "Plough Lane (historic home)"
+  },
+  "current_ground": null,
+  "premier_league": {
+   "seasons_completed": 8,
+   "in_2026_27": false,
+   "spells": "1992–2000",
+   "titles": 0,
+   "highest_finish": "6th",
+   "last_season_result": "Relocated to become MK Dons",
+   "top_scorer": "Dean Holdsworth (58)"
+  },
+  "summary": "Founded in 1889 as Wimbledon Old Centrals, Wimbledon were a non-League club for most of their history until their election to the Football League in 1977. Their 'Crazy Gang' side rose from the Fourth Division to the First in four seasons, reaching the top flight in 1986, and won the 1988 FA Cup by beating champions Liverpool. They were founder members of the Premier League and stayed until relegation in 2000. After leaving Plough Lane in 1991 they ground-shared at Selhurst Park for twelve years, then moved to Milton Keynes in 2003, a move the FA approved against huge fan opposition. Supporters formed AFC Wimbledon in protest, and Wimbledon FC became Milton Keynes Dons when it was dissolved in 2004.",
+  "stadiums": [
+   {
+    "name": "Wimbledon Common",
+    "from": 1889,
+    "to": 1912,
+    "note": "The team used the Fox and Grapes pub in Camp Road as its changing room",
+    "current": false
+   },
+   {
+    "name": "Plough Lane",
+    "from": 1912,
+    "to": 1991,
+    "note": "Left because it could not economically meet Taylor Report all-seater rules",
+    "current": false
+   },
+   {
+    "name": "Selhurst Park (ground-share with Crystal Palace)",
+    "from": 1991,
+    "to": 2003,
+    "note": "Intended as temporary but lasted twelve years",
+    "current": false
+   },
+   {
+    "name": "National Hockey Stadium (Milton Keynes)",
+    "from": 2003,
+    "to": 2004,
+    "note": "First game on 27 September 2003; became the first home of Milton Keynes Dons",
+    "current": false
+   }
+  ],
+  "source": {
+   "title": "Wimbledon F.C.",
+   "url": "https://en.wikipedia.org/wiki/Wimbledon_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  },
+  "note": "Wimbledon F.C. moved to Milton Keynes in 2003 and became Milton Keynes Dons. Fans formed AFC Wimbledon, which now plays at a new ground near Plough Lane. The map pin shows Plough Lane, the club's home from 1912 to 1991."
+ },
+ {
+  "slug": "wolverhampton_wanderers",
+  "name": "Wolverhampton Wanderers",
+  "status": "former",
+  "city": "Wolverhampton",
+  "area": null,
+  "founded": 1877,
+  "nicknames": [
+   "The Old Gold"
+  ],
+  "map": {
+   "lat": 52.59028,
+   "lng": -2.13028,
+   "label": "Molineux Stadium"
+  },
+  "current_ground": {
+   "name": "Molineux Stadium",
+   "capacity": 31750,
+   "timeline_name": "Molineux Stadium"
+  },
+  "premier_league": {
+   "seasons_completed": 12,
+   "in_2026_27": false,
+   "spells": "2003–2004, 2009–2012, 2018–2026",
+   "titles": 0,
+   "highest_finish": "7th",
+   "last_season_result": "20th (relegated)",
+   "top_scorer": "Raúl Jiménez (40)"
+  },
+  "summary": "Formed in 1877 as St. Luke's F.C. and renamed Wolverhampton Wanderers in 1879, Wolves were founder members of the Football League in 1888. They were English champions three times (1953–54, 1957–58 and 1958–59) under Stan Cullis, and have won the FA Cup four times and the League Cup in 1974 and 1980. Their 1950s floodlit friendlies against overseas clubs helped inspire the European Cup. After a financial crisis in the 1980s they dropped to the Fourth Division, then climbed back, reaching the Premier League for the first time in 2003. They have played at Molineux since 1889, and their main rivals are West Bromwich Albion in the Black Country derby. They were relegated in 2025–26.",
+  "stadiums": [
+   {
+    "name": "Goldthorn Hill (Blakenhall)",
+    "from": 1877,
+    "to": 1879,
+    "note": "A field that could hold about 2,000 spectators",
+    "current": false
+   },
+   {
+    "name": "John Harper's Field (Lower Villiers Street)",
+    "from": 1879,
+    "to": 1881,
+    "current": false
+   },
+   {
+    "name": "Dudley Road",
+    "from": 1881,
+    "to": 1889,
+    "note": "Opposite the Fighting Cocks Inn; hosted the club's first FA Cup tie in 1883 and first Football League fixture in September 1888",
+    "current": false
+   },
+   {
+    "name": "Molineux Stadium",
+    "from": 1889,
+    "to": null,
+    "current": true
+   }
+  ],
+  "source": {
+   "title": "Wolverhampton Wanderers F.C.",
+   "url": "https://en.wikipedia.org/wiki/Wolverhampton_Wanderers_F.C.",
+   "license": "Facts and figures from Wikipedia (CC BY-SA 4.0); summary written for this project"
+  }
+ }
+]

@@ -1,0 +1,182 @@
+{
+ "newcastle_united": {
+  "summary": "Founded in 1881 as Stanley F.C., the club became East End F.C. in 1882 and took the name Newcastle United in 1892 after absorbing the assets of the defunct Newcastle West End, including St James' Park. They have won four league titles, six FA Cups and the Inter-Cities Fairs Cup, with their best period between 1904 and 1910. They have been in the Premier League for all but three seasons, were relegated in 2009 and 2016 and bounced straight back each time, and were bought by a Public Investment Fund-led consortium in 2021. In 2025 they won the League Cup, their first trophy in nearly 56 years. Their great rivals are Sunderland.",
+  "stadiums": [
+   {
+    "name": "Chillingham Road (Heaton), as Newcastle East End",
+    "from": 1886,
+    "to": 1892
+   },
+   {
+    "name": "St James' Park",
+    "from": 1892,
+    "to": null,
+    "note": "Football was played here from 1880 (Newcastle Rangers), then Newcastle West End from 1886; the oldest and largest football stadium in North East England"
+   }
+  ]
+ },
+ "norwich_city": {
+  "summary": "Founded in 1902, Norwich have won the League Cup twice (1962 and 1985) and reached the 1958–59 FA Cup semi-final as a Third Division side. Their highest league finish was third in the inaugural 1992–93 Premier League season, and in the following season's UEFA Cup they became the only English club to beat Bayern Munich at the Olympiastadion. They moved to Carrow Road in 1935 and share the East Anglian derby with Ipswich Town. They play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Newmarket Road",
+    "from": 1902,
+    "to": 1908,
+    "note": "Left after a dispute over the rent"
+   },
+   {
+    "name": "The Nest (Rosary Road)",
+    "from": 1908,
+    "to": 1935,
+    "note": "A converted disused chalk pit"
+   },
+   {
+    "name": "Carrow Road",
+    "from": 1935,
+    "to": null,
+    "note": "The original ground was built in just 82 days; first match was a 4–3 win over West Ham on 31 August 1935"
+   }
+  ]
+ },
+ "nottingham_forest": {
+  "summary": "Founded in 1865, Nottingham Forest are one of the oldest clubs in the world. Under Brian Clough and Peter Taylor they won back-to-back European Cups in 1979 and 1980, making Forest the only team in Europe to have won the European Cup more often than their domestic league title (they won it once). They have also won two FA Cups and four League Cups. Relegated in 1993, they returned immediately and finished third in 1995. They were relegated again in 1997 and 1999 and returned to the Premier League by winning the 2022 play-offs. Their rivals are Derby County in the East Midlands derby.",
+  "stadiums": [
+   {
+    "name": "Forest Recreation Ground (Forest Fields)",
+    "from": 1865,
+    "to": 1878
+   },
+   {
+    "name": "Castle Ground (The Meadows)",
+    "from": 1879,
+    "to": 1880
+   },
+   {
+    "name": "Trent Bridge Cricket Ground (West Bridgford)",
+    "from": 1880,
+    "to": 1882
+   },
+   {
+    "name": "Parkside Ground (Lenton)",
+    "from": 1882,
+    "to": 1885
+   },
+   {
+    "name": "Gregory Ground (Lenton)",
+    "from": 1885,
+    "to": 1890
+   },
+   {
+    "name": "Town Ground (The Meadows)",
+    "from": 1890,
+    "to": 1898
+   },
+   {
+    "name": "City Ground (West Bridgford)",
+    "from": 1898,
+    "to": null,
+    "note": "On the banks of the River Trent, just 300 yards from Notts County's Meadow Lane, the two closest professional grounds in England"
+   }
+  ]
+ },
+ "oldham_athletic": {
+  "summary": "Founded in 1895 as Pine Villa, the club took the name Oldham Athletic when it moved to Boundary Park in 1899. They finished second in the First Division in 1914–15 and won the Second Division in 1990–91 under Joe Royle, which made them founder members of the Premier League in 1992 after 68 years out of the top flight. They were relegated in 1994 and in 2022 fell into the National League, becoming the first former Premier League club to play non-league football. They won back their Football League place via the 2025 National League play-off final and play in League Two.",
+  "stadiums": [
+   {
+    "name": "Boundary Park",
+    "from": 1899,
+    "to": null,
+    "note": "Originally the Athletic Ground, built for Oldham County F.C.; Pine Villa moved in after County folded. The club page doesn't cover Pine Villa's earlier grounds (1895–1899)"
+   }
+  ]
+ },
+ "portsmouth": {
+  "summary": "Founded in 1898, Portsmouth were league champions in 1948–49 and 1949–50, won the FA Cup in 1939 and 2008, and held the FA Cup for a record seven years because the Second World War halted football. They spent seven years in the Premier League (2003 to 2010) before relegation, two spells in administration and three relegations. The club was bought by the Pompey Supporters Trust in 2013 and won League Two in 2016–17 and League One in 2023–24. They are one of only five clubs to have been champions of all four professional tiers, and the only English professional club not on mainland Great Britain. Their arch-rivals are Southampton.",
+  "stadiums": [
+   {
+    "name": "Fratton Park",
+    "from": 1899,
+    "to": null,
+    "note": "Built on a former potato field; opened 15 August 1899 and used throughout the club's history. Home to the club's record 51,385 crowd in 1949"
+   }
+  ]
+ },
+ "queens_park_rangers": {
+  "summary": "Founded in 1882 as Christchurch Rangers, the club took the name Queens Park Rangers in 1886 after merging with St Jude's Institute. QPR won the League Cup in 1967, their only major trophy, and finished just one point behind champions Liverpool in 1975–76. They were founder members of the Premier League in 1992 and went down in 1996, returning in 2011–12 and 2014–15 for a season each. They have been in the Championship since 2015. Their West London derby rivals are Chelsea, Fulham and Brentford.",
+  "stadiums": [
+   {
+    "name": "The Queen's Park and other grounds (unknown)",
+    "from": 1882,
+    "to": 1886,
+    "note": "The grounds used before 1886 are unknown but were probably in the Queen's Park area"
+   },
+   {
+    "name": "Welford Fields",
+    "from": 1886,
+    "to": 1888
+   },
+   {
+    "name": "London Scottish Ground, Home Farm, Kensal Green, Gun Club, Wormwood Scrubs and Kilburn Cricket Ground",
+    "from": 1888,
+    "to": 1889,
+    "note": "Six different grounds in a single season"
+   },
+   {
+    "name": "Barn Elms",
+    "from": 1891,
+    "to": 1891
+   },
+   {
+    "name": "Kensal Rise Athletic Ground",
+    "from": 1899,
+    "to": 1901
+   },
+   {
+    "name": "Latimer Road",
+    "from": 1901,
+    "to": 1902
+   },
+   {
+    "name": "Kensal Rise Athletic Ground",
+    "from": 1902,
+    "to": 1904
+   },
+   {
+    "name": "Royal Agricultural Society showgrounds (Park Royal)",
+    "from": 1904,
+    "to": 1907
+   },
+   {
+    "name": "Park Royal Ground",
+    "from": 1907,
+    "to": 1917
+   },
+   {
+    "name": "Loftus Road",
+    "from": 1917,
+    "to": 1931
+   },
+   {
+    "name": "White City Stadium",
+    "from": 1931,
+    "to": 1933
+   },
+   {
+    "name": "Loftus Road",
+    "from": 1933,
+    "to": 1962
+   },
+   {
+    "name": "White City Stadium",
+    "from": 1962,
+    "to": 1963
+   },
+   {
+    "name": "Loftus Road",
+    "from": 1963,
+    "to": null,
+    "note": "Called Kiyan Prince Foundation Stadium from 2019 to 2022"
+   }
+  ]
+ }
+}

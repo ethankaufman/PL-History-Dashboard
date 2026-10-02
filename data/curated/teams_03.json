@@ -1,0 +1,203 @@
+{
+ "cardiff_city": {
+  "summary": "Founded in 1899 as Riverside A.F.C. and renamed Cardiff City in 1908, the Welsh club is the only team from outside England to have won the FA Cup, in 1927. They have also lost FA Cup finals in 1925 and 2008 and the 2012 League Cup final. Their most recent Premier League season was 2018–19, and they won promotion back to the Championship in 2026. They contest the South Wales derby with Swansea City.",
+  "stadiums": [
+   {
+    "name": "Sophia Gardens",
+    "from": 1899,
+    "to": 1910,
+    "note": "A recreational park"
+   },
+   {
+    "name": "Ninian Park",
+    "from": 1910,
+    "to": 2009,
+    "note": "Named after Lord Ninian Crichton-Stuart, who drove its construction"
+   },
+   {
+    "name": "Cardiff City Stadium",
+    "from": 2009,
+    "to": null,
+    "note": "Opened in July 2009 on the site of the old Cardiff Athletics Stadium; capacity expanded to 33,316 by 2014"
+   }
+  ]
+ },
+ "charlton_athletic": {
+  "summary": "Founded in 1905, Charlton won the FA Cup in 1947 and finished second in the First Division in 1936–37. They reached the Premier League by winning the 1998 play-off final, went straight back down, and then returned as First Division champions in 1999–2000 under Alan Curbishley, spending seven successive years in the top flight. Their history includes a long exile from The Valley: financial problems and safety concerns forced them to ground-share at Selhurst Park and then Upton Park before they returned in December 1992. They are now in the Championship.",
+  "stadiums": [
+   {
+    "name": "Siemens Meadow",
+    "from": 1905,
+    "to": 1907,
+    "note": "Rough ground by the Thames, beside the Siemens Brothers Telegraph Works"
+   },
+   {
+    "name": "Woolwich Common",
+    "from": 1907,
+    "to": 1908
+   },
+   {
+    "name": "Pound Park",
+    "from": 1908,
+    "to": 1913
+   },
+   {
+    "name": "Angerstein Lane",
+    "from": 1913,
+    "to": 1915
+   },
+   {
+    "name": "The Valley",
+    "from": 1919,
+    "to": 1923,
+    "note": "Built in a former chalk quarry known as 'the Swamps'"
+   },
+   {
+    "name": "The Mount (Catford)",
+    "from": 1923,
+    "to": 1924,
+    "note": "Part of a proposed merger with Catford Southend that collapsed"
+   },
+   {
+    "name": "The Valley",
+    "from": 1924,
+    "to": 1985
+   },
+   {
+    "name": "Selhurst Park",
+    "from": 1985,
+    "to": 1991,
+    "note": "Ground-share with Crystal Palace, after the East Terrace was closed following the Bradford fire"
+   },
+   {
+    "name": "Upton Park (Boleyn Ground)",
+    "from": 1991,
+    "to": 1992,
+    "note": "West Ham's ground, used for 1991–92 and part of 1992–93 after Wimbledon moved into Selhurst Park"
+   },
+   {
+    "name": "The Valley",
+    "from": 1992,
+    "to": null,
+    "note": "Returned in December 1992 with a 1–0 win over Portsmouth; the Valley Party and supporter fundraising helped bring the return about"
+   }
+  ]
+ },
+ "chelsea": {
+  "summary": "Chelsea were founded in 1905 specifically to play at Stamford Bridge, which they named themselves after the neighbouring area. They won their first league title in 1955 and their first Premier League title in 2004–05, and have since won two Champions Leagues (2012 and 2021) and the Europa League in 2013 and 2019. In 2025 they became the first club to win all of UEFA's men's club competitions. They have only ever had one home ground.",
+  "stadiums": [
+   {
+    "name": "Stamford Bridge",
+    "from": 1905,
+    "to": null,
+    "note": "Opened in 1877 as an athletics arena; the club was founded to play there. Fans own the freehold through Chelsea Pitch Owners"
+   }
+  ]
+ },
+ "coventry_city": {
+  "summary": "Formed as Singers F.C. in 1883 and renamed Coventry City in 1898, the club won the FA Cup in 1987, still its only major trophy. Coventry spent 34 straight seasons in the top flight (1967–2001), including the first nine Premier League seasons, before sliding down to League Two by 2017. They climbed back, won the Championship in 2025–26, and return to the Premier League in 2026–27. They bought their stadium outright in August 2025 after a long rent dispute.",
+  "stadiums": [
+   {
+    "name": "Dowells Field",
+    "from": 1883,
+    "to": 1887,
+    "note": "Played here as Singers F.C."
+   },
+   {
+    "name": "Stoke Road",
+    "from": 1887,
+    "to": 1899,
+    "note": "Enclosed by hedges and trees, with a small stand"
+   },
+   {
+    "name": "Highfield Road",
+    "from": 1899,
+    "to": 2005,
+    "note": "Final league game was a 6–2 win over Derby County in 2005"
+   },
+   {
+    "name": "Coventry Building Society Arena (formerly Ricoh Arena)",
+    "from": 2005,
+    "to": 2013,
+    "note": "Opened August 2005"
+   },
+   {
+    "name": "Sixfields Stadium (Northampton)",
+    "from": 2013,
+    "to": 2014,
+    "temporary": true,
+    "note": "Ground-share with Northampton Town, a 70-mile round trip, after a rent dispute"
+   },
+   {
+    "name": "Coventry Building Society Arena (formerly Ricoh Arena)",
+    "from": 2014,
+    "to": 2019
+   },
+   {
+    "name": "St Andrew's (Birmingham City's ground)",
+    "from": 2019,
+    "to": 2021,
+    "temporary": true,
+    "note": "Ground-share that helped the club avoid expulsion during the rent dispute"
+   },
+   {
+    "name": "Coventry Building Society Arena (formerly Ricoh Arena)",
+    "from": 2021,
+    "to": null,
+    "note": "The club bought the stadium outright in August 2025"
+   }
+  ]
+ },
+ "crystal_palace": {
+  "summary": "Crystal Palace was formed as a professional club in 1905 to play in the FA Cup final stadium inside the Crystal Palace exhibition grounds. They finished third in the top flight in 1990–91, their best league finish, and were founder members of the Premier League. After relegation in 1998 and two spells in administration, they returned in 2013 and have played top-flight football ever since. They won the FA Cup in 2025, their first major trophy, and the Conference League in 2025–26. Their fiercest rivals are Brighton & Hove Albion.",
+  "stadiums": [
+   {
+    "name": "Crystal Palace Stadium (FA Cup final venue)",
+    "from": 1905,
+    "to": 1915,
+    "note": "Inside the Crystal Palace exhibition grounds; the club had to leave when the First World War began"
+   },
+   {
+    "name": "Herne Hill Velodrome",
+    "from": 1915,
+    "to": 1917,
+    "note": "Temporary base; dates approximate"
+   },
+   {
+    "name": "The Nest (Croydon)",
+    "from": 1917,
+    "to": 1924,
+    "note": "Taken over from Croydon Common F.C., which folded in 1917; dates approximate"
+   },
+   {
+    "name": "Selhurst Park",
+    "from": 1924,
+    "to": null,
+    "note": "Designed by Archibald Leitch; also shared with Charlton Athletic (1985–91) and Wimbledon (1991–2003)"
+   }
+  ]
+ },
+ "derby_county": {
+  "summary": "Founded in 1884 as an offshoot of Derbyshire County Cricket Club, Derby were one of the twelve founder members of the Football League in 1888. They won the FA Cup in 1946 and the league title twice in the 1970s, reaching the European Cup semi-finals. They moved from the Baseball Ground to Pride Park in 1997, and are one of only nine clubs to have played in every season of the English league system. Their great rivals are Nottingham Forest in the East Midlands derby. They play in the Championship.",
+  "stadiums": [
+   {
+    "name": "County Cricket Ground (Racecourse Ground)",
+    "from": 1884,
+    "to": 1895,
+    "note": "Hosted the 1886 FA Cup final replay and an England international"
+   },
+   {
+    "name": "Baseball Ground",
+    "from": 1895,
+    "to": 1997,
+    "note": "Known to fans as 'the BBG'; last first-team game was a 3–1 loss to Arsenal in May 1997"
+   },
+   {
+    "name": "Pride Park Stadium",
+    "from": 1997,
+    "to": null,
+    "note": "Opened by Queen Elizabeth II; renamed iPro Stadium 2013–2017"
+   }
+  ]
+ }
+}

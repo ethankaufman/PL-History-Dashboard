@@ -1,0 +1,48 @@
+{
+ "swansea_city": {
+  "summary": "Founded in 1912 as Swansea Town and renamed Swansea City in 1970, the Welsh club climbed from the fourth tier to the top flight twice. In 2011 they became the first Welsh team in the Premier League, and in 2013 won the League Cup with a 5–0 win over Bradford City, the biggest win in a League Cup final, qualifying for the Europa League. They finished eighth in 2014–15, their best Premier League finish, and were relegated in 2018. They moved from the Vetch Field to the Liberty Stadium in 2005 and rival Cardiff City in the South Wales derby.",
+  "stadiums": [
+   {"name": "Vetch Field", "from": 1912, "to": 2005, "note": "Final game was a win over Wrexham in the 2004–05 FAW Premier Cup"},
+   {"name": "Liberty Stadium (now Swansea.com Stadium)", "from": 2005, "to": null, "note": "Opened July 2005; shared with the Ospreys rugby team; renamed Swansea.com Stadium in 2021"}
+  ]
+ },
+ "swindon_town": {
+  "summary": "Founded in 1879 as Swindon AFC, the club became Spartans and then Swindon Town in 1883. They won the League Cup in 1969, beating Arsenal 3–1 while in the Third Division. After winning the 1990 Second Division play-off final they were denied promotion for breaching Football League rules, but Glenn Hoddle's side won the 1993 play-off final to reach the top flight for the first time. Their one Premier League season (1993–94) ended in relegation. They play in League Two.",
+  "stadiums": [
+   {"name": "Okus Quarry pitch (south of Bath Road)", "from": 1879, "to": null, "note": "Original pitch; the club left after a young spectator fell into the quarry"},
+   {"name": "Lansdown Road", "from": null, "to": null},
+   {"name": "The Croft", "from": null, "to": 1893, "note": "Stayed about 11 years"},
+   {"name": "County Ground (adjacent cricket pitch)", "from": 1893, "to": 1896, "note": "Played on the cricket pitch while the football ground was built"},
+   {"name": "County Ground", "from": 1896, "to": null, "note": "Became the first League club ground with floodlights in 1951; the club bought it in 2023"}
+  ]
+ },
+ "tottenham_hotspur": {
+  "summary": "Founded in 1882 as Hotspur F.C., Tottenham won the FA Cup in 1901 as a non-League club, and in 1960–61 became the first team of the 20th century to win the league and FA Cup double. In 1963 they were the first British club to win a European trophy, and in 1972 the inaugural UEFA Cup winners. They have won two league titles and eight FA Cups, and were Champions League runners-up in 2018–19. After 118 years at White Hart Lane they moved into the new Tottenham Hotspur Stadium in 2019, built on the same site. Their big rivals are Arsenal in the North London derby.",
+  "stadiums": [
+   {"name": "Tottenham Marshes (Park Lane end)", "from": 1882, "to": 1888, "note": "Public land where the club had to mark out its own pitch"},
+   {"name": "Northumberland Park", "from": 1888, "to": 1899, "note": "Rented for £17 a year; crowds of 14,000 in 1898 outgrew it"},
+   {"name": "White Hart Lane", "from": 1899, "to": 2017},
+   {"name": "Wembley Stadium", "from": 2017, "to": 2019, "note": "Temporary home during construction: all home games in 2017–18 and all but five in 2018–19"},
+   {"name": "Tottenham Hotspur Stadium", "from": 2019, "to": null, "note": "Opened 3 April 2019 with a 2–0 win over Crystal Palace, built on the White Hart Lane site"}
+  ]
+ },
+ "watford": {
+  "summary": "Founded in 1881 as Watford Rovers, the Hornets rose from the fourth tier to the first under manager Graham Taylor between 1977 and 1987, finishing second in the First Division in 1982–83 and reaching the 1984 FA Cup final. They have had several Premier League spells: 1999–2000, 2006–07, 2015 to 2020 and 2021–22. They reached the 2019 FA Cup final but lost 6–0. Their rivals are nearby Luton Town. They play in the Championship.",
+  "stadiums": [
+   {"name": "Cassiobury Park, Vicarage Meadow, Market Street and other early grounds", "from": 1881, "to": 1890, "note": "Watford Rovers moved between several grounds in the late 19th century, including what is now West Herts Sports Club"},
+   {"name": "Cassio Road", "from": 1890, "to": 1922, "note": "Stayed 32 years"},
+   {"name": "Vicarage Road", "from": 1922, "to": null, "note": "Shared with Saracens rugby union from 1997 to 2013; the East Stand is now named after Elton John"}
+  ]
+ },
+ "west_bromwich_albion": {
+  "summary": "Formed in 1878, West Bromwich Albion were founder members of the Football League in 1888, won the league title in 1919–20 and have lifted the FA Cup five times (1888, 1892, 1931, 1954 and 1968). They also won the League Cup in 1966. Albion's last Premier League season was 2020–21. The Hawthorns, their home since 1900, is the highest of all 92 Premier League and Football League grounds, at 551 feet above sea level. Their traditional rivals are Aston Villa and Wolverhampton Wanderers, whom they meet in the Black Country derby.",
+  "stadiums": [
+   {"name": "Cooper's Hill", "from": 1878, "to": 1879},
+   {"name": "Cooper's Hill and Dartmouth Park (alternating)", "from": 1879, "to": 1881},
+   {"name": "Bunn's Field (the Birches)", "from": 1881, "to": 1882, "note": "First enclosed ground, so the club could charge admission"},
+   {"name": "Four Acres", "from": 1882, "to": 1885, "note": "Rented from West Bromwich Dartmouth Cricket Club"},
+   {"name": "Stoney Lane", "from": 1885, "to": 1900, "note": "Arguably the club's most successful period: two FA Cups and three runner-up places"},
+   {"name": "The Hawthorns", "from": 1900, "to": null, "note": "First match was a 1–1 draw with Derby County on 3 September 1900"}
+  ]
+ }
+}

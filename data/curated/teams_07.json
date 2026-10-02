@@ -1,0 +1,59 @@
+{
+ "reading": {
+  "summary": "Founded in 1871, Reading are one of England's oldest clubs, though they only joined the Football League in 1920. They set a record of 106 points in the 2005–06 Championship and reached the Premier League for the first time in 2006–07, finishing eighth, their highest finish. They returned for 2012–13 and went down after one season. They reached the FA Cup semi-finals in 1927 and 2015. They moved from Elm Park to the Madejski Stadium in 1998 and play in League One.",
+  "stadiums": [
+   {"name": "Reading Recreation Ground", "from": 1871, "to": 1878},
+   {"name": "Reading Cricket Ground", "from": 1878, "to": 1882},
+   {"name": "Coley Park", "from": 1882, "to": 1889, "note": "The local squire stopped football there over 'rowdyism'"},
+   {"name": "Caversham Cricket Ground", "from": 1889, "to": 1896},
+   {"name": "Elm Park", "from": 1896, "to": 1998, "note": "A former gravel pit; last competitive match was a 1–0 loss to Norwich on 3 May 1998"},
+   {"name": "Madejski Stadium (now Select Car Leasing Stadium)", "from": 1998, "to": null, "note": "Named after former chairman Sir John Madejski; opened 22 August 1998 with a 3–0 win over Luton"}
+  ]
+ },
+ "sheffield_united": {
+  "summary": "Formed in 1889 as an offshoot of Sheffield United Cricket Club, the Blades have always played at Bramall Lane. They were English champions in 1897–98, won the FA Cup four times (1899, 1902, 1915 and 1925) and are one of only five clubs to have won all four professional divisions. They scored the first goal in Premier League history in 1992–93. Since then they have had several spells in the top flight, most recently in 2023–24. Their rivals are Sheffield Wednesday in the Steel City derby.",
+  "stadiums": [
+   {"name": "Bramall Lane", "from": 1889, "to": null, "note": "Opened in 1855 as a cricket ground; described as the oldest major league ground in the world, and the site of the first floodlit match in 1878"}
+  ]
+ },
+ "sheffield_wednesday": {
+  "summary": "Formed in 1867 as an offshoot of The Wednesday Cricket Club, Sheffield Wednesday are the second-oldest professional association football club in England and were known as The Wednesday until 1929. They have won four league titles, three FA Cups and the League Cup, and in 1991 beat Manchester United in the League Cup final as a second-tier side, the last team to win a major English trophy while outside the top flight. Wednesday were founder members of the Premier League in 1992 but have not played top-flight football since 2000. They were relegated to League One in 2025–26.",
+  "stadiums": [
+   {"name": "Highfield", "from": 1867, "to": null, "note": "The original ground; Wednesday then moved several times, including Myrtle Road, Heeley and Hunter's Bar"},
+   {"name": "Sheaf House / Bramall Lane", "from": null, "to": 1887, "note": "Used for major matches, until Sheffield United made Bramall Lane their home"},
+   {"name": "Olive Grove", "from": 1887, "to": 1899, "note": "First permanent ground, leased from the Duke of Norfolk; first game a 4–4 draw with Blackburn on 12 September 1887"},
+   {"name": "Hillsborough Stadium", "from": 1899, "to": null, "note": "Originally Owlerton Stadium; renamed in 1914. Hosted 1966 World Cup games and Euro 96"}
+  ]
+ },
+ "southampton": {
+  "summary": "Founded in 1885 as St. Mary's Y.M.A., a church team, Southampton won the FA Cup in 1976 as a Second Division side and finished First Division runners-up in 1983–84. They were Premier League founder members and stayed in the top flight until 2005, dropped to the third tier by 2009, and came back to the Premier League in 2012 for 11 years. They won promotion again through the 2024 play-off final but were relegated in April 2025. They moved from The Dell to St Mary's Stadium in 2001, and their rivals are Portsmouth.",
+  "stadiums": [
+   {"name": "Antelope Ground", "from": 1887, "to": 1896, "note": "The club's first home ground"},
+   {"name": "County Cricket Ground", "from": 1896, "to": 1898},
+   {"name": "The Dell", "from": 1898, "to": 2001, "note": "In 1950 became the first English ground with permanent floodlights"},
+   {"name": "St Mary's Stadium", "from": 2001, "to": null}
+  ]
+ },
+ "stoke_city": {
+  "summary": "Founded as Stoke Ramblers (the club dates itself to 1863, with the first recorded match in 1868), Stoke were one of the twelve founder members of the Football League in 1888. Stanley Matthews made his debut in 1932. They won the League Cup in 1972, and under Tony Pulis spent ten years in the Premier League (2008 to 2018), reaching the 2011 FA Cup final. They moved from the Victoria Ground to the Britannia Stadium, now the bet365 Stadium, in 1997. Their local rivals are Port Vale and they play in the Championship.",
+  "stadiums": [
+   {"name": "Lonsdale Street and Campbell Road", "from": 1868, "to": 1875, "note": "Exact early pitches unclear; the first was on the site of a present burial ground in Lonsdale Street"},
+   {"name": "Sweetings Field", "from": 1875, "to": 1878, "note": "Owned by the mayor of Stoke, Alderman Sweeting"},
+   {"name": "Victoria Ground", "from": 1878, "to": 1997, "note": "Home for 119 years; one home league match in January 1976 was played at Vale Park after gales blew the roof off the Butler Street Stand"},
+   {"name": "Britannia Stadium (now bet365 Stadium)", "from": 1997, "to": null, "note": "Renamed bet365 Stadium in 2016"}
+  ]
+ },
+ "sunderland": {
+  "summary": "Formed in 1879 as Sunderland and District Teachers, the Black Cats have won six top-flight league titles (the last in 1936) and the FA Cup in 1937 and 1973. They played their first Premier League season in 1996–97, went down, and returned as First Division champions in 1999 with a then-record 105 points; Kevin Phillips won the European Golden Shoe with 30 goals. They left Roker Park for the Stadium of Light in 1997. Their fiercest rivals are Newcastle United in the Tyne–Wear derby. They were in the Premier League in 2025–26, finishing seventh.",
+  "stadiums": [
+   {"name": "Blue House Field (Hendon)", "from": 1879, "to": null, "note": "Close to where the club formed at Hendon Board School; rent was £10"},
+   {"name": "A number of fields, including one near The Cedars", "from": null, "to": 1882},
+   {"name": "Groves Field (Ashbrooke)", "from": 1882, "to": 1883, "note": "One season"},
+   {"name": "Horatio Street (Roker)", "from": 1883, "to": 1884, "note": "The first Sunderland ground north of the River Wear; one season"},
+   {"name": "Abbs Field (Fulwell)", "from": 1884, "to": 1886, "note": "The first ground where Sunderland charged admission"},
+   {"name": "Newcastle Road", "from": 1886, "to": 1898},
+   {"name": "Roker Park", "from": 1898, "to": 1997, "note": "Hosted the club's record 75,118 crowd in 1933; demolished in 1997"},
+   {"name": "Stadium of Light", "from": 1997, "to": null, "note": "Built on the site of Monkwearmouth Colliery; opened by Prince Andrew"}
+  ]
+ }
+}

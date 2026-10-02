@@ -1,0 +1,192 @@
+{
+ "leicester_city": {
+  "summary": "Founded in 1884 as Leicester Fosse and renamed Leicester City in 1919, the Foxes won the Premier League in 2015–16 at odds of 5000–1, one of seven clubs to have won the competition. They also won the FA Cup in 2021, the League Cup three times (1964, 1997 and 2000) and reached the Champions League quarter-finals in 2016–17. The club moved from Filbert Street to the Walkers Stadium, now the King Power Stadium, in 2002. They were relegated from the Championship in 2025–26 and play in League One.",
+  "stadiums": [
+   {
+    "name": "Fosse Road field",
+    "from": 1884,
+    "to": null,
+    "note": "Gave the club its original name, Leicester Fosse"
+   },
+   {
+    "name": "Victoria Park",
+    "from": null,
+    "to": null
+   },
+   {
+    "name": "Belgrave Road",
+    "from": null,
+    "to": null
+   },
+   {
+    "name": "Mill Lane",
+    "from": null,
+    "to": null,
+    "note": "Moved here on turning professional; the club was later evicted"
+   },
+   {
+    "name": "County Cricket Ground",
+    "from": null,
+    "to": 1891,
+    "note": "Temporary home while the club looked for a new ground"
+   },
+   {
+    "name": "Filbert Street",
+    "from": 1891,
+    "to": 2002,
+    "note": "Archibald Leitch made improvements; the 1927 'Double Decker' stand lasted until the ground closed"
+   },
+   {
+    "name": "King Power Stadium (formerly Walkers Stadium)",
+    "from": 2002,
+    "to": null,
+    "note": "Less than 300 yards from Filbert Street; renamed King Power Stadium in 2011"
+   }
+  ]
+ },
+ "liverpool": {
+  "summary": "Liverpool were founded in 1892 by John Houlding after Everton left Anfield, which Houlding owned, over a rent dispute. They joined the Football League in 1893 and have played at Anfield ever since. They have won a joint-record twenty league titles, including the club's first in the Premier League era in 2020 under Jürgen Klopp and a twentieth in 2025 under Arne Slot, plus six European Cups. Their rivals are Everton in the Merseyside derby and Manchester United.",
+  "stadiums": [
+   {
+    "name": "Anfield",
+    "from": 1892,
+    "to": null,
+    "note": "Built in 1884 and first used by Everton; capacity now 61,276, with the Kop one of the world's most famous stands"
+   }
+  ]
+ },
+ "luton_town": {
+  "summary": "Founded in 1885, Luton have played at Kenilworth Road since 1905. They won the League Cup in 1988 with a 3–2 victory over Arsenal and played in the old First Division from 1982 to 1992. Financial collapse between 2007 and 2009 dropped them from the second tier to non-league football, but they climbed back and were promoted to the Premier League through the 2023 Championship play-offs. They spent one Premier League season (2023–24) and were relegated twice in a row, so they play in League One. A new stadium at Power Court is planned.",
+  "stadiums": [
+   {
+    "name": "Dallow Lane",
+    "from": 1885,
+    "to": 1897,
+    "note": "Former ground of Luton Excelsior, beside a railway line; the club had to sell it after a financial loss in 1896–97"
+   },
+   {
+    "name": "Dunstable Road",
+    "from": 1897,
+    "to": 1905,
+    "note": "Opened by the Duke of Bedford; the site was sold for housing in 1905"
+   },
+   {
+    "name": "Kenilworth Road",
+    "from": 1905,
+    "to": null,
+    "note": "Capacity 12,056, one of the smallest grounds in the Premier League when Luton played there; a new Power Court Stadium is planned for 2028–29"
+   }
+  ]
+ },
+ "manchester_city": {
+  "summary": "Founded in 1880 as St. Mark's (West Gorton), the club became Ardwick A.F.C. in 1887 and Manchester City in 1894. City won their first FA Cup in 1904 and had a successful spell under Joe Mercer and Malcolm Allison in the late 1960s and early 1970s. They dropped to the third tier for the only time in 1998 and have been in the Premier League since 2002–03. After Sheikh Mansour's 2008 takeover they won the Premier League in 2012 and, under Pep Guardiola (2016–2026), a first English domestic treble, a continental treble in 2023 and four consecutive league titles from 2020–21 to 2023–24.",
+  "stadiums": [
+   {
+    "name": "Pitch near St Mark's Church (West Gorton)",
+    "from": 1880,
+    "to": null,
+    "note": "A dangerously bumpy patch of grass near the church where the club began; the club page doesn't name the early pitches"
+   },
+   {
+    "name": "Kirkmanshulme Cricket Club ground-share",
+    "from": null,
+    "to": null,
+    "note": "The club was turfed out after about a year"
+   },
+   {
+    "name": "Three further pitches on wasteland",
+    "from": null,
+    "to": 1887,
+    "note": "All proved inadequate; the fifth arrangement collapsed in 1887 when the landlord of the Bulls Head Hotel demanded more rent"
+   },
+   {
+    "name": "Hyde Road",
+    "from": 1887,
+    "to": 1923,
+    "note": "Waste ground on Hyde Road in Ardwick, found by captain Kenneth Mackenzie; the Main Stand was destroyed by fire in 1920"
+   },
+   {
+    "name": "Maine Road",
+    "from": 1923,
+    "to": 2003,
+    "note": "Nicknamed the 'Wembley of the North'; hosted a record 84,569 for an FA Cup tie in 1934"
+   },
+   {
+    "name": "City of Manchester Stadium (Etihad Stadium)",
+    "from": 2003,
+    "to": null,
+    "note": "Built for the 2002 Commonwealth Games; renamed Etihad Stadium in 2011; the North Stand reopened in 2026 named after Pep Guardiola"
+   }
+  ]
+ },
+ "manchester_united": {
+  "summary": "Founded in 1878 as Newton Heath LYR and renamed Manchester United in 1902, the club moved to Old Trafford in 1910. Matt Busby's 'Busby Babes' won titles in the 1950s before eight players died in the 1958 Munich air disaster, and United became the first English club to win the European Cup in 1968. Alex Ferguson (1986–2013) won 13 league titles, and in 1998–99 United became the first English side to win the Premier League, FA Cup and Champions League in one season. United share a joint-record twenty league titles with Liverpool and finished third in 2025–26.",
+  "stadiums": [
+   {
+    "name": "North Road (Newton Heath)",
+    "from": 1878,
+    "to": 1893,
+    "note": "A field close to the railway yard; capacity about 12,000"
+   },
+   {
+    "name": "Bank Street (Clayton)",
+    "from": 1893,
+    "to": 1910
+   },
+   {
+    "name": "Old Trafford",
+    "from": 1910,
+    "to": 1941,
+    "note": "Severely bombed in 1941"
+   },
+   {
+    "name": "Maine Road (Manchester City's ground)",
+    "from": 1941,
+    "to": 1949,
+    "temporary": true,
+    "note": "Shared with City while Old Trafford was repaired after wartime bomb damage"
+   },
+   {
+    "name": "Old Trafford",
+    "from": 1949,
+    "to": null,
+    "note": "Capacity 74,158; a new 100,000-seat stadium next door has been announced"
+   }
+  ]
+ },
+ "middlesbrough": {
+  "summary": "Formed in 1876, Middlesbrough were founder members of the Premier League in 1992. Their highest league finish is third (1913–14). The club nearly folded in 1986 before chairman Steve Gibson's consortium rescued it. Under Steve McClaren they won the League Cup in 2004, their first major trophy, and reached the 2006 UEFA Cup final. They lost both the FA Cup and League Cup finals in 1997, the same year they were relegated after a three-point deduction. They moved from Ayresome Park to the Riverside Stadium in 1995 and play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Albert Park",
+    "from": 1876,
+    "to": 1878,
+    "note": "Ordered to leave after damage by players and spectators"
+   },
+   {
+    "name": "Breckon Hill",
+    "from": 1878,
+    "to": 1880,
+    "note": "Left when the owner raised the rent; the club page doesn't say where they played between 1880 and 1882"
+   },
+   {
+    "name": "Linthorpe Road",
+    "from": 1882,
+    "to": 1903,
+    "note": "Shared with Middlesbrough Cricket Club until 1893–94"
+   },
+   {
+    "name": "Ayresome Park",
+    "from": 1903,
+    "to": 1995,
+    "note": "Designed by Archibald Leitch; a 1966 World Cup venue"
+   },
+   {
+    "name": "Riverside Stadium",
+    "from": 1995,
+    "to": null,
+    "note": "The first stadium built to the Taylor Report's all-seater recommendations; named by a fan vote"
+   }
+  ]
+ }
+}

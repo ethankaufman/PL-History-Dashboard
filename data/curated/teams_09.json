@@ -1,0 +1,37 @@
+{
+ "west_ham_united": {
+  "summary": "Founded in 1895 as Thames Ironworks and reformed as West Ham United in 1900, the club played at the Boleyn Ground (Upton Park) from 1904 until 2016, when it moved into the former Olympic Stadium, now the London Stadium. West Ham won the FA Cup in 1964, 1975 and 1980 and the European Cup Winners' Cup in 1965, and in 2023 won the Europa Conference League, their first major trophy since 1980. Their highest league finish was third in 1985–86. Bobby Moore, Geoff Hurst and Martin Peters were three of England's 1966 World Cup winners. They were relegated from the Premier League in 2025–26, and their long-standing rivals are Millwall.",
+  "stadiums": [
+   {"name": "Hermit Road (Canning Town)", "from": 1895, "to": null, "note": "As Thames Ironworks"},
+   {"name": "Browning Road (East Ham)", "from": null, "to": 1897, "note": "Used briefly"},
+   {"name": "Memorial Grounds (Plaistow)", "from": 1897, "to": 1904, "note": "Kept for four more seasons after the club became West Ham United"},
+   {"name": "Boleyn Ground (Upton Park)", "from": 1904, "to": 2016, "note": "Capacity 35,016; also used by Charlton Athletic in 1991–93"},
+   {"name": "London Stadium", "from": 2016, "to": null, "note": "The former 2012 Olympic Stadium, on a 99-year lease signed in 2013"}
+  ]
+ },
+ "wigan_athletic": {
+  "summary": "Founded in 1932, Wigan spent most of their early life in non-League football and were elected to the Football League in 1978. After winning promotion in 2004–05 they spent eight seasons in the Premier League, and in 2013 beat Manchester City in the FA Cup final, but were relegated the same season. Administration in 2020 and repeated points deductions followed. They have won the League One title four times and play there now. Bolton Wanderers are their main derby rivals.",
+  "stadiums": [
+   {"name": "Springfield Park", "from": 1932, "to": 1999, "note": "Former home of Wigan Borough; demolished in June 1999 and now housing"},
+   {"name": "Brick Community Stadium (formerly JJB Stadium and DW Stadium)", "from": 1999, "to": null, "note": "Opened on 4 August 1999 with a friendly against Manchester United; owned by the club and shared with Wigan Warriors rugby league"}
+  ]
+ },
+ "wimbledon": {
+  "summary": "Founded in 1889 as Wimbledon Old Centrals, Wimbledon were a non-League club for most of their history until their election to the Football League in 1977. Their 'Crazy Gang' side rose from the Fourth Division to the First in four seasons, reaching the top flight in 1986, and won the 1988 FA Cup by beating champions Liverpool. They were founder members of the Premier League and stayed until relegation in 2000. After leaving Plough Lane in 1991 they ground-shared at Selhurst Park for twelve years, then moved to Milton Keynes in 2003, a move the FA approved against huge fan opposition. Supporters formed AFC Wimbledon in protest, and Wimbledon FC became Milton Keynes Dons when it was dissolved in 2004.",
+  "stadiums": [
+   {"name": "Wimbledon Common", "from": 1889, "to": 1912, "note": "The team used the Fox and Grapes pub in Camp Road as its changing room"},
+   {"name": "Plough Lane", "from": 1912, "to": 1991, "note": "Left because it could not economically meet Taylor Report all-seater rules"},
+   {"name": "Selhurst Park (ground-share with Crystal Palace)", "from": 1991, "to": 2003, "note": "Intended as temporary but lasted twelve years"},
+   {"name": "National Hockey Stadium (Milton Keynes)", "from": 2003, "to": 2004, "note": "First game on 27 September 2003; became the first home of Milton Keynes Dons"}
+  ]
+ },
+ "wolverhampton_wanderers": {
+  "summary": "Formed in 1877 as St. Luke's F.C. and renamed Wolverhampton Wanderers in 1879, Wolves were founder members of the Football League in 1888. They were English champions three times (1953–54, 1957–58 and 1958–59) under Stan Cullis, and have won the FA Cup four times and the League Cup in 1974 and 1980. Their 1950s floodlit friendlies against overseas clubs helped inspire the European Cup. After a financial crisis in the 1980s they dropped to the Fourth Division, then climbed back, reaching the Premier League for the first time in 2003. They have played at Molineux since 1889, and their main rivals are West Bromwich Albion in the Black Country derby. They were relegated in 2025–26.",
+  "stadiums": [
+   {"name": "Goldthorn Hill (Blakenhall)", "from": 1877, "to": 1879, "note": "A field that could hold about 2,000 spectators"},
+   {"name": "John Harper's Field (Lower Villiers Street)", "from": 1879, "to": 1881},
+   {"name": "Dudley Road", "from": 1881, "to": 1889, "note": "Opposite the Fighting Cocks Inn; hosted the club's first FA Cup tie in 1883 and first Football League fixture in September 1888"},
+   {"name": "Molineux Stadium", "from": 1889, "to": null}
+  ]
+ }
+}

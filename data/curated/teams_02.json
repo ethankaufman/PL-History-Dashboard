@@ -1,0 +1,162 @@
+{
+ "bolton_wanderers": {
+  "summary": "Formed in 1874 as Christ Church F.C. and renamed Bolton Wanderers in 1877, the club was one of the twelve founder members of the Football League in 1888. Bolton won the FA Cup four times (1923, 1926, 1929 and 1958); the 1923 final was the first ever held at Wembley, the 'White Horse Final'. They played in the Premier League for eleven straight seasons under Sam Allardyce, reaching the 2004 League Cup final, and have spent more seasons in the top flight than any other club without winning the league. Financial trouble led to administration in 2019, but they climbed back and won promotion to the Championship in 2026.",
+  "stadiums": [
+   {
+    "name": "Various local pitches",
+    "from": 1874,
+    "to": 1881,
+    "note": "As Christ Church, the club played at several locations in the area"
+   },
+   {
+    "name": "Pike's Lane",
+    "from": 1881,
+    "to": 1895
+   },
+   {
+    "name": "Burnden Park",
+    "from": 1895,
+    "to": 1997,
+    "note": "Could hold around 70,000 at its peak"
+   },
+   {
+    "name": "Reebok Stadium (now Toughsheet Community Stadium)",
+    "from": 1997,
+    "to": null,
+    "note": "Built in Horwich; renamed Macron Stadium (2014), University of Bolton Stadium (2018) and Toughsheet Community Stadium (2023)"
+   }
+  ]
+ },
+ "bournemouth": {
+  "summary": "Formed in 1899 as Boscombe, the club became Bournemouth & Boscombe Athletic and has been AFC Bournemouth since 1971. For most of their history they were a lower-league side, entering administration in 1997 and 2008. Eddie Howe led them to three promotions in six years, and they reached the Premier League for the first time in 2015. They were relegated in 2020 and came straight back in 2022. In 2025–26 they finished sixth, their highest league finish, and qualified for the Europa League for the first time.",
+  "stadiums": [
+   {
+    "name": "Castlemain Avenue (Pokesdown)",
+    "from": 1899,
+    "to": 1901,
+    "note": "A football pitch used for the club's first two seasons, as Boscombe"
+   },
+   {
+    "name": "King's Park pitch",
+    "from": 1901,
+    "to": 1910,
+    "note": "Played on a pitch in King's Park from the third season"
+   },
+   {
+    "name": "Dean Court",
+    "from": 1910,
+    "to": null,
+    "note": "Built on wasteland leased from local businessman J.E. Cooper-Dean, who gave the ground its name"
+   }
+  ]
+ },
+ "bradford_city": {
+  "summary": "Founded in 1903 and elected straight into the Football League, Bradford City won the Second Division in 1907–08 and the FA Cup in 1911, still their only major honour. They reached the Premier League in 1999, their first top-flight season in 77 years, and were relegated in 2001. Two administrations followed and they fell to the fourth tier before reaching the 2013 League Cup final. The club also suffered the Valley Parade fire of 11 May 1985, in which 56 supporters died. They now play in League One.",
+  "stadiums": [
+   {
+    "name": "Valley Parade",
+    "from": 1903,
+    "to": 1985,
+    "note": "Previously a quarry and Manningham rugby club's ground; Archibald Leitch redeveloped it in 1908"
+   },
+   {
+    "name": "Odsal Stadium, Elland Road and Leeds Road (temporary)",
+    "from": 1985,
+    "to": 1986,
+    "temporary": true,
+    "note": "Used after the Valley Parade fire of 11 May 1985, which killed 56 supporters"
+   },
+   {
+    "name": "Valley Parade",
+    "from": 1986,
+    "to": null,
+    "note": "Reopened on 14 December 1986 after rebuilding"
+   }
+  ]
+ },
+ "brentford": {
+  "summary": "Founded in 1889, Brentford reached their highest league finish, fifth in the First Division, in 1935–36, then spent decades in the lower leagues. After promotion in 2014, they were promoted to the Premier League by winning the 2021 Championship play-off final, their first top-flight season since 1946–47. They left Griffin Park, their home since 1904, for a new stadium in 2020. Their main rivals are Fulham and Queens Park Rangers.",
+  "stadiums": [
+   {
+    "name": "Clifden Road",
+    "from": 1889,
+    "to": 1891
+   },
+   {
+    "name": "Benn's Field",
+    "from": 1891,
+    "to": 1895
+   },
+   {
+    "name": "Shotter's Field",
+    "from": 1895,
+    "to": 1898
+   },
+   {
+    "name": "Cross Roads",
+    "from": 1898,
+    "to": 1900
+   },
+   {
+    "name": "York Road",
+    "from": 1900,
+    "to": 1904
+   },
+   {
+    "name": "Griffin Park",
+    "from": 1904,
+    "to": 2020
+   },
+   {
+    "name": "Brentford Community Stadium (Gtech Community Stadium)",
+    "from": 2020,
+    "to": null
+   }
+  ]
+ },
+ "brighton_and_hove_albion": {
+  "summary": "Founded in 1901, Brighton spent most of the 20th century at the Goldstone Ground and played in the top flight from 1979 to 1983, reaching the 1983 FA Cup final. After the Goldstone was sold in 1997 the club nearly went out of the Football League and spent 14 years without a permanent home. Falmer Stadium opened in 2011, Brighton reached the Premier League in 2017, and in 2022–23 finished sixth, their best top-flight finish, to qualify for Europe for the first time. Their fiercest rivals are Crystal Palace.",
+  "stadiums": [
+   {
+    "name": "Goldstone Ground (Hove)",
+    "from": 1902,
+    "to": 1997,
+    "note": "Albion first played there on 22 February 1902 and it became the permanent home the next season; sold by the board in 1997 amid widespread fan protests"
+   },
+   {
+    "name": "Priestfield Stadium (Gillingham)",
+    "from": 1997,
+    "to": 1999,
+    "note": "Shared with Gillingham, about 70 miles away"
+   },
+   {
+    "name": "Withdean Stadium",
+    "from": 1999,
+    "to": 2011,
+    "note": "Mainly an athletics stadium, and previously a zoo"
+   },
+   {
+    "name": "Falmer Stadium",
+    "from": 2011,
+    "to": null,
+    "note": "Opened for the 2011–12 season; capacity expanded from 22,374 to over 30,000"
+   }
+  ]
+ },
+ "burnley": {
+  "summary": "Founded in 1882, Burnley were one of the first clubs to turn professional (1883) and one of the twelve founder members of the Football League. They have been English champions twice (1920–21 and 1959–60) and won the FA Cup in 1914, and are one of only five clubs to have won all four professional divisions. The 1959–60 title team came largely through the club's own youth system, making Burnley one of the smallest towns to produce a top-flight champion. They were relegated from the Premier League in 2025–26 and rival nearby Blackburn Rovers in the East Lancashire derby.",
+  "stadiums": [
+   {
+    "name": "Calder Vale",
+    "from": 1882,
+    "to": 1883
+   },
+   {
+    "name": "Turf Moor",
+    "from": 1883,
+    "to": null,
+    "note": "Shares its site with Burnley Cricket Club; only Preston North End have used their stadium continuously for longer"
+   }
+  ]
+ }
+}

@@ -1,0 +1,157 @@
+{
+ "arsenal": {
+  "summary": "Founded in 1886 by munitions workers at the Royal Arsenal in Woolwich as Dial Square, Arsenal were the first southern club to join the Football League (1893) and have been in the top division continuously since 1919. Herbert Chapman's 1930s side won five league titles, and under Arsène Wenger the club went unbeaten through the 2003–04 league season, earning the nickname 'The Invincibles'. They crossed London from Woolwich to Highbury in 1913 and moved to the Emirates Stadium in 2006. Arsenal were Premier League champions in 2025–26.",
+  "stadiums": [
+   {
+    "name": "Plumstead Common",
+    "from": null,
+    "to": null,
+    "note": "Briefly, before joining the Football League"
+   },
+   {
+    "name": "Manor Ground (Plumstead)",
+    "from": null,
+    "to": 1890
+   },
+   {
+    "name": "Invicta Ground (Plumstead)",
+    "from": 1890,
+    "to": 1893
+   },
+   {
+    "name": "Manor Ground (Plumstead)",
+    "from": 1893,
+    "to": 1913,
+    "note": "Returned on joining the Football League, apart from two matches in 1894–95"
+   },
+   {
+    "name": "Arsenal Stadium (Highbury)",
+    "from": 1913,
+    "to": 2006,
+    "note": "Designed by Archibald Leitch; Champions League home games were played at Wembley in 1998–2000"
+   },
+   {
+    "name": "Emirates Stadium",
+    "from": 2006,
+    "to": null,
+    "note": "Built at Ashburton Grove, about 500 metres from Highbury"
+   }
+  ]
+ },
+ "aston_villa": {
+  "summary": "Founded in 1874, Aston Villa are one of England's oldest and most successful clubs: founder members of the Football League in 1888 (the idea came from Villa director William McGregor) and of the Premier League in 1992. They won seven league titles, the last in 1980–81, and the European Cup in 1981–82. Villa's only Premier League relegation came in 2015–16, and they returned in 2019. Under Unai Emery they reached the Champions League and won the Europa League in 2025–26.",
+  "stadiums": [
+   {
+    "name": "Aston Park",
+    "from": 1874,
+    "to": 1876
+   },
+   {
+    "name": "Wellington Road (Perry Barr)",
+    "from": 1876,
+    "to": 1897
+   },
+   {
+    "name": "Villa Park",
+    "from": 1897,
+    "to": null,
+    "note": "Largest football stadium in the English Midlands; has hosted 55 FA Cup semi-finals"
+   }
+  ]
+ },
+ "barnsley": {
+  "summary": "Founded in 1887 by Reverend Tiverton Preedy, Barnsley moved to Oakwell the following year and won the FA Cup in 1912 while a Second Division side. Their only Premier League season was 1997–98, after finishing second in the First Division, and they were relegated straight away. They have spent more seasons at English football's second level than any other club and now play in League One.",
+  "stadiums": [
+   {
+    "name": "Oakwell",
+    "from": 1888,
+    "to": null,
+    "note": "Name comes from a well and an oak tree on the original site"
+   }
+  ]
+ },
+ "birmingham_city": {
+  "summary": "Formed in 1875 as Small Heath Alliance, the club became Small Heath in 1888, Birmingham in 1905 and Birmingham City in 1943. They were the first champions of the Football League Second Division and in 1960 became the first English club to reach a major European final (the Inter-Cities Fairs Cup). They won the League Cup in 1963 and 2011 and share the 'Second City derby' with Aston Villa. They now play in the Championship.",
+  "stadiums": [
+   {
+    "name": "Arthur Street waste ground (Bordesley Green)",
+    "from": 1875,
+    "to": null,
+    "note": "First home games, on waste ground"
+   },
+   {
+    "name": "Ladypool Road (Sparkbrook)",
+    "from": null,
+    "to": null,
+    "note": "A fenced-off field where admission could be charged"
+   },
+   {
+    "name": "Muntz Street (Small Heath)",
+    "from": null,
+    "to": 1906,
+    "note": "Capacity grew to around 30,000"
+   },
+   {
+    "name": "St Andrew's",
+    "from": 1906,
+    "to": null,
+    "note": "Opened on Boxing Day 1906; currently branded St. Andrew's @ Knighthead Park"
+   }
+  ]
+ },
+ "blackburn_rovers": {
+  "summary": "Founded in 1875, Blackburn Rovers were founder members of the Football League in 1888 and won five FA Cups in the 19th century. Taken over by local businessman Jack Walker in 1991, who installed Kenny Dalglish as manager, they won promotion to the new Premier League in 1992 and became champions in 1994–95. They were relegated in 2012, dropped to the third tier in 2017, and returned to the Championship in 2018.",
+  "stadiums": [
+   {
+    "name": "Oozehead Ground",
+    "from": 1875,
+    "to": 1877,
+    "note": "A farm field on Preston New Road"
+   },
+   {
+    "name": "Pleasington Cricket Ground",
+    "from": 1877,
+    "to": 1877
+   },
+   {
+    "name": "Alexandra Meadows",
+    "from": 1877,
+    "to": 1881,
+    "note": "In the town centre; sources differ on the date of Rovers' first match there"
+   },
+   {
+    "name": "Leamington Road",
+    "from": 1881,
+    "to": 1890,
+    "note": "First purpose-built ground; left because of rising lease costs"
+   },
+   {
+    "name": "Ewood Park",
+    "from": 1890,
+    "to": null,
+    "note": "Beside the River Darwen; floodlights installed in 1892"
+   }
+  ]
+ },
+ "blackpool": {
+  "summary": "Founded in 1887, Blackpool won the FA Cup in 1953 (the 'Matthews final', a 4–3 win over Bolton) and finished league runners-up in 1955–56. They became the first club to win promotion from every division of the Football League through the play-offs, reaching the Premier League in 2010. Their one Premier League season, 2010–11 under Ian Holloway, ended in relegation. They now play in League One.",
+  "stadiums": [
+   {
+    "name": "Raikes Hall",
+    "from": 1887,
+    "to": null
+   },
+   {
+    "name": "Athletic Grounds",
+    "from": null,
+    "to": 1901
+   },
+   {
+    "name": "Bloomfield Road",
+    "from": 1901,
+    "to": null,
+    "note": "Temporary East Stand built in 2010 for the Premier League season"
+   }
+  ]
+ }
+}

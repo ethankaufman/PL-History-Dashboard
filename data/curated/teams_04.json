@@ -1,0 +1,58 @@
+{
+ "everton": {
+  "summary": "Founded in 1878, Everton were founder members of both the Football League (1888) and the Premier League (1992), one of only three clubs to be both. They have won nine league titles, five FA Cups and the 1985 European Cup Winners' Cup, and have played more top-flight seasons than any other club, missing only four. The club left Anfield in 1892 after a rent dispute with landlord John Houlding, who then founded Liverpool. After 133 years at Goodison Park they moved to the new Hill Dickinson Stadium on the Liverpool waterfront in 2025. Their rivals are Liverpool in the Merseyside derby.",
+  "stadiums": [
+   {"name": "Stanley Park", "from": 1878, "to": 1882, "note": "Played in the south-east corner of the park; first official match in 1879"},
+   {"name": "Priory Road", "from": 1883, "to": 1884, "note": "Land donated by J. Cruitt in 1882; the club used Walton Stiles for at least one game while it was prepared, and was told to leave after one season over noise and crowd behaviour"},
+   {"name": "Anfield", "from": 1884, "to": 1892, "note": "Rented from John Orrell and then John Houlding; the club left after rent rose from £100 to £240 a year"},
+   {"name": "Goodison Park", "from": 1892, "to": 2025, "note": "The first major football stadium built in England; hosted a 1966 World Cup semi-final. Now home to Everton Women"},
+   {"name": "Hill Dickinson Stadium", "from": 2025, "to": null, "note": "Built at Bramley-Moore Dock; first stadium sponsor announced in May 2025"}
+  ]
+ },
+ "fulham": {
+  "summary": "Founded in 1879 as St Andrews Cricket & Football Club, Fulham are London's oldest professional football club. They moved into Craven Cottage in 1896 and were elected to the Football League in 1907. Their best moments include the 1975 FA Cup final and, under Mohamed Al-Fayed's ownership from 1997, a rise to the Premier League by 2001, an Intertoto Cup win in 2002 and the 2010 Europa League final. Thirteen straight top-flight seasons ended in relegation in 2014; they have been back in the Premier League since 2022. Their West London derby rivals are Chelsea, Brentford and QPR.",
+  "stadiums": [
+   {"name": "'The Mud Pond' (Star Road, Fulham)", "from": 1879, "to": 1883},
+   {"name": "Lillie Road (Fulham)", "from": 1883, "to": 1886},
+   {"name": "Ranelagh House (Fulham)", "from": 1886, "to": 1888},
+   {"name": "Barn Elms Playing Fields (Barnes)", "from": 1888, "to": 1889, "note": "Site of The Ranelagh Club"},
+   {"name": "Parsons Green and Roskell's Fields (Fulham)", "from": 1889, "to": 1891},
+   {"name": "The Half Moon (Putney)", "from": 1891, "to": 1895},
+   {"name": "Captain James Field (West Brompton)", "from": 1895, "to": 1896},
+   {"name": "Craven Cottage", "from": 1896, "to": 2002, "note": "The club bought the site in 1894 but had to wait two years to play there"},
+   {"name": "Loftus Road (Shepherd's Bush)", "from": 2002, "to": 2004, "note": "Ground-share with Queens Park Rangers during the renovation of Craven Cottage"},
+   {"name": "Craven Cottage", "from": 2004, "to": null}
+  ]
+ },
+ "huddersfield_town": {
+  "summary": "Founded in 1908, Huddersfield won the FA Cup in 1922 and then three league titles in a row (1923–24, 1924–25 and 1925–26), the first two under Herbert Chapman. After falling to the fourth tier and nearly going out of business around 2003, they climbed back and won promotion to the Premier League in 2017 by beating Reading on penalties in the play-off final, making them the second club after Blackpool to have won all three divisional play-offs. They stayed up in 2017–18, were relegated in 2019, and now play in League One. They moved from Leeds Road to the Kirklees Stadium in 1994.",
+  "stadiums": [
+   {"name": "Leeds Road", "from": 1908, "to": 1994, "note": "Last match was a 2–1 win over Blackpool on 30 April 1994"},
+   {"name": "Kirklees Stadium (now Accu Stadium)", "from": 1994, "to": null, "note": "Opened as the Alfred McAlpine Stadium; later the Galpharm Stadium (2004), John Smith's Stadium (2012) and Accu Stadium (2025)"}
+  ]
+ },
+ "hull_city": {
+  "summary": "Founded in 1904, Hull City reached the Premier League for the first time in 2009 by winning the 2008 play-off final, and have been promoted to it four times in all. They lost the 2014 FA Cup final 3–2 to Arsenal after extra time. After dropping to the third tier in 2020 they were League One champions in 2020–21, and in 2026 won the play-off final against Middlesbrough to return to the Premier League. They moved from Boothferry Park to the KC Stadium (now the MKM Stadium) in 2002.",
+  "stadiums": [
+   {"name": "The Boulevard", "from": 1904, "to": null, "note": "A rugby league ground; the club's first home"},
+   {"name": "The Circle", "from": null, "to": 1906, "note": "A local cricket ground, used briefly"},
+   {"name": "Anlaby Road", "from": 1906, "to": 1941, "note": "The first permanent home, opened in March 1906; the club suspended operations in 1941 because of the Second World War"},
+   {"name": "Boothferry Park", "from": 1946, "to": 2002},
+   {"name": "KC Stadium (now MKM Stadium)", "from": 2002, "to": null, "note": "Opened in December 2002; renamed KCOM Stadium (2016) and MKM Stadium (2021)"}
+  ]
+ },
+ "ipswich_town": {
+  "summary": "Founded in 1878 but not professional until 1936, Ipswich won the league title in 1961–62, their first season in the top flight, and finished runners-up in 1980–81 and 1981–82. They also won the FA Cup in 1978 and the UEFA Cup in 1981. They have never lost at home in European competition. Their great rivals are Norwich City in the East Anglian derby. The club finished second in the Championship in 2025–26 and returns to the Premier League.",
+  "stadiums": [
+   {"name": "Broomhill", "from": 1878, "to": null, "note": "One of two early grounds in the town, used until 1884"},
+   {"name": "Brook's Hall", "from": null, "to": 1884},
+   {"name": "Portman Road", "from": 1884, "to": null, "note": "Became the first fully all-seater ground in the top flight after the Taylor Report in 1992"}
+  ]
+ },
+ "leeds_united": {
+  "summary": "Leeds United were formed in 1919 and have always played at Elland Road, the ground previously used by their predecessors Leeds City, who were disbanded that year. Under manager Don Revie in the 1960s and 1970s they won three top-flight league titles, the FA Cup, the League Cup and two Inter-Cities Fairs Cups. They have also been runners-up in the league five times and in the European Cup. Their rivals include Manchester United and Chelsea. They finished 14th in the Premier League in 2025–26.",
+  "stadiums": [
+   {"name": "Elland Road", "from": 1919, "to": null, "note": "Originally 'The Old Peacock Ground', home to Holbeck Rugby Club; the club sold it in 2004 on a 25-year sale-leaseback deal"}
+  ]
+ }
+}
