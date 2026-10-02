@@ -126,7 +126,7 @@ function renderReport(d) {
   const u0 = ups[0];
   add({
     title: `The biggest upset on record: ${u0.winner} beat ${u0.loser} ${u0.winnerScore} ${u0.winnerAway ? "away from home" : "at home"}, at bookmaker odds of ${dec(u0.odds, 1)}`,
-    body: [`Using bookmaker odds, the ten greatest surprises since 2000–01 all share one feature: a huge club beaten by a visitor given almost no chance. ` +
+    body: [`Using bookmaker odds, the ten greatest surprises since 2000–01 all share one feature: a big club beaten by a side the bookmakers gave almost no chance. ` +
       `${ups.filter((u) => u.loser === "Manchester City" || u.loser === "Manchester United").length} of the ten victims are Manchester City or Manchester United. The longest odds were ${dec(u0.odds, 1)} (decimal) for ${u0.winner} on ${u0.date}.`,
       `Odds are decimal Bet365 prices (or the average of several bookmakers when Bet365 is missing) for the team that won; a decimal price of ${dec(u0.odds, 0)} means a ${pct(100 / u0.odds, 1)} implied chance. Odds exist from 2000–01, so earlier matches can't be ranked.`],
     chart: { type: "bar", data: { labels: ups.map((u) => `${PL.short(u.winner)} v ${PL.short(u.loser)} (${u.date.slice(0, 4)})`), datasets: [{ label: "Decimal odds on the winner", data: ups.map((u) => u.odds), backgroundColor: ups.map((u) => clubColor(u.winner)) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.3, plugins: { legend: { display: false } } } },
