@@ -7,7 +7,7 @@
   const $ = (id) => document.getElementById(id);
   let d;
   try {
-    d = await PL.load(["playerMatches", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers"], (p) => {
+    d = await PL.load(["playerMatches", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers", "domestic", "records"], (p) => {
       $("load-bar").style.width = Math.round(p * 100) + "%"; $("load-text").textContent = `Loading the data… ${Math.round(p * 100)}%`;
     });
   } catch (e) { $("load-text").innerHTML = `Couldn't load the data: ${esc(e.message)} <button class="btn small" onclick="location.reload()">Retry</button>`; return; }
@@ -275,9 +275,10 @@
         const cs = ms.filter((r) => r.goals_against === 0).length;
         return { n, seasons: ft.length, played, w, d: dr, l: played - w - dr, gf, ga, pts: C.sum(ft, (r) => r.points), titles: ft.filter((r) => r.position === 1).length,
           top4: ft.filter((r) => r.position <= 4).length, best: ft.length ? Math.min(...ft.map((r) => r.position)) : null, rel: ft.filter((r) => /relegated/i.test(r.outcome)).length,
+          dl: d.domestic.by_club[n].counts.league, dfa: d.domestic.by_club[n].counts.fa_cup, dlc: d.domestic.by_club[n].counts.league_cup, dcs: d.domestic.by_club[n].counts.community_shield, dtot: d.domestic.by_club[n].counts.total,
           ppg: played ? C.sum(ft, (r) => r.points) / played : 0, gfpg: played ? gf / played : 0, gapg: played ? ga / played : 0, winp: played ? (100 * w) / played : 0, csp: played ? (100 * cs) / played : 0 };
       });
-      const rows = [["Seasons in the Premier League", "seasons"], ["Matches played", "played"], ["Won", "w"], ["Drawn", "d"], ["Lost", "l"], ["Goals scored", "gf"], ["Goals conceded", "ga"], ["Points (official)", "pts"], ["Titles", "titles"], ["Top-four finishes", "top4"], ["Best finish", "best"], ["Relegations", "rel"]];
+      const rows = [["Seasons in the Premier League", "seasons"], ["Matches played", "played"], ["Won", "w"], ["Drawn", "d"], ["Lost", "l"], ["Goals scored", "gf"], ["Goals conceded", "ga"], ["Points (official)", "pts"], ["Titles", "titles"], ["Top-four finishes", "top4"], ["Best finish", "best"], ["Relegations", "rel"], ["League titles (all time)", "dl"], ["FA Cups", "dfa"], ["League Cups", "dlc"], ["Community Shields", "dcs"], ["Domestic trophies in all", "dtot"]];
       $("cmp-tbl").innerHTML = `<thead><tr><th>Measure</th>${stats.map((s) => `<th class="num" style="color:${clubColor(s.n)}">${esc(PL.short(s.n))}</th>`).join("")}</tr></thead><tbody>` + rows.map(([l, k]) => `<tr><td>${l}</td>${stats.map((s) => `<td class="num">${s[k] === null ? "–" : int(s[k])}</td>`).join("")}</tr>`).join("") + "</tbody>";
       const mx = (k) => Math.max(...stats.map((s) => s[k])) || 1, mn = (k) => Math.min(...stats.map((s) => s[k])) || 1;
       make("cmp-radar", { type: "radar", data: { labels: ["Points per game", "Goals scored", "Goals conceded (fewer)", "Win %", "Clean sheets %"], datasets: sel.map((n, i) => { const s = stats[i]; return { label: n, data: [100 * s.ppg / mx("ppg"), 100 * s.gfpg / mx("gfpg"), 100 * mn("gapg") / s.gapg, 100 * s.winp / mx("winp"), 100 * s.csp / mx("csp")], borderColor: clubColor(n), backgroundColor: clubColor(n) + "33", pointBackgroundColor: clubColor(n) }; }) }, options: { responsive: true, aspectRatio: 1.3, scales: { r: { min: 0, max: 100, ticks: { display: false }, grid: { color: "#ffffff22" }, angleLines: { color: "#ffffff22" } } }, plugins: { legend: { display: true } } } });
@@ -310,9 +311,12 @@
       const season = $("s-season").value, s = d.seasons.find((x) => x.season === season), h = d.honours.find((x) => x.season === season);
       const table = d.finalTables.filter((r) => r.season === season).sort((a, b) => a.position - b.position);
       const awards = d.awards.awards.filter((a) => a.season === season);
+      const dm = d.domestic.by_season[season];
       const chips = (arr, cls) => (arr.length ? arr.map((x) => `<span class="chip ${cls || ""}">${esc(x)}</span>`).join("") : `<span class="muted">—</span>`);
       const bd = h.ballon_dor.player ? `${esc(h.ballon_dor.player)} <span class="muted">(${esc(h.ballon_dor.club || "")}, ${h.ballon_dor_year})</span>` : `<span class="muted">${esc(h.ballon_dor.note)}</span>`;
-      const kp = [[s.champion, "Premier League champions"], [table[1].team, "Runners-up"], [h.champions_league.winner, `Champions League winners (${h.champions_league.score})`], [h.europa_league.winner, `UEFA Cup / Europa League winners (${h.europa_league.score})`], [h.world_cup ? h.world_cup.winner + " (" + h.world_cup.year + ")" : "—", "World Cup winners (summer after the season)"]];
+      const kp = [[s.champion, "Premier League champions"], [table[1].team, "Runners-up"], [h.champions_league.winner, `Champions League winners (${h.champions_league.score})`], [h.europa_league.winner, `UEFA Cup / Europa League winners (${h.europa_league.score})`], [h.world_cup ? h.world_cup.winner + " (" + h.world_cup.year + ")" : "—", "World Cup winners (summer after the season)"],
+        [dm.fa_cup.winner, `FA Cup winners (beat ${dm.fa_cup.runner_up}, ${dm.fa_cup.score})`], [dm.league_cup.winner, "League Cup winners"],
+        [dm.community_shield ? dm.community_shield.winners.join(" & ") + (dm.community_shield.shared ? " (shared)" : "") : "—", `Community Shield (August ${dm.community_shield ? dm.community_shield.year : ""})`]];
       const byAward = C.byKey(awards, (a) => a.award);
       $("s-body").innerHTML = `<div class="kpis">${kp.map(([n, l]) => `<div class="kpi"><div class="n" style="font-size:1.1rem">${esc(n)}</div><div class="l">${esc(l)}</div></div>`).join("")}<div class="kpi"><div class="n" style="font-size:1.1rem">${bd}</div><div class="l">Ballon d'Or</div></div></div>
         <div class="grid2"><div class="card"><h3>Promoted to the Premier League afterwards</h3><div class="chips">${chips(s.promoted, "up")}</div>
@@ -325,6 +329,83 @@
     }
     $("s-season").addEventListener("change", draw);
     draw();
+  };
+
+
+  // =====================================================================
+  // RECORDS & TROPHIES (league records, club records, domestic trophies)
+  // =====================================================================
+  initFns.records = function () {
+    const root = $("panel-records"), R = d.records, off = R.official, L = R.league;
+    const clubNames = Object.keys(R.clubs).sort();
+    const BOOKS = {
+      most_goals: ["Most goals (career)", "Goals", ["Rank", "Player", "Goals", "Games", "Ratio", "Position", "First goal", "Last goal"]],
+      most_assists: ["Most assists (career)", "Assists", ["Rank", "Player", "Assists", "Games", "Ratio", "Position", "First assist", "Last assist"]],
+      most_appearances: ["Most appearances (career)", "Games", ["Rank", "Player", "Games", "Position", "First season", "Last season"]],
+      most_clean_sheets: ["Most clean sheets (career)", "Clean sheets", ["Rank", "Player", "Clean sheets", "Games", "Ratio", "First season", "Last season"]],
+      most_penalties: ["Most penalties scored (career)", "Scored", ["Rank", "Player", "Scored", "Taken", "Ratio", "Playing position"]],
+      most_free_kicks: ["Most direct free-kick goals (career)", "Goals", ["Rank", "Player", "Goals", "Games", "Ratio", "Playing position"]],
+    };
+    root.innerHTML = `<h2>League records</h2>
+      <p class="note">All-time Premier League player records, 1992–93 to 2025–26, as listed by Wikipedia. (The Explore tab covers only 2016–17 onward, so its totals are smaller.)</p>
+      <div class="row"><div><label for="rb-pick">Record book</label><select id="rb-pick">${Object.entries(BOOKS).map(([k, b]) => `<option value="${k}">${b[0]}</option>`).join("")}</select></div></div>
+      <div class="grid2"><div class="card"><canvas id="rb-chart"></canvas></div><div class="card"><div class="tablewrap" style="max-height:380px"><table class="plain" id="rb-tbl"></table></div></div></div>
+      <div class="grid2" id="lg-records"></div>
+      <h2 style="margin-top:34px">Club records</h2>
+      <div class="row"><div><label for="cr-club">Club</label><select id="cr-club">${optionHtml(clubNames)}</select></div></div>
+      <div id="cr-body"></div>
+      <h2 style="margin-top:34px">All-time Premier League table</h2>
+      <div class="card"><div class="tablewrap" style="max-height:520px"><table class="plain" id="at-tbl"></table></div></div>
+      <h2 style="margin-top:34px">Domestic trophies, all time</h2>
+      <p class="note">League titles are top-flight titles since 1888; FA Cup, League Cup and Community Shield winners go back to each competition's first year. Click a column heading to sort.</p>
+      <div class="card"><div class="tablewrap" style="max-height:520px"><table class="plain" id="tr-tbl"></table></div></div>`;
+    let rbChart;
+    function drawBook() {
+      const k = $("rb-pick").value, [title, valKey, cols] = BOOKS[k], rows = off[k];
+      $("rb-tbl").innerHTML = `<thead><tr>${cols.map((c) => `<th>${c}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr>${cols.map((c, i) => `<td class="${i === 1 || i > 5 ? "" : "num"}">${esc(r[c] ?? "")}</td>`).join("")}</tr>`).join("")}</tbody>`;
+      if (rbChart) rbChart.destroy();
+      rbChart = new Chart($("rb-chart"), { type: "bar", data: { labels: rows.map((r) => r.Player), datasets: [{ label: title, data: rows.map((r) => +String(r[valKey]).replace(/,/g, "")), backgroundColor: rows.map((r, i) => (i === 0 ? "#ffc83dcc" : "#00ff85aa")) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.15, plugins: { legend: { display: false }, title: { display: true, text: title } } } });
+    }
+    $("rb-pick").addEventListener("change", drawBook); drawBook();
+
+    // computed league records
+    const m = (x) => `<b>${esc(x.score)}</b> ${esc(x.home)} v ${esc(x.away)} <span class="muted">${x.date}</span>`;
+    const seasonRow = (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.points} pts, ${x.won}W ${x.drawn}D ${x.lost}L</span>`;
+    const run = (x) => `<b>${esc(x.team)}</b> ${x.length} <span class="muted">${x.from_season === x.to_season ? x.from_season : x.from_season + " to " + x.to_season}</span>`;
+    const list = (title, items, f, note) => `<div class="card"><h3>${title}</h3><ol style="margin:0;padding-left:1.2em;line-height:1.7">${items.map((x) => `<li>${f(x)}</li>`).join("")}</ol>${note ? `<div class="note">${note}</div>` : ""}</div>`;
+    $("lg-records").innerHTML = list("Biggest wins", L.biggest_wins.slice(0, 6), m) + list("Highest-scoring matches", L.highest_scoring.slice(0, 6), (x) => `${m(x)} <span class="muted">(${x.goals} goals)</span>`) +
+      list("Most points in a season", L.most_points, seasonRow, "38-game seasons only.") + list("Fewest points in a season", L.fewest_points, seasonRow, "38-game seasons only.") +
+      list("Longest unbeaten runs", L.longest_unbeaten_runs, run, "Matches without defeat; runs can span seasons.") + list("Longest winning runs", L.longest_winning_runs, run) +
+      list("Longest losing runs", L.longest_losing_runs, run) + list("Most goals scored in a season", L.most_goals_scored, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.goals_for} goals</span>`) +
+      list("Best defences (fewest conceded)", L.fewest_goals_conceded, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.goals_against} conceded</span>`, "38-game seasons only.") +
+      list("Most wins in a season", L.most_wins, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.won} wins</span>`, "38-game seasons only.");
+
+    // club records
+    function drawClub() {
+      const n = $("cr-club").value, c = R.clubs[n], dom = d.domestic.by_club[n], pl = c.premier_league;
+      const years = (a) => (a.length ? a.map((x) => String(x).slice(0, 4) === String(x) ? x : x).join(", ") : "—");
+      $("cr-body").innerHTML = `<div class="kpis">${[[pl.seasons, "Premier League seasons"], [int(pl.played), "matches"], [`${pl.won}–${pl.drawn}–${pl.lost}`, "won–drawn–lost"], [int(pl.points), "official points"], [pl.titles, "Premier League titles"]].map(([v, l]) => `<div class="kpi"><div class="n">${v}</div><div class="l">${l}</div></div>`).join("")}</div>
+        <div class="grid2"><div class="card"><h3 style="color:${clubColor(n)}">${esc(n)} — Premier League records</h3><table class="plain"><tbody>${PL.recordLines(c).map(([k, v]) => `<tr><td class="muted">${k}</td><td>${v}</td></tr>`).join("")}<tr><td class="muted">Goals in the Premier League</td><td>${int(pl.goals_for)} for, ${int(pl.goals_against)} against</td></tr></tbody></table></div>
+        <div class="card"><h3>Domestic trophies</h3><div class="chips" style="margin-bottom:10px">${PL.trophyChips(dom.counts)}</div>
+          <table class="plain"><tbody><tr><td class="muted">League titles</td><td>${years(dom.league_titles.map((s) => s))}</td></tr><tr><td class="muted">FA Cups</td><td>${years(dom.fa_cup)}</td></tr><tr><td class="muted">League Cups</td><td>${years(dom.league_cup)}</td></tr><tr><td class="muted">Community Shields</td><td>${years(dom.community_shield.map((y) => y + (dom.community_shield_shared.includes(y) ? "*" : "")))}</td></tr></tbody></table><div class="note">* shared shield. Seasons are written as the year the season began, e.g. 2003–04.</div></div></div>`;
+    }
+    $("cr-club").addEventListener("change", drawClub); $("cr-club").value = "Arsenal"; drawClub();
+
+    // all-time table (official, from Wikipedia)
+    const at = off.all_time_table;
+    const cols = Object.keys(at[0]).filter((k) => k && k !== "Ref");
+    $("at-tbl").innerHTML = `<thead><tr>${cols.map((c) => `<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${at.map((r) => `<tr>${cols.map((c) => `<td class="${c === "Club" ? "" : "num"}">${esc(r[c])}</td>`).join("")}</tr>`).join("")}</tbody>`;
+
+    // trophies table (sortable)
+    const rows = Object.entries(d.domestic.by_club).map(([club, v]) => ({ club, ...v.counts })).filter((r) => r.total > 0);
+    let sort = { col: "total", dir: -1 };
+    const cols2 = [["club", "Club"], ["league", "League titles"], ["fa_cup", "FA Cups"], ["league_cup", "League Cups"], ["community_shield", "Community Shields"], ["total", "Total"]];
+    function drawTrophies() {
+      rows.sort((a, b) => (sort.col === "club" ? a.club.localeCompare(b.club) * sort.dir : (a[sort.col] - b[sort.col]) * sort.dir || a.club.localeCompare(b.club)));
+      $("tr-tbl").innerHTML = `<thead><tr>${cols2.map(([k, l]) => `<th class="${k === "club" ? "" : "num"}" data-col="${k}">${l}${sort.col === k ? (sort.dir < 0 ? " ▼" : " ▲") : ""}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(r.club)}</td><td class="num">${r.league}</td><td class="num">${r.fa_cup}</td><td class="num">${r.league_cup}</td><td class="num">${r.community_shield}</td><td class="num"><b>${r.total}</b></td></tr>`).join("")}</tbody>`;
+      $("tr-tbl").querySelectorAll("th").forEach((th) => th.addEventListener("click", () => { const c = th.dataset.col; sort = { col: c, dir: sort.col === c ? -sort.dir : c === "club" ? 1 : -1 }; drawTrophies(); }));
+    }
+    drawTrophies();
   };
 
   // =====================================================================
