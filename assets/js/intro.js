@@ -3,8 +3,7 @@
  */
 import * as THREE from "../vendor/three.module.min.js";
 
-const REPORT_DATA = ["matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "map", "domestic", "records", "playerSeasons", "audit", "disagreements", "manifest"];
-const CODES = { "Arsenal": "ARS", "Aston Villa": "AVL", "AFC Bournemouth": "BOU", "Brentford": "BRE", "Brighton & Hove Albion": "BHA", "Chelsea": "CHE", "Coventry City": "COV", "Crystal Palace": "CRY", "Everton": "EVE", "Fulham": "FUL", "Hull City": "HUL", "Ipswich Town": "IPS", "Leeds United": "LEE", "Liverpool": "LIV", "Manchester City": "MCI", "Manchester United": "MUN", "Newcastle United": "NEW", "Nottingham Forest": "NFO", "Tottenham Hotspur": "TOT", "Sunderland": "SUN" };
+const REPORT_DATA = ["matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "map", "cities", "domestic", "records", "playerSeasons", "audit", "disagreements", "manifest"];
 
 const root = document.getElementById("intro");
 const statusEl = document.getElementById("intro-status");
@@ -210,8 +209,36 @@ function runIntro() {
   tilt.add(mapSpin); scene.add(tilt);
   const K = 0.46, LON0 = -2.2, LAT0 = 53.2, COS = Math.cos((54 * Math.PI) / 180);
   const project = (lon, lat) => new THREE.Vector3((lon - LON0) * COS * K * 1.0, (lat - LAT0) * K, 0);
-  const pins = [], pinMeshes = [], labelDivs = [];
+  const pins = [], pinMeshes = [];
   let showAll = false, hovered = null, pausedUntil = 0;
+
+  // a pin's head is the club's crest on a round white token with a ring in the club's colour
+  function crestTexture(t, col) {
+    const c = document.createElement("canvas"); c.width = c.height = 128;
+    const x = c.getContext("2d"), tex = new THREE.CanvasTexture(c);
+    tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
+    const draw = (img) => {
+      x.clearRect(0, 0, 128, 128);
+      x.beginPath(); x.arc(64, 64, 61, 0, Math.PI * 2); x.fillStyle = "#ffffff"; x.fill();
+      x.lineWidth = 6; x.strokeStyle = "#" + col.getHexString(); x.stroke();
+      if (img) { const r = Math.min(76 / img.width, 76 / img.height); x.drawImage(img, 64 - img.width * r / 2, 64 - img.height * r / 2, img.width * r, img.height * r); }
+      tex.needsUpdate = true;
+    };
+    draw(null);
+    const img = new Image(); img.onload = () => draw(img); img.src = PL.badge(t.name);
+    return tex;
+  }
+  const cityLabels = [];
+  function buildCities(list) {
+    const dots = new THREE.Group(); mapSpin.add(dots);
+    list.forEach((c) => {
+      const p = project(c.lng, c.lat);
+      const dot = new THREE.Mesh(new THREE.CircleGeometry(0.022, 14), new THREE.MeshBasicMaterial({ color: 0xf1e1f7, transparent: true, opacity: 0.9, depthWrite: false }));
+      dot.position.copy(p).setZ(0.03); dots.add(dot);
+      const d = document.createElement("div"); d.className = "clabel t" + c.tier; d.textContent = c.name; labelsEl.appendChild(d);
+      cityLabels.push({ el: d, dot, name: c.name, tier: c.tier, pos: p.clone().setZ(0.03) });
+    });
+  }
 
   function buildMap(data) {
     function addPolys(rings, fillColor, lineColor, fillOpacity, lineOpacity, z) {
@@ -229,6 +256,7 @@ function runIntro() {
     // faint graticule for a "radar" look
     const grid = new THREE.GridHelper(14, 28, 0x00ff85, 0x6a2a75); grid.rotation.x = Math.PI / 2; grid.position.z = -0.02; grid.material.transparent = true; grid.material.opacity = 0.35; mapSpin.add(grid);
     mapSpin.add(pinGroup);
+    buildCities(data.cities);
     data.teams.forEach((t) => {
       const cur = t.status === "current";
       const p = project(t.map.lng, t.map.lat);
@@ -236,7 +264,8 @@ function runIntro() {
       const g = new THREE.Group(); g.position.copy(p);
       const stem = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, cur ? 0.34 : 0.2, 6), new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: cur ? 0.9 : 0.5 }));
       stem.rotation.x = Math.PI / 2; stem.position.z = cur ? 0.17 : 0.1; g.add(stem);
-      const head = new THREE.Mesh(new THREE.SphereGeometry(cur ? 0.065 : 0.04, 16, 12), new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: cur ? 1 : 0.6 }));
+      const head = new THREE.Sprite(new THREE.SpriteMaterial({ map: crestTexture(t, col), transparent: true, depthWrite: false }));
+      head.scale.set(cur ? 0.27 : 0.18, cur ? 0.27 : 0.18, 1); head.material.opacity = cur ? 1 : 0.8;
       head.position.z = cur ? 0.36 : 0.21; head.userData.team = t; g.add(head);
       const halo = new THREE.Mesh(new THREE.RingGeometry(0.05, 0.062, 32), new THREE.MeshBasicMaterial({ color: col, transparent: true, opacity: 0.8, side: THREE.DoubleSide, depthWrite: false }));
       halo.position.z = 0.02; g.add(halo);
@@ -244,10 +273,6 @@ function runIntro() {
       pinGroup.add(g);
       pins.push({ team: t, group: g, head, halo, cur, delay: 0 });
       pinMeshes.push(head);
-      if (cur) {
-        const d = document.createElement("div"); d.className = "plabel"; d.textContent = CODES[t.name] || t.name.slice(0, 3).toUpperCase();
-        d.style.color = PL.clubColor(t.name, true); labelsEl.appendChild(d); labelDivs.push({ el: d, pos: p.clone().setZ(0.5), pin: pins[pins.length - 1] });
-      }
     });
     window.__introPins = pins;   // handy for testing in the browser console
     pins.filter((x) => x.cur).forEach((x, i) => (x.delay = 0.04 * i));
@@ -314,7 +339,7 @@ function runIntro() {
     const rows = t.stadiums.map((s) => `<li${s.current ? ' class="cur"' : ""}><b>${PL.esc(s.name)}</b> <span class="muted">${s.from ?? "?"}–${s.current ? "now" : s.to ?? "?"}${s.temporary ? " · temporary" : ""}</span></li>`).join("");
     const pl = t.premier_league;
     card.innerHTML = `<button class="x" aria-label="Close" id="card-x">×</button><div class="eyebrow">${t.status === "current" ? "In the 2026–27 Premier League" : t.status === "defunct" ? "Defunct club" : "Former Premier League club"}</div>
-      <h3 style="color:${PL.clubColor(t.name, true)}">${PL.esc(t.name)}</h3>
+      <h3 style="color:${PL.clubColor(t.name, true)}"><img class="crest" src="${PL.badge(t.name)}" alt="" width="44" height="44"> ${PL.esc(t.name)}</h3>
       <p class="muted">${PL.esc(t.city)}${t.area ? " (" + PL.esc(t.area) + ")" : ""} · founded ${t.founded} · ${pl.seasons_completed} Premier League seasons${pl.titles ? " · " + pl.titles + " title" + (pl.titles > 1 ? "s" : "") : ""}</p>
       <p>${PL.esc(t.summary)}</p>
       <h4>Domestic trophies (all-time)</h4><div class="chips">${PL.trophyChips(window.PLDATA.domestic.by_club[t.name]?.counts)}</div>
@@ -369,17 +394,25 @@ function runIntro() {
         const s = mode === "map" ? 1 - Math.pow(1 - Math.min(1, e), 3) : 0.001;
         p.group.scale.setScalar(Math.max(0.001, s * sizeFactor * (p.team === hovered ? 1.5 : 1)));
         p.halo.scale.setScalar(pulse + (p.team === hovered ? 0.4 : 0));
+        p.head.renderOrder = p.team === hovered ? 5 : 0;
       });
       // where each pin is on screen (used for picking), and labels that follow the pins without piling up
       const w = root.clientWidth, h = root.clientHeight, tmp = new THREE.Vector3();
       pins.forEach((p) => { p.head.getWorldPosition(tmp); tmp.project(camera); p.sx = (tmp.x * 0.5 + 0.5) * w; p.sy = (-tmp.y * 0.5 + 0.5) * h; });
-      const placed = [];
-      labelDivs.forEach((l) => {
-        const x = l.pin.sx, y = l.pin.sy - 20;
-        const clash = placed.some((q) => Math.abs(q.x - x) < 30 && Math.abs(q.y - y) < 13) && l.pin.team !== hovered;
-        if (!clash) placed.push({ x, y });
-        l.el.style.transform = `translate(${x}px, ${y}px) translate(-50%,-50%)`;
-        l.el.style.opacity = mode === "map" && mapT >= 1 && !clash ? "1" : "0";
+      // city names (the biggest cities always, more as you zoom in), skipping any that would sit on top of another name
+      const cityPlaced = [], zoomedIn = camera.position.z < 4.5, ready = mode === "map" && mapT >= 1;
+      cityLabels.forEach((c) => {
+        c.dot.scale.setScalar(Math.max(0.2, sizeFactor * 1.3));
+        tmp.copy(c.pos); mapSpin.localToWorld(tmp); tmp.project(camera);
+        const x = (tmp.x * 0.5 + 0.5) * w, y = (-tmp.y * 0.5 + 0.5) * h + 12, half = c.name.length * 3.6 + 6;
+        const onScreen = ready && (c.tier === 1 || zoomedIn);
+        const overlaps = cityPlaced.some((q) => Math.abs(q.x - x) < q.half + half && Math.abs(q.y - y) < 14);
+        const underCrest = c.tier === 2 && visiblePins().some((p) => Math.abs(p.sx - x) < half + 12 && Math.abs(p.sy - y) < 22);
+        const show = onScreen && !overlaps && !underCrest;
+        if (show) cityPlaced.push({ x, y, half });
+        c.dot.visible = onScreen;
+        c.el.style.transform = `translate(${x}px, ${y}px) translate(-50%,-50%)`;
+        c.el.style.opacity = show ? "1" : "0";
       });
     }
     renderer.render(scene, camera);

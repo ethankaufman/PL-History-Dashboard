@@ -4,11 +4,11 @@ const PL = (() => {
     matches: "data/matches.csv", teamMatches: "data/team_matches.csv", finalTables: "data/final_tables.csv",
     playerMatches: "data/player_matches.csv", transfers: "data/transfers.csv",
     seasons: "data/seasons.json", awards: "data/awards.json", honours: "data/honours.json", teams: "data/teams.json",
-    players: "data/current_players.json", map: "data/uk_map.json",
+    players: "data/current_players.json", map: "data/uk_map.json", cities: "data/cities.json", badges: "data/badges.json",
     domestic: "data/domestic_honours.json", records: "data/records.json", playerSeasons: "data/player_seasons.csv", appearances: "data/appearances_lean.csv", audit: "data/audit.json", manifest: "data/manifest.json", disagreements: "data/source_disagreements.csv",
   };
   // approximate download sizes (MB) so the progress bar moves smoothly
-  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1, domestic: 0.15, records: 0.2, playerSeasons: 1.8, appearances: 12, audit: 0.1, manifest: 0.01, disagreements: 0.3 };
+  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1, cities: 0.01, badges: 0.01, domestic: 0.15, records: 0.2, playerSeasons: 1.8, appearances: 12, audit: 0.1, manifest: 0.01, disagreements: 0.3 };
 
   async function load(names, onProgress) {
     const total = names.reduce((s, n) => s + weight[n], 0);
@@ -85,6 +85,9 @@ const PL = (() => {
     return `hsl(${h} 65% 38%)`;
   };
 
+  // club crests: saved by scripts/fetch_badges.py as assets/badges/<club name with underscores>.png
+  const badge = (name) => "assets/badges/" + String(name).toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "") + ".png";
+
   // generic series colours: the Premier League purple first, then its pink, then softer partners
   const palette = ["#38003c", "#e90052", "#00c76f", "#0aa5c2", "#963cff", "#f2a900", "#5b1a66", "#8a7b92"];
 
@@ -126,5 +129,5 @@ const PL = (() => {
     ];
   }
 
-  return { load, renderNav, ordinal, trophyChips, recordLines, int, dec, pct, esc, short, clubColor, palette, chartDefaults };
+  return { load, renderNav, ordinal, trophyChips, recordLines, int, dec, pct, esc, short, clubColor, badge, palette, chartDefaults };
 })();
