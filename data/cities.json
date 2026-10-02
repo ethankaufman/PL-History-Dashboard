@@ -1,0 +1,298 @@
+[
+ {
+  "name": "London",
+  "lat": 51.5072,
+  "lng": -0.1275,
+  "tier": 1,
+  "country": "England",
+  "page": "London"
+ },
+ {
+  "name": "Birmingham",
+  "lat": 52.48,
+  "lng": -1.9025,
+  "tier": 1,
+  "country": "England",
+  "page": "Birmingham"
+ },
+ {
+  "name": "Manchester",
+  "lat": 53.4794,
+  "lng": -2.2453,
+  "tier": 1,
+  "country": "England",
+  "page": "Manchester"
+ },
+ {
+  "name": "Liverpool",
+  "lat": 53.4072,
+  "lng": -2.9917,
+  "tier": 1,
+  "country": "England",
+  "page": "Liverpool"
+ },
+ {
+  "name": "Leeds",
+  "lat": 53.7975,
+  "lng": -1.5436,
+  "tier": 1,
+  "country": "England",
+  "page": "Leeds"
+ },
+ {
+  "name": "Sheffield",
+  "lat": 53.3808,
+  "lng": -1.4703,
+  "tier": 1,
+  "country": "England",
+  "page": "Sheffield"
+ },
+ {
+  "name": "Newcastle",
+  "lat": 54.9738,
+  "lng": -1.6131,
+  "tier": 1,
+  "country": "England",
+  "page": "Newcastle upon Tyne"
+ },
+ {
+  "name": "Bristol",
+  "lat": 51.4536,
+  "lng": -2.5975,
+  "tier": 1,
+  "country": "England",
+  "page": "Bristol"
+ },
+ {
+  "name": "Glasgow",
+  "lat": 55.8611,
+  "lng": -4.25,
+  "tier": 1,
+  "country": "Scotland",
+  "page": "Glasgow"
+ },
+ {
+  "name": "Edinburgh",
+  "lat": 55.9533,
+  "lng": -3.1892,
+  "tier": 1,
+  "country": "Scotland",
+  "page": "Edinburgh"
+ },
+ {
+  "name": "Cardiff",
+  "lat": 51.4817,
+  "lng": -3.1792,
+  "tier": 1,
+  "country": "Wales",
+  "page": "Cardiff"
+ },
+ {
+  "name": "Belfast",
+  "lat": 54.5967,
+  "lng": -5.93,
+  "tier": 1,
+  "country": "Northern Ireland",
+  "page": "Belfast"
+ },
+ {
+  "name": "Dublin",
+  "lat": 53.35,
+  "lng": -6.2603,
+  "tier": 1,
+  "country": "Ireland",
+  "page": "Dublin"
+ },
+ {
+  "name": "Aberdeen",
+  "lat": 57.15,
+  "lng": -2.11,
+  "tier": 2,
+  "country": "Scotland",
+  "page": "Aberdeen"
+ },
+ {
+  "name": "Dundee",
+  "lat": 56.4606,
+  "lng": -2.97,
+  "tier": 2,
+  "country": "Scotland",
+  "page": "Dundee"
+ },
+ {
+  "name": "Inverness",
+  "lat": 57.4778,
+  "lng": -4.2247,
+  "tier": 2,
+  "country": "Scotland",
+  "page": "Inverness"
+ },
+ {
+  "name": "Derry",
+  "lat": 54.9975,
+  "lng": -7.32,
+  "tier": 2,
+  "country": "Northern Ireland",
+  "page": "Derry"
+ },
+ {
+  "name": "Cork",
+  "lat": 51.8972,
+  "lng": -8.47,
+  "tier": 2,
+  "country": "Ireland",
+  "page": "Cork (city)"
+ },
+ {
+  "name": "Galway",
+  "lat": 53.2719,
+  "lng": -9.0489,
+  "tier": 2,
+  "country": "Ireland",
+  "page": "Galway"
+ },
+ {
+  "name": "Limerick",
+  "lat": 52.6653,
+  "lng": -8.6238,
+  "tier": 2,
+  "country": "Ireland",
+  "page": "Limerick"
+ },
+ {
+  "name": "Nottingham",
+  "lat": 52.96,
+  "lng": -1.15,
+  "tier": 2,
+  "country": "England",
+  "page": "Nottingham"
+ },
+ {
+  "name": "Leicester",
+  "lat": 52.6361,
+  "lng": -1.1331,
+  "tier": 2,
+  "country": "England",
+  "page": "Leicester"
+ },
+ {
+  "name": "Southampton",
+  "lat": 50.9025,
+  "lng": -1.4042,
+  "tier": 2,
+  "country": "England",
+  "page": "Southampton"
+ },
+ {
+  "name": "Plymouth",
+  "lat": 50.3714,
+  "lng": -4.1422,
+  "tier": 2,
+  "country": "England",
+  "page": "Plymouth"
+ },
+ {
+  "name": "Exeter",
+  "lat": 50.7256,
+  "lng": -3.5269,
+  "tier": 2,
+  "country": "England",
+  "page": "Exeter"
+ },
+ {
+  "name": "Oxford",
+  "lat": 51.7519,
+  "lng": -1.2578,
+  "tier": 2,
+  "country": "England",
+  "page": "Oxford"
+ },
+ {
+  "name": "Cambridge",
+  "lat": 52.205,
+  "lng": 0.1225,
+  "tier": 2,
+  "country": "England",
+  "page": "Cambridge"
+ },
+ {
+  "name": "Norwich",
+  "lat": 52.6286,
+  "lng": 1.2928,
+  "tier": 2,
+  "country": "England",
+  "page": "Norwich"
+ },
+ {
+  "name": "York",
+  "lat": 53.96,
+  "lng": -1.08,
+  "tier": 2,
+  "country": "England",
+  "page": "York"
+ },
+ {
+  "name": "Carlisle",
+  "lat": 54.8947,
+  "lng": -2.9364,
+  "tier": 2,
+  "country": "England",
+  "page": "Carlisle"
+ },
+ {
+  "name": "Lincoln",
+  "lat": 53.2283,
+  "lng": -0.5389,
+  "tier": 2,
+  "country": "England",
+  "page": "Lincoln, England"
+ },
+ {
+  "name": "Bath",
+  "lat": 51.3814,
+  "lng": -2.3597,
+  "tier": 2,
+  "country": "England",
+  "page": "Bath, Somerset"
+ },
+ {
+  "name": "Canterbury",
+  "lat": 51.28,
+  "lng": 1.08,
+  "tier": 2,
+  "country": "England",
+  "page": "Canterbury"
+ },
+ {
+  "name": "Swansea",
+  "lat": 51.6167,
+  "lng": -3.95,
+  "tier": 2,
+  "country": "Wales",
+  "page": "Swansea"
+ },
+ {
+  "name": "Newport",
+  "lat": 51.5886,
+  "lng": -2.9978,
+  "tier": 2,
+  "country": "Wales",
+  "page": "Newport, Wales"
+ },
+ {
+  "name": "Stoke-on-Trent",
+  "lat": 53.0255,
+  "lng": -2.1761,
+  "tier": 2,
+  "country": "England",
+  "page": "Stoke-on-Trent"
+ },
+ {
+  "name": "Coventry",
+  "lat": 52.4081,
+  "lng": -1.5106,
+  "tier": 2,
+  "country": "England",
+  "page": "Coventry"
+ }
+]

@@ -1,0 +1,308 @@
+[
+ {
+  "name": "AFC Bournemouth",
+  "file": "assets/badges/afc_bournemouth.png",
+  "opta": "t91",
+  "status": "current"
+ },
+ {
+  "name": "Arsenal",
+  "file": "assets/badges/arsenal.png",
+  "opta": "t3",
+  "status": "current"
+ },
+ {
+  "name": "Aston Villa",
+  "file": "assets/badges/aston_villa.png",
+  "opta": "t7",
+  "status": "current"
+ },
+ {
+  "name": "Barnsley",
+  "file": "assets/badges/barnsley.png",
+  "opta": "t37",
+  "status": "former"
+ },
+ {
+  "name": "Birmingham City",
+  "file": "assets/badges/birmingham_city.png",
+  "opta": "t41",
+  "status": "former"
+ },
+ {
+  "name": "Blackburn Rovers",
+  "file": "assets/badges/blackburn_rovers.png",
+  "opta": "t5",
+  "status": "former"
+ },
+ {
+  "name": "Blackpool",
+  "file": "assets/badges/blackpool.png",
+  "opta": "t92",
+  "status": "former"
+ },
+ {
+  "name": "Bolton Wanderers",
+  "file": "assets/badges/bolton_wanderers.png",
+  "opta": "t30",
+  "status": "former"
+ },
+ {
+  "name": "Bradford City",
+  "file": "assets/badges/bradford_city.png",
+  "opta": "t55",
+  "status": "former"
+ },
+ {
+  "name": "Brentford",
+  "file": "assets/badges/brentford.png",
+  "opta": "t94",
+  "status": "current"
+ },
+ {
+  "name": "Brighton & Hove Albion",
+  "file": "assets/badges/brighton_and_hove_albion.png",
+  "opta": "t36",
+  "status": "current"
+ },
+ {
+  "name": "Burnley",
+  "file": "assets/badges/burnley.png",
+  "opta": "t90",
+  "status": "former"
+ },
+ {
+  "name": "Cardiff City",
+  "file": "assets/badges/cardiff_city.png",
+  "opta": "t97",
+  "status": "former"
+ },
+ {
+  "name": "Charlton Athletic",
+  "file": "assets/badges/charlton_athletic.png",
+  "opta": "t33",
+  "status": "former"
+ },
+ {
+  "name": "Chelsea",
+  "file": "assets/badges/chelsea.png",
+  "opta": "t8",
+  "status": "current"
+ },
+ {
+  "name": "Coventry City",
+  "file": "assets/badges/coventry_city.png",
+  "opta": "t9",
+  "status": "current"
+ },
+ {
+  "name": "Crystal Palace",
+  "file": "assets/badges/crystal_palace.png",
+  "opta": "t31",
+  "status": "current"
+ },
+ {
+  "name": "Derby County",
+  "file": "assets/badges/derby_county.png",
+  "opta": "t24",
+  "status": "former"
+ },
+ {
+  "name": "Everton",
+  "file": "assets/badges/everton.png",
+  "opta": "t11",
+  "status": "current"
+ },
+ {
+  "name": "Fulham",
+  "file": "assets/badges/fulham.png",
+  "opta": "t54",
+  "status": "current"
+ },
+ {
+  "name": "Huddersfield Town",
+  "file": "assets/badges/huddersfield_town.png",
+  "opta": "t38",
+  "status": "former"
+ },
+ {
+  "name": "Hull City",
+  "file": "assets/badges/hull_city.png",
+  "opta": "t88",
+  "status": "current"
+ },
+ {
+  "name": "Ipswich Town",
+  "file": "assets/badges/ipswich_town.png",
+  "opta": "t40",
+  "status": "current"
+ },
+ {
+  "name": "Leeds United",
+  "file": "assets/badges/leeds_united.png",
+  "opta": "t2",
+  "status": "current"
+ },
+ {
+  "name": "Leicester City",
+  "file": "assets/badges/leicester_city.png",
+  "opta": "t13",
+  "status": "former"
+ },
+ {
+  "name": "Liverpool",
+  "file": "assets/badges/liverpool.png",
+  "opta": "t14",
+  "status": "current"
+ },
+ {
+  "name": "Luton Town",
+  "file": "assets/badges/luton_town.png",
+  "opta": "t102",
+  "status": "former"
+ },
+ {
+  "name": "Manchester City",
+  "file": "assets/badges/manchester_city.png",
+  "opta": "t43",
+  "status": "current"
+ },
+ {
+  "name": "Manchester United",
+  "file": "assets/badges/manchester_united.png",
+  "opta": "t1",
+  "status": "current"
+ },
+ {
+  "name": "Middlesbrough",
+  "file": "assets/badges/middlesbrough.png",
+  "opta": "t25",
+  "status": "former"
+ },
+ {
+  "name": "Newcastle United",
+  "file": "assets/badges/newcastle_united.png",
+  "opta": "t4",
+  "status": "current"
+ },
+ {
+  "name": "Norwich City",
+  "file": "assets/badges/norwich_city.png",
+  "opta": "t45",
+  "status": "former"
+ },
+ {
+  "name": "Nottingham Forest",
+  "file": "assets/badges/nottingham_forest.png",
+  "opta": "t17",
+  "status": "current"
+ },
+ {
+  "name": "Oldham Athletic",
+  "file": "assets/badges/oldham_athletic.png",
+  "opta": "t105",
+  "status": "former"
+ },
+ {
+  "name": "Portsmouth",
+  "file": "assets/badges/portsmouth.png",
+  "opta": "t47",
+  "status": "former"
+ },
+ {
+  "name": "Queens Park Rangers",
+  "file": "assets/badges/queens_park_rangers.png",
+  "opta": "t52",
+  "status": "former"
+ },
+ {
+  "name": "Reading",
+  "file": "assets/badges/reading.png",
+  "opta": "t108",
+  "status": "former"
+ },
+ {
+  "name": "Sheffield United",
+  "file": "assets/badges/sheffield_united.png",
+  "opta": "t49",
+  "status": "former"
+ },
+ {
+  "name": "Sheffield Wednesday",
+  "file": "assets/badges/sheffield_wednesday.png",
+  "opta": "t19",
+  "status": "former"
+ },
+ {
+  "name": "Southampton",
+  "file": "assets/badges/southampton.png",
+  "opta": "t20",
+  "status": "former"
+ },
+ {
+  "name": "Stoke City",
+  "file": "assets/badges/stoke_city.png",
+  "opta": "t110",
+  "status": "former"
+ },
+ {
+  "name": "Sunderland",
+  "file": "assets/badges/sunderland.png",
+  "opta": "t56",
+  "status": "current"
+ },
+ {
+  "name": "Swansea City",
+  "file": "assets/badges/swansea_city.png",
+  "opta": "t80",
+  "status": "former"
+ },
+ {
+  "name": "Swindon Town",
+  "file": "assets/badges/swindon_town.png",
+  "opta": "t46",
+  "status": "former"
+ },
+ {
+  "name": "Tottenham Hotspur",
+  "file": "assets/badges/tottenham_hotspur.png",
+  "opta": "t6",
+  "status": "current"
+ },
+ {
+  "name": "Watford",
+  "file": "assets/badges/watford.png",
+  "opta": "t57",
+  "status": "former"
+ },
+ {
+  "name": "West Bromwich Albion",
+  "file": "assets/badges/west_bromwich_albion.png",
+  "opta": "t35",
+  "status": "former"
+ },
+ {
+  "name": "West Ham United",
+  "file": "assets/badges/west_ham_united.png",
+  "opta": "t21",
+  "status": "former"
+ },
+ {
+  "name": "Wigan Athletic",
+  "file": "assets/badges/wigan_athletic.png",
+  "opta": "t111",
+  "status": "former"
+ },
+ {
+  "name": "Wimbledon",
+  "file": "assets/badges/wimbledon.png",
+  "opta": "t1736",
+  "status": "defunct"
+ },
+ {
+  "name": "Wolverhampton Wanderers",
+  "file": "assets/badges/wolverhampton_wanderers.png",
+  "opta": "t39",
+  "status": "former"
+ }
+]
