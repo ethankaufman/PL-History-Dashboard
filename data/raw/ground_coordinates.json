@@ -1,0 +1,252 @@
+{
+ "arsenal": {
+  "title": "Emirates Stadium",
+  "lat": 51.555,
+  "lng": -0.10833333
+ },
+ "aston_villa": {
+  "title": "Villa Park",
+  "lat": 52.50916667,
+  "lng": -1.88472222
+ },
+ "barnsley": {
+  "title": "Oakwell",
+  "lat": 53.55222222,
+  "lng": -1.4675
+ },
+ "birmingham_city": {
+  "title": "St Andrew's (stadium)",
+  "lat": 52.47583333,
+  "lng": -1.86805556
+ },
+ "blackburn_rovers": {
+  "title": "Ewood Park",
+  "lat": 53.72861111,
+  "lng": -2.48916667
+ },
+ "bolton_wanderers": {
+  "title": "Toughsheet Community Stadium",
+  "lat": 53.58055556,
+  "lng": -2.53555556
+ },
+ "bournemouth": {
+  "title": "Dean Court",
+  "lat": 50.73527778,
+  "lng": -1.83833333
+ },
+ "bradford_city": {
+  "title": "Valley Parade",
+  "lat": 53.80416667,
+  "lng": -1.75888889
+ },
+ "brentford": {
+  "title": "Brentford Community Stadium",
+  "lat": 51.49083333,
+  "lng": -0.28861111
+ },
+ "brighton_and_hove_albion": {
+  "title": "Falmer Stadium",
+  "lat": 50.86182222,
+  "lng": -0.08327778
+ },
+ "burnley": {
+  "title": "Turf Moor",
+  "lat": 53.78916667,
+  "lng": -2.23027778
+ },
+ "cardiff_city": {
+  "title": "Cardiff City Stadium",
+  "lat": 51.47278,
+  "lng": -3.20306
+ },
+ "charlton_athletic": {
+  "title": "The Valley (stadium)",
+  "lat": 51.48638889,
+  "lng": 0.03638889
+ },
+ "chelsea": {
+  "title": "Stamford Bridge (stadium)",
+  "lat": 51.48166667,
+  "lng": -0.19111111
+ },
+ "coventry_city": {
+  "title": "Coventry Building Society Arena",
+  "lat": 52.44805556,
+  "lng": -1.49555556
+ },
+ "crystal_palace": {
+  "title": "Selhurst Park",
+  "lat": 51.39833333,
+  "lng": -0.08555556
+ },
+ "derby_county": {
+  "title": "Pride Park Stadium",
+  "lat": 52.915,
+  "lng": -1.44722222
+ },
+ "everton": {
+  "title": "Hill Dickinson Stadium",
+  "lat": 53.4251,
+  "lng": -3.0028
+ },
+ "fulham": {
+  "title": "Craven Cottage",
+  "lat": 51.475,
+  "lng": -0.22166667
+ },
+ "huddersfield_town": {
+  "title": "Kirklees Stadium",
+  "lat": 53.65416667,
+  "lng": -1.76833333
+ },
+ "hull_city": {
+  "title": "MKM Stadium",
+  "lat": 53.74611111,
+  "lng": -0.36777778
+ },
+ "ipswich_town": {
+  "title": "Portman Road",
+  "lat": 52.055,
+  "lng": 1.14527778
+ },
+ "leeds_united": {
+  "title": "Elland Road",
+  "lat": 53.77777778,
+  "lng": -1.57222222
+ },
+ "leicester_city": {
+  "title": "King Power Stadium",
+  "lat": 52.62027778,
+  "lng": -1.14222222
+ },
+ "liverpool": {
+  "title": "Anfield",
+  "lat": 53.43083333,
+  "lng": -2.96083333
+ },
+ "luton_town": {
+  "title": "Kenilworth Road",
+  "lat": 51.88416667,
+  "lng": -0.43166667
+ },
+ "manchester_city": {
+  "title": "Etihad Stadium",
+  "lat": 53.483144,
+  "lng": -2.20039
+ },
+ "manchester_united": {
+  "title": "Old Trafford",
+  "lat": 53.46305556,
+  "lng": -2.29138889
+ },
+ "middlesbrough": {
+  "title": "Riverside Stadium",
+  "lat": 54.57833333,
+  "lng": -1.21694444
+ },
+ "newcastle_united": {
+  "title": "St James' Park",
+  "lat": 54.97555556,
+  "lng": -1.62166667
+ },
+ "norwich_city": {
+  "title": "Carrow Road",
+  "lat": 52.62222222,
+  "lng": 1.30916667
+ },
+ "nottingham_forest": {
+  "title": "City Ground",
+  "lat": 52.94,
+  "lng": -1.13277778
+ },
+ "oldham_athletic": {
+  "title": "Boundary Park",
+  "lat": 53.55527778,
+  "lng": -2.12861111
+ },
+ "portsmouth": {
+  "title": "Fratton Park",
+  "lat": 50.79638889,
+  "lng": -1.06388889
+ },
+ "queens_park_rangers": {
+  "title": "Loftus Road",
+  "lat": 51.50916667,
+  "lng": -0.23222222
+ },
+ "reading": {
+  "title": "Madejski Stadium",
+  "lat": 51.42222222,
+  "lng": -0.98277778
+ },
+ "sheffield_united": {
+  "title": "Bramall Lane",
+  "lat": 53.37027778,
+  "lng": -1.47083333
+ },
+ "sheffield_wednesday": {
+  "title": "Hillsborough Stadium",
+  "lat": 53.41138889,
+  "lng": -1.50055556
+ },
+ "southampton": {
+  "title": "St Mary's Stadium",
+  "lat": 50.90583333,
+  "lng": -1.39111111
+ },
+ "stoke_city": {
+  "title": "Bet365 Stadium",
+  "lat": 52.98833333,
+  "lng": -2.17555556
+ },
+ "sunderland": {
+  "title": "Stadium of Light",
+  "lat": 54.91442907,
+  "lng": -1.38817297
+ },
+ "swansea_city": {
+  "title": "Swansea.com Stadium",
+  "lat": 51.6422,
+  "lng": -3.9351
+ },
+ "swindon_town": {
+  "title": "County Ground (Swindon)",
+  "lat": 51.56444444,
+  "lng": -1.77055556
+ },
+ "tottenham_hotspur": {
+  "title": "Tottenham Hotspur Stadium",
+  "lat": 51.6044,
+  "lng": -0.0664
+ },
+ "watford": {
+  "title": "Vicarage Road",
+  "lat": 51.64972222,
+  "lng": -0.40138889
+ },
+ "west_bromwich_albion": {
+  "title": "The Hawthorns",
+  "lat": 52.50916667,
+  "lng": -1.96388889
+ },
+ "west_ham_united": {
+  "title": "London Stadium",
+  "lat": 51.5386,
+  "lng": -0.0164
+ },
+ "wigan_athletic": {
+  "title": "Brick Community Stadium",
+  "lat": 53.54777778,
+  "lng": -2.65388889
+ },
+ "wimbledon": {
+  "title": "Plough Lane (1912)",
+  "lat": 51.42847222,
+  "lng": -0.18966667
+ },
+ "wolverhampton_wanderers": {
+  "title": "Molineux Stadium",
+  "lat": 52.59027778,
+  "lng": -2.13027778
+ }
+}
