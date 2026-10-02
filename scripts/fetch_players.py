@@ -1,4 +1,9 @@
-"""Download player-level data: one row per player per match, for 2016-17 to 2025-26.
+"""Download today's Premier League squad lists (used for the current-player profiles).
+
+History: this script used to download per-match player data from an open fantasy-game archive for 2016-17 to 2025-26. That data is no longer used:
+the official match records (fetch_pl_matches.py) cover every match since 1992-93 and use the official definition of an assist.
+
+Original description: one row per player per match, for 2016-17 to 2025-26.
 
 Source: the open 'vaastav/Fantasy-Premier-League' archive on GitHub, which saves the Premier League's
 public data every gameweek. We only use real football facts (minutes, goals, assists...) and drop
@@ -35,10 +40,7 @@ def get(url, out):
 
 
 def main():
-    for y in range(2016, 2026):
-        season = f"{y}-{str(y + 1)[2:]}"
-        get(f"{BASE}/{season}/gws/merged_gw.csv", RAW / season / "merged_gw.csv")
-        get(f"{BASE}/{season}/players_raw.csv", RAW / season / "players_raw.csv")
+    # Only today's squad lists are needed now (for the current-player profiles); the match-by-match player data comes from fetch_pl_matches.py.
     get("https://fantasy.premierleague.com/api/bootstrap-static/", RAW / "bootstrap_static_current.json")
 
 

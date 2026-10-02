@@ -1,0 +1,194 @@
+[
+ {
+  "name": "promoted clubs listed for each season are exactly the clubs that newly appear the next season",
+  "ok": true,
+  "detail": "33 of 33 seasons agree",
+  "scope": "seasons.json vs matches.csv"
+ },
+ {
+  "name": "relegated clubs listed for each season are exactly the clubs missing the next season",
+  "ok": true,
+  "detail": "33 of 33 seasons agree",
+  "scope": "seasons.json vs matches.csv"
+ },
+ {
+  "name": "every Golden Boot winner's goals equal the player table",
+  "ok": true,
+  "detail": "42 of 42",
+  "scope": "awards.json vs player_seasons.csv"
+ },
+ {
+  "name": "every assists-leader's total equals the player table",
+  "ok": true,
+  "detail": "38 of 38",
+  "scope": "awards.json vs player_seasons.csv"
+ },
+ {
+  "name": "every Golden Glove winner's clean sheets equal the player table",
+  "ok": true,
+  "detail": "25 of 25",
+  "scope": "awards.json vs player_seasons.csv"
+ },
+ {
+  "name": "each season's top scorer(s) and goal total equal the player table",
+  "ok": true,
+  "detail": "34 of 34",
+  "scope": "seasons.json vs player_seasons.csv"
+ },
+ {
+  "name": "each club's all-time played/won/drawn/lost/goals/points equal the sum of its 34 official season tables",
+  "ok": true,
+  "detail": "306 of 306 figures",
+  "scope": "records.json vs final_tables.csv"
+ },
+ {
+  "name": "Wikipedia's all-time table agrees with our totals, apart from documented slips in Wikipedia itself",
+  "ok": true,
+  "detail": "302 of 306 figures agree; differences: [('Tottenham Hotspur', 'GF', '2,000', 2001), ('West Ham United', 'Pld', '1,110', 1148), ('West Ham United', 'GA', '1,684', 1685), ('Brighton & Hove Albion', 'L', '123', 125)]; Wikipedia's West Ham row is internally inconsistent (W+D+L = 1148, Pld = 1,110)",
+  "scope": "records.json vs Wikipedia all-time table"
+ },
+ {
+  "name": "players are never credited with more goals than their club scored",
+  "ok": true,
+  "detail": "686 of 686 club-seasons",
+  "scope": "player_seasons.csv vs final_tables.csv"
+ },
+ {
+  "name": "players are credited with at least 85% of each club's goals (the rest are own goals)",
+  "ok": true,
+  "detail": "686 of 686 club-seasons",
+  "scope": "player_seasons.csv vs final_tables.csv"
+ },
+ {
+  "name": "no player has more appearances for a club in a season than the club played",
+  "ok": true,
+  "detail": "18662 of 18662 rows",
+  "scope": "player_seasons.csv"
+ },
+ {
+  "name": "the clubs in the player table are exactly the clubs that played each season",
+  "ok": true,
+  "detail": "34 of 34 seasons",
+  "scope": "player_seasons.csv vs matches.csv"
+ },
+ {
+  "name": "Wikipedia's most-assists leaders agree with the Premier League's own statistics in at least 29 of 34 seasons; the differences are logged and the Premier League's figures used",
+  "ok": true,
+  "detail": "30 of 34 seasons agree; differences: ['1993–94', '2009–10', '2013–14', '2014–15']",
+  "scope": "awards.json (Wikipedia) vs player statistics, see data/source_disagreements_awards.csv"
+ },
+ {
+  "name": "appearances per player, club and season agree between the match records and the season statistics",
+  "ok": true,
+  "detail": "18580 of 18662 (99.56%); the Premier League's season statistics omit a game or two for some Stoke 2008-09 and Burnley 2009-10 players, and the line-ups show who played, so the match records are used for match-level data",
+  "scope": "player_matches.csv vs player_seasons.csv"
+ },
+ {
+  "name": "goals per player, club and season agree between the match records and the season statistics",
+  "ok": true,
+  "detail": "18658 of 18662 (99.98%)",
+  "scope": "player_matches.csv vs player_seasons.csv"
+ },
+ {
+  "name": "assists per player, club and season agree between the match records and the season statistics",
+  "ok": true,
+  "detail": "18658 of 18662 (99.98%)",
+  "scope": "player_matches.csv vs player_seasons.csv"
+ },
+ {
+  "name": "yellow cards per player, club and season agree between the match records and the season statistics",
+  "ok": true,
+  "detail": "18645 of 18662 (99.91%)",
+  "scope": "player_matches.csv vs player_seasons.csv"
+ },
+ {
+  "name": "red cards per player, club and season agree between the match records and the season statistics",
+  "ok": true,
+  "detail": "18655 of 18662 (99.96%)",
+  "scope": "player_matches.csv vs player_seasons.csv"
+ },
+ {
+  "name": "the match records contain every appearance in the season statistics (the extra rows are the games the season statistics omit)",
+  "ok": true,
+  "detail": "355716 match rows, 355632 appearances in the season statistics (84 extra)",
+  "scope": "player_matches.csv vs player_seasons.csv"
+ },
+ {
+  "name": "every club-season's card totals from match events equal the Premier League's player card statistics (within 2 yellows, 1 red)",
+  "ok": true,
+  "detail": "686 of 686 club-seasons",
+  "scope": "match events vs player statistics"
+ },
+ {
+  "name": "the official score equals the football-data.co.uk score in every match",
+  "ok": true,
+  "detail": "13166 of 13166",
+  "scope": "official match records vs matches.csv (football-data.co.uk)"
+ },
+ {
+  "name": "kick-off dates agree between the two sources in at least 95% of matches (the rest are settled with the official record and logged)",
+  "ok": true,
+  "detail": "13062 of 13166 (99.2%)",
+  "scope": "official match records vs football-data.co.uk"
+ },
+ {
+  "name": "half-time scores agree between the two sources in at least 95% of matches (the rest are settled with the official record and logged)",
+  "ok": true,
+  "detail": "11773 of 11780 (99.9%)",
+  "scope": "official match records vs football-data.co.uk"
+ },
+ {
+  "name": "referees agree between the two sources in at least 95% of matches (the rest are settled with the official record and logged)",
+  "ok": true,
+  "detail": "9576 of 9880 (96.9%)",
+  "scope": "official match records vs football-data.co.uk"
+ },
+ {
+  "name": "minutes computed from line-ups and substitutions equal the Premier League's recorded minutes (within 5 minutes) for at least 98% of player-seasons",
+  "ok": true,
+  "detail": "18564 of 18662 within 5 minutes; 14731 identical",
+  "scope": "player_matches.csv vs player_seasons.csv (2006-07 onward)"
+ },
+ {
+  "name": "every team in every match has 11 starters in the official line-ups (a few data-entry exceptions allowed)",
+  "ok": true,
+  "detail": "26320 of 26332 team-matches; exceptions: 12",
+  "scope": "official line-ups"
+ },
+ {
+  "name": "the goal events of every match add up exactly to its official score",
+  "ok": true,
+  "detail": "13166 of 13166 matches",
+  "scope": "official match events vs official scores"
+ },
+ {
+  "name": "attendances are plausible (none negative, none above 100,000)",
+  "ok": true,
+  "detail": "12198 of 13166 matches have an attendance (0 = played without fans)",
+  "scope": "match_details.csv"
+ },
+ {
+  "name": "the ground the Premier League recorded for each club's home matches matches that club's stadium timeline for every season",
+  "ok": true,
+  "detail": "686 of 686 club-seasons agree",
+  "scope": "match_details.csv (official grounds) vs teams.json stadiums"
+ },
+ {
+  "name": "every player-award winner made appearances for the club named in the award that season",
+  "ok": true,
+  "detail": "289 of 289 awards",
+  "scope": "awards.json vs player_seasons.csv"
+ },
+ {
+  "name": "every Goal of the Season was scored by that player, for that club, against that opponent, on that date (per the official match events)",
+  "ok": true,
+  "detail": "34 of 34",
+  "scope": "awards.json vs match_events.csv"
+ },
+ {
+  "name": "every year and large number in the 51 club histories appears in the club's source page or our data",
+  "ok": true,
+  "detail": "all matched",
+  "scope": "teams.json summaries vs Wikipedia pages"
+ }
+]

@@ -8,6 +8,7 @@ const C = require(path.join(root, "assets/js/calc.js"));
 const csv = (f) => Papa.parse(fs.readFileSync(path.join(root, "data", f), "utf8"), { header: true, dynamicTyping: true, skipEmptyLines: true }).data;
 const json = (f) => JSON.parse(fs.readFileSync(path.join(root, "data", f), "utf8"));
 
+const plain = (n) => ({ "andy cole": "andrew cole" })[n.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()] || n.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();   // ignore accents; Wikipedia says Andy Cole, the Premier League says Andrew Cole
 const matches = csv("matches.csv"), tm = csv("team_matches.csv"), ft = csv("final_tables.csv"), pm = csv("player_matches.csv");
 const seasons = json("seasons.json"), teams = json("teams.json");
 const ss = C.seasonStats(matches), tr = C.titleRaces(ft), totals = C.playerTotals(pm).sort((a, b) => b.goals - a.goals);
@@ -31,6 +32,8 @@ const check = (name, ok, detail = "") => { console.log(`${ok ? "PASS" : "FAIL"} 
 check("13,166 matches = 3×462 + 31×380", matches.length === 3 * 462 + 31 * 380, matches.length);
 check("26,332 team-match rows (2 per match)", tm.length === 2 * matches.length, tm.length);
 check("goals in matches.csv = goals in team_matches.csv", C.sum(matches, (m) => m.home_goals + m.away_goals) === C.sum(tm, (r) => r.goals_for), numbers.goals);
+const manifest = json("manifest.json");
+check("the manifest used by the report matches the real files (player_matches.csv rows, players, goals)", manifest.player_matches.rows === pm.length && manifest.player_matches.players === new Set(pm.map((r) => r.player_id)).size && manifest.player_matches.goals === C.sum(pm, (r) => r.goals) && manifest.matches.rows === matches.length, `${manifest.player_matches.rows} rows, ${manifest.player_matches.players} players`);
 check("player table has at least 50,000 rows and 8 columns", pm.length >= 50000 && Object.keys(pm[0]).length >= 8, `${pm.length} rows, ${Object.keys(pm[0]).length} columns`);
 
 // official final tables = results (plus the four known deductions)
@@ -54,16 +57,16 @@ for (const r of tm) if (r.game_no === (r.season < "1995" ? 42 : 38)) lastPos[r.s
 check("table position after the last game = official final position", ft.every((r) => lastPos[r.season + "|" + r.team] === r.position), "686 rows");
 check("every champion matches seasons.json", tr.every((r) => seasons.find((s) => s.season === r.season).champion === r.champion));
 
-// every player row's team score matches its match, and players' goals never exceed the team's goals
+// every player row belongs to a real match: right club, right opponent, right side
 const mById = Object.fromEntries(matches.map((m) => [m.match_id, m]));
-let scoreBad = 0; const goalsByTeamMatch = {};
+let sideBad = 0; const goalsByTeamMatch = {};
 for (const r of pm) {
   const m = mById[r.match_id];
-  const [tg, og] = r.venue === "Home" ? [m.home_goals, m.away_goals] : [m.away_goals, m.home_goals];
-  if (tg !== r.team_goals || og !== r.opponent_goals) scoreBad++;
+  const ok = m && (r.venue === "Home" ? m.home === r.team && m.away === r.opponent : m.away === r.team && m.home === r.opponent) && m.season === r.season;
+  if (!ok) sideBad++;
   const k = r.match_id + "|" + r.team; goalsByTeamMatch[k] = (goalsByTeamMatch[k] || 0) + r.goals;
 }
-check("every player row's score equals its match score", scoreBad === 0, scoreBad + " mismatches");
+check("every player row sits in a real match with the right club, opponent and side", sideBad === 0, sideBad + " mismatches");
 let tooMany = 0;
 for (const [k, g] of Object.entries(goalsByTeamMatch)) { const [id, team] = k.split("|"); const m = mById[id]; if (g > (m.home === team ? m.home_goals : m.away_goals)) tooMany++; }
 check("players never score more goals in a match than their team", tooMany === 0, tooMany + " team-matches");
@@ -73,7 +76,8 @@ check("every season since 1992 has an FA Cup and League Cup winner", seasons.eve
 check("each club's league titles since 1992 are within its all-time league titles", seasons.every((x) => dom.by_club[x.champion].counts.league >= C.titleCounts(seasons).find((t) => t[0] === x.champion)[1]));
 check("Leicester's trophies match their club page (1 league, 1 FA Cup, 3 League Cups, 2 Community Shields)", JSON.stringify(dom.by_club["Leicester City"].counts) === JSON.stringify({ league: 1, fa_cup: 1, league_cup: 3, community_shield: 2, total: 7 }));
 check("official all-time top scorer is Alan Shearer with 260", rec.official.most_goals[0].Player === "Alan Shearer" && rec.official.most_goals[0].Goals === "260");
-check("our 2016–26 player data never exceeds the official career goals (Salah)", totals[0].goals <= +rec.official.most_goals.find((r) => r.Player === totals[0].name).Goals, `${totals[0].name}: ${totals[0].goals} in our data, ${rec.official.most_goals.find((r) => r.Player === totals[0].name).Goals} all-time`);
+const officialMatchTotals = rec.official.most_goals.every((r) => totals.some((p) => plain(p.name) === plain(r.Player) && p.goals === +r.Goals));
+check("the match-by-match table reproduces all ten official top career goal totals", officialMatchTotals, `${totals[0].name}: ${totals[0].goals}`);
 // longest unbeaten run recomputed here, independently of the Python that wrote records.json
 const unbeaten = (team) => { const g = tm.filter((r) => r.team === team).sort((a, b) => (a.date < b.date ? -1 : 1)); let best = 0, cur = 0, prev = null; for (const r of g) { const s0 = C.seasonStart(r.season); if (prev !== null && s0 - prev > 1) cur = 0; prev = s0; cur = r.result !== "L" ? cur + 1 : 0; best = Math.max(best, cur); } return best; };
 check("Arsenal's longest unbeaten run is 49 matches (recomputed here and in records.json)", unbeaten("Arsenal") === 49 && rec.league.longest_unbeaten_runs[0].length === 49, unbeaten("Arsenal"));
@@ -86,17 +90,18 @@ check("player_seasons.csv covers all 34 seasons with 14 columns", new Set(psr.ma
 const cs = C.playerTotalsSeasons(psr);
 const sh = cs.find((p) => p.name === "Alan Shearer");
 check("computed career goals: Alan Shearer 260 (the official record)", sh.goals === 260 && cs.sort((a, b) => b.goals - a.goals)[0].name === "Alan Shearer", sh.goals);
-const plain = (n) => ({ "andy cole": "andrew cole" })[n.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()] || n.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();   // ignore accents; Wikipedia says Andy Cole, the Premier League says Andrew Cole
 const officialGoals = rec.official.most_goals.every((r) => cs.some((p) => plain(p.name) === plain(r.Player) && p.goals === +r.Goals));
 check("all ten official top career goal totals are reproduced exactly", officialGoals);
 const giggs = cs.find((p) => p.name === "Ryan Giggs");
 check("Ryan Giggs: 162 assists and 632 appearances, as in the official records", giggs.assists === 162 && giggs.appearances === 632, `${giggs.assists} assists, ${giggs.appearances} apps`);
-// the two player tables must agree wherever they overlap (2016-17 onward)
-const goalsMatch = {}, goalsSeason = {};
-for (const r of pm) { const k = r.player_id + "|" + r.season; goalsMatch[k] = (goalsMatch[k] || 0) + r.goals; }
-for (const r of psr) if (C.seasonStart(r.season) >= 2016) { const k = r.player_id + "|" + r.season; goalsSeason[k] = (goalsSeason[k] || 0) + r.goals; }
-const keys = Object.keys(goalsSeason); const same = keys.filter((k) => (goalsMatch[k] || 0) === goalsSeason[k]).length;
-check("goals per player-season agree between the match-by-match and season tables for 2016–17 onward (at least 98%)", same / keys.length >= 0.98, `${same} of ${keys.length} (${(100 * same / keys.length).toFixed(2)}%)`);
+// the two player tables (official match records vs official season statistics) must agree
+const fields = [["goals", "goals", "goals"], ["assists", "assists", "assists"], ["appearances", "appearances", null], ["yellow_cards", "yellow_cards", "yellow_cards"], ["red_cards", "red_cards", "red_cards"]];
+const mine = {}; for (const r of pm) { const k = r.player_id + "|" + r.season + "|" + r.team; const o = (mine[k] ||= { goals: 0, assists: 0, appearances: 0, yellow_cards: 0, red_cards: 0 }); o.goals += r.goals; o.assists += r.assists; o.appearances++; o.yellow_cards += r.yellow_cards; o.red_cards += r.red_cards; }
+for (const [label, col] of fields) {
+  const same = psr.filter((r) => (mine[r.player_id + "|" + r.season + "|" + r.club]?.[label] ?? 0) === r[col]).length;
+  const floor = label === "appearances" ? 0.995 : 0.998;   // the season statistics omit a game or two for some Stoke 2008–09 and Burnley 2009–10 players
+  check(`${label} per player-club-season agree between the match records and the season statistics (at least ${floor * 100}%)`, same / psr.length >= floor, `${same} of ${psr.length} (${(100 * same / psr.length).toFixed(2)}%)`);
+}
 // signings and sales between Premier League clubs must mirror each other
 const tr2 = csv("transfers.csv");
 const sold = tr2.filter((r) => r.kind === "Sold to another Premier League club").length, bought = tr2.filter((r) => r.kind === "Signing from another Premier League club").length;

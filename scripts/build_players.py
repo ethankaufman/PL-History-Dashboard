@@ -1,8 +1,12 @@
-"""Build the player-match table: one row for each player who played in each Premier League match.
+"""LEGACY (superseded by build_official_matches.py): an earlier player-match table built from the open vaastav archive (2016-17 onward).
+It is kept only to document where the Opta expected-goals columns came from (saved in data/raw/expected_goals_2022_on.csv).
+Its assists differ from the official statistics for about a quarter of player-seasons (fantasy-game rules), so it is no longer used.
+
+Original description: build the player-match table: one row for each player who played in each Premier League match.
 
 Reads   data/raw/vaastav/<season>/merged_gw.csv + players_raw.csv   (2016-17 to 2025-26)
         data/matches.csv                                            (to link each row to its real match)
-Writes  data/player_matches.csv
+Writes  data/raw/player_matches_fpl_archive.csv
 
 Only real football facts are kept (minutes, goals, assists, cards...). All fantasy-game columns are dropped.
 A row is kept only when the player played at least one minute, so each match lists the players who took part.
@@ -152,5 +156,5 @@ if __name__ == "__main__":
     print("problems:", len(problems), problems[:8])
     low = check(rows)
     print("team-matches with under 900 player-minutes in total:", len(low), low[:5])
-    with open(ROOT / "data" / "player_matches.csv", "w", newline="") as f:
+    with open(ROOT / "data" / "raw" / "player_matches_fpl_archive.csv", "w", newline="") as f:
         w = csv.writer(f); w.writerow(COLUMNS); w.writerows(rows)
