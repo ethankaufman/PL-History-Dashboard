@@ -87,17 +87,13 @@
    "award": "top_assists",
    "season": "1992–93",
    "winner": "Eric Cantona",
-   "club": "Leeds United",
-   "nationality": "France",
-   "assists": 16
-  },
-  {
-   "award": "top_assists",
-   "season": "1992–93",
-   "winner": "Eric Cantona",
    "club": "Manchester United",
-   "nationality": "France",
-   "assists": 16
+   "assists": 16,
+   "clubs": [
+    "Leeds United",
+    "Manchester United"
+   ],
+   "nationality": "France"
   },
   {
    "award": "goal_of_the_season",
@@ -146,18 +142,10 @@
   {
    "award": "top_assists",
    "season": "1993–94",
-   "winner": "Andy Cole",
+   "winner": "Andrew Cole",
    "club": "Newcastle United",
-   "nationality": "England",
-   "assists": 13
-  },
-  {
-   "award": "top_assists",
-   "season": "1993–94",
-   "winner": "Eric Cantona",
-   "club": "Manchester United",
-   "nationality": "France",
-   "assists": 13
+   "assists": 13,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -221,10 +209,10 @@
   {
    "award": "top_assists",
    "season": "1994–95",
-   "winner": "Matt Le Tissier",
+   "winner": "Matthew Le Tissier",
    "club": "Southampton",
-   "nationality": "England",
-   "assists": 15
+   "assists": 15,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -290,8 +278,8 @@
    "season": "1995–96",
    "winner": "Steve McManaman",
    "club": "Liverpool",
-   "nationality": "England",
-   "assists": 15
+   "assists": 15,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -357,8 +345,8 @@
    "season": "1996–97",
    "winner": "Eric Cantona",
    "club": "Manchester United",
-   "nationality": "France",
-   "assists": 12
+   "assists": 12,
+   "nationality": "France"
   },
   {
    "award": "goal_of_the_season",
@@ -442,8 +430,8 @@
    "season": "1997–98",
    "winner": "David Beckham",
    "club": "Manchester United",
-   "nationality": "England",
-   "assists": 13
+   "assists": 13,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -527,16 +515,16 @@
    "season": "1998–99",
    "winner": "Dennis Bergkamp",
    "club": "Arsenal",
-   "nationality": "Netherlands",
-   "assists": 13
+   "assists": 13,
+   "nationality": "Netherlands"
   },
   {
    "award": "top_assists",
    "season": "1998–99",
    "winner": "Jimmy Floyd Hasselbaink",
    "club": "Leeds United",
-   "nationality": "Netherlands",
-   "assists": 13
+   "assists": 13,
+   "nationality": "Netherlands"
   },
   {
    "award": "goal_of_the_season",
@@ -602,16 +590,16 @@
    "season": "1999–2000",
    "winner": "David Beckham",
    "club": "Manchester United",
-   "nationality": "England",
-   "assists": 15
+   "assists": 15,
+   "nationality": "England"
   },
   {
    "award": "top_assists",
    "season": "1999–2000",
    "winner": "Nolberto Solano",
    "club": "Newcastle United",
-   "nationality": "Peru",
-   "assists": 15
+   "assists": 15,
+   "nationality": "Peru"
   },
   {
    "award": "goal_of_the_season",
@@ -677,8 +665,8 @@
    "season": "2000–01",
    "winner": "David Beckham",
    "club": "Manchester United",
-   "nationality": "England",
-   "assists": 12
+   "assists": 12,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -744,8 +732,8 @@
    "season": "2001–02",
    "winner": "Robert Pirès",
    "club": "Arsenal",
-   "nationality": "France",
-   "assists": 15
+   "assists": 15,
+   "nationality": "France"
   },
   {
    "award": "goal_of_the_season",
@@ -811,8 +799,8 @@
    "season": "2002–03",
    "winner": "Thierry Henry",
    "club": "Arsenal",
-   "nationality": "France",
-   "assists": 20
+   "assists": 20,
+   "nationality": "France"
   },
   {
    "award": "goal_of_the_season",
@@ -878,8 +866,8 @@
    "season": "2003–04",
    "winner": "Muzzy Izzet",
    "club": "Leicester City",
-   "nationality": "Turkey",
-   "assists": 14
+   "assists": 14,
+   "nationality": "Turkey"
   },
   {
    "award": "goal_of_the_season",
@@ -957,8 +945,8 @@
    "season": "2004–05",
    "winner": "Frank Lampard",
    "club": "Chelsea",
-   "nationality": "England",
-   "assists": 18
+   "assists": 18,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -1032,8 +1020,8 @@
    "season": "2005–06",
    "winner": "Didier Drogba",
    "club": "Chelsea",
-   "nationality": "Ivory Coast",
-   "assists": 11
+   "assists": 11,
+   "nationality": "Ivory Coast"
   },
   {
    "award": "goal_of_the_season",
@@ -1107,16 +1095,16 @@
    "season": "2006–07",
    "winner": "Cesc Fàbregas",
    "club": "Arsenal",
-   "nationality": "Spain",
-   "assists": 11
+   "assists": 11,
+   "nationality": "Spain"
   },
   {
    "award": "top_assists",
    "season": "2006–07",
    "winner": "Wayne Rooney",
    "club": "Manchester United",
-   "nationality": "England",
-   "assists": 11
+   "assists": 11,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -1190,8 +1178,8 @@
    "season": "2007–08",
    "winner": "Cesc Fàbregas",
    "club": "Arsenal",
-   "nationality": "Spain",
-   "assists": 17
+   "assists": 17,
+   "nationality": "Spain"
   },
   {
    "award": "goal_of_the_season",
@@ -1265,16 +1253,16 @@
    "season": "2008–09",
    "winner": "Frank Lampard",
    "club": "Chelsea",
-   "nationality": "England",
-   "assists": 10
+   "assists": 10,
+   "nationality": "England"
   },
   {
    "award": "top_assists",
    "season": "2008–09",
    "winner": "Robin van Persie",
    "club": "Arsenal",
-   "nationality": "Netherlands",
-   "assists": 10
+   "assists": 10,
+   "nationality": "Netherlands"
   },
   {
    "award": "goal_of_the_season",
@@ -1348,8 +1336,8 @@
    "season": "2009–10",
    "winner": "Frank Lampard",
    "club": "Chelsea",
-   "nationality": "England",
-   "assists": 16
+   "assists": 14,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -1432,8 +1420,8 @@
    "season": "2010–11",
    "winner": "Nani",
    "club": "Manchester United",
-   "nationality": "Portugal",
-   "assists": 14
+   "assists": 14,
+   "nationality": "Portugal"
   },
   {
    "award": "goal_of_the_season",
@@ -1507,8 +1495,8 @@
    "season": "2011–12",
    "winner": "David Silva",
    "club": "Manchester City",
-   "nationality": "Spain",
-   "assists": 15
+   "assists": 15,
+   "nationality": "Spain"
   },
   {
    "award": "goal_of_the_season",
@@ -1582,8 +1570,8 @@
    "season": "2012–13",
    "winner": "Juan Mata",
    "club": "Chelsea",
-   "nationality": "Spain",
-   "assists": 12
+   "assists": 12,
+   "nationality": "Spain"
   },
   {
    "award": "goal_of_the_season",
@@ -1663,18 +1651,10 @@
   {
    "award": "top_assists",
    "season": "2013–14",
-   "winner": "Luis Suárez",
-   "club": "Liverpool",
-   "nationality": "Uruguay",
-   "assists": 13
-  },
-  {
-   "award": "top_assists",
-   "season": "2013–14",
    "winner": "Steven Gerrard",
    "club": "Liverpool",
-   "nationality": "England",
-   "assists": 13
+   "assists": 13,
+   "nationality": "England"
   },
   {
    "award": "goal_of_the_season",
@@ -1748,8 +1728,8 @@
    "season": "2014–15",
    "winner": "Cesc Fàbregas",
    "club": "Chelsea",
-   "nationality": "Spain",
-   "assists": 19
+   "assists": 18,
+   "nationality": "Spain"
   },
   {
    "award": "goal_of_the_season",
@@ -1823,8 +1803,8 @@
    "season": "2015–16",
    "winner": "Mesut Özil",
    "club": "Arsenal",
-   "nationality": "Germany",
-   "assists": 19
+   "assists": 19,
+   "nationality": "Germany"
   },
   {
    "award": "goal_of_the_season",
@@ -1898,8 +1878,8 @@
    "season": "2016–17",
    "winner": "Kevin De Bruyne",
    "club": "Manchester City",
-   "nationality": "Belgium",
-   "assists": 18
+   "assists": 18,
+   "nationality": "Belgium"
   },
   {
    "award": "goal_of_the_season",
@@ -1973,8 +1953,8 @@
    "season": "2017–18",
    "winner": "Kevin De Bruyne",
    "club": "Manchester City",
-   "nationality": "Belgium",
-   "assists": 16
+   "assists": 16,
+   "nationality": "Belgium"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2074,8 +2054,8 @@
    "season": "2018–19",
    "winner": "Eden Hazard",
    "club": "Chelsea",
-   "nationality": "Belgium",
-   "assists": 15
+   "assists": 15,
+   "nationality": "Belgium"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2164,8 +2144,8 @@
    "season": "2019–20",
    "winner": "Kevin De Bruyne",
    "club": "Manchester City",
-   "nationality": "Belgium",
-   "assists": 20
+   "assists": 20,
+   "nationality": "Belgium"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2254,8 +2234,8 @@
    "season": "2020–21",
    "winner": "Harry Kane",
    "club": "Tottenham Hotspur",
-   "nationality": "England",
-   "assists": 14
+   "assists": 14,
+   "nationality": "England"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2361,8 +2341,8 @@
    "season": "2021–22",
    "winner": "Mohamed Salah",
    "club": "Liverpool",
-   "nationality": "Egypt",
-   "assists": 13
+   "assists": 13,
+   "nationality": "Egypt"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2451,8 +2431,8 @@
    "season": "2022–23",
    "winner": "Kevin De Bruyne",
    "club": "Manchester City",
-   "nationality": "Belgium",
-   "assists": 16
+   "assists": 16,
+   "nationality": "Belgium"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2541,8 +2521,8 @@
    "season": "2023–24",
    "winner": "Ollie Watkins",
    "club": "Aston Villa",
-   "nationality": "England",
-   "assists": 13
+   "assists": 13,
+   "nationality": "England"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2639,8 +2619,8 @@
    "season": "2024–25",
    "winner": "Mohamed Salah",
    "club": "Liverpool",
-   "nationality": "Egypt",
-   "assists": 18
+   "assists": 18,
+   "nationality": "Egypt"
   },
   {
    "award": "playmaker_of_the_season",
@@ -2729,8 +2709,8 @@
    "season": "2025–26",
    "winner": "Bruno Fernandes",
    "club": "Manchester United",
-   "nationality": "Portugal",
-   "assists": 21
+   "assists": 21,
+   "nationality": "Portugal"
   },
   {
    "award": "playmaker_of_the_season",

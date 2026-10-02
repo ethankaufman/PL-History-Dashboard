@@ -3896,7 +3896,7 @@
    "most_clean_sheets_in_a_row": {
     "length": 4,
     "from": "1996-04-13",
-    "to": "1996-05-04",
+    "to": "1996-05-05",
     "from_season": "1995–96",
     "to_season": "1995–96"
    },
@@ -6866,8 +6866,8 @@
    },
    "longest_winning": {
     "length": 5,
-    "from": "2004-04-12",
-    "to": "2004-05-08",
+    "from": "2004-04-11",
+    "to": "2004-05-07",
     "from_season": "2003–04",
     "to_season": "2003–04"
    },
@@ -8104,7 +8104,7 @@
    },
    "longest_winless": {
     "length": 10,
-    "from": "2004-04-03",
+    "from": "2004-04-02",
     "to": "2004-08-21",
     "from_season": "2003–04",
     "to_season": "2004–05"

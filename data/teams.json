@@ -49,7 +49,7 @@
     "name": "Dean Court",
     "from": 1910,
     "to": null,
-    "note": "Built on wasteland leased from local businessman J.E. Cooper-Dean, who gave the ground its name",
+    "note": "Built on wasteland leased from local businessman J.E. Cooper-Dean, who gave the ground its name. Sponsored names have included the Fitness First, Seward, Goldsands and Vitality Stadium.",
     "current": true
    }
   ],
@@ -88,7 +88,7 @@
    "last_season_result": "1st",
    "top_scorer": "Thierry Henry (175)"
   },
-  "summary": "Founded in 1886 by munitions workers at the Royal Arsenal in Woolwich as Dial Square, Arsenal were the first southern club to join the Football League (1893) and have been in the top division continuously since 1919. Herbert Chapman's 1930s side won five league titles, and under Arsène Wenger the club went unbeaten through the 2003–04 league season, earning the nickname 'The Invincibles'. They crossed London from Woolwich to Highbury in 1913 and moved to the Emirates Stadium in 2006. Arsenal were Premier League champions in 2025–26.",
+  "summary": "Founded in 1886 by munitions workers at the Royal Arsenal in Woolwich as Dial Square, Arsenal were the first southern club to join the Football League (1893) and hold the longest unbroken run in the top division (over 105 years). Herbert Chapman's 1930s side won five league titles, and under Arsène Wenger the club went unbeaten through the 2003–04 league season, earning the nickname 'The Invincibles'. They crossed London from Woolwich to Highbury in 1913 and moved to the Emirates Stadium in 2006. Arsenal were Premier League champions in 2025–26.",
   "stadiums": [
    {
     "name": "Plumstead Common",
@@ -338,7 +338,7 @@
    "last_season_result": "Championship 20th",
    "top_scorer": "Alan Shearer (112)"
   },
-  "summary": "Founded in 1875, Blackburn Rovers were founder members of the Football League in 1888 and won five FA Cups in the 19th century. Taken over by local businessman Jack Walker in 1991, who installed Kenny Dalglish as manager, they won promotion to the new Premier League in 1992 and became champions in 1994–95. They were relegated in 2012, dropped to the third tier in 2017, and returned to the Championship in 2018.",
+  "summary": "Founded in 1875, Blackburn Rovers were founder members of the Football League in 1888 and won five FA Cups in the 19th century. Taken over by local businessman Jack Walker, who installed Kenny Dalglish as manager, they won promotion to the new Premier League in 1992 and became champions in 1994–95. They were relegated in 2012, dropped to the third tier in 2017, and returned to the Championship in 2018.",
   "stadiums": [
    {
     "name": "Oozehead Ground",
@@ -496,7 +496,7 @@
     "name": "Reebok Stadium (now Toughsheet Community Stadium)",
     "from": 1997,
     "to": null,
-    "note": "Built in Horwich; renamed Macron Stadium (2014), University of Bolton Stadium (2018) and Toughsheet Community Stadium (2023)",
+    "note": "Built in Horwich; renamed Macron Stadium (2014), University of Bolton Stadium (2018) and Toughsheet Community Stadium (2023). Also known as the Macron Stadium (2014–2018).",
     "current": true
    }
   ],
@@ -706,7 +706,7 @@
     "name": "Falmer Stadium",
     "from": 2011,
     "to": null,
-    "note": "Opened for the 2011–12 season; capacity expanded from 22,374 to over 30,000",
+    "note": "Opened for the 2011–12 season; capacity expanded from 22,374 to over 30,000. Sponsored name: American Express Community Stadium ('the Amex').",
     "current": true
    }
   ],
@@ -1417,7 +1417,7 @@
     "name": "Kirklees Stadium (now Accu Stadium)",
     "from": 1994,
     "to": null,
-    "note": "Opened as the Alfred McAlpine Stadium; later the Galpharm Stadium (2004), John Smith's Stadium (2012) and Accu Stadium (2025)",
+    "note": "Opened as the Alfred McAlpine Stadium; later the Galpharm Stadium (2004), John Smith's Stadium (2012) and Accu Stadium (2025). Called the John Smith's Stadium from 2012 to 2025.",
     "current": true
    }
   ],
@@ -1632,7 +1632,7 @@
    "last_season_result": "Championship 23rd (relegated)",
    "top_scorer": "Jamie Vardy (145)"
   },
-  "summary": "Founded in 1884 as Leicester Fosse and renamed Leicester City in 1919, the Foxes won the Premier League in 2015–16 at odds of 5000–1, one of seven clubs to have won the competition. They also won the FA Cup in 2021, the League Cup three times (1964, 1997 and 2000) and reached the Champions League quarter-finals in 2016–17. The club moved from Filbert Street to the Walkers Stadium, now the King Power Stadium, in 2002. They were relegated from the Championship in 2025–26 and play in League One.",
+  "summary": "Founded in 1884 as Leicester Fosse and renamed Leicester City in 1919, the Foxes won the Premier League in 2015–16, one of seven clubs to have won the competition. They also won the FA Cup in 2021, the League Cup three times (1964, 1997 and 2000) and reached the Champions League quarter-finals in 2016–17. The club moved from Filbert Street to the Walkers Stadium, now the King Power Stadium, in 2002. They were relegated from the Championship in 2025–26 and play in League One.",
   "stadiums": [
    {
     "name": "Fosse Road field",
@@ -1904,7 +1904,7 @@
    "last_season_result": "3rd",
    "top_scorer": "Wayne Rooney (183)"
   },
-  "summary": "Founded in 1878 as Newton Heath LYR and renamed Manchester United in 1902, the club moved to Old Trafford in 1910. Matt Busby's 'Busby Babes' won titles in the 1950s before eight players died in the 1958 Munich air disaster, and United became the first English club to win the European Cup in 1968. Alex Ferguson (1986–2013) won 13 league titles, and in 1998–99 United became the first English side to win the Premier League, FA Cup and Champions League in one season. United share a joint-record twenty league titles with Liverpool and finished third in 2025–26.",
+  "summary": "Founded in 1878 as Newton Heath LYR and renamed Manchester United in 1902, the club moved to Old Trafford in 1910. Matt Busby's 'Busby Babes' won titles in the 1950s before eight players were killed in the Munich air disaster, and United became the first English club to win the European Cup in 1968. Alex Ferguson (1986–2013) won 13 league titles, and in 1998–99 United became the first English side to win the Premier League, FA Cup and Champions League in one season. United share a joint-record twenty league titles with Liverpool and finished third in 2025–26.",
   "stadiums": [
    {
     "name": "North Road (Newton Heath)",
@@ -2065,7 +2065,7 @@
     "name": "St James' Park",
     "from": 1892,
     "to": null,
-    "note": "Football was played here from 1880 (Newcastle Rangers), then Newcastle West End from 1886; the oldest and largest football stadium in North East England",
+    "note": "Football was played here from 1880 (Newcastle Rangers), then Newcastle West End from 1886; the oldest and largest football stadium in North East England. Branded the Sports Direct Arena for several seasons in the 2000s and 2010s.",
     "current": true
    }
   ],
@@ -3002,7 +3002,7 @@
    "last_season_result": "17th",
    "top_scorer": "Harry Kane (213)"
   },
-  "summary": "Founded in 1882 as Hotspur F.C., Tottenham won the FA Cup in 1901 as a non-League club, and in 1960–61 became the first team of the 20th century to win the league and FA Cup double. In 1963 they were the first British club to win a European trophy, and in 1972 the inaugural UEFA Cup winners. They have won two league titles and eight FA Cups, and were Champions League runners-up in 2018–19. After 118 years at White Hart Lane they moved into the new Tottenham Hotspur Stadium in 2019, built on the same site. Their big rivals are Arsenal in the North London derby.",
+  "summary": "Founded in 1882 as Hotspur F.C., Tottenham won the FA Cup in 1901 as a non-League club, and in 1960–61 became the first team of the 20th century to win the league and FA Cup double. In 1963 they were the first British club to win a European trophy, and in 1972 the inaugural UEFA Cup winners. They have won two league titles and eight FA Cups, and were Champions League runners-up in 2018–19. After more than a century at White Hart Lane they moved into the new Tottenham Hotspur Stadium in 2019, built on the same site. Their big rivals are Arsenal in the North London derby.",
   "stadiums": [
    {
     "name": "Tottenham Marshes (Park Lane end)",

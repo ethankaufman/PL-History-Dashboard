@@ -1,6 +1,6 @@
 {
  "arsenal": {
-  "summary": "Founded in 1886 by munitions workers at the Royal Arsenal in Woolwich as Dial Square, Arsenal were the first southern club to join the Football League (1893) and have been in the top division continuously since 1919. Herbert Chapman's 1930s side won five league titles, and under Arsène Wenger the club went unbeaten through the 2003–04 league season, earning the nickname 'The Invincibles'. They crossed London from Woolwich to Highbury in 1913 and moved to the Emirates Stadium in 2006. Arsenal were Premier League champions in 2025–26.",
+  "summary": "Founded in 1886 by munitions workers at the Royal Arsenal in Woolwich as Dial Square, Arsenal were the first southern club to join the Football League (1893) and hold the longest unbroken run in the top division (over 105 years). Herbert Chapman's 1930s side won five league titles, and under Arsène Wenger the club went unbeaten through the 2003–04 league season, earning the nickname 'The Invincibles'. They crossed London from Woolwich to Highbury in 1913 and moved to the Emirates Stadium in 2006. Arsenal were Premier League champions in 2025–26.",
   "stadiums": [
    {
     "name": "Plumstead Common",
@@ -100,7 +100,7 @@
   ]
  },
  "blackburn_rovers": {
-  "summary": "Founded in 1875, Blackburn Rovers were founder members of the Football League in 1888 and won five FA Cups in the 19th century. Taken over by local businessman Jack Walker in 1991, who installed Kenny Dalglish as manager, they won promotion to the new Premier League in 1992 and became champions in 1994–95. They were relegated in 2012, dropped to the third tier in 2017, and returned to the Championship in 2018.",
+  "summary": "Founded in 1875, Blackburn Rovers were founder members of the Football League in 1888 and won five FA Cups in the 19th century. Taken over by local businessman Jack Walker, who installed Kenny Dalglish as manager, they won promotion to the new Premier League in 1992 and became champions in 1994–95. They were relegated in 2012, dropped to the third tier in 2017, and returned to the Championship in 2018.",
   "stadiums": [
    {
     "name": "Oozehead Ground",

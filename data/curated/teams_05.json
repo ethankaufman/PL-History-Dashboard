@@ -1,6 +1,6 @@
 {
  "leicester_city": {
-  "summary": "Founded in 1884 as Leicester Fosse and renamed Leicester City in 1919, the Foxes won the Premier League in 2015–16 at odds of 5000–1, one of seven clubs to have won the competition. They also won the FA Cup in 2021, the League Cup three times (1964, 1997 and 2000) and reached the Champions League quarter-finals in 2016–17. The club moved from Filbert Street to the Walkers Stadium, now the King Power Stadium, in 2002. They were relegated from the Championship in 2025–26 and play in League One.",
+  "summary": "Founded in 1884 as Leicester Fosse and renamed Leicester City in 1919, the Foxes won the Premier League in 2015–16, one of seven clubs to have won the competition. They also won the FA Cup in 2021, the League Cup three times (1964, 1997 and 2000) and reached the Champions League quarter-finals in 2016–17. The club moved from Filbert Street to the Walkers Stadium, now the King Power Stadium, in 2002. They were relegated from the Championship in 2025–26 and play in League One.",
   "stadiums": [
    {
     "name": "Fosse Road field",
@@ -120,7 +120,7 @@
   ]
  },
  "manchester_united": {
-  "summary": "Founded in 1878 as Newton Heath LYR and renamed Manchester United in 1902, the club moved to Old Trafford in 1910. Matt Busby's 'Busby Babes' won titles in the 1950s before eight players died in the 1958 Munich air disaster, and United became the first English club to win the European Cup in 1968. Alex Ferguson (1986–2013) won 13 league titles, and in 1998–99 United became the first English side to win the Premier League, FA Cup and Champions League in one season. United share a joint-record twenty league titles with Liverpool and finished third in 2025–26.",
+  "summary": "Founded in 1878 as Newton Heath LYR and renamed Manchester United in 1902, the club moved to Old Trafford in 1910. Matt Busby's 'Busby Babes' won titles in the 1950s before eight players were killed in the Munich air disaster, and United became the first English club to win the European Cup in 1968. Alex Ferguson (1986–2013) won 13 league titles, and in 1998–99 United became the first English side to win the Premier League, FA Cup and Champions League in one season. United share a joint-record twenty league titles with Liverpool and finished third in 2025–26.",
   "stadiums": [
    {
     "name": "North Road (Newton Heath)",
