@@ -157,3 +157,11 @@ dialog::backdrop { background: #000a; }
 .h2h .big { font-size: 2rem; font-weight: 900; }
 .pos-1 { color: var(--gold); font-weight: 800; }
 @media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+
+.tools { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; pointer-events: none; }
+.tools[hidden] { display: none; }
+.tools .btn { pointer-events: auto; }
+#cluster-menu { position: fixed; z-index: 140; width: 220px; background: #1b0b30f5; border: 1px solid var(--green); border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 6px; box-shadow: 0 16px 40px #000a; }
+#cluster-menu[hidden] { display: none; }
+#cluster-menu .btn { text-align: left; }
+#intro.zoomed .intro-ui h1, #intro.zoomed .intro-ui h2 { opacity: 0; transition: opacity .5s; }
