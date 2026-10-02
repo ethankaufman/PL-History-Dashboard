@@ -107,5 +107,12 @@ const tr2 = csv("transfers.csv");
 const sold = tr2.filter((r) => r.kind === "Sold to another Premier League club").length, bought = tr2.filter((r) => r.kind === "Signing from another Premier League club").length;
 check("every sale to another Premier League club is also a signing by that club", sold === bought, `${sold} and ${bought}`);
 check("report headline: highest-scoring season is 2023–24", numbers.highestGoalsPerGameSeason === "2023–24", numbers.highestGoalsPerGameSeason);
+// the Manchester City asterisk: which honours fall in the flagged seasons (data/city_case.json)
+const cc = json("city_case.json"), cityDom = json("domestic_honours.json").by_club[cc.club];
+const inWindow = (x) => +String(x).slice(0, 4) >= +cc.first_season.slice(0, 4) && +String(x).slice(0, 4) <= +cc.last_season.slice(0, 4);
+check("flagged seasons run 2009–10 to 2017–18 (nine seasons)", +cc.last_season.slice(0, 4) - +cc.first_season.slice(0, 4) + 1 === 9);
+check("the charge counts add up to 115", cc.charges.reduce((a, c) => a + +c[0], 0) === 115, cc.charges.map((c) => c[0]).join(" + "));
+check("three of Manchester City's league titles fall in the flagged seasons", seasons.filter((x) => x.champion === cc.club && inWindow(x.season)).length === 3);
+check("eight of Manchester City's trophies since 1992 fall in the flagged seasons", [...cityDom.league_titles.filter((x) => +String(x).slice(0, 4) >= 1992), ...cityDom.fa_cup.filter((x) => +String(x).slice(0, 4) >= 1992), ...cityDom.league_cup.filter((x) => +String(x).slice(0, 4) >= 1992), ...cityDom.community_shield.filter((x) => x >= 1992)].filter(inWindow).length === 8);
 console.log(failures ? `\n${failures} check(s) FAILED` : "\nAll checks passed.");
 process.exit(failures ? 1 : 0);

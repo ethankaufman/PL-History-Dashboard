@@ -4,11 +4,11 @@ const PL = (() => {
     matches: "data/matches.csv", teamMatches: "data/team_matches.csv", finalTables: "data/final_tables.csv",
     playerMatches: "data/player_matches.csv", transfers: "data/transfers.csv",
     seasons: "data/seasons.json", awards: "data/awards.json", honours: "data/honours.json", teams: "data/teams.json",
-    players: "data/current_players.json", map: "data/uk_map.json", cities: "data/cities.json", badges: "data/badges.json",
+    players: "data/current_players.json", map: "data/uk_map.json", cities: "data/cities.json", badges: "data/badges.json", cityCase: "data/city_case.json",
     domestic: "data/domestic_honours.json", records: "data/records.json", playerSeasons: "data/player_seasons.csv", appearances: "data/appearances_lean.csv", audit: "data/audit.json", manifest: "data/manifest.json", disagreements: "data/source_disagreements.csv",
   };
   // approximate download sizes (MB) so the progress bar moves smoothly
-  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1, cities: 0.01, badges: 0.01, domestic: 0.15, records: 0.2, playerSeasons: 1.8, appearances: 12, audit: 0.1, manifest: 0.01, disagreements: 0.3 };
+  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1, cities: 0.01, badges: 0.01, cityCase: 0.01, domestic: 0.15, records: 0.2, playerSeasons: 1.8, appearances: 12, audit: 0.1, manifest: 0.01, disagreements: 0.3 };
 
   async function load(names, onProgress) {
     const total = names.reduce((s, n) => s + weight[n], 0);
@@ -106,28 +106,49 @@ const PL = (() => {
     Chart.defaults.animation.duration = 500;
   }
 
+  // ---- the Manchester City asterisk (data/city_case.json): seasons 2009-10 to 2017-18 are flagged, nothing is removed ----
+  let CASE = null, caseFrom = 0, caseTo = 0;
+  function setCase(c) { CASE = c; caseFrom = +c.first_season.slice(0, 4); caseTo = +c.last_season.slice(0, 4); }
+  const flagYear = (club, y) => !!CASE && club === CASE.club && y >= caseFrom && y <= caseTo;
+  const flagged = (club, season) => flagYear(club, +String(season).slice(0, 4));             // a season label such as "2011–12", or a year
+  const flaggedDate = (club, iso) => !!CASE && club === CASE.club && iso >= CASE.window_start && iso <= CASE.window_end;
+  const flaggedRun = (club, from, to) => !!CASE && club === CASE.club && from <= CASE.window_end && to >= CASE.window_start;
+  const isCaseClub = (club) => !!CASE && club === CASE.club;
+  const star = (on) => (on && CASE ? `<a class="star" href="#city-note" title="${esc(CASE.short)}">*</a>` : "");   // clickable asterisk (HTML)
+  const starText = (on) => (on && CASE ? "*" : "");                                                              // plain asterisk for chart labels
+  const starOpensNote = (e) => { const a = e.target.closest && e.target.closest("a.star"); const box = document.getElementById("city-note"); if (a && box && box.tagName === "DETAILS") box.open = true; };
+  document.addEventListener("click", starOpensNote);
+  function caseBox() {
+    if (!CASE) return "";
+    return `<h2>${CASE.title}</h2><p class="muted" style="margin-top:-6px">Status as of ${new Date(CASE.as_of + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</p>${CASE.paragraphs.map((p) => `<p>${p}</p>`).join("")}
+      <table class="plain"><thead><tr><th class="num">Charges</th><th>What</th><th>Period</th><th>Outcome</th></tr></thead><tbody>${CASE.charges.map((c) => `<tr><td class="num">${c[0]}</td><td>${c[1]}</td><td>${c[2]}</td><td>${c[3]}</td></tr>`).join("")}</tbody></table>
+      <p class="note">Sources: ${CASE.sources.map((x) => `<a href="${x.url}" target="_blank" rel="noopener">${esc(x.title)}</a>`).join("; ")}.</p>`;
+  }
+
   // ---- club facts shared by the map card and the dashboard ----
   const ordinal = (n) => { const v = n % 100; return n + (["th", "st", "nd", "rd"][(v - 20) % 10] || ["th", "st", "nd", "rd"][v] || "th"); };
   const year = (d) => String(d).slice(0, 4);
-  function trophyChips(c) {
+  // domestic trophy chips; for the flagged club each chip also says how many of those trophies fall in the flagged seasons
+  function trophyChips(c, club, entry) {
     if (!c) return "";
-    const item = (n, label) => `<span class="chip ${n ? "up" : ""}"><b>${n}</b> ${label}</span>`;
-    return item(c.league, "league title" + (c.league === 1 ? "" : "s")) + item(c.fa_cup, "FA Cup" + (c.fa_cup === 1 ? "" : "s")) +
-      item(c.league_cup, "League Cup" + (c.league_cup === 1 ? "" : "s")) + item(c.community_shield, "Community Shield" + (c.community_shield === 1 ? "" : "s"));
+    const n = (list) => (club && entry && list ? list.filter((x) => flagged(club, x)).length : 0);
+    const item = (count, label, flaggedCount) => `<span class="chip ${count ? "up" : ""}"><b>${count}</b> ${label}${flaggedCount ? ` ${star(true)}<small>(${flaggedCount} flagged)</small>` : ""}</span>`;
+    return item(c.league, "league title" + (c.league === 1 ? "" : "s"), n(entry?.league_titles)) + item(c.fa_cup, "FA Cup" + (c.fa_cup === 1 ? "" : "s"), n(entry?.fa_cup)) +
+      item(c.league_cup, "League Cup" + (c.league_cup === 1 ? "" : "s"), n(entry?.league_cup)) + item(c.community_shield, "Community Shield" + (c.community_shield === 1 ? "" : "s"), n(entry?.community_shield));
   }
-  function recordLines(r) {
+  function recordLines(r, club) {
     if (!r) return [];
-    const m = (x) => (x ? `${x.score} ${esc(x.home)} v ${esc(x.away)} (${year(x.date)})` : "–");
-    const run = (x) => (x ? `${x.length} games (${x.from_season === x.to_season ? x.from_season : x.from_season + " to " + x.to_season})` : "–");
+    const m = (x) => (x ? `${x.score} ${esc(x.home)} v ${esc(x.away)} (${year(x.date)})${star(flaggedDate(club, x.date))}` : "–");
+    const run = (x) => (x ? `${x.length} games (${x.from_season === x.to_season ? x.from_season : x.from_season + " to " + x.to_season})${star(flaggedRun(club, x.from, x.to))}` : "–");
     return [
-      ["Best finish", `${ordinal(r.best_finish.position)} in ${r.best_finish.season} (${r.best_finish.points} points)`],
-      ["Most points in a season", `${r.most_points.points} in ${r.most_points.season}`],
-      ["Most goals in a season", `${r.most_goals_scored.goals_for} in ${r.most_goals_scored.season}`],
+      ["Best finish", `${ordinal(r.best_finish.position)} in ${r.best_finish.season} (${r.best_finish.points} points)${star(flagged(club, r.best_finish.season))}`],
+      ["Most points in a season", `${r.most_points.points} in ${r.most_points.season}${star(flagged(club, r.most_points.season))}`],
+      ["Most goals in a season", `${r.most_goals_scored.goals_for} in ${r.most_goals_scored.season}${star(flagged(club, r.most_goals_scored.season))}`],
       ["Biggest win", m(r.biggest_win)], ["Heaviest defeat", m(r.biggest_defeat)],
       ["Longest unbeaten run", run(r.longest_unbeaten)], ["Longest winning run", run(r.longest_winning)], ["Longest losing run", run(r.longest_losing)],
       ["Top Premier League scorer", esc(r.top_scorer)],
     ];
   }
 
-  return { load, renderNav, ordinal, trophyChips, recordLines, int, dec, pct, esc, short, clubColor, badge, palette, chartDefaults };
+  return { load, renderNav, ordinal, trophyChips, recordLines, setCase, flagged, flagYear, flaggedDate, flaggedRun, isCaseClub, star, starText, caseBox, get caseData() { return CASE; }, int, dec, pct, esc, short, clubColor, badge, palette, chartDefaults };
 })();

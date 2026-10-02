@@ -3,7 +3,7 @@
  */
 import * as THREE from "../vendor/three.module.min.js";
 
-const REPORT_DATA = ["matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "map", "cities", "domestic", "records", "playerSeasons", "audit", "disagreements", "manifest"];
+const REPORT_DATA = ["matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "map", "cities", "cityCase", "domestic", "records", "playerSeasons", "audit", "disagreements", "manifest"];
 
 const root = document.getElementById("intro");
 const statusEl = document.getElementById("intro-status");
@@ -340,13 +340,15 @@ function runIntro() {
     const pl = t.premier_league;
     card.innerHTML = `<button class="x" aria-label="Close" id="card-x">×</button><div class="eyebrow">${t.status === "current" ? "In the 2026–27 Premier League" : t.status === "defunct" ? "Defunct club" : "Former Premier League club"}</div>
       <h3 style="color:${PL.clubColor(t.name, true)}"><img class="crest" src="${PL.badge(t.name)}" alt="" width="44" height="44"> ${PL.esc(t.name)}</h3>
-      <p class="muted">${PL.esc(t.city)}${t.area ? " (" + PL.esc(t.area) + ")" : ""} · founded ${t.founded} · ${pl.seasons_completed} Premier League seasons${pl.titles ? " · " + pl.titles + " title" + (pl.titles > 1 ? "s" : "") : ""}</p>
+      <p class="muted">${PL.esc(t.city)}${t.area ? " (" + PL.esc(t.area) + ")" : ""} · founded ${t.founded} · ${pl.seasons_completed} Premier League seasons${pl.titles ? " · " + pl.titles + " title" + (pl.titles > 1 ? "s" : "") + PL.star(PL.isCaseClub(t.name)) : ""}</p>${PL.isCaseClub(t.name) ? `<div class="casecard"><b>${PL.star(true)} Under Premier League charges.</b> ${PL.esc(PL.caseData.short)} <button class="btn small" id="card-case" type="button">Read the full note in the report</button></div>` : ""}
       <p>${PL.esc(t.summary)}</p>
-      <h4>Domestic trophies (all-time)</h4><div class="chips">${PL.trophyChips(window.PLDATA.domestic.by_club[t.name]?.counts)}</div>
-      <h4>Premier League club records</h4><table class="plain"><tbody>${PL.recordLines(window.PLDATA.records.clubs[t.name]).map(([k, v]) => `<tr><td class="muted">${k}</td><td>${v}</td></tr>`).join("")}</tbody></table>
+      <h4>Domestic trophies (all-time)</h4><div class="chips">${PL.trophyChips(window.PLDATA.domestic.by_club[t.name]?.counts, t.name, window.PLDATA.domestic.by_club[t.name])}</div>
+      <h4>Premier League club records</h4><table class="plain"><tbody>${PL.recordLines(window.PLDATA.records.clubs[t.name], t.name).map(([k, v]) => `<tr><td class="muted">${k}</td><td>${v}</td></tr>`).join("")}</tbody></table>
       <h4>Every ground, in order</h4><ol>${rows}</ol>`;
     card.hidden = false;
     document.getElementById("card-x").onclick = () => (card.hidden = true);
+    const more = document.getElementById("card-case");
+    if (more) more.onclick = () => { close(); const n = document.getElementById("city-note"); if (n) n.scrollIntoView({ behavior: "smooth" }); };
   }
 
   function toggleAll() { showAll = !showAll; pins.filter((p) => !p.cur).forEach((p) => (p.group.visible = showAll)); document.getElementById("intro-all").textContent = showAll ? "Show current clubs only" : "Show all 51 clubs"; }

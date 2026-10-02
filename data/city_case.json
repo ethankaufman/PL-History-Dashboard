@@ -1,0 +1,29 @@
+{
+ "club": "Manchester City",
+ "as_of": "2026-10-02",
+ "first_season": "2009–10",
+ "last_season": "2017–18",
+ "window_start": "2009-08-01",
+ "window_end": "2018-06-30",
+ "verdict_date": "2026-09-29",
+ "title": "Manchester City and the asterisk (*)",
+ "short": "Charged in 2023 with 115 breaches of Premier League rules; found guilty of 114 of them on 29 September 2026. The financial charges cover 2009–10 to 2017–18. Sanctions and an appeal are still to come, and nothing has been removed from the record.",
+ "paragraphs": [
+  "<b>What happened.</b> In February 2023 the Premier League charged Manchester City with 115 breaches of its rules. On 29 September 2026 an independent commission found the club guilty of all 80 charges about financial rules and 34 of the 35 charges of failing to cooperate with the league's investigation. The commission found that City arranged &lsquo;sham&rsquo; sponsorship contracts with commercial partners; the league says this inflated the club's revenues and cut its costs by more than £900 million.",
+  "<b>Which seasons.</b> The financial charges cover nine seasons, <b>2009–10 to 2017–18</b> (the profit-and-sustainability charges cover 2015–16 to 2017–18 and the UEFA Financial Fair Play charges 2013–14 to 2017–18). The cooperation charges cover December 2018 to February 2023; they are about how the club dealt with the investigation, not about results on the pitch, so those seasons are not starred.",
+  "<b>How severe.</b> Sanctions have not been decided; a separate hearing will set them. The possibilities run from a reprimand or a fine, through a points deduction or suspension, to expulsion from the Premier League in the worst case. City says it is &lsquo;innocent of the accusations made by the Premier League&rsquo; and will appeal; an appeal would go to a new three-person panel whose decision is final. Until something is decided, no title, result or record has been removed or changed, so every number on this site is as it was played.",
+  "<b>What the asterisk means.</b> A <b>*</b> marks every Manchester City result, record, trophy and league position from 2009–10 to 2017–18, the seasons the financial charges cover. It is a flag, not a ruling on any match. It covers three Premier League titles (2011–12, 2013–14 and 2017–18), the 2010–11 FA Cup, the 2013–14, 2015–16 and 2017–18 League Cups, the 2012 Community Shield and the 100-point season of 2017–18. This note reflects the news as of 2 October 2026; the appeal and the sanctions hearing may change the picture."
+ ],
+ "charges": [
+  ["54", "Failing to provide accurate financial information", "2009–10 to 2017–18", "all proven"],
+  ["14", "Failing to provide accurate details of player and manager payments", "2009–10 to 2017–18", "all proven"],
+  ["7", "Breaching the Premier League's profit and sustainability rules", "2015–16 to 2017–18", "all proven"],
+  ["5", "Breaching UEFA's Financial Fair Play rules", "2013–14 to 2017–18", "all proven"],
+  ["35", "Failing to cooperate with the Premier League's investigation", "December 2018 to February 2023", "34 proven, 1 not"]
+ ],
+ "sources": [
+  {"title": "NBC News: Man City guilty of almost all of the 115 financial charges, Premier League says", "url": "https://www.nbcnews.com/sports/soccer/man-city-guilty-almost-115-financial-charges-premier-league-says-rcna600523"},
+  {"title": "Yahoo Sports: What happens next after Man City found guilty of majority of 115 Premier League charges?", "url": "https://sports.yahoo.com/articles/man-city-appeal-against-verdict-135918421.html"},
+  {"title": "Wikipedia: Manchester City F.C.—Premier League financial breaches case", "url": "https://en.wikipedia.org/wiki/Manchester_City_F.C.%E2%80%94Premier_League_financial_breaches_case"}
+ ]
+}

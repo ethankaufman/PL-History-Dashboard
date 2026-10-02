@@ -7,12 +7,15 @@
   const $ = (id) => document.getElementById(id);
   let d, failed = false;
   try {
-    d = await PL.load(["appearances", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers", "domestic", "records", "playerSeasons"], (p) => {
+    d = await PL.load(["appearances", "matches", "teamMatches", "finalTables", "seasons", "awards", "honours", "teams", "players", "transfers", "domestic", "records", "playerSeasons", "cityCase"], (p) => {
       if (failed) return;
       $("load-bar").style.width = Math.round(p * 100) + "%"; $("load-text").textContent = `Loading the data… ${Math.round(p * 100)}%`;
     });
   } catch (e) { failed = true; $("load-text").innerHTML = `Couldn't load the data: ${esc(e.message)} <button class="btn small" onclick="location.reload()">Retry</button>`; return; }
   $("loading").remove(); $("app").hidden = false;
+  PL.setCase(d.cityCase);   // Manchester City: seasons covered by the Premier League charges get an asterisk
+  $("city-note").innerHTML = `<summary>${PL.star(true)} <b>${PL.caseData.club}</b> figures from ${PL.caseData.first_season} to ${PL.caseData.last_season} carry an asterisk: the club was found guilty of 114 of 115 Premier League charges on 29 September 2026. Read the note.</summary>${PL.caseBox()}`;
+  $("city-note").hidden = false;
 
   // The slim appearance file holds only ids; rebuild each full row by joining it with the match, club and player tables.
   const ps = d.playerSeasons;
@@ -146,7 +149,7 @@
       const k = keyFn(r);
       let g = m.get(k);
       if (!g) m.set(k, (g = { n: 0, minutes: 0, gm: 0, goals: 0, assists: 0, cs: 0, yellow: 0, red: 0, ids: new Set() }));
-      g.n += r.n ?? 1; g.minutes += r.minutes; if (r.minutes > 0) g.gm += r.goals; g.goals += r.goals; g.assists += r.assists; g.cs += r.clean_sheet; g.yellow += r.yellow_cards; g.red += r.red_cards; g.ids.add(r.player_id);
+      if (PL.flagged(r.team, r.season)) g.star = true; g.n += r.n ?? 1; g.minutes += r.minutes; if (r.minutes > 0) g.gm += r.goals; g.goals += r.goals; g.assists += r.assists; g.cs += r.clean_sheet; g.yellow += r.yellow_cards; g.red += r.red_cards; g.ids.add(r.player_id);
     }
     return m;
   }
@@ -176,7 +179,7 @@
   function drawChart(c, rows) {
     const mKey = $(c.id + "-m").value, bKey = $(c.id + "-b").value;
     const M = MEASURES[mKey], B = BREAKDOWNS[bKey];
-    let items = [...group(rows, B.key)].map(([k, g]) => ({ k, label: keyLabel(k, bKey), v: M.val(g), g })).filter((x) => x.v !== null);
+    let items = [...group(rows, B.key)].map(([k, g]) => ({ k, label: keyLabel(k, bKey) + (bKey === "club" && g.star ? "*" : ""), v: M.val(g), g })).filter((x) => x.v !== null);
     const timeline = B.order === "time";
     if (timeline) items.sort((a, b) => (bKey === "season" ? C.bySeason(a.k, b.k) : a.k - b.k));
     else { items.sort((a, b) => b.v - a.v); items = items.slice(0, bKey === "position" || bKey === "venue" ? 10 : 12); }
@@ -191,7 +194,7 @@
       plugins: { legend: { display: type === "doughnut" } }, scales: type === "doughnut" ? {} : { x: { ticks: { maxTicksLimit: horizontal ? 12 : 9 } }, y: { beginAtZero: true } } };
     if (chartObjs[c.id]) chartObjs[c.id].destroy();
     chartObjs[c.id] = new Chart($(c.id), { type, data, options });
-    $(c.id + "-n").textContent = items.length ? `${B.label}: ${M.label}${timeline ? "" : ` — top ${items.length}`}` : "No rows match the filters.";
+    $(c.id + "-n").textContent = items.length ? `${B.label}: ${M.label}${timeline ? "" : ` — top ${items.length}`}${items.some((x) => String(x.label).endsWith("*")) ? " · * includes seasons covered by the Premier League charges (see the note above)" : ""}` : "No rows match the filters.";
   }
 
   // table
@@ -201,14 +204,14 @@
   $("tbl-group").addEventListener("change", () => drawTable(currentRows));
   function drawTable(rows) {
     const bKey = $("tbl-group").value, B = BREAKDOWNS[bKey];
-    tblRows = [...group(rows, B.key)].map(([k, g]) => ({ k, label: keyLabel(k, bKey), n: g.n, minutes: g.minutes, goals: g.goals, assists: g.assists, cs: g.cs, yellow: g.yellow, red: g.red, g90: g.minutes ? (g.gm * 90) / g.minutes : null }));
+    tblRows = [...group(rows, B.key)].map(([k, g]) => ({ k, label: keyLabel(k, bKey) + (bKey === "club" && g.star ? "*" : ""), n: g.n, minutes: g.minutes, goals: g.goals, assists: g.assists, cs: g.cs, yellow: g.yellow, red: g.red, g90: g.minutes ? (g.gm * 90) / g.minutes : null }));
     const col = tblSort.col;
     tblRows.sort((a, b) => (col === "label" ? String(a.label).localeCompare(String(b.label), undefined, { numeric: true }) * tblSort.dir : ((a[col] ?? -1) - (b[col] ?? -1)) * tblSort.dir));
     const shown = tblRows.slice(0, 250);
     $("tbl").innerHTML = `<thead><tr>${TBL_COLS.map(([k, l]) => `<th class="${k === "label" ? "" : "num"}" data-col="${k}">${l}${tblSort.col === k ? (tblSort.dir < 0 ? " ▼" : " ▲") : ""}</th>`).join("")}</tr></thead><tbody>` +
       shown.map((r) => `<tr><td>${esc(r.label)}</td><td class="num">${int(r.n)}</td><td class="num">${int(r.minutes)}</td><td class="num">${int(r.goals)}</td><td class="num">${int(r.assists)}</td><td class="num">${int(r.cs)}</td><td class="num">${int(r.yellow)}</td><td class="num">${int(r.red)}</td><td class="num">${r.g90 === null ? "–" : dec(r.g90, 3)}</td></tr>`).join("") + `</tbody>`;
     $("tbl").querySelectorAll("th").forEach((th) => th.addEventListener("click", () => { const c = th.dataset.col; tblSort = { col: c, dir: tblSort.col === c ? -tblSort.dir : c === "label" ? 1 : -1 }; drawTable(currentRows); }));
-    $("tbl-note").textContent = `${int(tblRows.length)} group${tblRows.length === 1 ? "" : "s"} · showing the first ${int(shown.length)} · click a column heading to sort`;
+    $("tbl-note").textContent = `${int(tblRows.length)} group${tblRows.length === 1 ? "" : "s"} · showing the first ${int(shown.length)} · click a column heading to sort${tblRows.some((r) => String(r.label).endsWith("*")) ? " · * includes seasons covered by the Premier League charges (see the note above)" : ""}`;
   }
   $("tbl-csv").addEventListener("click", () => {
     const csv = [TBL_COLS.map((c) => c[1]).join(",")].concat(tblRows.map((r) => TBL_COLS.map(([k]) => (k === "label" ? `"${String(r.label).replace(/"/g, '""')}"` : r[k] ?? "")).join(","))).join("\n");
@@ -269,7 +272,7 @@
     function update() {
       const { season, teams, games } = state(), mw = +$("r-mw").value, snap = snapshot(teams, mw), hi = $("r-hi").value;
       $("r-mw-l").textContent = `Matchweek ${mw} of ${games}`;
-      race.data.labels = snap.map((s) => `${s.row.position}. ${PL.short(s.team)}`);
+      race.data.labels = snap.map((s) => `${s.row.position}. ${PL.short(s.team)}${PL.starText(PL.flagged(s.team, season))}`);
       race.data.datasets[0].data = snap.map((s) => s.row.cum_points);
       race.data.datasets[0].backgroundColor = snap.map((s) => clubColor(s.team) + (hi && s.team !== hi ? "44" : ""));
       race.update();
@@ -277,11 +280,11 @@
       bump.update("none");
       const lead = snap[0], bottom = snap[snap.length - 1];
       $("r-title1").textContent = `${season}: table after matchweek ${mw}`;
-      $("r-sum").textContent = `After matchweek ${mw}, ${lead.team} lead with ${lead.row.cum_points} points; ${bottom.team} are bottom with ${bottom.row.cum_points}.`;
+      $("r-sum").textContent = `After matchweek ${mw}, ${lead.team} lead with ${lead.row.cum_points} points; ${bottom.team} are bottom with ${bottom.row.cum_points}.` + (snap.some((x) => PL.flagged(x.team, season)) ? ` * ${PL.caseData.club} in ${season} is one of the seasons covered by the Premier League charges.` : "");
       $("r-title2").textContent = `${season} league table after matchweek ${mw}`;
       $("r-table").innerHTML = `<thead><tr><th class="num">Pos</th><th>Club</th><th class="num">P</th><th class="num">W</th><th class="num">D</th><th class="num">L</th><th class="num">GF</th><th class="num">GA</th><th class="num">GD</th><th class="num">Pts</th></tr></thead><tbody>` +
         snap.map((s) => { const rs = s.rows.slice(0, mw); const w = rs.filter((r) => r.result === "W").length, dr = rs.filter((r) => r.result === "D").length, ga = C.sum(rs, (r) => r.goals_against);
-          return `<tr><td class="num ${s.row.position === 1 ? "pos-1" : ""}">${s.row.position}</td><td>${esc(s.team)}${s.row.cum_deduction ? ` <span class="muted">(−${s.row.cum_deduction} pts)</span>` : ""}</td><td class="num">${mw}</td><td class="num">${w}</td><td class="num">${dr}</td><td class="num">${mw - w - dr}</td><td class="num">${s.row.cum_goals_for}</td><td class="num">${ga}</td><td class="num">${s.row.cum_goal_diff > 0 ? "+" : ""}${s.row.cum_goal_diff}</td><td class="num"><b>${s.row.cum_points}</b></td></tr>`; }).join("") + "</tbody>";
+          return `<tr><td class="num ${s.row.position === 1 ? "pos-1" : ""}">${s.row.position}</td><td>${esc(s.team)}${PL.star(PL.flagged(s.team, season))}${s.row.cum_deduction ? ` <span class="muted">(−${s.row.cum_deduction} pts)</span>` : ""}</td><td class="num">${mw}</td><td class="num">${w}</td><td class="num">${dr}</td><td class="num">${mw - w - dr}</td><td class="num">${s.row.cum_goals_for}</td><td class="num">${ga}</td><td class="num">${s.row.cum_goal_diff > 0 ? "+" : ""}${s.row.cum_goal_diff}</td><td class="num"><b>${s.row.cum_points}</b></td></tr>`; }).join("") + "</tbody>";
     }
     $("r-season").addEventListener("change", () => { stop(); build(); });
     $("r-mw").addEventListener("input", update);
@@ -314,15 +317,15 @@
     const seasonsAll = [...new Set(d.finalTables.map((r) => r.season))].sort(C.bySeason);
     function draw() {
       const sel = [0, 1, 2, 3].map((i) => $("cmp" + i).value).filter((v, i, a) => v && a.indexOf(v) === i);
-      $("cmp-cards").innerHTML = sel.map((n) => { const t = teamsBy[n], g = t.current_ground; return `<div class="clubhead" style="border-color:${clubColor(n)}"><h3 style="color:${clubColor(n)}">${esc(n)}</h3>
+      $("cmp-cards").innerHTML = sel.map((n) => { const t = teamsBy[n], g = t.current_ground; return `<div class="clubhead" style="border-color:${clubColor(n)}"><h3 style="color:${clubColor(n)}">${esc(n)}${PL.star(PL.isCaseClub(n))}</h3>
         <div class="muted">${esc(t.city)} · founded ${t.founded} · ${t.status === "current" ? "in the 2026–27 Premier League" : t.status === "defunct" ? "defunct" : "former Premier League club"}</div>
         <div>${g ? `Ground: <b>${esc(g.name)}</b>${g.capacity ? ` (${int(g.capacity)})` : ""}` : "Ground: none (club dissolved)"} · ${t.stadiums.filter((s) => !s.temporary).length === 1 ? "one ground" : t.stadiums.filter((s) => !s.temporary).length + " grounds"} in all</div>
-        <div class="muted" style="font-size:.85rem;margin-top:4px">${esc(t.summary.split(". ")[0])}.</div></div>`; }).join("");
+        <div class="muted" style="font-size:.85rem;margin-top:4px">${esc(t.summary.split(". ")[0])}.</div></div>`; }).join("") + (sel.some(PL.isCaseClub) ? `<p class="starnote" style="grid-column:1/-1">${PL.star(true)} ${esc(PL.caseData.short)} Every total below for ${esc(PL.caseData.club)} counts the flagged seasons (${PL.caseData.first_season} to ${PL.caseData.last_season}).</p>` : "");
       // season by season
       const byClubSeason = (club) => Object.fromEntries(d.finalTables.filter((r) => r.team === club).map((r) => [r.season, r]));
       const make = (id, cfg) => { if (charts[id]) charts[id].destroy(); charts[id] = new Chart($(id), cfg); };
-      make("cmp-pts", { type: "line", data: { labels: seasonsAll, datasets: sel.map((n) => { const b = byClubSeason(n); return { label: n, data: seasonsAll.map((s) => b[s]?.points ?? null), borderColor: clubColor(n), backgroundColor: clubColor(n), spanGaps: false, tension: 0.2, pointRadius: 3 }; }) }, options: { responsive: true, aspectRatio: 1.5, interaction: { mode: "index", intersect: false }, plugins: { legend: { display: true } }, scales: { x: { ticks: { maxTicksLimit: 9 } }, y: { title: { display: true, text: "Points" } } } } });
-      make("cmp-pos", { type: "line", data: { labels: seasonsAll, datasets: sel.map((n) => { const b = byClubSeason(n); return { label: n, data: seasonsAll.map((s) => b[s]?.position ?? null), borderColor: clubColor(n), backgroundColor: clubColor(n), spanGaps: false, tension: 0.2, pointRadius: 3 }; }) }, options: { responsive: true, aspectRatio: 1.5, interaction: { mode: "index", intersect: false }, plugins: { legend: { display: true } }, scales: { x: { ticks: { maxTicksLimit: 9 } }, y: { reverse: true, min: 1, max: 22, title: { display: true, text: "Final position" } } } } });
+      make("cmp-pts", { type: "line", data: { labels: seasonsAll, datasets: sel.map((n) => { const b = byClubSeason(n); return { label: n + PL.starText(PL.isCaseClub(n)), data: seasonsAll.map((s) => b[s]?.points ?? null), borderColor: clubColor(n), backgroundColor: clubColor(n), spanGaps: false, tension: 0.2, pointRadius: 3 }; }) }, options: { responsive: true, aspectRatio: 1.5, interaction: { mode: "index", intersect: false }, plugins: { legend: { display: true } }, scales: { x: { ticks: { maxTicksLimit: 9 } }, y: { title: { display: true, text: "Points" } } } } });
+      make("cmp-pos", { type: "line", data: { labels: seasonsAll, datasets: sel.map((n) => { const b = byClubSeason(n); return { label: n + PL.starText(PL.isCaseClub(n)), data: seasonsAll.map((s) => b[s]?.position ?? null), borderColor: clubColor(n), backgroundColor: clubColor(n), spanGaps: false, tension: 0.2, pointRadius: 3 }; }) }, options: { responsive: true, aspectRatio: 1.5, interaction: { mode: "index", intersect: false }, plugins: { legend: { display: true } }, scales: { x: { ticks: { maxTicksLimit: 9 } }, y: { reverse: true, min: 1, max: 22, title: { display: true, text: "Final position" } } } } });
       // all-time record + style
       const stats = sel.map((n) => {
         const ft = d.finalTables.filter((r) => r.team === n), ms = d.teamMatches.filter((r) => r.team === n);
@@ -335,7 +338,7 @@
           ppg: played ? C.sum(ft, (r) => r.points) / played : 0, gfpg: played ? gf / played : 0, gapg: played ? ga / played : 0, winp: played ? (100 * w) / played : 0, csp: played ? (100 * cs) / played : 0 };
       });
       const rows = [["Seasons in the Premier League", "seasons"], ["Matches played", "played"], ["Won", "w"], ["Drawn", "d"], ["Lost", "l"], ["Goals scored", "gf"], ["Goals conceded", "ga"], ["Points (official)", "pts"], ["Titles", "titles"], ["Top-four finishes", "top4"], ["Best finish", "best"], ["Relegations", "rel"], ["League titles (all time)", "dl"], ["FA Cups", "dfa"], ["League Cups", "dlc"], ["Community Shields", "dcs"], ["Domestic trophies in all", "dtot"]];
-      $("cmp-tbl").innerHTML = `<thead><tr><th>Measure</th>${stats.map((s) => `<th class="num" style="color:${clubColor(s.n)}">${esc(PL.short(s.n))}</th>`).join("")}</tr></thead><tbody>` + rows.map(([l, k]) => `<tr><td>${l}</td>${stats.map((s) => `<td class="num">${s[k] === null ? "–" : int(s[k])}</td>`).join("")}</tr>`).join("") + "</tbody>";
+      $("cmp-tbl").innerHTML = `<thead><tr><th>Measure</th>${stats.map((s) => `<th class="num" style="color:${clubColor(s.n)}">${esc(PL.short(s.n))}${PL.star(PL.isCaseClub(s.n))}</th>`).join("")}</tr></thead><tbody>` + rows.map(([l, k]) => `<tr><td>${l}</td>${stats.map((s) => `<td class="num">${s[k] === null ? "–" : int(s[k])}</td>`).join("")}</tr>`).join("") + "</tbody>";
       const mx = (k) => Math.max(...stats.map((s) => s[k])) || 1, mn = (k) => Math.min(...stats.map((s) => s[k])) || 1;
       make("cmp-radar", { type: "radar", data: { labels: ["Points per game", "Goals scored", "Goals conceded (fewer)", "Win %", "Clean sheets %"], datasets: sel.map((n, i) => { const s = stats[i]; return { label: n, data: [100 * s.ppg / mx("ppg"), 100 * s.gfpg / mx("gfpg"), 100 * mn("gapg") / s.gapg, 100 * s.winp / mx("winp"), 100 * s.csp / mx("csp")], borderColor: clubColor(n), backgroundColor: clubColor(n) + "33", pointBackgroundColor: clubColor(n) }; }) }, options: { responsive: true, aspectRatio: 1.3, scales: { r: { min: 0, max: 100, ticks: { display: false }, grid: { color: "rgba(56,0,60,.15)" }, angleLines: { color: "rgba(56,0,60,.15)" } } }, plugins: { legend: { display: true } } } });
       // head to head
@@ -347,7 +350,7 @@
         $("cmp-h2h").innerHTML = `<div class="card" style="margin-bottom:16px"><h3>Head to head in the Premier League (${meet.length} meetings)</h3>
           <div class="h2h"><div><div class="big" style="color:${clubColor(a)}">${wa}</div><div>${esc(a)} wins</div></div><div><div class="big">${dr}</div><div>draws</div></div><div><div class="big" style="color:${clubColor(b)}">${wb}</div><div>${esc(b)} wins</div></div></div>
           <div class="note" style="text-align:center">Goals: ${esc(a)} ${ga} – ${gb} ${esc(b)}</div>
-          <div class="tablewrap" style="max-height:260px"><table class="plain"><thead><tr><th>Date</th><th>Home</th><th class="num">Score</th><th>Away</th></tr></thead><tbody>${last.map((m) => `<tr><td>${m.date}</td><td>${esc(m.home)}</td><td class="num">${m.home_goals}–${m.away_goals}</td><td>${esc(m.away)}</td></tr>`).join("")}</tbody></table></div>
+          <div class="tablewrap" style="max-height:260px"><table class="plain"><thead><tr><th>Date</th><th>Home</th><th class="num">Score</th><th>Away</th></tr></thead><tbody>${last.map((m) => `<tr><td>${m.date}${PL.star(PL.flaggedDate(m.home, m.date) || PL.flaggedDate(m.away, m.date))}</td><td>${esc(m.home)}</td><td class="num">${m.home_goals}–${m.away_goals}</td><td>${esc(m.away)}</td></tr>`).join("")}</tbody></table></div>
           <div class="note">Most recent ${last.length} meetings shown. Meetings only count while both clubs were in the Premier League.</div></div>`;
       } else $("cmp-h2h").innerHTML = `<p class="note">Pick exactly two clubs to see their head-to-head record.</p>`;
     }
@@ -368,20 +371,20 @@
       const table = d.finalTables.filter((r) => r.season === season).sort((a, b) => a.position - b.position);
       const awards = d.awards.awards.filter((a) => a.season === season);
       const dm = d.domestic.by_season[season];
-      const chips = (arr, cls) => (arr.length ? arr.map((x) => `<span class="chip ${cls || ""}">${esc(x)}</span>`).join("") : `<span class="muted">—</span>`);
+      const chips = (arr, cls) => (arr.length ? arr.map((x) => `<span class="chip ${cls || ""}">${esc(x)}${PL.star(PL.flagged(x, season))}</span>`).join("") : `<span class="muted">—</span>`);
       const bd = h.ballon_dor.player ? `${esc(h.ballon_dor.player)} <span class="muted">(${esc(h.ballon_dor.club || "")}, ${h.ballon_dor_year})</span>` : `<span class="muted">${esc(h.ballon_dor.note)}</span>`;
       const kp = [[s.champion, "Premier League champions"], [table[1].team, "Runners-up"], [h.champions_league.winner, `Champions League winners (${h.champions_league.score})`], [h.europa_league.winner, `UEFA Cup / Europa League winners (${h.europa_league.score})`], [h.world_cup ? h.world_cup.winner + " (" + h.world_cup.year + ")" : "—", "World Cup winners (summer after the season)"],
         [dm.fa_cup.winner, `FA Cup winners (beat ${dm.fa_cup.runner_up}, ${dm.fa_cup.score})`], [dm.league_cup.winner, "League Cup winners"],
         [dm.community_shield ? dm.community_shield.winners.join(" & ") + (dm.community_shield.shared ? " (shared)" : "") : "—", `Community Shield (August ${dm.community_shield ? dm.community_shield.year : ""})`]];
       const byAward = C.byKey(awards, (a) => a.award);
-      $("s-body").innerHTML = `<div class="kpis">${kp.map(([n, l]) => `<div class="kpi"><div class="n" style="font-size:1.1rem">${esc(n)}</div><div class="l">${esc(l)}</div></div>`).join("")}<div class="kpi"><div class="n" style="font-size:1.1rem">${bd}</div><div class="l">Ballon d'Or</div></div></div>
+      $("s-body").innerHTML = `<div class="kpis">${kp.map(([n, l]) => `<div class="kpi"><div class="n" style="font-size:1.1rem">${esc(n)}${l === "Community Shield (August " + (dm.community_shield ? dm.community_shield.year : "") + ")" ? PL.star((dm.community_shield?.winners ?? []).some((w) => PL.flagYear(w, dm.community_shield.year))) : PL.star(PL.flagged(n, season))}</div><div class="l">${esc(l)}</div></div>`).join("")}<div class="kpi"><div class="n" style="font-size:1.1rem">${bd}</div><div class="l">Ballon d'Or</div></div></div>
         <div class="grid2"><div class="card"><h3>Promoted to the Premier League afterwards</h3><div class="chips">${chips(s.promoted, "up")}</div>
           <h3 style="margin-top:14px">Relegated at the end of the season</h3><div class="chips">${chips(s.relegated, "down")}</div>
           <h3 style="margin-top:14px">Champions League places</h3><div class="chips">${chips(s.champions_league)}</div>
           <h3 style="margin-top:14px">UEFA Cup / Europa League places</h3><div class="chips">${chips(s.uefa_cup_europa_league)}</div>
           <h3 style="margin-top:14px">Top scorer${s.top_scorers.length > 1 ? "s" : ""}</h3><div class="chips">${chips(s.top_scorers.map((x) => x + (s.top_scorer_goals ? " (" + s.top_scorer_goals + ")" : "")))}</div></div>
-        <div class="card"><h3>Every award this season</h3><div class="tablewrap" style="max-height:420px"><table class="plain"><tbody>${[...byAward].map(([k, list]) => `<tr><td class="muted">${esc(info[k]?.label || k)}</td><td>${list.map((a) => `<b>${esc(a.winner)}</b> <span class="muted">${esc(a.club || "")}${a.goals ? " · " + a.goals + " goals" : ""}${a.assists ? " · " + a.assists + " assists" : ""}${a.clean_sheets ? " · " + a.clean_sheets + " clean sheets" : ""}${a.score ? " · " + esc(a.score) + " v " + esc(a.opponent || "") : ""}</span>`).join("<br>")}</td></tr>`).join("")}</tbody></table></div></div></div>
-        <div class="card"><h3>Final league table ${season}</h3><div class="tablewrap"><table class="plain"><thead><tr><th class="num">Pos</th><th>Club</th><th class="num">P</th><th class="num">W</th><th class="num">D</th><th class="num">L</th><th class="num">GF</th><th class="num">GA</th><th class="num">GD</th><th class="num">Pts</th><th>Outcome</th></tr></thead><tbody>${table.map((r) => `<tr><td class="num ${r.position === 1 ? "pos-1" : ""}">${r.position}</td><td>${esc(r.team)}${r.points_deducted ? ` <span class="muted">(−${r.points_deducted})</span>` : ""}</td><td class="num">${r.played}</td><td class="num">${r.won}</td><td class="num">${r.drawn}</td><td class="num">${r.lost}</td><td class="num">${r.goals_for}</td><td class="num">${r.goals_against}</td><td class="num">${r.goal_difference > 0 ? "+" : ""}${r.goal_difference}</td><td class="num"><b>${r.points}</b></td><td class="muted">${esc(r.outcome || "")}</td></tr>`).join("")}</tbody></table></div></div>`;
+        <div class="card"><h3>Every award this season</h3><div class="tablewrap" style="max-height:420px"><table class="plain"><tbody>${[...byAward].map(([k, list]) => `<tr><td class="muted">${esc(info[k]?.label || k)}</td><td>${list.map((a) => `<b>${esc(a.winner)}</b> <span class="muted">${esc(a.club || "")}${PL.star(PL.flagged(a.club, season))}${a.goals ? " · " + a.goals + " goals" : ""}${a.assists ? " · " + a.assists + " assists" : ""}${a.clean_sheets ? " · " + a.clean_sheets + " clean sheets" : ""}${a.score ? " · " + esc(a.score) + " v " + esc(a.opponent || "") : ""}</span>`).join("<br>")}</td></tr>`).join("")}</tbody></table></div></div></div>
+        <div class="card"><h3>Final league table ${season}</h3><div class="tablewrap"><table class="plain"><thead><tr><th class="num">Pos</th><th>Club</th><th class="num">P</th><th class="num">W</th><th class="num">D</th><th class="num">L</th><th class="num">GF</th><th class="num">GA</th><th class="num">GD</th><th class="num">Pts</th><th>Outcome</th></tr></thead><tbody>${table.map((r) => `<tr><td class="num ${r.position === 1 ? "pos-1" : ""}">${r.position}</td><td>${esc(r.team)}${PL.star(PL.flagged(r.team, season))}${r.points_deducted ? ` <span class="muted">(−${r.points_deducted})</span>` : ""}</td><td class="num">${r.played}</td><td class="num">${r.won}</td><td class="num">${r.drawn}</td><td class="num">${r.lost}</td><td class="num">${r.goals_for}</td><td class="num">${r.goals_against}</td><td class="num">${r.goal_difference > 0 ? "+" : ""}${r.goal_difference}</td><td class="num"><b>${r.points}</b></td><td class="muted">${esc(r.outcome || "")}</td></tr>`).join("")}</tbody></table></div></div>`;
     }
     $("s-season").addEventListener("change", draw);
     draw();
@@ -430,32 +433,32 @@
     $("rb-pick").addEventListener("change", drawBook); drawBook();
 
     // computed league records
-    const m = (x) => `<b>${esc(x.score)}</b> ${esc(x.home)} v ${esc(x.away)} <span class="muted">${x.date}</span>`;
-    const seasonRow = (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.points} pts, ${x.won}W ${x.drawn}D ${x.lost}L</span>`;
-    const run = (x) => `<b>${esc(x.team)}</b> ${x.length} <span class="muted">${x.from_season === x.to_season ? x.from_season : x.from_season + " to " + x.to_season}</span>`;
+    const m = (x) => `<b>${esc(x.score)}</b> ${esc(x.home)} v ${esc(x.away)} <span class="muted">${x.date}</span>${PL.star(PL.flaggedDate(x.home, x.date) || PL.flaggedDate(x.away, x.date))}`;
+    const seasonRow = (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.points} pts, ${x.won}W ${x.drawn}D ${x.lost}L</span>${PL.star(PL.flagged(x.team, x.season))}`;
+    const run = (x) => `<b>${esc(x.team)}</b> ${x.length} <span class="muted">${x.from_season === x.to_season ? x.from_season : x.from_season + " to " + x.to_season}</span>${PL.star(PL.flaggedRun(x.team, x.from, x.to))}`;
     const list = (title, items, f, note) => `<div class="card"><h3>${title}</h3><ol style="margin:0;padding-left:1.2em;line-height:1.7">${items.map((x) => `<li>${f(x)}</li>`).join("")}</ol>${note ? `<div class="note">${note}</div>` : ""}</div>`;
     $("lg-records").innerHTML = list("Biggest wins", L.biggest_wins.slice(0, 6), m) + list("Highest-scoring matches", L.highest_scoring.slice(0, 6), (x) => `${m(x)} <span class="muted">(${x.goals} goals)</span>`) +
       list("Most points in a season", L.most_points, seasonRow, "38-game seasons only.") + list("Fewest points in a season", L.fewest_points, seasonRow, "38-game seasons only.") +
       list("Longest unbeaten runs", L.longest_unbeaten_runs, run, "Matches without defeat; runs can span seasons.") + list("Longest winning runs", L.longest_winning_runs, run) +
-      list("Longest losing runs", L.longest_losing_runs, run) + list("Most goals scored in a season", L.most_goals_scored, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.goals_for} goals</span>`) +
-      list("Best defences (fewest conceded)", L.fewest_goals_conceded, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.goals_against} conceded</span>`, "38-game seasons only.") +
-      list("Most wins in a season", L.most_wins, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.won} wins</span>`, "38-game seasons only.");
+      list("Longest losing runs", L.longest_losing_runs, run) + list("Most goals scored in a season", L.most_goals_scored, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.goals_for} goals</span>${PL.star(PL.flagged(x.team, x.season))}`) +
+      list("Best defences (fewest conceded)", L.fewest_goals_conceded, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.goals_against} conceded</span>${PL.star(PL.flagged(x.team, x.season))}`, "38-game seasons only.") +
+      list("Most wins in a season", L.most_wins, (x) => `<b>${esc(x.team)}</b> ${x.season} <span class="muted">${x.won} wins</span>${PL.star(PL.flagged(x.team, x.season))}`, "38-game seasons only.");
 
     // club records
     function drawClub() {
       const n = $("cr-club").value, c = R.clubs[n], dom = d.domestic.by_club[n], pl = c.premier_league;
-      const years = (a) => (a.length ? a.map((x) => String(x).slice(0, 4) === String(x) ? x : x).join(", ") : "—");
-      $("cr-body").innerHTML = `<div class="kpis">${[[pl.seasons, "Premier League seasons"], [int(pl.played), "matches"], [`${pl.won}–${pl.drawn}–${pl.lost}`, "won–drawn–lost"], [int(pl.points), "official points"], [pl.titles, "Premier League titles"]].map(([v, l]) => `<div class="kpi"><div class="n">${v}</div><div class="l">${l}</div></div>`).join("")}</div>
-        <div class="grid2"><div class="card"><h3 style="color:${clubColor(n)}">${esc(n)} — Premier League records</h3><table class="plain"><tbody>${PL.recordLines(c).map(([k, v]) => `<tr><td class="muted">${k}</td><td>${v}</td></tr>`).join("")}<tr><td class="muted">Goals in the Premier League</td><td>${int(pl.goals_for)} for, ${int(pl.goals_against)} against</td></tr></tbody></table></div>
-        <div class="card"><h3>Domestic trophies</h3><div class="chips" style="margin-bottom:10px">${PL.trophyChips(dom.counts)}</div>
-          <table class="plain"><tbody><tr><td class="muted">League titles</td><td>${years(dom.league_titles.map((s) => s))}</td></tr><tr><td class="muted">FA Cups</td><td>${years(dom.fa_cup)}</td></tr><tr><td class="muted">League Cups</td><td>${years(dom.league_cup)}</td></tr><tr><td class="muted">Community Shields</td><td>${years(dom.community_shield.map((y) => y + (dom.community_shield_shared.includes(y) ? "*" : "")))}</td></tr></tbody></table><div class="note">* shared shield. Seasons are written as the year the season began, e.g. 2003–04.</div></div></div>`;
+      const years = (a) => (a.length ? a.map((x) => `${x}${PL.star(PL.flagged(n, String(x).replace(/[^0-9–-].*$/, "")))}`).join(", ") : "—");
+      $("cr-body").innerHTML = `<div class="kpis">${[[pl.seasons, "Premier League seasons"], [int(pl.played), "matches"], [`${pl.won}–${pl.drawn}–${pl.lost}`, "won–drawn–lost"], [int(pl.points), "official points"], [pl.titles, "Premier League titles"]].map(([v, l]) => `<div class="kpi"><div class="n">${v}${PL.star(PL.isCaseClub(n))}</div><div class="l">${l}</div></div>`).join("")}</div>
+        <div class="grid2"><div class="card"><h3 style="color:${clubColor(n)}">${esc(n)} — Premier League records</h3><table class="plain"><tbody>${PL.recordLines(c, n).map(([k, v]) => `<tr><td class="muted">${k}</td><td>${v}</td></tr>`).join("")}<tr><td class="muted">Goals in the Premier League</td><td>${int(pl.goals_for)} for, ${int(pl.goals_against)} against</td></tr></tbody></table></div>
+        <div class="card"><h3>Domestic trophies</h3><div class="chips" style="margin-bottom:10px">${PL.trophyChips(dom.counts, n, dom)}</div>
+          <table class="plain"><tbody><tr><td class="muted">League titles</td><td>${years(dom.league_titles.map((s) => s))}</td></tr><tr><td class="muted">FA Cups</td><td>${years(dom.fa_cup)}</td></tr><tr><td class="muted">League Cups</td><td>${years(dom.league_cup)}</td></tr><tr><td class="muted">Community Shields</td><td>${years(dom.community_shield.map((y) => y + (dom.community_shield_shared.includes(y) ? "†" : "")))}</td></tr></tbody></table><div class="note">† shared shield. Seasons are written as the year the season began, e.g. 2003–04.${PL.isCaseClub(n) ? ` ${PL.star(true)} marks the seasons covered by the Premier League charges; the totals above include them.` : ""}</div></div></div>`;
     }
     $("cr-club").addEventListener("change", drawClub); $("cr-club").value = "Arsenal"; drawClub();
 
     // all-time table (official, from Wikipedia)
     const at = off.all_time_table;
     const cols = Object.keys(at[0]).filter((k) => k && k !== "Ref");
-    $("at-tbl").innerHTML = `<thead><tr>${cols.map((c) => `<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${at.map((r) => `<tr>${cols.map((c) => `<td class="${c === "Club" ? "" : "num"}">${esc(r[c])}</td>`).join("")}</tr>`).join("")}</tbody>`;
+    $("at-tbl").innerHTML = `<thead><tr>${cols.map((c) => `<th>${esc(c)}</th>`).join("")}</tr></thead><tbody>${at.map((r) => `<tr>${cols.map((c) => `<td class="${c === "Club" ? "" : "num"}">${esc(r[c])}${c === "Club" ? PL.star(PL.isCaseClub(String(r[c]).replace(/\[.*?\]/g, "").trim())) : ""}</td>`).join("")}</tr>`).join("")}</tbody>`;
 
     // trophies table (sortable)
     const rows = Object.entries(d.domestic.by_club).map(([club, v]) => ({ club, ...v.counts })).filter((r) => r.total > 0);
@@ -463,7 +466,7 @@
     const cols2 = [["club", "Club"], ["league", "League titles"], ["fa_cup", "FA Cups"], ["league_cup", "League Cups"], ["community_shield", "Community Shields"], ["total", "Total"]];
     function drawTrophies() {
       rows.sort((a, b) => (sort.col === "club" ? a.club.localeCompare(b.club) * sort.dir : (a[sort.col] - b[sort.col]) * sort.dir || a.club.localeCompare(b.club)));
-      $("tr-tbl").innerHTML = `<thead><tr>${cols2.map(([k, l]) => `<th class="${k === "club" ? "" : "num"}" data-col="${k}">${l}${sort.col === k ? (sort.dir < 0 ? " ▼" : " ▲") : ""}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(r.club)}</td><td class="num">${r.league}</td><td class="num">${r.fa_cup}</td><td class="num">${r.league_cup}</td><td class="num">${r.community_shield}</td><td class="num"><b>${r.total}</b></td></tr>`).join("")}</tbody>`;
+      $("tr-tbl").innerHTML = `<thead><tr>${cols2.map(([k, l]) => `<th class="${k === "club" ? "" : "num"}" data-col="${k}">${l}${sort.col === k ? (sort.dir < 0 ? " ▼" : " ▲") : ""}</th>`).join("")}</tr></thead><tbody>${rows.map((r) => `<tr><td>${esc(r.club)}${PL.star(PL.isCaseClub(r.club))}</td><td class="num">${r.league}</td><td class="num">${r.fa_cup}</td><td class="num">${r.league_cup}</td><td class="num">${r.community_shield}</td><td class="num"><b>${r.total}</b></td></tr>`).join("")}</tbody>`;
       $("tr-tbl").querySelectorAll("th").forEach((th) => th.addEventListener("click", () => { const c = th.dataset.col; sort = { col: c, dir: sort.col === c ? -sort.dir : c === "club" ? 1 : -1 }; drawTrophies(); }));
     }
     drawTrophies();

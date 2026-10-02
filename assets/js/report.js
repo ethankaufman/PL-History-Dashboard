@@ -3,6 +3,8 @@ function renderReport(d) {
   const { int, dec, pct, esc, clubColor, palette } = PL;
   const C = Calc;
   PL.chartDefaults();
+  PL.setCase(d.cityCase);   // Manchester City: seasons covered by the Premier League charges get an asterisk
+  document.getElementById("city-note").innerHTML = PL.caseBox();
   document.getElementById("report-root").hidden = false;   // show the page (still under the intro overlay) BEFORE drawing charts, so they measure their real size
 
   const matches = d.matches, seasons = d.seasons, finalTables = d.finalTables, teams = d.teams;
@@ -76,8 +78,9 @@ function renderReport(d) {
       `${pct(100 * titleCounts.slice(0, 3).reduce((s, x) => s + x[1], 0) / seasons.length, 0)} of the total. ` +
       `${titleCounts.slice(-2).map(([c]) => c).join(" and ")} are the one-time winners who broke the pattern (Blackburn in 1994–95, Leicester in 2015–16).`,
       `A title is counted for the club that finished first in the official final table. Seasons come from seasons.json; the champion is checked against the final tables.`],
-    chart: { type: "bar", data: { labels: titleCounts.map((x) => x[0]), datasets: [{ label: "Titles", data: titleCounts.map((x) => x[1]), backgroundColor: titleCounts.map((x) => clubColor(x[0])) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.5, plugins: { legend: { display: false } } } },
+    chart: { type: "bar", data: { labels: titleCounts.map((x) => x[0] + PL.starText(seasons.some((s) => s.champion === x[0] && PL.flagged(x[0], s.season)))), datasets: [{ label: "Titles", data: titleCounts.map((x) => x[1]), backgroundColor: titleCounts.map((x) => clubColor(x[0])) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.5, plugins: { legend: { display: false } } } },
     caption: "Source: seasons.json (champion of each season).",
+    star: seasons.some((s) => PL.flagged(s.champion, s.season)) ? `${seasons.filter((s) => PL.flagged(s.champion, s.season)).length} of ${PL.caseData.club}'s ${titleCounts.find((x) => x[0] === PL.caseData.club)?.[1]} titles (${seasons.filter((s) => PL.flagged(s.champion, s.season)).map((s) => s.season).join(", ")}) come from the seasons covered by the charges.` : "",
   });
 
   // 4 points needed
@@ -92,6 +95,7 @@ function renderReport(d) {
       { label: "Champions' points", data: races.map((r) => r.championPoints), borderColor: palette[0], tension: .25, pointRadius: 2 },
       { label: "Safety line", data: races.map((r) => r.safetyPoints), borderColor: palette[1], tension: .25, pointRadius: 2 }] }, options: lineOpts({ legend: true, y: { title: { display: true, text: "Points" } } }) },
     caption: "Source: final_tables.csv — official final league tables.",
+    star: [champMin, champMax].some((r) => PL.flagged(r.champion, r.season)) ? `The highest title total, ${champMax.championPoints} points by ${champMax.champion} in ${champMax.season}, is one of the flagged seasons.` : "",
   });
 
   // 5 margins
@@ -106,6 +110,7 @@ function renderReport(d) {
       `Margin is the champion's points minus the runner-up's points. In ${races.filter((r) => r.margin <= 3).length} of ${races.length} seasons it was 3 points or fewer, one win's worth.`],
     chart: { type: "bar", data: { labels: races.map((r) => r.season), datasets: [{ label: "Winning margin (points)", data: races.map((r) => r.margin), backgroundColor: races.map((r) => (r === tight ? palette[1] : r === wide ? palette[3] : "#00c76f99")) }] }, options: lineOpts({ y: { title: { display: true, text: "Points ahead of 2nd place" } } }) },
     caption: "Source: final_tables.csv. Pink = closest race, gold = widest margin.",
+    star: [tight, wide].filter((r) => PL.flagged(r.champion, r.season)).map((r) => `${r.season} (${r.champion})`).join(" and ") ? `${[tight, wide].filter((r) => PL.flagged(r.champion, r.season)).map((r) => `${r.season} (${r.champion})`).join(" and ")} fall in the seasons covered by the charges.` : "",
   });
 
   // 6 cards
@@ -258,8 +263,9 @@ function renderReport(d) {
     body: [`The best seasons: ${best5.slice(0, 3).map((r) => `${r.team} ${r.season} (${r.points})`).join(", ")}. The worst: ${worst5.slice(0, 3).map((r) => `${r.team} ${r.season} (${r.points})`).join(", ")}. ` +
       `${best5[0].team}'s record came with ${best5[0].won} wins, ${best5[0].drawn} draws and ${best5[0].lost} defeats; ${worst5[0].team} won ${worst5[0].won} game${worst5[0].won === 1 ? "" : "s"}.`,
       `Points are the official totals in 38-game seasons (the three 42-game seasons are left out so that totals compare fairly). Both lists were computed from final_tables.csv and agree with the official records list.`],
-    chart: { type: "bar", data: { labels: [...best5, ...worst5].map((r) => `${PL.short(r.team)} ${r.season}`), datasets: [{ label: "Points", data: [...best5, ...worst5].map((r) => r.points), backgroundColor: [...best5.map(() => "#00c76fcc"), ...worst5.map(() => "#e90052cc")] }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.2, plugins: { legend: { display: false } } } },
+    chart: { type: "bar", data: { labels: [...best5, ...worst5].map((r) => `${PL.short(r.team)} ${r.season}${PL.starText(PL.flagged(r.team, r.season))}`), datasets: [{ label: "Points", data: [...best5, ...worst5].map((r) => r.points), backgroundColor: [...best5.map(() => "#00c76fcc"), ...worst5.map(() => "#e90052cc")] }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.2, plugins: { legend: { display: false } } } },
     caption: "Source: final_tables.csv. Green = five best seasons, pink = five worst.",
+    star: [...best5, ...worst5].filter((r) => PL.flagged(r.team, r.season)).length ? `${[...best5, ...worst5].filter((r) => PL.flagged(r.team, r.season)).map((r) => `${r.team} ${r.season}`).join(", ")} ${[...best5, ...worst5].filter((r) => PL.flagged(r.team, r.season)).length > 1 ? "are" : "is"} in the seasons covered by the charges.` : "",
   });
 
   // 16 unbeaten runs
@@ -269,15 +275,16 @@ function renderReport(d) {
     body: [`${unb[0].team} went ${unb[0].length} matches without defeat between ${unb[0].from} and ${unb[0].to}, across ${unb[0].from_season}, ${unb[0].from_season === unb[0].to_season ? "" : "2003–04 and "}${unb[0].to_season}. ${unb[1].team} were next with ${unb[1].length}. ` +
       `The longest winning run is ${L.longest_winning_runs[0].length} (${L.longest_winning_runs[0].team}); the longest losing run is ${L.longest_losing_runs[0].length} (${L.longest_losing_runs[0].team}, ${L.longest_losing_runs[0].to_season}). The biggest win ever was ${L.biggest_wins[0].score} (${L.biggest_wins[0].home} v ${L.biggest_wins[0].away}, ${L.biggest_wins[0].date.slice(0, 4)}).`,
       `A run only continues from one season into the next if the club played in the Premier League in both. Unbeaten means no defeats (draws allowed). Computed from team_matches.csv.`],
-    chart: { type: "bar", data: { labels: unb.map((r) => `${PL.short(r.team)} (${r.from_season === r.to_season ? r.from_season : r.from_season.slice(0, 4) + "–" + r.to_season.slice(2)})`), datasets: [{ label: "Matches unbeaten", data: unb.map((r) => r.length), backgroundColor: unb.map((r) => clubColor(r.team)) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.7, plugins: { legend: { display: false } } } },
+    chart: { type: "bar", data: { labels: unb.map((r) => `${PL.short(r.team)}${PL.starText(PL.flaggedRun(r.team, r.from, r.to))} (${r.from_season === r.to_season ? r.from_season : r.from_season.slice(0, 4) + "–" + r.to_season.slice(2)})`), datasets: [{ label: "Matches unbeaten", data: unb.map((r) => r.length), backgroundColor: unb.map((r) => clubColor(r.team)) }] }, options: { indexAxis: "y", responsive: true, aspectRatio: 1.7, plugins: { legend: { display: false } } } },
     caption: "Source: team_matches.csv — every club's results in date order.",
+    star: unb.filter((r) => PL.flaggedRun(r.team, r.from, r.to)).length ? "A run that overlaps the seasons covered by the charges is starred." : "",
   });
 
   // 17 domestic trophies since 1992
   const dom = d.domestic.by_season, tally = {};
-  const bump = (club, k) => { if (!club) return; (tally[club] ||= { league: 0, fa_cup: 0, league_cup: 0, community_shield: 0 })[k]++; };
-  for (const s of seasons) bump(s.champion, "league");
-  for (const [, v] of Object.entries(dom)) { bump(v.fa_cup.winner, "fa_cup"); bump(v.league_cup.winner, "league_cup"); if (v.community_shield) v.community_shield.winners.forEach((w) => bump(w, "community_shield")); }
+  const bump = (club, k, season) => { if (!club) return; (tally[club] ||= { league: 0, fa_cup: 0, league_cup: 0, community_shield: 0, flagged: 0 })[k]++; if (PL.flagged(club, season)) tally[club].flagged++; };
+  for (const s of seasons) bump(s.champion, "league", s.season);
+  for (const [season, v] of Object.entries(dom)) { bump(v.fa_cup.winner, "fa_cup", season); bump(v.league_cup.winner, "league_cup", season); if (v.community_shield) v.community_shield.winners.forEach((w) => bump(w, "community_shield", v.community_shield.year)); }
   const tot = (t) => t.league + t.fa_cup + t.league_cup + t.community_shield;
   const ranked = Object.entries(tally).sort((a, b) => tot(b[1]) - tot(a[1]) || a[0].localeCompare(b[0])).slice(0, 10);
   add({
@@ -285,11 +292,12 @@ function renderReport(d) {
     body: [`Counting the Premier League, FA Cup, League Cup and Community Shield from 1992–93 to 2025–26: ${ranked.slice(0, 4).map(([c, t]) => `${c} ${tot(t)}`).join(", ")}. ` +
       `${Object.keys(tally).length} different clubs have won at least one of the four trophies in that time.`,
       `Each season's FA Cup and League Cup winner is the final played in that season; the Community Shield is the match played at the start of the season. All-time club totals, back to the 1800s, are in the dashboard's Records tab.`],
-    chart: { type: "bar", data: { labels: ranked.map((r) => PL.short(r[0])), datasets: [
+    chart: { type: "bar", data: { labels: ranked.map((r) => PL.short(r[0]) + PL.starText(r[1].flagged > 0)), datasets: [
       { label: "Premier League", data: ranked.map((r) => r[1].league), backgroundColor: "#00c76fcc" }, { label: "FA Cup", data: ranked.map((r) => r[1].fa_cup), backgroundColor: "#f2a900cc" },
       { label: "League Cup", data: ranked.map((r) => r[1].league_cup), backgroundColor: "#0aa5c2cc" }, { label: "Community Shield", data: ranked.map((r) => r[1].community_shield), backgroundColor: "#963cffcc" }] },
       options: { responsive: true, aspectRatio: 1.5, plugins: { legend: { display: true } }, scales: { x: { stacked: true }, y: { stacked: true, ticks: { stepSize: 5 } } } } },
     caption: "Source: domestic_honours.json and seasons.json — winners of each trophy by season.",
+    star: ranked.filter((r) => r[1].flagged).map((r) => `${r[0]}: ${r[1].flagged} of its ${tot(r[1])} trophies since 1992 were won in the seasons covered by the charges`).join("; ") + (ranked.some((r) => r[1].flagged) ? "." : ""),
   });
 
   // ---------- render sections ----------
@@ -297,7 +305,7 @@ function renderReport(d) {
   host.innerHTML = sections.map((s, i) => `
     <section class="section" id="finding-${i + 1}">
       <div><div class="num">FINDING ${String(i + 1).padStart(2, "0")}</div><h2>${esc(s.title)}</h2>${s.body.map((p) => `<p>${p}</p>`).join("")}</div>
-      <div class="chartbox"><canvas id="chart-${i + 1}" role="img" aria-label="${esc(s.title)}"></canvas><div class="cap">${esc(s.caption)}</div></div>
+      <div class="chartbox"><canvas id="chart-${i + 1}" role="img" aria-label="${esc(s.title)}"></canvas><div class="cap">${esc(s.caption)}</div>${s.star ? `<div class="starnote">${PL.star(true)} ${esc(s.star)} <a href="#city-note">Why?</a></div>` : ""}</div>
     </section>`).join("");
   sections.forEach((s, i) => charts.push(new Chart(document.getElementById(`chart-${i + 1}`), s.chart)));
   requestAnimationFrame(() => charts.forEach((c) => c.resize()));
@@ -308,11 +316,11 @@ function renderReport(d) {
   const rows = d.honours.map((h) => {
     const wc = h.world_cup ? `${esc(h.world_cup.winner)} (${h.world_cup.year})` : "–";
     const bd = h.ballon_dor.player ? esc(h.ballon_dor.player) : `<span class="muted">${esc(h.ballon_dor.note)}</span>`;
-    return `<tr><td>${h.season}</td><td><b>${esc(champByS[h.season].champion)}</b></td><td>${esc(raceByS[h.season].runnerUp)}</td><td>${esc(h.champions_league.winner)}</td><td>${esc(h.europa_league.winner)}</td><td>${bd}</td><td>${wc}</td></tr>`;
+    return `<tr><td>${h.season}</td><td><b>${esc(champByS[h.season].champion)}</b>${PL.star(PL.flagged(champByS[h.season].champion, h.season))}</td><td>${esc(raceByS[h.season].runnerUp)}${PL.star(PL.flagged(raceByS[h.season].runnerUp, h.season))}</td><td>${esc(h.champions_league.winner)}</td><td>${esc(h.europa_league.winner)}</td><td>${bd}</td><td>${wc}</td></tr>`;
   }).join("");
   document.getElementById("honours").innerHTML = `
     <div class="num">EVERY SEASON AT A GLANCE</div><h2>The Premier League champion and the world's other big winners, year by year</h2>
-    <p>The Premier League champion and runner-up for each season next to that year's UEFA Champions League winner, UEFA Cup / Europa League winner, Ballon d'Or recipient (the award year in which the season ends) and FIFA World Cup winner (played in the summer after the season).</p>
+    <p>${PL.caseData ? `A <b>*</b> marks ${esc(PL.caseData.club)} in the seasons covered by the Premier League's financial-rules charges (2009–10 to 2017–18). ` : ""}The Premier League champion and runner-up for each season next to that year's UEFA Champions League winner, UEFA Cup / Europa League winner, Ballon d'Or recipient (the award year in which the season ends) and FIFA World Cup winner (played in the summer after the season).</p>
     <div class="chartbox" style="max-height:520px;overflow:auto"><table class="plain"><thead><tr><th>Season</th><th>Premier League</th><th>Runner-up</th><th>Champions League</th><th>UEFA Cup / Europa League</th><th>Ballon d'Or</th><th>World Cup</th></tr></thead><tbody>${rows}</tbody></table></div>`;
 
   // ---------- closing: about the data (all counts computed) ----------
@@ -331,6 +339,8 @@ function renderReport(d) {
       <li><b>Matches — <code>matches.csv</code> and <code>team_matches.csv</code></b>: ${int(matches.length)} matches, one row per match and ${int(tm.length)} rows with one per team per match, plus the league table after every game. Results come from football-data.co.uk (1993–94 on) and the footballcsv project (1992–93) and were compared with the official record for every match. Dates, half-time scores, referees and cards use the official record; where football-data.co.uk disagreed (${disText}) the official value was used and the difference is logged in <code>source_disagreements.csv</code>. Shots, fouls, corners and betting odds exist only in football-data.co.uk, from 2000–01.</li>
       <li><b>Final tables, seasons, awards, honours, clubs</b>: ${int(finalTables.length)} official table rows, ${seasons.length} seasons (${int(nPromoted)} promotions), ${int(d.awards.awards.length)} award records, European and World Cup winners, and ${teams.length} club histories with ${int(C.sum(teams, (t) => t.stadiums.length))} stadium entries, all from Wikipedia (CC BY-SA 4.0).</li>
       <li><b>Records and trophies</b>: the winners of the FA Cup, League Cup, Community Shield and league title come from Wikipedia's lists, with each club's totals cross-checked against Wikipedia's totals. All-time player records are rebuilt from the player table and match the official lists. Club and league records (biggest wins, longest runs, best and worst seasons) are computed from the match data here.</li>
+      <li><b>The Manchester City asterisk</b>: a <b>*</b> marks any result, record, trophy or league position of ${esc(PL.caseData.club)} in a season from ${PL.caseData.first_season} to ${PL.caseData.last_season}, the seasons covered by the financial charges that an independent Premier League commission upheld on ${new Date(PL.caseData.verdict_date + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}. It is a flag only: no number was changed or removed, and every total counts those seasons. The facts and sources are in <code>data/city_case.json</code>, status as of ${PL.caseData.as_of}.</li>
+      <li><b>Other ratios</b>: a club's share of titles = titles ÷ seasons; England's share of appearances (or goals) = appearances (or goals) by English players ÷ all appearances (or goals) in the season; London share = London clubs ÷ clubs in the league; promoted clubs relegated at once = promoted clubs that went straight back down ÷ promoted clubs; implied chance of a bookmaker price = 1 ÷ decimal odds; points per game = points ÷ matches.</li>
       <li><b>Left out</b>: unused substitutes (they have no minutes) are not rows. Fantasy-game statistics are not used anywhere.</li>
       <li><b>Matchweek</b> means a club's nth game of the season. Every club has played the same number of games at game n, so the table at game n is a fair comparison. Points deductions (Middlesbrough 1996–97, Portsmouth 2009–10, Everton and Nottingham Forest 2023–24) are applied from the date they took effect, and the final points match the official tables.</li>
       <li><b>How the numbers are computed</b>: goals per game = goals ÷ matches; home win % = home wins ÷ matches; cards per game = (home + away cards) ÷ matches; margin = champion points − runner-up points; safety points = points of the last club not relegated; goals per 90 = goals ÷ minutes × 90; players used = distinct players with at least one appearance for a club in a season; minutes = from the start (or the minute a substitute came on) until substituted, sent off or the 90th minute, with stoppage time not counted. Each is calculated by the same code (<code>assets/js/calc.js</code>) on this page, the dashboard and the check script <code>tests/check_numbers.js</code>.</li>
