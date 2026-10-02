@@ -254,7 +254,7 @@ function runIntro() {
 
   // Picking: choose the pin whose on-screen position is closest to the pointer. Pins that sit very close together on screen
   // (London, Manchester, Merseyside...) form a group; hovering lists the group and clicking lets you choose one.
-  const pickPx = () => (camera.position.z > 3 ? 16 : 11), groupPx = () => (camera.position.z > 3 ? 20 : 9);
+  const pickPx = () => (camera.position.z > 3 ? 16 : 11), groupPx = () => (camera.position.z > 3 ? 20 : 12);
   function visiblePins() { return pins.filter((p) => p.group.visible && p.sx !== undefined && p.group.scale.x > 0.05); }
   function pickAt(x, y) {
     const r = dom.getBoundingClientRect(); x -= r.left; y -= r.top;
@@ -308,6 +308,7 @@ function runIntro() {
   document.getElementById("intro-zout").addEventListener("click", () => zoomBy(1.4));
 
   function openCard(t) {
+    tooltip.hidden = true;
     const rows = t.stadiums.map((s) => `<li${s.current ? ' class="cur"' : ""}><b>${PL.esc(s.name)}</b> <span class="muted">${s.from ?? "?"}–${s.current ? "now" : s.to ?? "?"}${s.temporary ? " · temporary" : ""}</span></li>`).join("");
     const pl = t.premier_league;
     card.innerHTML = `<button class="x" aria-label="Close" id="card-x">×</button><div class="eyebrow">${t.status === "current" ? "In the 2026–27 Premier League" : t.status === "defunct" ? "Defunct club" : "Former Premier League club"}</div>
