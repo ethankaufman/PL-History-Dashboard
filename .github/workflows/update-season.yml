@@ -1,5 +1,6 @@
-# Refreshes the "This season" section of the dashboard twice a week.
-# Monday morning picks up the weekend's games; Friday morning picks up Monday-night and midweek games.
+# Refreshes the "This season" section of the dashboard three times a week.
+# Monday morning picks up the weekend's games; Wednesday morning picks up Monday-night and Tuesday games;
+# Friday morning picks up Wednesday and Thursday games.
 # GitHub schedules run in UTC (07:00 UTC = 07:00 UK in winter, 08:00 in summer) and can start a few minutes late.
 # You can also run it by hand: repository -> Actions -> "Update this season" -> Run workflow.
 name: Update this season
@@ -7,6 +8,7 @@ name: Update this season
 on:
   schedule:
     - cron: "0 7 * * 1"   # Monday morning
+    - cron: "0 7 * * 3"   # Wednesday morning
     - cron: "0 7 * * 5"   # Friday morning
   workflow_dispatch:
 

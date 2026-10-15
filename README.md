@@ -109,7 +109,7 @@ The Premier League's service is not an official, documented API and could change
 **Also in the repository**: `.gitignore` (keeps the very large raw match downloads, `data/raw/plmatches/`, out of git), `assets/vendor/` (Chart.js, PapaParse and Three.js, saved locally so the site does not depend on a CDN), `assets/badges/` (51 crest images, one per club), `data/raw/` (every download as received, plus small check outputs; the scripts above read these).
 
 ## Weekly refresh
-`.github/workflows/update-season.yml` is a free GitHub Actions job that runs `scripts/update_current_season.py` every Monday and Friday at 07:00 UTC (Monday catches the weekend's games, Friday catches Monday and midweek games), saves the new `data/current_season.json` to the repository and asks GitHub Pages to publish it. If the script's checks fail, nothing is saved and GitHub emails the owner. It can also be started by hand from the repository's Actions tab. Only the 2026–27 section refreshes; the 34 finished seasons are fixed.
+`.github/workflows/update-season.yml` is a free GitHub Actions job that runs `scripts/update_current_season.py` every Monday, Wednesday and Friday at 07:00 UTC (Monday catches the weekend's games, Wednesday catches Monday and Tuesday games, Friday catches Wednesday and Thursday games), saves the new `data/current_season.json` to the repository and asks GitHub Pages to publish it. If the script's checks fail, nothing is saved and GitHub emails the owner. It can also be started by hand from the repository's Actions tab. Only the 2026–27 section refreshes; the 34 finished seasons are fixed.
 
 ## How to rebuild
 
