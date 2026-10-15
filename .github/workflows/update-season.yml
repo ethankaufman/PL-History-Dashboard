@@ -1,0 +1,57 @@
+# Refreshes the "This season" section of the dashboard twice a week.
+# Monday morning picks up the weekend's games; Friday morning picks up Monday-night and midweek games.
+# GitHub schedules run in UTC (07:00 UTC = 07:00 UK in winter, 08:00 in summer) and can start a few minutes late.
+# You can also run it by hand: repository -> Actions -> "Update this season" -> Run workflow.
+name: Update this season
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # Monday morning
+    - cron: "0 7 * * 5"   # Friday morning
+  workflow_dispatch:
+
+permissions:
+  contents: write   # to save the new data files in the repository
+  pages: write      # to ask GitHub Pages to publish the change straight away
+
+concurrency:
+  group: update-season
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Downloads only the newest matches. If any of its own checks fail it stops with an error and writes nothing,
+      # so bad data is never published (GitHub emails you when a run fails).
+      - name: Download the season and check it
+        run: python3 scripts/update_current_season.py
+
+      - name: Save the new data
+        id: save
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/current_season.json data/raw/plcurrent
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Nothing new this time."
+          else
+            git commit -m "Update 2026-27 season data ($(date -u +%Y-%m-%d))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # A push made by a workflow does not always start the Pages build by itself, so ask for it.
+      - name: Publish the site
+        if: steps.save.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"
