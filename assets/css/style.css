@@ -180,6 +180,8 @@ select:focus, input:focus { outline: 3px solid var(--violet); outline-offset: 1p
 .card canvas { max-height: 330px; }
 .tablewrap { max-height: 460px; overflow: auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
 .tablewrap table.plain th { cursor: pointer; user-select: none; }
+.tablewrap.full { max-height: none; }
+.tablewrap.full table.plain th { cursor: default; }
 .note { color: var(--muted); font-size: .85rem; margin: 6px 2px 14px; }
 .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: end; margin-bottom: 14px; }
 .row > div { min-width: 140px; }
@@ -235,3 +237,38 @@ details.casebox > summary .star { font-size: 1.1em; }
 #club-card .casecard { margin: 12px 0 4px; padding: 10px 12px; border: 1px solid var(--pink); border-radius: 12px; background: #e9005218; font-size: .88rem; color: #fff; }
 #club-card .casecard .btn { margin-top: 8px; }
 #club-card a.star { color: #ff7aa5; }
+
+/* ---------- dashboard: "This season" section (table, season stats, matches by week) ---------- */
+.crest-sm { width: 20px; height: 20px; object-fit: contain; vertical-align: middle; margin-right: 8px; }
+.mt.home .crest-sm { margin: 0 0 0 8px; }
+.form { display: inline-flex; gap: 3px; }
+.fm { font-style: normal; font-size: .7rem; font-weight: 800; width: 20px; height: 20px; display: inline-grid; place-items: center; border-radius: 5px; color: #fff; }
+.fm.W { background: #00a85a; }
+.fm.D { background: #8a7b92; }
+.fm.L { background: var(--pink); }
+table.plain tr.zone-down td:first-child { box-shadow: inset 4px 0 0 var(--pink); }
+.gwbar { display: flex; gap: 6px; align-items: center; }
+.gwbar select { min-width: 150px; }
+.gwbar .btn:disabled { opacity: .35; cursor: default; }
+.gwbar .btn:disabled:hover { background: #fff; color: var(--purple); }
+.mgroup { margin-bottom: 14px; padding-bottom: 6px; }
+details.match { border-top: 1px solid var(--line); }
+details.match:first-of-type { border-top: 0; }
+details.match summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; padding: 10px 4px; }
+details.match summary::-webkit-details-marker { display: none; }
+details.match summary:hover { background: var(--panel2); }
+.mt { min-width: 0; font-weight: 700; display: flex; align-items: center; }
+.mt.home { justify-content: flex-end; text-align: right; }
+.score { background: var(--purple); color: #fff; font-weight: 900; border-radius: 8px; padding: 3px 12px; min-width: 64px; text-align: center; font-variant-numeric: tabular-nums; }
+.ko { color: var(--purple); font-weight: 800; min-width: 64px; text-align: center; font-variant-numeric: tabular-nums; border: 1.5px solid var(--line); border-radius: 8px; padding: 2px 10px; }
+.mdetail { padding: 4px 8px 14px; font-size: .92rem; }
+.mdetail h4 { margin: 8px 0 4px; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.cardbox { display: inline-block; width: 9px; height: 13px; border-radius: 2px; margin-right: 8px; vertical-align: -2px; }
+.cardbox.y { background: #f2c200; }
+.cardbox.r { background: #e0243c; }
+@media (max-width: 600px) {
+  details.match summary { grid-template-columns: 1fr; justify-items: center; gap: 4px; }
+  .mt.home { justify-content: center; text-align: center; }
+  .mt.home .crest-sm { margin: 0 0 0 8px; }
+  .gwbar select { min-width: 0; flex: 1; }
+}

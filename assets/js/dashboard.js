@@ -46,6 +46,7 @@
   // ---------------- sections and views ----------------
   // Four sections, each with a few views. A view is one panel; panels are only built the first time you open them.
   const SECTIONS = [
+    { id: "now", label: "This season", views: [["nowtable", "Table"], ["nowstats", "Season stats"], ["nowmatches", "Matches by week"]] },
     { id: "players", label: "Players", views: [["explore", "Explore the numbers"], ["players", "Player profiles"]] },
     { id: "clubs", label: "Clubs", views: [["compare", "Compare clubs"], ["clubrecords", "Club records & trophies"], ["transfers", "Signings & departures"]] },
     { id: "seasons", label: "Seasons", views: [["race", "Table race"], ["seasons", "Season summary & awards"]] },
@@ -541,6 +542,193 @@
     ["t-season", "t-club", "t-dir", "t-kind"].forEach((i) => $(i).addEventListener("change", draw));
     $("t-min").addEventListener("input", draw);
     draw();
+  };
+
+  // =====================================================================
+  // THIS SEASON (2026–27): table, season stats, matches by week.
+  // Reads data/current_season.json, which scripts/update_current_season.py rewrites every week. Loaded only when you open the section.
+  // =====================================================================
+  const londonDate = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long", timeZone: "Europe/London" });
+  const londonTime = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/London" });
+  const longDate = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/London" });
+  const crest = (t) => `<img class="crest-sm" src="${PL.badge(t)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`;
+  const signed = (n) => (n > 0 ? "+" : "") + n;
+  let nowPromise = null;
+  function currentSeason() {
+    if (!nowPromise) nowPromise = PL.load(["currentSeason"]).then((r) => prepareNow(r.currentSeason));
+    return nowPromise;
+  }
+  // everything the three views share: the played matches, the clubs and cards counted by the project's rules
+  function prepareNow(cs) {
+    const played = cs.matches.filter((m) => m.status === "C");
+    const clubs = [...new Set(cs.matches.flatMap((m) => [m.home, m.away]))].sort();
+    // Cards follow the rest of the project: only cards shown to a named player count, and a second yellow counts as a red card only.
+    let unnamedCards = 0;
+    for (const m of played) {
+      const secondYellow = new Set((m.cards || []).filter((c) => c.kind === "Second yellow" && c.player).map((c) => c.team + "|" + c.player));
+      m.counted = { yellow: {}, red: {} };
+      for (const c of m.cards || []) {
+        if (!c.player) { unnamedCards++; continue; }
+        const key = c.team + "|" + c.player, kind = c.kind === "Yellow" && secondYellow.has(key) ? null : c.kind === "Yellow" ? "yellow" : "red";
+        if (kind) m.counted[kind][c.team] = (m.counted[kind][c.team] || 0) + 1;
+      }
+    }
+    const lastWeek = Math.max(...played.map((m) => m.gw));
+    return { cs, played, clubs, unnamedCards, lastWeek };
+  }
+  // shows "loading", builds the view once the data has arrived, and offers a retry if the file could not be loaded
+  function nowPanel(view, build) {
+    const root = $("panel-" + view);
+    root.innerHTML = `<p class="note">Loading the ${esc("2026–27")} season…</p>`;
+    currentSeason().then((ns) => { root.innerHTML = `<p class="intro">${nowIntro[view]}</p><p class="note" id="${view}-stamp">${stamp(ns)}</p><div id="${view}-body"></div>`; build($(view + "-body"), ns); })
+      .catch((e) => { nowPromise = null; root.innerHTML = `<p class="note">Couldn't load this season's data: ${esc(e.message)} <button class="btn small" type="button" id="${view}-retry">Retry</button></p>`; $(view + "-retry").addEventListener("click", () => nowPanel(view, build)); });
+  }
+  const stamp = (ns) => `${ns.cs.season} season: ${ns.played.length} of ${ns.cs.total} matches played, up to matchweek ${ns.lastWeek}. Data last updated ${longDate.format(new Date(ns.cs.updated))}; it is refreshed once a week from the Premier League's statistics service.`;
+  const nowIntro = {
+    nowtable: "The league table as it stands, worked out from every finished match this season. Switch to home or away games only to see who is strong where.",
+    nowstats: "The season so far in numbers: goals, results, cards and crowds, the leading players, and how each club is doing.",
+    nowmatches: "Every match of the season, matchweek by matchweek, with the scorers, assists and cards for the games that have been played. Choose a club to see all of its games.",
+  };
+
+  // ---- the table ----
+  function leagueTable(ns, side) {
+    const t = new Map(ns.clubs.map((c) => [c, { club: c, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0, form: [] }]));
+    const add = (club, gf, ga) => { const r = t.get(club); r.p++; r.gf += gf; r.ga += ga; const res = gf > ga ? "W" : gf < ga ? "L" : "D"; r[res.toLowerCase()]++; r.pts += res === "W" ? 3 : res === "D" ? 1 : 0; r.form.push(res); };
+    for (const m of [...ns.played].sort((a, b) => a.kick.localeCompare(b.kick))) {
+      if (side !== "away") add(m.home, m.hg, m.ag);
+      if (side !== "home") add(m.away, m.ag, m.hg);
+    }
+    // the Premier League orders clubs by points, then goal difference, then goals scored
+    return [...t.values()].sort((a, b) => b.pts - a.pts || (b.gf - b.ga) - (a.gf - a.ga) || b.gf - a.gf || a.club.localeCompare(b.club));
+  }
+  initFns.nowtable = function () {
+    nowPanel("nowtable", (body, ns) => {
+      body.innerHTML = `<div class="row"><div><label for="nt-side">Show</label><select id="nt-side"><option value="all">All matches</option><option value="home">Home matches only</option><option value="away">Away matches only</option></select></div>
+        <div class="grow"></div><div><button class="btn small" id="nt-csv" type="button">Download CSV</button></div></div>
+        <div class="card"><h3 id="nt-title">League table</h3><div class="tablewrap full"><table class="plain" id="nt-tbl"></table></div></div><p class="note" id="nt-note"></p>`;
+      let rows = [];
+      function draw() {
+        const side = $("nt-side").value;
+        rows = leagueTable(ns, side);
+        $("nt-title").textContent = `${ns.cs.season} Premier League table${side === "all" ? "" : side === "home" ? " (home matches only)" : " (away matches only)"}`;
+        $("nt-tbl").innerHTML = `<thead><tr><th class="num">Pos</th><th>Club</th><th class="num">P</th><th class="num">W</th><th class="num">D</th><th class="num">L</th><th class="num">GF</th><th class="num">GA</th><th class="num">GD</th><th class="num">Pts</th><th>Last 5</th></tr></thead><tbody>` +
+          rows.map((r, i) => `<tr class="${i >= rows.length - 3 ? "zone-down" : ""}"><td class="num ${i === 0 && r.p ? "pos-1" : ""}">${i + 1}</td><td>${crest(r.club)}${esc(r.club)}</td><td class="num">${r.p}</td><td class="num">${r.w}</td><td class="num">${r.d}</td><td class="num">${r.l}</td><td class="num">${r.gf}</td><td class="num">${r.ga}</td><td class="num">${signed(r.gf - r.ga)}</td><td class="num"><b>${r.pts}</b></td>` +
+            `<td><span class="form">${r.form.slice(-5).map((x) => `<i class="fm ${x}" title="${{ W: "Win", D: "Draw", L: "Defeat" }[x]}">${x}</i>`).join("")}</span></td></tr>`).join("") + "</tbody>";
+        const games = new Set(rows.map((r) => r.p));
+        $("nt-note").innerHTML = `The pink marker shows the bottom three, the relegation places. Clubs are ordered by points, then goal difference, then goals scored (the league's own order; head-to-head results are not used here). ` +
+          (side === "all" && games.size > 1 ? `Clubs have played different numbers of games (${Math.min(...games)} to ${Math.max(...games)}), so compare points with care. ` : "") + (ns.played.length ? "" : "No matches have been played yet.");
+      }
+      $("nt-side").addEventListener("change", draw);
+      $("nt-csv").addEventListener("click", () => {
+        const csv = "position,club,played,won,drawn,lost,goals_for,goals_against,goal_difference,points\n" + rows.map((r, i) => [i + 1, `"${r.club}"`, r.p, r.w, r.d, r.l, r.gf, r.ga, r.gf - r.ga, r.pts].join(",")).join("\n");
+        const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" })); a.download = `premier-league-table-${ns.cs.season}.csv`; a.click(); URL.revokeObjectURL(a.href);
+      });
+      draw();
+    });
+  };
+
+  // ---- season stats ----
+  initFns.nowstats = function () {
+    nowPanel("nowstats", (body, ns) => {
+      const P = ns.played, n = P.length;
+      if (!n) { body.innerHTML = `<p class="note">No matches have been played yet.</p>`; return; }
+      const goals = C.sum(P, (m) => m.hg + m.ag), hw = P.filter((m) => m.hg > m.ag).length, dr = P.filter((m) => m.hg === m.ag).length, aw = n - hw - dr;
+      const pens = C.sum(P, (m) => m.goals.filter((g) => g.kind === "Penalty").length), ogs = C.sum(P, (m) => m.goals.filter((g) => g.kind === "Own goal").length);
+      const cleanSheets = C.sum(P, (m) => (m.ag === 0 ? 1 : 0) + (m.hg === 0 ? 1 : 0));
+      const sumCards = (kind) => C.sum(P, (m) => C.sum(Object.values(m.counted[kind]), (x) => x));
+      const crowds = P.filter((m) => m.att);
+      const kpi = (v, l) => `<div class="kpi"><div class="n">${v}</div><div class="l">${l}</div></div>`;
+      const margin = (m) => Math.abs(m.hg - m.ag);
+      const biggest = [...P].sort((a, b) => margin(b) - margin(a) || (b.hg + b.ag) - (a.hg + a.ag))[0];
+      const highest = [...P].sort((a, b) => (b.hg + b.ag) - (a.hg + a.ag) || margin(b) - margin(a))[0];
+      const crowd = [...crowds].sort((a, b) => b.att - a.att)[0];
+      const line = (m) => `<b>${esc(m.home)} ${m.hg}–${m.ag} ${esc(m.away)}</b> <span class="muted">matchweek ${m.gw}</span>`;
+      const topCard = (title, rows, what) => `<div class="card"><h3>${title}</h3><div class="tablewrap full"><table class="plain"><thead><tr><th class="num">#</th><th>Player</th><th>Club</th><th class="num">${what}</th></tr></thead><tbody>${rows.map((r, i) => `<tr><td class="num">${i > 0 && rows[i - 1].value === r.value ? "=" : i + 1}</td><td>${esc(r.player)}</td><td>${crest(r.club)}${esc(PL.short(r.club))}</td><td class="num"><b>${r.value}</b></td></tr>`).join("")}</tbody></table></div></div>`;
+      const teamStats = ns.clubs.map((c) => {
+        const mine = P.filter((m) => m.home === c || m.away === c);
+        const gf = C.sum(mine, (m) => (m.home === c ? m.hg : m.ag)), ga = C.sum(mine, (m) => (m.home === c ? m.ag : m.hg));
+        return { club: c, p: mine.length, gf, ga, cs: mine.filter((m) => (m.home === c ? m.ag : m.hg) === 0).length, yellow: C.sum(mine, (m) => m.counted.yellow[c] || 0), red: C.sum(mine, (m) => m.counted.red[c] || 0) };
+      });
+      body.innerHTML = `<div class="kpis">${kpi(n + '<span class="muted" style="font-size:1rem"> / ' + ns.cs.total + "</span>", "Matches played")}${kpi(int(goals), "Goals")}${kpi(dec(goals / n), "Goals per match")}
+        ${kpi(pct(100 * hw / n, 0), "Home wins")}${kpi(pct(100 * dr / n, 0), "Draws")}${kpi(pct(100 * aw / n, 0), "Away wins")}${kpi(int(cleanSheets), "Clean sheets")}
+        ${kpi(int(pens) + " / " + int(ogs), "Penalties / own goals")}${kpi(int(sumCards("yellow")) + " / " + int(sumCards("red")), "Yellow / red cards")}${kpi(crowds.length ? int(C.sum(crowds, (m) => m.att) / crowds.length) : "–", "Average crowd")}</div>
+        <div class="grid2"><div class="card"><h3>Goals per match, matchweek by matchweek</h3><canvas id="ns-goals"></canvas></div>
+          <div class="card"><h3>Home wins, draws and away wins each matchweek</h3><canvas id="ns-res"></canvas></div></div>
+        <div class="card"><h3>Highlights so far</h3><table class="plain"><tbody>
+          <tr><td class="muted">Biggest win</td><td>${line(biggest)}</td></tr><tr><td class="muted">Most goals in a match</td><td>${line(highest)}</td></tr>
+          ${crowd ? `<tr><td class="muted">Biggest crowd</td><td><b>${int(crowd.att)}</b> <span class="muted">${esc(crowd.home)} v ${esc(crowd.away)}, ${esc(crowd.ground)}</span></td></tr>` : ""}</tbody></table></div>
+        <div class="grid2">${topCard("Top scorers", ns.cs.top.goals, "Goals")}${topCard("Most assists", ns.cs.top.assists, "Assists")}${topCard("Most clean sheets (goalkeepers)", ns.cs.top.clean_sheets, "Clean sheets")}${topCard("Most yellow cards", ns.cs.top.yellow_cards, "Yellows")}</div>
+        <div class="grid2">${topCard("Most red cards", ns.cs.top.red_cards, "Reds")}<div class="card"><h3>How to read the cards</h3><p class="note" style="margin:0">Cards follow the rest of this project: only cards shown to a named player count, and a player sent off for two yellows counts as a red only (as the Premier League's own statistic does).${ns.unnamedCards ? ` ${ns.unnamedCards} yellow card${ns.unnamedCards === 1 ? " is" : "s are"} not counted because the official record names no player.` : ""} Player lists are the league's own season totals, top 10; ties share a number.</p></div></div>
+        <div class="card"><h3>Club by club</h3><div class="row"><div><label for="ns-sort">Sort by</label><select id="ns-sort"><option value="gf">Goals scored</option><option value="ga">Goals conceded (fewest first)</option><option value="cs">Clean sheets</option><option value="yellow">Yellow cards</option><option value="red">Red cards</option><option value="club">Club name</option></select></div></div>
+          <div class="tablewrap full"><table class="plain" id="ns-clubs"></table></div></div>`;
+      // charts, one bar per matchweek that has been played
+      const weeks = [...new Set(P.map((m) => m.gw))].sort((a, b) => a - b);
+      const inWeek = (w) => P.filter((m) => m.gw === w);
+      new Chart($("ns-goals"), { type: "bar", data: { labels: weeks, datasets: [{ data: weeks.map((w) => +(C.sum(inWeek(w), (m) => m.hg + m.ag) / inWeek(w).length).toFixed(2)), backgroundColor: palette[0] }] },
+        options: { responsive: true, plugins: { legend: { display: false }, tooltip: { callbacks: { title: (i) => "Matchweek " + i[0].label, afterLabel: (i) => `${inWeek(weeks[i.dataIndex]).length} matches played` } } }, scales: { x: { title: { display: true, text: "Matchweek" } }, y: { beginAtZero: true, title: { display: true, text: "Goals per match" } } } } });
+      const count = (w, f) => inWeek(w).filter(f).length;
+      new Chart($("ns-res"), { type: "bar", data: { labels: weeks, datasets: [{ label: "Home wins", data: weeks.map((w) => count(w, (m) => m.hg > m.ag)), backgroundColor: palette[0] }, { label: "Draws", data: weeks.map((w) => count(w, (m) => m.hg === m.ag)), backgroundColor: palette[7] }, { label: "Away wins", data: weeks.map((w) => count(w, (m) => m.hg < m.ag)), backgroundColor: palette[1] }] },
+        options: { responsive: true, plugins: { tooltip: { callbacks: { title: (i) => "Matchweek " + i[0].label } } }, scales: { x: { stacked: true, title: { display: true, text: "Matchweek" } }, y: { stacked: true, title: { display: true, text: "Matches" } } } } });
+      function drawClubs() {
+        const key = $("ns-sort").value, dir = { club: 1, ga: 1 }[key] || -1;
+        const rows = [...teamStats].sort((a, b) => (key === "club" ? a.club.localeCompare(b.club) : (a[key] - b[key]) * dir || a.club.localeCompare(b.club)));
+        $("ns-clubs").innerHTML = `<thead><tr><th>Club</th><th class="num">P</th><th class="num">Goals scored</th><th class="num">Goals conceded</th><th class="num">Clean sheets</th><th class="num">Yellows</th><th class="num">Reds</th></tr></thead><tbody>` +
+          rows.map((r) => `<tr><td>${crest(r.club)}${esc(r.club)}</td><td class="num">${r.p}</td><td class="num">${r.gf}</td><td class="num">${r.ga}</td><td class="num">${r.cs}</td><td class="num">${r.yellow}</td><td class="num">${r.red}</td></tr>`).join("") + "</tbody>";
+      }
+      $("ns-sort").addEventListener("change", drawClubs);
+      drawClubs();
+    });
+  };
+
+  // ---- matches by week ----
+  initFns.nowmatches = function () {
+    nowPanel("nowmatches", (body, ns) => {
+      const weeks = [...new Set(ns.cs.matches.map((m) => m.gw))].sort((a, b) => a - b);
+      const done = (w) => ns.cs.matches.filter((m) => m.gw === w).every((m) => m.status === "C");
+      body.innerHTML = `<div class="row"><div><label>Matchweek</label><div class="gwbar"><button class="btn small" id="nm-prev" type="button" aria-label="Previous matchweek">◀</button>
+          <select id="nm-week" aria-label="Matchweek">${weeks.map((w) => `<option value="${w}">Matchweek ${w}${done(w) ? " ✓" : ""}</option>`).join("")}</select><button class="btn small" id="nm-next" type="button" aria-label="Next matchweek">▶</button></div></div>
+        <div><label for="nm-club">Or one club's whole season</label><select id="nm-club">${optionHtml(ns.clubs, "All clubs (use the matchweek)")}</select></div></div><div id="nm-list"></div>`;
+      const stateWeek = ns.played.length ? ns.lastWeek : weeks[0];
+      $("nm-week").value = stateWeek;
+      const goalLine = (g) => `<div>${esc(g.player || "Unknown")} <span class="muted">${esc(g.min)}′${g.kind === "Penalty" ? " (pen)" : g.kind === "Own goal" ? " (own goal)" : ""}${g.assist ? ` · assist ${esc(g.assist)}` : ""}</span></div>`;
+      const cardLine = (c) => `<div><i class="cardbox ${c.kind === "Yellow" ? "y" : "r"}"></i>${esc(c.player || "Player not named in the official record")} <span class="muted">${esc(c.min)}′ · ${esc(PL.short(c.team))}${c.kind === "Second yellow" ? " (second yellow)" : ""}</span></div>`;
+      function matchHtml(m) {
+        const k = new Date(m.kick), center = m.status === "C" || m.status === "L" ? `<span class="score">${m.hg}–${m.ag}</span>` : `<span class="ko">${londonTime.format(k)}</span>`;
+        const head = `<summary><span class="mt home">${esc(m.home)}${crest(m.home)}</span>${center}<span class="mt away">${crest(m.away)}${esc(m.away)}</span></summary>`;
+        let detail;
+        if (m.status !== "C") detail = `<div class="mdetail muted">${m.status === "L" ? "In progress. " : ""}Kick-off ${londonDate.format(k)}, ${londonTime.format(k)} UK time · ${esc(m.ground)}${m.city ? ", " + esc(m.city) : ""}</div>`;
+        else {
+          const side = (team) => m.goals.filter((g) => g.team === team).map(goalLine).join("") || `<div class="muted">–</div>`;
+          detail = `<div class="mdetail"><div class="grid2" style="margin-bottom:8px"><div><h4>${esc(m.home)} goals</h4>${side(m.home)}</div><div><h4>${esc(m.away)} goals</h4>${side(m.away)}</div></div>` +
+            (m.cards.length ? `<h4>Cards</h4>${m.cards.map(cardLine).join("")}` : "") +
+            `<p class="note" style="margin:8px 0 0">${m.ht && m.ht[0] != null ? `Half-time ${m.ht[0]}–${m.ht[1]} · ` : ""}${m.ref ? `Referee ${esc(m.ref)} · ` : ""}${esc(m.ground)}${m.att ? ` · crowd ${int(m.att)}` : ""}</p></div>`;
+        }
+        return `<details class="match">${head}${detail}</details>`;
+      }
+      function draw() {
+        const club = $("nm-club").value, w = +$("nm-week").value;
+        $("nm-week").disabled = !!club;
+        $("nm-prev").disabled = !!club || w <= weeks[0]; $("nm-next").disabled = !!club || w >= weeks[weeks.length - 1];
+        const list = ns.cs.matches.filter((m) => (club ? m.home === club || m.away === club : m.gw === w)).sort((a, b) => a.gw - b.gw || a.kick.localeCompare(b.kick) || a.id - b.id);
+        const groups = new Map();
+        for (const m of list) {
+          const key = club ? `Matchweek ${m.gw}` : londonDate.format(new Date(m.kick));
+          if (!groups.has(key)) groups.set(key, []);
+          groups.get(key).push(m);
+        }
+        const pl = list.filter((m) => m.status === "C");
+        const summary = club ? (() => { const r = pl.map((m) => { const home = m.home === club, gf = home ? m.hg : m.ag, ga = home ? m.ag : m.hg; return gf > ga ? "W" : gf < ga ? "L" : "D"; });
+          return `${club}: played ${r.length}, won ${r.filter((x) => x === "W").length}, drawn ${r.filter((x) => x === "D").length}, lost ${r.filter((x) => x === "L").length}.`; })()
+          : `Matchweek ${w}: ${pl.length} of ${list.length} matches played${pl.length ? `, ${C.sum(pl, (m) => m.hg + m.ag)} goals.` : "."}`;
+        $("nm-list").innerHTML = `<p class="note">${esc(summary)} Click a match for the scorers, assists and cards. Times are UK time.</p>` +
+          [...groups].map(([title, ms]) => `<div class="card mgroup"><h3>${esc(title)}</h3>${ms.map(matchHtml).join("")}</div>`).join("");
+      }
+      $("nm-week").addEventListener("change", draw);
+      $("nm-club").addEventListener("change", draw);
+      $("nm-prev").addEventListener("click", () => { $("nm-week").value = +$("nm-week").value - 1; draw(); });
+      $("nm-next").addEventListener("click", () => { $("nm-week").value = +$("nm-week").value + 1; draw(); });
+      draw();
+    });
   };
 
   const startView = location.hash.slice(1);

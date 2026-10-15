@@ -5,10 +5,10 @@ const PL = (() => {
     playerMatches: "data/player_matches.csv", transfers: "data/transfers.csv",
     seasons: "data/seasons.json", awards: "data/awards.json", honours: "data/honours.json", teams: "data/teams.json",
     players: "data/current_players.json", map: "data/uk_map.json", cities: "data/cities.json", badges: "data/badges.json", cityCase: "data/city_case.json",
-    domestic: "data/domestic_honours.json", records: "data/records.json", playerSeasons: "data/player_seasons.csv", appearances: "data/appearances_lean.csv", audit: "data/audit.json", manifest: "data/manifest.json", disagreements: "data/source_disagreements.csv",
+    domestic: "data/domestic_honours.json", records: "data/records.json", playerSeasons: "data/player_seasons.csv", appearances: "data/appearances_lean.csv", audit: "data/audit.json", manifest: "data/manifest.json", disagreements: "data/source_disagreements.csv", currentSeason: "data/current_season.json",
   };
   // approximate download sizes (MB) so the progress bar moves smoothly
-  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1, cities: 0.01, badges: 0.01, cityCase: 0.01, domestic: 0.15, records: 0.2, playerSeasons: 1.8, appearances: 12, audit: 0.1, manifest: 0.01, disagreements: 0.3 };
+  const weight = { matches: 2, teamMatches: 6, finalTables: 0.2, playerMatches: 14, transfers: 0.6, seasons: 0.1, awards: 0.2, honours: 0.1, teams: 0.4, players: 0.8, map: 0.1, cities: 0.01, badges: 0.01, cityCase: 0.01, domestic: 0.15, records: 0.2, playerSeasons: 1.8, appearances: 12, audit: 0.1, manifest: 0.01, disagreements: 0.3, currentSeason: 0.11 };
 
   async function load(names, onProgress) {
     const total = names.reduce((s, n) => s + weight[n], 0);

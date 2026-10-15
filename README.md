@@ -4,7 +4,7 @@ A two-page website about every Premier League season since it began in 1992–93
 
 * **Report** (`index.html`) — 18 findings, each with a chart, a table of every season's winners, a closing section on the data, and a live "How we know the numbers are right" section. It opens with an interactive spinning football (the pink-and-purple 2026–27 Premier League ball, the Puma Stellar Nitro Ultimate, recreated in 3D) that explodes into a rotating map of the UK once the data has loaded. Every club is a pin topped with its crest, and the largest cities (and capitals) are named, with more appearing as you zoom in. On the map you can hover or click any club, zoom to the cursor, jump to London or Manchester and Liverpool, and open each club's history, trophies, records and every ground.
 * **Both pages** open with a pile of balls, one per club, each showing its crest. Click or tap anywhere in the pile and a ball is kicked at that spot, knocking the crests around (simple 2D physics, no library; `assets/js/pile.js`).
-* **Dashboard** (`dashboard.html`) — four sections (Players, Clubs, Seasons, League records), each with a few views: filters, summary numbers, four charts with a measure switch and a breakdown switch, a sortable table and a reset button (Explore the numbers); player profiles; club comparison; club records and trophies; signings and departures; matchweek table race; season summary and awards; record books.
+* **Dashboard** (`dashboard.html`) — five sections. **This season** shows the 2026–27 season as it is played: the league table (all, home or away games), season stats (goals, results, cards, crowds, top players, club by club) and every match by matchweek with scorers, assists and cards. The other four (Players, Clubs, Seasons, League records) each have a few views: filters, summary numbers, four charts with a measure switch and a breakdown switch, a sortable table and a reset button (Explore the numbers); player profiles; club comparison; club records and trophies; signings and departures; matchweek table race; season summary and awards; record books.
 
 Live site: https://ethankaufman.github.io/PL-History-Dashboard/
 
@@ -66,7 +66,7 @@ The Premier League's service is not an official, documented API and could change
 * `player_seasons.csv` — the Premier League's season statistics: one row per player per club per season (18,662 rows). Minutes before 2006–07 are computed from line-ups and substitutions.
 * `matches.csv`, `team_matches.csv` — 13,166 matches (and one row per team per match with the league table after every game); `match_details.csv` (official referee, attendance, ground), `match_events.csv` (79,000 goals and cards with minutes).
 * `final_tables.csv`, `seasons.json`, `awards.json`, `honours.json`, `domestic_honours.json`, `records.json`, `teams.json`, `current_players.json`, `transfers.csv` (signings and departures by season, derived from where players played; no fees), `uk_map.json`, `cities.json` (map city labels), `badges.json` (club name to crest file), `city_case.json` (the Manchester City asterisk: dates, charges, wording and sources).
-* `audit.json` (the audit results shown in the report), `manifest.json` (row counts), `source_disagreements*.csv`.
+* `current_season.json` (the 2026–27 season so far, rewritten by `scripts/update_current_season.py`; the 34 finished seasons above are separate and unchanged), `audit.json` (the audit results shown in the report), `manifest.json` (row counts), `source_disagreements*.csv`.
 * `curated/` — hand-written club histories and stadium lists. `raw/` — files as downloaded (plus small check outputs).
 
 **Every script (`scripts/`)**
@@ -100,6 +100,7 @@ The Premier League's service is not an official, documented API and could change
 | `rebuild_all.sh` | Rebuilds every data file from the raw downloads in the right order, then runs every check. |
 | `reconcile_awards.py` | Settle the 'most assists' award records using the Premier League's own statistics. |
 | `reconcile_matches.py` | Cross-check the two independent match sources and fill the gaps in matches.csv and team_matches.csv. |
+| `update_current_season.py` | Download the season being played now (only the newest matches) and write data/current_season.json for the "This season" section; stops without writing if its own checks fail (every score equals its goal events, season goals add up, top scorers match). Run weekly: `python3 scripts/update_current_season.py`. |
 | `verify.py` | Independent check of the website's headline numbers: recomputes them in plain Python and compares them with the JavaScript results. |
 | `wikitables.py` | Tiny helper that pulls tables out of Wikipedia HTML using only Python's standard library. |
 
